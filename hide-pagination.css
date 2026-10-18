@@ -1,0 +1,4 @@
+/* Hide the previous/next page links at the bottom of every page */
+#pagination {
+  display: none !important;
+}

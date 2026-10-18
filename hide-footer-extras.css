@@ -1,0 +1,5 @@
+/* Footer: keep only the X and LinkedIn icons, hide everything else */
+#footer a:not([href*="x.com"]):not([href*="linkedin.com"]),
+footer a:not([href*="x.com"]):not([href*="linkedin.com"]) {
+  display: none !important;
+}
