@@ -1,7 +1,7 @@
-/* Dil seçiciyi header'ın sağına, Webza butonunun soluna taşı (yalnızca masaüstü) */
+/* Header sağ bölüm sırası (yalnızca masaüstü): Dil seçici | Tema | Webza butonu */
 @media (min-width: 1024px) {
   #navbar {
-    --wz-lang-right: 150px; /* Webza butonundan uzaklık; gerekirse ayarla */
+    --wz-lang-right: 185px; /* Sağ kenardan uzaklık; gerekirse ayarla */
   }
 
   #navbar > div,
@@ -9,6 +9,18 @@
     position: relative;
   }
 
+  /* Webza butonu en sağa, tema seçici onun soluna */
+  .topbar-right-container > #topbar-cta-button,
+  .topbar-right-container > *:has(#topbar-cta-button) {
+    order: 99;
+  }
+
+  .topbar-right-container > [data-component-name="theme-toggle"],
+  .topbar-right-container > *:has([data-component-name="theme-toggle"]) {
+    order: 98;
+  }
+
+  /* Dil seçici tema seçicinin soluna */
   #localization-select-trigger,
   [data-component-part="localization-select-trigger"] {
     position: absolute !important;
