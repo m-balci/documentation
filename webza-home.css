@@ -211,7 +211,23 @@
 .wz-comm-iconed:hover .wz-comm-icon { background: var(--wz-accent); border-color: var(--wz-accent); }
 .wz-comm-iconed:hover .wz-comm-icon svg { background-color: var(--wz-on-accent) !important; }
 .wz-comm-icon svg { background-color: var(--wz-ink) !important; }
+/* Get help and connect: support banner + resource cards */
+.wz-help { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 16px; padding: 24px; border-radius: 16px; border: 1px solid var(--wz-line); background: var(--wz-surface); }
+.wz-help-text { display: flex; flex-direction: column; gap: 6px; max-width: 520px; }
+.wz-help-text .wz-comm-icon { background: var(--wz-bg); }
+.wz-help-text b { font-size: 18px; font-weight: 650; color: var(--wz-ink); }
+.wz-help-text span { color: var(--wz-muted); font-size: 14px; line-height: 1.55; }
+.wz-help-actions { display: flex; flex-wrap: wrap; gap: 10px; flex-shrink: 0; }
+.wz-help-actions .wz-btn-ghost { background: var(--wz-bg); }
+.wz-help-actions .wz-btn-ghost:hover { background: var(--wz-surface); }
+.wz-community-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1100px) {
+  .wz-community-4 { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 800px) {
+  .wz-help { flex-direction: column; align-items: flex-start; }
+  .wz-help-actions { width: 100%; }
+  .wz-help-actions .wz-btn { flex: 1 1 auto; text-align: center; }
   .wz-pillars, .wz-paths, .wz-community, .wz-stage { grid-template-columns: 1fr; }
   .wz-stage { height: auto; }
   .wz-section { margin-top: 64px; }
