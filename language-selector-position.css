@@ -20,6 +20,18 @@
 
   #navbar #topbar-cta-button {
     margin-left: 10px !important;
+    margin-right: 0 !important;
+    margin-inline-end: 0 !important;
+    padding-right: 0 !important;
+    padding-inline-end: 0 !important;
+  }
+
+  /* Webza butonunu sağ kenara yasla: doğrudan kapsayıcısındaki sağ boşluğu kaldır */
+  #navbar :has(> #topbar-cta-button) {
+    margin-right: 0 !important;
+    margin-inline-end: 0 !important;
+    padding-right: 0 !important;
+    padding-inline-end: 0 !important;
   }
 }
 
@@ -41,10 +53,22 @@
   min-width: 40px !important;
   padding: 0 8px !important;
   border-radius: 10px !important;
-  border: 1px solid rgba(10, 10, 10, 0.14) !important;
-  background-color: #ffffff !important;
-  box-shadow: 0 6px 18px -12px rgba(0, 0, 0, 0.35) !important;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(10, 10, 10, 0.26) !important;
+  background-color: #f4f4f5 !important;
+  color: #0a0a0a !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 6px 18px -10px rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Açık modda simgeler net siyah görünsün */
+:is(
+  [data-component-name="theme-toggle"],
+  #navbar button[aria-label*="dark" i],
+  #navbar button[aria-label*="theme" i]
+) svg {
+  color: #0a0a0a !important;
 }
 
 :is(
@@ -54,7 +78,8 @@
   #navbar button[aria-label*="light mode" i],
   #navbar button[aria-label*="color mode" i]
 ):hover {
-  border-color: rgba(10, 10, 10, 0.28) !important;
+  border-color: rgba(10, 10, 10, 0.45) !important;
+  background-color: #ebebec !important;
 }
 
 html.dark :is(
@@ -64,9 +89,21 @@ html.dark :is(
   #navbar button[aria-label*="light mode" i],
   #navbar button[aria-label*="color mode" i]
 ) {
-  border-color: rgba(255, 255, 255, 0.16) !important;
-  background-color: #0a0a0a !important;
-  box-shadow: 0 6px 20px -12px rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.32) !important;
+  background-color: #1c1c1c !important;
+  color: #ffffff !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 6px 20px -10px rgba(255, 255, 255, 0.22) !important;
+}
+
+/* Koyu modda simgeler net beyaz görünsün */
+html.dark :is(
+  [data-component-name="theme-toggle"],
+  #navbar button[aria-label*="dark" i],
+  #navbar button[aria-label*="theme" i]
+) svg {
+  color: #ffffff !important;
 }
 
 html.dark :is(
@@ -76,7 +113,8 @@ html.dark :is(
   #navbar button[aria-label*="light mode" i],
   #navbar button[aria-label*="color mode" i]
 ):hover {
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: #262626 !important;
 }
 
 /* İç içe kutu oluşmasın: dış kutunun içindeki tema butonlarının çerçevesini kaldır */
