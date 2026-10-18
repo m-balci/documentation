@@ -1,138 +1,81 @@
-/* Header sağ bölüm sırası (yalnızca masaüstü): Tema | Webza butonu */
+/* Header sağ bölüm (yalnızca masaüstü): Tema seçici | Webza butonu
+   Kapsayıcı Tailwind "space-x-4" kullanıyor; bu, Webza butonunu taşıyan <nav>'a
+   sağ margin veriyor. Sıralama değişince bu margin butonun sağında boşluk bırakıyordu.
+   Margin'leri sıfırlayıp aralığı "gap" ile veriyoruz. */
 @media (min-width: 1024px) {
-  /* Webza butonunu içeren kapsayıcılar sona */
-  #navbar #topbar-cta-button,
-  #navbar :has(#topbar-cta-button):not(:has([data-component-name="theme-toggle"])) {
-    order: 2;
-  }
-
-  /* Tema seçiciyi içeren kapsayıcılar Webza butonunun önüne */
-  #navbar [data-component-name="theme-toggle"],
-  #navbar :has([data-component-name="theme-toggle"]):not(:has(#topbar-cta-button)) {
-    order: 1;
-    margin-left: 0 !important;
-  }
-
-  /* Tema ile Webza butonu arasında boşluk */
-  #navbar [data-component-name="theme-toggle"] {
-    margin-right: 1rem !important;
-  }
-
-  #navbar #topbar-cta-button {
-    margin-left: 10px !important;
+  div:has(> nav #topbar-cta-button) {
+    gap: 12px !important;
     margin-right: 0 !important;
-    margin-inline-end: 0 !important;
     padding-right: 0 !important;
-    padding-inline-end: 0 !important;
   }
 
-  /* Webza butonunu sağ kenara yasla: doğrudan kapsayıcısındaki sağ boşluğu kaldır */
-  #navbar :has(> #topbar-cta-button) {
-    margin-right: 0 !important;
-    margin-inline-end: 0 !important;
-    padding-right: 0 !important;
-    padding-inline-end: 0 !important;
+  div:has(> nav #topbar-cta-button) > * {
+    margin: 0 !important;
+  }
+
+  /* Webza butonu en sağda */
+  div:has(> nav #topbar-cta-button) > nav {
+    order: 2 !important;
+  }
+
+  /* Tema seçici Webza butonunun solunda */
+  div:has(> nav #topbar-cta-button) > div:has([data-component-name="theme-preference-menu"]) {
+    order: 1 !important;
+  }
+
+  #topbar-cta-button {
+    margin: 0 !important;
   }
 }
 
-/* Tema seçiciyi Webza butonuyla aynı yükseklikte çerçeveli bir kutuya al.
-   Farklı tema sürümlerinde eşleşmesi için birden fazla seçici kullanılır. */
-:is(
-  [data-component-name="theme-toggle"],
-  #navbar button[aria-label*="dark" i],
-  #navbar button[aria-label*="theme" i],
-  #navbar button[aria-label*="light mode" i],
-  #navbar button[aria-label*="color mode" i]
-) {
+/* Tema seçiciyi Webza butonuyla aynı yükseklikte çerçeveli bir kutuya al */
+#theme-preference-menu-trigger,
+[data-component-name="theme-preference-menu"] {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 2px !important;
   height: 40px !important;
   min-height: 40px !important;
   min-width: 40px !important;
-  padding: 0 8px !important;
+  padding: 0 10px !important;
   border-radius: 10px !important;
   border: 1px solid rgba(10, 10, 10, 0.26) !important;
   background-color: #f4f4f5 !important;
-  color: #0a0a0a !important;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
     0 6px 18px -10px rgba(0, 0, 0, 0.35) !important;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-/* Açık modda simgeler net siyah görünsün */
-:is(
-  [data-component-name="theme-toggle"],
-  #navbar button[aria-label*="dark" i],
-  #navbar button[aria-label*="theme" i]
-) svg {
-  color: #0a0a0a !important;
-}
-
-:is(
-  [data-component-name="theme-toggle"],
-  #navbar button[aria-label*="dark" i],
-  #navbar button[aria-label*="theme" i],
-  #navbar button[aria-label*="light mode" i],
-  #navbar button[aria-label*="color mode" i]
-):hover {
+#theme-preference-menu-trigger:hover,
+[data-component-name="theme-preference-menu"]:hover {
   border-color: rgba(10, 10, 10, 0.45) !important;
   background-color: #ebebec !important;
 }
 
-html.dark :is(
-  [data-component-name="theme-toggle"],
-  #navbar button[aria-label*="dark" i],
-  #navbar button[aria-label*="theme" i],
-  #navbar button[aria-label*="light mode" i],
-  #navbar button[aria-label*="color mode" i]
-) {
+/* Açık modda simgeler net siyah */
+#theme-preference-menu-trigger svg {
+  width: 18px !important;
+  height: 18px !important;
+  color: #0a0a0a !important;
+}
+
+/* Koyu mod */
+html.dark #theme-preference-menu-trigger,
+html.dark [data-component-name="theme-preference-menu"] {
   border-color: rgba(255, 255, 255, 0.32) !important;
   background-color: #1c1c1c !important;
-  color: #ffffff !important;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 6px 20px -10px rgba(255, 255, 255, 0.22) !important;
 }
 
-/* Koyu modda simgeler net beyaz görünsün */
-html.dark :is(
-  [data-component-name="theme-toggle"],
-  #navbar button[aria-label*="dark" i],
-  #navbar button[aria-label*="theme" i]
-) svg {
-  color: #ffffff !important;
-}
-
-html.dark :is(
-  [data-component-name="theme-toggle"],
-  #navbar button[aria-label*="dark" i],
-  #navbar button[aria-label*="theme" i],
-  #navbar button[aria-label*="light mode" i],
-  #navbar button[aria-label*="color mode" i]
-):hover {
+html.dark #theme-preference-menu-trigger:hover,
+html.dark [data-component-name="theme-preference-menu"]:hover {
   border-color: rgba(255, 255, 255, 0.5) !important;
   background-color: #262626 !important;
 }
 
-/* İç içe kutu oluşmasın: dış kutunun içindeki tema butonlarının çerçevesini kaldır */
-[data-component-name="theme-toggle"] :is(button[aria-label*="dark" i], button[aria-label*="theme" i], button[aria-label*="light mode" i], button[aria-label*="color mode" i]) {
-  border: 0 !important;
-  box-shadow: none !important;
-  background-color: transparent !important;
-  height: auto !important;
-  min-height: 0 !important;
-  min-width: 0 !important;
-  padding: 0 !important;
-}
-
-:is(
-  [data-component-name="theme-toggle"],
-  #navbar button[aria-label*="dark" i],
-  #navbar button[aria-label*="theme" i]
-) svg {
-  width: 18px !important;
-  height: 18px !important;
+html.dark #theme-preference-menu-trigger svg {
+  color: #ffffff !important;
 }
