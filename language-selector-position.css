@@ -1,14 +1,5 @@
-/* Header sağ bölüm sırası (yalnızca masaüstü): Dil seçici | Tema | Webza butonu */
+/* Header sağ bölüm sırası (yalnızca masaüstü): Tema | Webza butonu */
 @media (min-width: 1024px) {
-  #navbar {
-    --wz-lang-right: 182px; /* Sağ kenardan uzaklık; gerekirse ayarla */
-  }
-
-  #navbar > div,
-  #navbar .max-w-8xl {
-    position: relative;
-  }
-
   /* Webza butonunu içeren kapsayıcılar sona */
   #navbar #topbar-cta-button,
   #navbar :has(#topbar-cta-button):not(:has([data-component-name="theme-toggle"])) {
@@ -27,18 +18,7 @@
     margin-right: 1rem !important;
   }
 
-  /* Tema ile Webza arasındaki boşluğu dil ile tema arasıyla eşitle */
   #navbar #topbar-cta-button {
     margin-left: 10px !important;
-  }
-
-  /* Dil seçici tema seçicinin soluna */
-  #localization-select-trigger,
-  [data-component-part="localization-select-trigger"] {
-    position: absolute !important;
-    right: var(--wz-lang-right);
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 30;
   }
 }
