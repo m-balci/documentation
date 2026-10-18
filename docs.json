@@ -107,6 +107,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Support",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "Status",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -203,6 +213,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Support",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "Systemstatus",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -299,6 +319,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Soporte",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "Estado del servicio",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -395,6 +425,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Assistance",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "État des services",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -491,6 +531,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Assistenza",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "Stato del servizio",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -587,6 +637,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Suporte",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "Status do sistema",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -683,6 +743,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Destek",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "Sistem Durumu",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -779,6 +849,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Поддержка",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "Статус сервисов",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -875,6 +955,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "技术支持",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "服务状态",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -971,6 +1061,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "고객 지원",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "서비스 상태",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -1067,6 +1167,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "الدعم",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "حالة الخدمة",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       },
@@ -1163,6 +1273,16 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "サポート",
+            "icon": "message",
+            "href": "https://webza.ai/support/tickets"
+          },
+          {
+            "tab": "稼働状況",
+            "icon": "signal",
+            "href": "https://status.webza.ai/"
           }
         ]
       }
@@ -1173,18 +1293,6 @@
     "dark": "/images/Vector(1).svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "https://webza.ai/support/tickets",
-        "icon": "message"
-      },
-      {
-        "icon": "signal",
-        "href": "https://status.webza.ai/",
-        "label": "Status"
-      }
-    ],
     "primary": {
       "type": "button",
       "label": "Webza",

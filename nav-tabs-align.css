@@ -1,0 +1,8 @@
+/* Support ve Status sekmelerini sekme çubuğunun sağına sabitle (tüm diller) */
+.nav-tabs {
+  width: 100%;
+}
+
+.nav-tabs > .nav-tabs-item[href^="https://webza.ai/support"] {
+  margin-inline-start: auto;
+}
