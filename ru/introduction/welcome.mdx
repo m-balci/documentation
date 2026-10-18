@@ -328,53 +328,65 @@ description: "Создавайте и публикуйте полностью о
 
   <div className="wz-section">
     <h2 className="wz-h2">Помощь и контакты</h2>
-    <p className="wz-sub">Получайте обновления от команды Webza.</p>
+    <p className="wz-sub">Наша команда всегда готова помочь.</p>
 
-    <div className="wz-community">
-      <a className="wz-comm wz-comm-iconed" href="https://x.com/webzaai">
-        <div className="wz-comm-icon">
-          <Icon icon="x-twitter" iconType="brands" size={18} />
+    <div className="wz-sp">
+      <div className="wz-sp-main">
+        <span className="wz-sp-label">Поддержка</span>
+        <h3 className="wz-sp-title">Мы всегда на связи</h3>
+        <p className="wz-sp-text">Создайте тикет в личном кабинете или напишите нам напрямую. Мы читаем каждое обращение и отвечаем по электронной почте.</p>
+
+        <div className="wz-sp-actions">
+          <a className="wz-sp-btn wz-sp-btn-primary" href="/ru/help/support-tickets">Создать тикет</a>
+          <a className="wz-sp-btn wz-sp-btn-quiet" href="mailto:support@webza.ai">Написать нам</a>
         </div>
+      </div>
 
-        <b>Webza в X</b>
-        <span>Новости и обновления продукта</span>
-      </a>
+      <div className="wz-sp-list">
+        <a className="wz-sp-row" href="/ru/help/prompting-tips">
+          <Icon icon="lightbulb" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="https://webza.ai">
-        <div className="wz-comm-icon">
-          <Icon icon="arrow-up-right-from-square" size={18} />
-        </div>
+          <div>
+            <b>Советы по промптам</b>
+            <span>Чёткие промпты для лучшего результата.</span>
+          </div>
 
-        <b>Открыть Webza</b>
-        <span>Начните создавать на webza.ai</span>
-      </a>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-      <a className="wz-comm wz-comm-iconed" href="/ru/changelog">
-        <div className="wz-comm-icon">
-          <Icon icon="clock-rotate-left" size={18} />
-        </div>
+        <a className="wz-sp-row" href="/ru/changelog">
+          <Icon icon="clock-rotate-left" size={16} />
 
-        <b>История изменений</b>
-        <span>Что нового в Webza</span>
-      </a>
+          <div>
+            <b>История изменений</b>
+            <span>Новые функции и улучшения.</span>
+          </div>
 
-      <a className="wz-comm wz-comm-iconed" href="/ru/help/support-tickets">
-        <div className="wz-comm-icon">
-          <Icon icon="life-ring" size={18} />
-        </div>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-        <b>Поддержка</b>
-        <span>Создать тикет в поддержку</span>
-      </a>
+        <a className="wz-sp-row" href="https://x.com/webzaai">
+          <Icon icon="x-twitter" iconType="brands" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="/ru/change-or-cancel-your-subscription">
-        <div className="wz-comm-icon">
-          <Icon icon="arrows-rotate" size={18} />
-        </div>
+          <div>
+            <b>X</b>
+            <span>Новости и анонсы продукта.</span>
+          </div>
 
-        <b>Изменить или отменить</b>
-        <span>Управление подпиской</span>
-      </a>
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+
+        <a className="wz-sp-row" href="https://linkedin.com/company/webzaai">
+          <Icon icon="linkedin" iconType="brands" size={16} />
+
+          <div>
+            <b>LinkedIn</b>
+            <span>Новости команды Webza.</span>
+          </div>
+
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+      </div>
     </div>
   </div>
 </div>

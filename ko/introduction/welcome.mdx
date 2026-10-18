@@ -327,54 +327,66 @@ description: "프롬프트 하나로 완성된 웹사이트를 만들고 게시�
   </div>
 
   <div className="wz-section">
-    <h2 className="wz-h2">도움받기 및 연결하기</h2>
-    <p className="wz-sub">Webza 팀의 최신 소식을 받아보세요.</p>
+    <h2 className="wz-h2">도움말 및 문의</h2>
+    <p className="wz-sub">도움이 필요할 때 언제든 Webza 팀이 함께합니다.</p>
 
-    <div className="wz-community">
-      <a className="wz-comm wz-comm-iconed" href="https://x.com/webzaai">
-        <div className="wz-comm-icon">
-          <Icon icon="x-twitter" iconType="brands" size={18} />
+    <div className="wz-sp">
+      <div className="wz-sp-main">
+        <span className="wz-sp-label">지원</span>
+        <h3 className="wz-sp-title">무엇이든 도와드릴게요</h3>
+        <p className="wz-sp-text">대시보드에서 티켓을 열거나 이메일로 직접 문의하세요. 모든 문의를 꼼꼼히 확인하고 이메일로 답변해 드립니다.</p>
+
+        <div className="wz-sp-actions">
+          <a className="wz-sp-btn wz-sp-btn-primary" href="/ko/help/support-tickets">티켓 열기</a>
+          <a className="wz-sp-btn wz-sp-btn-quiet" href="mailto:support@webza.ai">이메일 보내기</a>
         </div>
+      </div>
 
-        <b>X에서 Webza 팔로우하기</b>
-        <span>새 소식과 제품 업데이트</span>
-      </a>
+      <div className="wz-sp-list">
+        <a className="wz-sp-row" href="/ko/help/prompting-tips">
+          <Icon icon="lightbulb" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="https://webza.ai">
-        <div className="wz-comm-icon">
-          <Icon icon="arrow-up-right-from-square" size={18} />
-        </div>
+          <div>
+            <b>프롬프트 작성 팁</b>
+            <span>더 명확한 프롬프트로 더 나은 결과를 얻으세요.</span>
+          </div>
 
-        <b>Webza 열기</b>
-        <span>webza.ai에서 지금 만들기 시작하세요</span>
-      </a>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-      <a className="wz-comm wz-comm-iconed" href="/ko/changelog">
-        <div className="wz-comm-icon">
-          <Icon icon="clock-rotate-left" size={18} />
-        </div>
+        <a className="wz-sp-row" href="/ko/changelog">
+          <Icon icon="clock-rotate-left" size={16} />
 
-        <b>변경 로그</b>
-        <span>Webza의 새로운 기능을 확인하세요</span>
-      </a>
+          <div>
+            <b>변경 로그</b>
+            <span>최신 기능과 개선 사항.</span>
+          </div>
 
-      <a className="wz-comm wz-comm-iconed" href="/ko/help/support-tickets">
-        <div className="wz-comm-icon">
-          <Icon icon="life-ring" size={18} />
-        </div>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-        <b>지원 받기</b>
-        <span>지원 티켓 열기</span>
-      </a>
+        <a className="wz-sp-row" href="https://x.com/webzaai">
+          <Icon icon="x-twitter" iconType="brands" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="/ko/change-or-cancel-your-subscription">
-        <div className="wz-comm-icon">
-          <Icon icon="arrows-rotate" size={18} />
-        </div>
+          <div>
+            <b>X</b>
+            <span>제품 소식과 공지사항.</span>
+          </div>
 
-        <b>변경 또는 취소</b>
-        <span>구독 관리하기</span>
-      </a>
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+
+        <a className="wz-sp-row" href="https://linkedin.com/company/webzaai">
+          <Icon icon="linkedin" iconType="brands" size={16} />
+
+          <div>
+            <b>LinkedIn</b>
+            <span>Webza 팀의 최신 소식.</span>
+          </div>
+
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+      </div>
     </div>
   </div>
 </div>

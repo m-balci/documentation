@@ -328,53 +328,65 @@ description: "プロンプトから完全にデザインされたWebサイトを
 
   <div className="wz-section">
     <h2 className="wz-h2">ヘルプと連絡先</h2>
-    <p className="wz-sub">Webzaチームからの最新情報をお届けします。</p>
+    <p className="wz-sub">お困りのときは、Webzaチームがいつでもサポートします。</p>
 
-    <div className="wz-community">
-      <a className="wz-comm wz-comm-iconed" href="https://x.com/webzaai">
-        <div className="wz-comm-icon">
-          <Icon icon="x-twitter" iconType="brands" size={18} />
+    <div className="wz-sp">
+      <div className="wz-sp-main">
+        <span className="wz-sp-label">サポート</span>
+        <h3 className="wz-sp-title">お気軽にご相談ください</h3>
+        <p className="wz-sp-text">ダッシュボードからチケットを作成するか、メールで直接お問い合わせください。すべてのお問い合わせを確認し、メールでご返信します。</p>
+
+        <div className="wz-sp-actions">
+          <a className="wz-sp-btn wz-sp-btn-primary" href="/ja/help/support-tickets">チケットを作成</a>
+          <a className="wz-sp-btn wz-sp-btn-quiet" href="mailto:support@webza.ai">メールで問い合わせ</a>
         </div>
+      </div>
 
-        <b>WebzaをXでフォロー</b>
-        <span>ニュースと製品アップデート</span>
-      </a>
+      <div className="wz-sp-list">
+        <a className="wz-sp-row" href="/ja/help/prompting-tips">
+          <Icon icon="lightbulb" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="https://webza.ai">
-        <div className="wz-comm-icon">
-          <Icon icon="arrow-up-right-from-square" size={18} />
-        </div>
+          <div>
+            <b>プロンプトのコツ</b>
+            <span>明確なプロンプトで、より良い結果を。</span>
+          </div>
 
-        <b>Webzaを開く</b>
-        <span>webza.aiで構築を開始</span>
-      </a>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-      <a className="wz-comm wz-comm-iconed" href="/ja/changelog">
-        <div className="wz-comm-icon">
-          <Icon icon="clock-rotate-left" size={18} />
-        </div>
+        <a className="wz-sp-row" href="/ja/changelog">
+          <Icon icon="clock-rotate-left" size={16} />
 
-        <b>変更履歴</b>
-        <span>Webzaの新機能を確認</span>
-      </a>
+          <div>
+            <b>変更履歴</b>
+            <span>最新の機能と改善点。</span>
+          </div>
 
-      <a className="wz-comm wz-comm-iconed" href="/ja/help/support-tickets">
-        <div className="wz-comm-icon">
-          <Icon icon="life-ring" size={18} />
-        </div>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-        <b>サポートを受ける</b>
-        <span>サポートチケットを作成</span>
-      </a>
+        <a className="wz-sp-row" href="https://x.com/webzaai">
+          <Icon icon="x-twitter" iconType="brands" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="/ja/change-or-cancel-your-subscription">
-        <div className="wz-comm-icon">
-          <Icon icon="arrows-rotate" size={18} />
-        </div>
+          <div>
+            <b>X</b>
+            <span>製品ニュースとお知らせ。</span>
+          </div>
 
-        <b>変更または解約</b>
-        <span>サブスクリプションを管理</span>
-      </a>
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+
+        <a className="wz-sp-row" href="https://linkedin.com/company/webzaai">
+          <Icon icon="linkedin" iconType="brands" size={16} />
+
+          <div>
+            <b>LinkedIn</b>
+            <span>Webzaチームからの最新情報。</span>
+          </div>
+
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+      </div>
     </div>
   </div>
 </div>

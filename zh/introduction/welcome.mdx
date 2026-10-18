@@ -327,54 +327,66 @@ description: "通过提示词构建并发布一个设计完整的网站。查找
   </div>
 
   <div className="wz-section">
-    <h2 className="wz-h2">获取帮助与联系</h2>
-    <p className="wz-sub">获取 Webza 团队的最新动态。</p>
+    <h2 className="wz-h2">帮助与联系</h2>
+    <p className="wz-sub">遇到问题时，我们的团队随时为您提供支持。</p>
 
-    <div className="wz-community">
-      <a className="wz-comm wz-comm-iconed" href="https://x.com/webzaai">
-        <div className="wz-comm-icon">
-          <Icon icon="x-twitter" iconType="brands" size={18} />
+    <div className="wz-sp">
+      <div className="wz-sp-main">
+        <span className="wz-sp-label">支持</span>
+        <h3 className="wz-sp-title">我们随时为您提供帮助</h3>
+        <p className="wz-sp-text">您可以在控制台中提交工单，也可以直接给我们发邮件。我们会认真阅读每一条请求，并通过邮件回复您。</p>
+
+        <div className="wz-sp-actions">
+          <a className="wz-sp-btn wz-sp-btn-primary" href="/zh/help/support-tickets">提交工单</a>
+          <a className="wz-sp-btn wz-sp-btn-quiet" href="mailto:support@webza.ai">发送邮件</a>
         </div>
+      </div>
 
-        <b>在 X 上关注 Webza</b>
-        <span>新闻与产品更新</span>
-      </a>
+      <div className="wz-sp-list">
+        <a className="wz-sp-row" href="/zh/help/prompting-tips">
+          <Icon icon="lightbulb" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="https://webza.ai">
-        <div className="wz-comm-icon">
-          <Icon icon="arrow-up-right-from-square" size={18} />
-        </div>
+          <div>
+            <b>提示词技巧</b>
+            <span>写出更清晰的提示词，获得更好的结果。</span>
+          </div>
 
-        <b>打开 Webza</b>
-        <span>在 webza.ai 开始创建</span>
-      </a>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-      <a className="wz-comm wz-comm-iconed" href="/zh/changelog">
-        <div className="wz-comm-icon">
-          <Icon icon="clock-rotate-left" size={18} />
-        </div>
+        <a className="wz-sp-row" href="/zh/changelog">
+          <Icon icon="clock-rotate-left" size={16} />
 
-        <b>更新日志</b>
-        <span>查看 Webza 的新功能</span>
-      </a>
+          <div>
+            <b>更新日志</b>
+            <span>最新功能与改进。</span>
+          </div>
 
-      <a className="wz-comm wz-comm-iconed" href="/zh/help/support-tickets">
-        <div className="wz-comm-icon">
-          <Icon icon="life-ring" size={18} />
-        </div>
+          <Icon icon="arrow-right" size={14} />
+        </a>
 
-        <b>获取支持</b>
-        <span>提交支持工单</span>
-      </a>
+        <a className="wz-sp-row" href="https://x.com/webzaai">
+          <Icon icon="x-twitter" iconType="brands" size={16} />
 
-      <a className="wz-comm wz-comm-iconed" href="/zh/change-or-cancel-your-subscription">
-        <div className="wz-comm-icon">
-          <Icon icon="arrows-rotate" size={18} />
-        </div>
+          <div>
+            <b>X</b>
+            <span>产品动态与公告。</span>
+          </div>
 
-        <b>更改或取消</b>
-        <span>管理您的订阅</span>
-      </a>
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+
+        <a className="wz-sp-row" href="https://linkedin.com/company/webzaai">
+          <Icon icon="linkedin" iconType="brands" size={16} />
+
+          <div>
+            <b>LinkedIn</b>
+            <span>来自 Webza 团队的最新消息。</span>
+          </div>
+
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+      </div>
     </div>
   </div>
 </div>
