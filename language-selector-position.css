@@ -22,3 +22,38 @@
     margin-left: 10px !important;
   }
 }
+
+/* Tema seçiciyi Webza butonuyla aynı yükseklikte çerçeveli bir kutuya al */
+html body [data-component-name="theme-toggle"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 2px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 6px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(10, 10, 10, 0.14) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 18px -12px rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+html body [data-component-name="theme-toggle"]:hover {
+  border-color: rgba(10, 10, 10, 0.28) !important;
+}
+
+html.dark body [data-component-name="theme-toggle"] {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  background-color: #0a0a0a !important;
+  box-shadow: 0 6px 20px -12px rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark body [data-component-name="theme-toggle"]:hover {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+html body [data-component-name="theme-toggle"] svg {
+  width: 18px !important;
+  height: 18px !important;
+}
