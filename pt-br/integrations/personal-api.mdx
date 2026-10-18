@@ -1,0 +1,59 @@
+---
+title: "API Pessoal"
+sidebarTitle: "API Pessoal"
+description: "API REST somente leitura para acessar sua conta, projetos, créditos e faturamento da Webza programaticamente."
+---
+
+Os planos Plus e Premium incluem acesso à API. A API Pessoal é uma API REST somente leitura que permite acessar os dados da sua conta Webza programaticamente. Você não pode criar projetos, disparar builds ou alterar faturamento pela API.
+
+## Criar uma chave de API
+
+Abra a página **API Keys** na barra lateral.
+
+<Steps>
+  <Step title="Gerar uma chave">
+    Clique para criar uma nova chave. Cada chave é mostrada apenas uma vez na criação, então copie-a imediatamente e guarde-a com segurança.
+  </Step>
+  <Step title="Definir expiração (opcional)">
+    Escolha uma expiração de 30, 90 ou 365 dias, ou deixe sem expiração.
+  </Step>
+  <Step title="Revogar quando necessário">
+    Você pode revogar qualquer chave a qualquer momento. Você pode ter até 10 chaves por conta.
+  </Step>
+</Steps>
+
+<Warning>
+  Mantenha suas chaves em segredo. Elas concedem acesso aos dados da sua conta até serem revogadas ou expirarem.
+</Warning>
+
+## Autenticar
+
+Envie sua chave como um token Bearer no cabeçalho `Authorization`:
+
+```bash
+curl -H "Authorization: Bearer SUA_CHAVE_DE_API" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirmar a URL base exata da API Pessoal. */}
+
+## Endpoints e documentação
+
+A API expõe recursos sob `/api/v1` para sua conta, créditos, assinatura, projetos, notificações e faturas.
+
+Abra a página **API Docs** na barra lateral para ver cada endpoint. A documentação inclui um testador interativo e amostras copiáveis em curl, JavaScript, PHP e Python.
+
+{/* TODO: confirmar caminhos exatos dos endpoints; direcione usuários para a Documentação da API para detalhes autoritativos. */}
+
+## Separado: chaves de provedor de IA
+
+Suas próprias chaves de provedor de IA são gerenciadas separadamente em **Configurações → AI Settings** (`/settings`). Elas não têm relação com a API Pessoal.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/pt-br/integrations/github">
+    Envie código-fonte gerado automaticamente para um repositório privado do GitHub.
+  </Card>
+
+  <Card title="Banco de dados Supabase" icon="database" href="/pt-br/integrations/supabase">
+    Anexe um banco de dados Postgres aos seus apps gerados.
+  </Card>
+</CardGroup>

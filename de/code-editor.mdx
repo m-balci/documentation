@@ -1,0 +1,68 @@
+---
+title: "Code-Editor"
+description: "So zeigen, durchsuchen und bearbeiten Sie Projektdateien im Webza Monaco Code-Editor, einschließlich schreibgeschützter Systemdateien und wichtiger Warnungen."
+---
+
+Der Code-Editor ist ein integrierter Monaco-Editor, mit dem Sie Projektdateien direkt anzeigen und bearbeiten können. Er bietet Syntaxhervorhebung, Suchen und Ersetzen, Speichern auf Anfrage und einen Indikator für ungespeicherte Änderungen, damit Sie immer wissen, was noch aussteht.
+
+## Unterstützte Sprachen
+
+Der Editor hebt die Syntax für die gängigsten Web-Dateitypen hervor:
+
+- JavaScript und TypeScript (`.js`, `.ts`, `.tsx`)
+- CSS und HTML
+- JSON und Markdown
+
+## Suchen und Ersetzen
+
+Drücken Sie <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd>, um das Suchfeld im Editor zu öffnen. Sie können die aktuelle Datei durchsuchen und Treffer einzeln oder alle auf einmal ersetzen.
+
+## Änderungen speichern
+
+Drücken Sie <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd>, um die aktuelle Datei zu speichern. Ein Punkt oder ein Indikator für ungespeicherte Änderungen erscheint neben dem Dateinamen, bis Sie speichern. Die Live-Vorschau aktualisiert sich nach dem Speichern.
+
+## Schreibgeschützte Dateien
+
+Eine kleine Anzahl von Systemdateien ist schreibgeschützt. Sie werden vom Template- und Buildsystem verwaltet, und eine schlechte Bearbeitung könnte das Projekt unfähig machen, neu zu bauen. Wenn Sie eine dieser Dateien auswählen, zeigt der Editor ein **Schreibgeschützt**-Schloss-Badge und blendet die **Speichern**-Schaltfläche aus.
+
+<AccordionGroup>
+  <Accordion title="Schreibgeschützte Dateien auf Root-Ebene">
+    `index.html`, `package.json`, `package-lock.json`, `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`, `components.json`, `tailwind.config.ts`, `tailwind.config.js`, `postcss.config.js`, `postcss.config.cjs`
+  </Accordion>
+
+  <Accordion title="Schreibgeschützte Quelldateien">
+    `src/main.tsx`, `src/index.css`, `src/vite-env.d.ts`
+  </Accordion>
+
+  <Accordion title="Schreibgeschützte Systemdateien">
+    `memory.json`, `design-intelligence.json`, `KNOWLEDGE.md`, `template.json`
+  </Accordion>
+</AccordionGroup>
+
+Es gibt keine Einstellung, um diese Dateien zu entsperren. `index.html` ist nur die Hülle, die die App lädt. Jede sichtbare Seite, jeder Header, jede Fußzeile und jeder Link befindet sich unter `src/`, und alles dort ist bearbeitbar, abgesehen von `main.tsx`, `index.css` und `vite-env.d.ts`.
+
+## Analytics- und Tracking-Snippets
+
+Wenn Sie Google Tag Manager, ein Google-Tag oder ein Meta Pixel hinzufügen müssen, verwenden Sie stattdessen die Karte **Analyse** in **Einstellungen → Allgemein**. Siehe [Einstellungen](/de/settings).
+
+## Wichtige Warnungen
+
+<Warning>
+  Manuelle Bearbeitungen, die Sie innerhalb des Revisionsverlaufs vornehmen (nach einem Rückgängig), werden von der nächsten Rückgängig-, Wiederholen- oder Wiederherstellen-Aktion verworfen. Siehe [Vorschau](/de/preview) für Details zum Revisionsverlauf.
+</Warning>
+
+<Info>
+  Generierte KI-Bilder werden in `public/images/generated/` gespeichert. Sie können sie in Ihrem Code referenzieren, aber verschieben oder umbenennen Sie sie nicht außerhalb des Chats, sonst verliert die KI möglicherweise den Überblick über sie.
+</Info>
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Editor" icon="table-columns" href="/de/editor">
+    Übersicht über das vollständige Projekteditor-Layout und die Toolbar.
+  </Card>
+
+  <Card title="Vorschau" icon="eye" href="/de/preview">
+    Erfahren Sie, wie die Live-Vorschau und der Revisionsverlauf funktionieren.
+  </Card>
+</CardGroup>

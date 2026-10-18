@@ -1,0 +1,75 @@
+---
+title: "Changelog"
+sidebarTitle: "Changelog"
+description: "Novos recursos, melhorias e correções no Webza."
+mode: "center"
+---
+
+{/* TODO: Entries are grouped by month. Confirm the exact release dates for the late August and early September updates. */}
+
+<Update label="Outubro de 2026">
+  ### Novo
+
+  - **Geração de imagens por IA**: A IA pode criar imagens personalizadas para projetos de site. Se seu plano incluir isso, uma cota mensal de imagens se aplica. Consulte [Chat do projeto](/pt-br/project-chat).
+  - **Compreensão de imagens**: Quando o modelo selecionado suporta imagens, a IA agora consegue ver as imagens que você anexa a um prompt ou mensagem no chat.
+  - **Corrigir grátis**: Execuções que falham por causa da IA ou da plataforma não são cobradas. Você pode tentar novamente uma execução falha uma vez de graça, e a página **Uso** marca essas execuções como não cobradas. Consulte [Créditos e uso](/pt-br/credits-and-usage).
+  - **Mais formas de conectar o Supabase**: Conecte-se fazendo login com o Supabase ou com um token de acesso. Conexões manuais não precisam mais da sua chave secreta. Consulte [Supabase](/pt-br/integrations/supabase).
+
+  ### Melhorado
+
+  - Templates de site agora incluem a biblioteca de animação Motion, então a IA pode construir animações mais ricas como entradas escalonadas, parallax e contadores animados. Consulte [Templates](/pt-br/templates).
+
+  ### Corrigido
+
+  - Temas WordPress agora aplicam as cores e tokens do design system selecionado de forma confiável. Design systems escuros (Carbon, Lumen e Noir) agora iniciam no modo escuro.
+  - Temas Shopify agora recebem as cores do design system quando o template é escolhido automaticamente, e arquivos iniciais não modificados não mostram mais falsos erros de validação.
+</Update>
+
+<Update label="Setembro de 2026">
+  ### Novo
+
+  - **Modelos de IA mais recentes**: As listas de modelos agora incluem os modelos de IA mais recentes. Se um modelo que você salvou for descontinuado, o Webza o substitui automaticamente pelo modelo atual mais próximo da mesma classe.
+  - **Anexar arquivos ao primeiro prompt**: Se seu plano incluir armazenamento de arquivos, anexe até 10 arquivos ao criar um projeto.
+  - **Orientação de design para a IA**: Enquanto constrói, a IA agora segue playbooks focados sobre composição de página, layout de seções, motion, redesigns seguros e precisão de texto.
+  - **Motion consistente**: Cada [design system](/pt-br/design-systems) agora define um estilo de motion, então o tempo e o easing das animações permanecem consistentes em todo o site.
+
+  ### Melhorado
+
+  - Seu primeiro prompt agora pode ter até 10.000 caracteres, o mesmo das mensagens de acompanhamento.
+  - Verificações de qualidade agora detectam links mortos "#" em sites gerados.
+  - Carregamentos de página mais rápidos em todo o dashboard.
+  - Melhor suporte a leitores de tela para toggles, filtros e botões de ícone apenas.
+  - Contas sem créditos restantes agora veem um aviso de que não podem construir.
+
+  ### Corrigido
+
+  - A IA não vincula mais seus arquivos enviados com endereços errados, o que impedia as imagens de carregarem.
+  - Alterações em sites publicados em domínios personalizados agora chegam aos visitantes imediatamente.
+  - Endereços que terminam em barra agora abrem a página correta em sites publicados e de pré-visualização.
+  - O painel Design não reporta mais um novo estilo como aplicado quando o rebuild por trás dele falhou. A mesma correção se aplica a Desfazer, Refazer e restaurar uma revisão.
+  - Cartões de pergunta no chat não distorcem mais a página ou quebram a rolagem.
+  - A aba **Código** não mostra mais um erro "Failed to load files" em um projeto que nunca foi construído.
+</Update>
+
+<Update label="Agosto de 2026">
+  ### Novo
+
+  - **Perguntas esclarecedoras**: A IA pode fazer perguntas durante um build. Responda com opções tocáveis diretamente no chat. Consulte [Chat do projeto](/pt-br/project-chat).
+  - **Tours guiados**: Tours passo a passo do dashboard, criação de projeto, editor, cobrança, gerenciador de arquivos, bancos de dados, GitHub e Shopify. Reproduza-os a qualquer momento com **Reiniciar tour**.
+  - **Preferências de cookies**: Altere suas escolhas de consentimento de cookies a qualquer momento pelo link **Preferências de cookies** no rodapé.
+
+  ### Melhorado
+
+  - Carregamentos de página mais rápidos e uma ampla revisão de acessibilidade: leitores de tela agora anunciam erros de formulário, estados de carregamento, resultados de upload e resultados de busca.
+  - A IA agora lida melhor com conversas longas e não diz mais que está resumindo em cada mensagem.
+
+  ### Corrigido
+
+  - O modo escuro agora segue o alternador de tema do Webza em vez da configuração do sistema operacional.
+  - O painel **Histórico de revisões**, incluindo seus botões de restauração, não fica mais cortado em navegadores mobile.
+  - O construtor não reporta mais "Build complete" quando a IA não alterou nenhum arquivo.
+  - Mensagens do chat não desaparecem mais quando várias atualizações chegam ao mesmo tempo.
+  - Criar um repositório GitHub agora mostra o motivo real quando falha.
+  - Falhas de build agora mostram uma única mensagem clara.
+  - Uma rejeição de salvamento de arquivo no editor de código não reporta mais sucesso e perde sua edição.
+</Update>

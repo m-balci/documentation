@@ -1,0 +1,108 @@
+---
+title: "Vorschau"
+description: "Verwenden Sie das Vorschau-Panel, um Ihr Projekt live anzusehen, Elemente zu inspizieren, die Viewport-Größe zu ändern, Designs neu zu gestalten und den Revisionsverlauf zu verwalten."
+---
+
+Das Vorschau-Panel zeigt eine Live-Ansicht Ihres Projekts. Sie können die Viewport-Größe ändern, Elemente inspizieren, das Design neu gestalten und den Revisionsverlauf durchlaufen. Die Vorschau lädt sich automatisch neu, wenn ein Build abgeschlossen ist, sodass Sie keine manuelle Aktualisierung benötigen.
+
+## Viewport-Steuerung
+
+Verwenden Sie die Viewport-Schaltflächen, um zu testen, wie Ihr Projekt in verschiedenen Größen aussieht.
+
+| Schaltfläche | Was sie tut |
+| --- | --- |
+| **Telefon** | Verkleinert die Vorschau auf eine mobile Breite. |
+| **Tablet** | Setzt eine mittlere Breite zwischen Telefon und Desktop. |
+| **Volle Breite** | Dehnt die Vorschau auf die volle Panel-Breite aus. |
+
+## Inspizieren-Modus
+
+Klicken Sie auf **Inspizieren**, um den Inspizieren-Modus zu aktivieren. Wenn der Inspizieren-Modus aktiviert ist, öffnet ein Klick auf ein beliebiges Element in der Vorschau die Element-Inspektor-Toolbar.
+
+Die Toolbar-Aktionen hängen vom ausgewählten Element ab:
+
+- **Text bearbeiten** (nur Textelemente): Bearbeiten Sie den Elementtext inline. Die Änderung wird in der ausstehenden Änderungen-Leiste eingereiht.
+- **Bild** (nur `<img>`-Elemente): Tauschen Sie die Bildquelle aus, indem Sie eine Datei hochladen oder eine Bild-URL einfügen. Die Änderung wird in der ausstehenden Änderungen-Leiste eingereiht.
+- **Stil**: Passen Sie Inline-Stile wie Farben, Abstände und Größen an. Stilbearbeitungen werden eigenständig ohne KI angewendet.
+- **KI-Bearbeitung**: Senden Sie das Element mit einer Anweisung an die KI. Die Änderung wird in der ausstehenden Änderungen-Leiste eingereiht.
+- **Schließen**: Schließt den Inspektor.
+
+### Ausstehende Änderungen-Leiste
+
+Wenn Sie im Inspektor **Text bearbeiten**-, **Bild**- oder **KI-Bearbeitung**-Änderungen vornehmen, erscheint am unteren Rand der Vorschau eine ausstehende Änderungen-Leiste. Sie zeigt die Anzahl der eingereihten Änderungen und zwei Aktionen:
+
+- **Alle speichern**: Sendet den Stapel an die KI, führt einen Build aus und verbraucht Credits.
+- **Alle verwerfen**: Entfernt alle eingereihten Änderungen.
+
+<Warning>
+  Nichts wird angewendet, bis Sie auf **Alle speichern** klicken. Wenn Sie wegnavigieren, bevor Sie speichern, verlieren Sie die eingereihten Änderungen. Bündeln Sie Ihre Anpassungen und speichern Sie einmal, um zusätzlichen Credit-Verbrauch zu vermeiden.
+</Warning>
+
+<Note>
+  **Stil**-Bearbeitungen ändern die Quelle direkt ohne KI und werden nicht in der ausstehenden Änderungen-Leiste eingereiht.
+</Note>
+
+## Design-Modus
+
+Klicken Sie auf **Design**, um eine bereits erstellte Website neu zu gestalten.
+
+1. Wählen Sie ein Designsystem aus.
+2. Wählen Sie optional eine Akzent-Farbpalette aus.
+3. Klicken Sie auf **KI fragen**, um das neue Theme anzuwenden.
+
+Dies löst einen Rebuild aus. Die Vorschau lädt sich mit dem realen Design neu, und die KI führt einen Korrekturdurchlauf für hartcodierte Farben durch. Es verbraucht Build-Credits wie eine Chat-Anfrage. Sie können keine Designänderung anwenden, während bereits ein Build läuft.
+
+<Info>
+  Der Design-Modus ist nur für Websites verfügbar. Er ist ausgeblendet für WordPress- und Shopify-Theme-Projekte, die das bei der Erstellung gewählte Designsystem beibehalten.
+</Info>
+
+## Rückgängig und Wiederherstellen
+
+Verwenden Sie die Schaltflächen **Rückgängig** und **Wiederholen**, um den Projektverlauf durchzugehen. Sie können auch diese Tastenkürzel verwenden:
+
+| Aktion | Tastenkürzel |
+| --- | --- |
+| Rückgängig | Ctrl/Cmd + Z |
+| Wiederherstellen | Ctrl/Cmd + Shift + Z, oder Ctrl + Y |
+
+Jedes Rückgängig macht genau eine Änderung rückgängig: eine KI-Chat-Anfrage, eine Stil-Bearbeitung oder eine Design-Neugestaltung. Nach einem Rückgängig wird das Projekt neu aufgebaut. Ihre neueste Arbeit wird vor einem Rückgängig gesichert, sodass Wiederherstellen sie zurückbringen kann. Jedes Rückgängig und Wiederherstellen wird im Chat protokolliert, damit die KI informiert bleibt.
+
+<Warning>
+  Rückgängig und Wiederherstellen sind während eines Builds nicht verfügbar. Ein brandneues Projekt hat nichts rückgängig zu machen, bis zur zweiten Änderung.
+</Warning>
+
+<Warning>
+  Manuelle Code-Editor-Bearbeitungen, die Sie innerhalb des Verlaufs vornehmen (nach einem Rückgängig), werden nicht erfasst. Die nächste Rückgängig-, Wiederholen- oder Wiederherstellen-Aktion verwirft sie ohne Warnung. Kehren Sie zuerst zum neuesten Zustand zurück, oder lassen Sie die KI die Änderung vornehmen.
+</Warning>
+
+<Info>
+  Bei Shopify-Projekten sind die Schaltflächen **Rückgängig**, **Wiederholen** und **Revisionsverlauf** ausgeblendet. Nur **Theme herunterladen (.zip)** erscheint. Tastenkürzel funktionieren weiterhin für Shopify-Projekte.
+</Info>
+
+## Revisionsverlauf
+
+Klicken Sie auf das **Uhr-Symbol**, um den Revisionsverlauf zu öffnen. Vor jeder KI-Anfrage, jeder Style-Bearbeitung und jeder Designänderung wird ein Checkpoint erstellt. Webza behält die 20 neuesten Checkpoints.
+
+Die Liste zeigt Beschriftungen, Zeitstempel und Dateianzahlen. Die aktuelle Version hat ein **Aktuell**-Badge. Klicken Sie auf **Wiederherstellen** bei einer beliebigen Version, um zu ihr zu springen.
+
+Das Wiederherstellen sichert zunächst Ihren aktuellen Zustand, sodass das Wiederherstellen umkehrbar ist. Jedes Wiederherstellen löst einen Rebuild aus. Der Revisionsverlauf ist nur für Websites und WordPress-Themes verfügbar.
+
+<Note>
+  Veröffentlichte Snapshots sind vom Revisionsverlauf getrennt. Siehe die Seite [Veröffentlichen](/de/publish) für Details.
+</Note>
+
+## WordPress Playground-Vorschau
+
+WordPress-Theme-Projekte werden in der WordPress Playground angezeigt. Playground hat seine eigene Neuladesteuerung, sodass sich das automatische Vorschau-Neuladeverhalten dort anders verhält.
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Projekt-Chat" icon="message" href="/de/project-chat">
+    Senden Sie Anweisungen an die KI und verwalten Sie den Chat-Verlauf.
+  </Card>
+
+  <Card title="Veröffentlichen" icon="rocket" href="/de/publish">
+    Veröffentlichen Sie Ihr Projekt und verwalten Sie live Snapshots.
+  </Card>
+</CardGroup>

@@ -1,0 +1,108 @@
+---
+title: "Preview"
+description: "Use the preview panel to view your project live, inspect elements, resize the viewport, re-theme designs, and manage revision history."
+---
+
+The preview panel shows a live view of your project. You can resize the viewport, inspect elements, re-theme the design, and step through revision history. The preview reloads itself automatically when a build finishes, so you do not need a manual refresh button.
+
+## Viewport controls
+
+Use the viewport buttons to test how your project looks at different sizes.
+
+| Button | What it does |
+| --- | --- |
+| **Phone** | Shrinks the preview to a mobile width. |
+| **Tablet** | Sets a medium width between phone and desktop. |
+| **Full width** | Expands the preview to the full panel width. |
+
+## Inspect mode
+
+Click **Inspect** to toggle inspect mode. When inspect mode is on, clicking any element in the preview opens the element inspector toolbar.
+
+The toolbar actions depend on the element you selected:
+
+- **Edit Text** (text elements only): edit the element text inline. The change queues in the pending changes bar.
+- **Image** (`<img>` elements only): swap the image source by uploading a file or pasting an image URL. The change queues in the pending changes bar.
+- **Style**: tweak inline styles such as colors, spacing, and sizing. Style edits apply on their own without AI.
+- **AI Edit**: send the element to the AI with an instruction. The change queues in the pending changes bar.
+- **Close**: close the inspector.
+
+### Pending changes bar
+
+When you make **Edit Text**, **Image**, or **AI Edit** changes in the inspector, a pending changes bar appears at the bottom of the preview. It shows the number of queued changes and two actions:
+
+- **Save All**: sends the batch to the AI, runs a build, and spends credits.
+- **Discard All**: removes all queued changes.
+
+<Warning>
+  Nothing applies until you click **Save All**. If you navigate away before saving, you lose the queued changes. Batch your tweaks and save once to avoid extra credit usage.
+</Warning>
+
+<Note>
+  **Style** edits change the source directly without AI and do not queue in the pending changes bar.
+</Note>
+
+## Design mode
+
+Click **Design** to re-theme an already-built site.
+
+1. Pick a design system.
+2. Optionally pick an accent palette.
+3. Click **Ask AI** to apply the new theme.
+
+This triggers a rebuild. The preview reloads with the real design, and the AI runs a fixup pass for hardcoded colors. It consumes build credits like a chat request. You cannot apply a design change while another build is already running.
+
+<Info>
+  Design mode is available for websites only. It is hidden for WordPress and Shopify theme projects, which keep the design system chosen at creation.
+</Info>
+
+## Undo and Redo
+
+Use the **Undo** and **Redo** buttons to step through your project history. You can also use these keyboard shortcuts:
+
+| Action | Shortcut |
+| --- | --- |
+| Undo | Ctrl/Cmd + Z |
+| Redo | Ctrl/Cmd + Shift + Z, or Ctrl + Y |
+
+Each undo reverts exactly one change: an AI chat request, a Style edit, or a design re-theme. After an undo, the project rebuilds. Your newest work is checkpointed before an undo so redo can bring it back. Each undo and redo is recorded in chat so the AI stays aware.
+
+<Warning>
+  Undo and redo are unavailable while a build runs. A brand-new project has nothing to undo until the second change.
+</Warning>
+
+<Warning>
+  Manual code editor edits made while you are inside the history (after undoing) are not captured. The next Undo, Redo, or Restore discards them without warning. Return to the newest state first, or let the AI make the change.
+</Warning>
+
+<Info>
+  For Shopify projects, the **Undo**, **Redo**, and **Revision History** buttons are hidden. Only **Download theme (.zip)** appears. Keyboard shortcuts still work for Shopify projects.
+</Info>
+
+## Revision history
+
+Click the **clock icon** to open revision history. A checkpoint is captured before every AI request, Style edit, and design change. Webza keeps the 20 most recent checkpoints.
+
+The list shows labels, timestamps, and file counts. The current version has a **Current** badge. Click **Restore** on any version to jump to it.
+
+Restoring first checkpoints your current state so the restore is reversible. Each restore triggers a rebuild. Revision history is available for websites and WordPress themes only.
+
+<Note>
+  Publish snapshots are separate from revision history. See the [Publish](/publish) page for details.
+</Note>
+
+## WordPress Playground preview
+
+WordPress theme projects preview inside WordPress Playground. Playground has its own reload control, so the automatic preview reload behavior works differently there.
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Project Chat" icon="message" href="/project-chat">
+    Send instructions to the AI and manage chat history.
+  </Card>
+
+  <Card title="Publish" icon="rocket" href="/publish">
+    Publish your project and manage live snapshots.
+  </Card>
+</CardGroup>

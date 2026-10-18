@@ -1,0 +1,142 @@
+---
+title: "Chat del progetto"
+description: "Usa la chat del progetto per dire all'AI cosa costruire, modificare o correggere. Allega file, rispondi a domande chiarificatrici e tieni traccia dei progressi in tempo reale."
+---
+
+La chat del progetto è la tua area di lavoro principale per costruire con l'AI. Digita cosa vuoi e l'AI crea, modifica o spiega il codice per te. Puoi chiedere nuove pagine, funzionalità, cambiamenti di stile, correzioni di bug o una spiegazione di come funziona qualcosa.
+
+## Invia un messaggio
+
+Digita la tua richiesta e premi **Enter** o clicca il pulsante di invio. L'AI legge il tuo messaggio e inizia a lavorare.
+
+## Allega file
+
+Se il tuo piano include l'archiviazione file, puoi allegare file per dare all'AI contesto aggiuntivo.
+
+<Steps>
+  <Step title="Carica file">
+    Clicca il pulsante di allegato e seleziona i file dal tuo dispositivo. I file caricati appaiono nell'albero dei file del progetto.
+  </Step>
+  <Step title="Menziona file esistenti">
+    Digita `@` nella chat per autocompletare i file già presenti nel progetto.
+  </Step>
+</Steps>
+
+I file allegati vengono passati all'AI con i loro URL pubblici. L'AI può usarli come immagini, sfondi o link di download.
+
+### Allegati immagine e vision
+
+Con un modello AI dotato di visione, l'AI può vedere direttamente le immagini allegate. I formati supportati sono JPG, PNG, WebP e GIF. Puoi allegare fino a quattro immagini per messaggio. Le immagini grandi vengono ridimensionate automaticamente. L'AI vede le immagini sul messaggio a cui sono state allegate.
+
+Con i modelli solo testo, l'AI riceve solo i nomi dei file e gli URL.
+
+## Limiti dei messaggi
+
+I messaggi di chat possono essere lunghi fino a 10.000 caratteri. Se la tua richiesta è lunga, considera di dividerla in passaggi più piccoli.
+
+## Rispondi alle domande dell'AI
+
+Quando una richiesta è ambigua, l'AI pone domande chiarificatrici invece di indovinare. Una card di domanda appare in fondo alla chat con fino a cinque risposte brevi e tappabili. Alcune domande consentono selezioni multiple. Tocca di nuovo una risposta per deselezionarla. Le domande aperte mostrano un campo di testo.
+
+Una casella di testo libera in fondo ti permette di aggiungere dettagli extra prima di inviare. Le tue risposte vengono pubblicate come un normale messaggio di chat e avviano la prossima esecuzione AI. Puoi anche chiudere la card con il pulsante **×** e digitare una risposta normale. Le domande restano leggibili nella trascrizione.
+
+<Info>
+  Fare una domanda termina quella esecuzione. La card attende la tua risposta, quindi nessun credito viene speso mentre è aperta.
+</Info>
+
+## Tieni traccia dei progressi della build
+
+Ogni esecuzione AI passa attraverso fasi mostrate nella chat:
+
+| Fase | Cosa succede |
+| --- | --- |
+| Thinking | L'AI analizza la tua richiesta e pianifica le modifiche. |
+| Actions | I file vengono creati o modificati. |
+| Messages | L'AI spiega cosa ha fatto e perché. |
+| Complete | L'esecuzione termina e puoi visualizzare il risultato in anteprima. |
+
+## Indicatore dei crediti
+
+L'intestazione della chat mostra il tuo stato crediti attuale:
+
+- **Colore default:** rimane più del 20% dei tuoi crediti.
+- **Giallo:** rimane tra il 5% e il 20%, con un link **Acquista crediti**.
+- **Rosso:** rimane il 5% o meno.
+
+Sui piani illimitati mostra **Crediti illimitati**. Quando stai costruendo con la tua chiave API mostra **Usando la tua chiave API**. Per maggiori dettagli, vedi [Crediti e utilizzo](/it/credits-and-usage).
+
+## Correzione gratuita
+
+Le esecuzioni che falliscono a causa dell'agente AI o della piattaforma non vengono addebitate. Questo include esecuzioni in cui l'agente si è fermato dopo errori ripetuti, il controllo finale della build è fallito, o i token sono stati spesi senza produrre nulla. Le esecuzioni che falliscono perché hai esaurito i crediti, o quelle che annulli, vengono addebitate.
+
+Dopo un'esecuzione fallita, un pulsante **Correggi gratis** appare sotto la chat. Cliccarlo chiede all'AI di diagnosticare e riparare il problema senza aggiungere nuove funzionalità. Anche quella esecuzione di correzione è gratuita. Il pulsante invia un'istruzione fissa. Il testo nella casella di chat non è incluso.
+
+<Warning>
+  Ogni esecuzione fallita può essere corretta gratuitamente una volta, entro 24 ore, e solo mentre è l'esecuzione più recente.
+</Warning>
+
+Le esecuzioni non addebitate appaiono su **Fatturazione → Utilizzo** marcate come **Non addebitato**. C'è un limite giornaliero di esecuzioni non addebitate per utente.
+
+{/* TODO: confirm Webza's daily limit of uncharged runs (default is 5 per 24h). */}
+
+## Immagini generate dall'AI
+
+Se il tuo piano include immagini AI, l'AI può creare immagini personalizzate per i progetti sito web quando le foto stock non si adattano o quando chiedi qualcosa di specifico. Ad esempio, puoi dire, "generate a custom hero image of a lighthouse at dusk."
+
+Le immagini generate vengono salvate in `public/images/generated/` e appaiono nell'albero dei file. Ogni immagine richiede un po' più di tempo da produrre rispetto a una modifica di testo.
+
+La tua quota mensile è mostrata sulla card **Piano attuale** nella pagina **Utilizzo**. Quando la esaurisci, l'AI usa foto stock fino al mese successivo.
+
+{/* TODO: confirm which Webza plans include AI images and how many per month. */}
+
+## Istruzioni personalizzate
+
+Aggiungi istruzioni che l'AI riceve a ogni build. Vai su **Impostazioni → Conoscenza** del progetto e inserisci fino a 500 caratteri. Questo è utile per regole su tono, branding o stile di codifica. Vedi [Impostazioni](/it/settings) per maggiori informazioni.
+
+## Consigli per risultati migliori
+
+<AccordionGroup>
+  <Accordion title="Sii descrittivo">
+    Descrivi in dettaglio cosa vuoi. Includi layout, colori, comportamento e contenuto. Più contesto dai, più il primo risultato si avvicinerà a ciò che desideri.
+  </Accordion>
+
+  <Accordion title="Itera per passaggi">
+    Inizia con una versione di base, poi aggiungi funzionalità una alla volta. Le richieste grandi e tutte insieme sono più difficili da azzeccare.
+  </Accordion>
+
+  <Accordion title="Fai riferimento a esempi">
+    Linka o descrivi siti web e design che ti piacciono. L'AI può abbinare stili, layout e atmosfere più accuratamente quando ha un riferimento.
+  </Accordion>
+
+  <Accordion title="Chiedi spiegazioni">
+    Se vuoi imparare come funziona qualcosa, chiedi all'AI di spiegare il codice o l'approccio. Questo ti aiuta a fare le tue modifiche in seguito.
+  </Accordion>
+
+  <Accordion title="Usa i template">
+    Partire da un template dà all'AI una struttura funzionante. Puoi poi personalizzarlo invece di costruire da zero.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=project-chat" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Provalo ora</span>
+    <span className="wz-ad-title">Hai un'idea? Scrivila.</span>
+    <span className="wz-ad-text">Avvia un progetto e dai a Webza il tuo primo prompt. L'AI chiede ciò che le serve e costruisce il resto.</span>
+  </span>
+
+  <span className="wz-ad-btn">Avvia un progetto <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Pagine correlate
+
+<CardGroup cols={2}>
+  <Card title="Editor" icon="pen" href="/it/editor">
+    Modifica codice, gestisci file e rivedi le modifiche AI affiancate alla chat.
+  </Card>
+
+  <Card title="Preview" icon="eye" href="/it/preview">
+    Vedi il tuo sito live e testa le modifiche prima di pubblicare.
+  </Card>
+</CardGroup>

@@ -1,0 +1,145 @@
+---
+title: "Verbinden Sie eine eigene Domain mit Ihrer Webza-Website"
+sidebarTitle: "Custom Domains"
+description: "Verbinden Sie eine Domain, die Sie bereits besitzen, mit Ihrem Webza-Projekt. Fügen Sie sie in den Projekteinstellungen hinzu, verifizieren Sie sie mit DNS-Einträgen und servieren Sie Ihre Seite unter Ihrer eigenen Adresse."
+---
+
+Eine **Eigene Domain** ermöglicht es Besuchern, Ihre Webza-Website unter Ihrer eigenen Adresse zu erreichen, wie zum Beispiel `goldencrust.com`, anstelle der Standard-`webza.ai`-Subdomain (zum Beispiel `golden-crust.webza.ai`). Webza verkauft keine Domains: Sie kaufen eine Domain bei einem beliebigen Domain-Provider (Registrar) und verbinden sie mit Ihrem Projekt. Diese Seite führt Sie durch das Verbinden, Verifizieren und die Fehlerbehebung Ihrer Domain.
+
+Eine eigene Domain verbessert die:
+
+- **Markenidentität**: Ihre Seite wirkt professioneller und vertrauenswürdiger.
+- **Suchsichtbarkeit**: Ihr Inhalt baut Autorität unter einer Domain auf, die Sie kontrollieren.
+- **Merksamkeit**: Eine kurze, markenbezogene Adresse ist einfacher zu teilen und zu merken.
+
+<Info>
+  Eigene Domains sind in den **Plus**- und **Premium**-Tarifen verfügbar. Sie sind im kostenlosen Tarif nicht verfügbar. Siehe [Abonnementpläne](/de/subscription-plans) für den Tarifvergleich.
+</Info>
+
+## Bevor Sie beginnen
+
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+- **Eine Domain, die Ihnen gehört.** Kaufen Sie eine bei einem Domain-Provider wie GoDaddy, Namecheap oder Cloudflare, falls Sie noch keine haben.
+- **Zugriff auf die DNS-Einstellungen Ihrer Domain.** Sie fügen DNS-Einträge bei Ihrem Domain-Provider hinzu, um den Besitz zu verifizieren. Wenn jemand anderes Ihre Domain verwaltet (zum Beispiel ein IT-Team oder eine Agentur), bitten Sie sie um Zugriff oder senden Sie ihnen die Einträge.
+- **Ein veröffentlichtes Projekt.** Sie können eine Domain jederzeit verbinden, aber die Domain zeigt Ihre Website erst, nachdem Sie [Ihr Projekt veröffentlicht haben](/de/publish).
+
+## Verbinden Sie Ihre Domain
+
+<Steps>
+  <Step title="Öffnen Sie die Domain-Einstellungen Ihres Projekts">
+    Öffnen Sie das Projekt, das Sie verbinden möchten, und gehen Sie dann zu **Einstellungen → Domains → Eigene Domain**.
+  </Step>
+  <Step title="Geben Sie Ihre Domain ein">
+    Geben Sie die Domain ein, die Sie verwenden möchten, zum Beispiel `goldencrust.com`, und fahren Sie fort. Geben Sie nur den Domain-Namen ein, ohne `https://` oder einen abschließenden Schrägstrich.
+  </Step>
+  <Step title="Prüfen Sie den Verifizierungsbildschirm">
+    Webza zeigt einen Verifizierungsbildschirm mit den DNS-Einträgen, die Sie hinzufügen müssen. Lassen Sie diesen Bildschirm geöffnet: Sie kopieren jeden Eintrag von hier zu Ihrem Domain-Provider im nächsten Schritt.
+  </Step>
+  <Step title="Fügen Sie die DNS-Einträge bei Ihrem Domain-Provider hinzu">
+    Öffnen Sie in einem neuen Tab Ihren Domain-Provider und öffnen Sie die DNS-Einstellungen (manchmal **DNS management**, **DNS zone** oder **Advanced DNS** genannt) für Ihre Domain. Für jeden Eintrag auf dem Webza-Verifizierungsbildschirm:
+
+    1. Wählen Sie **Add record**.
+    2. Wählen Sie denselben **type**, der in Webza angezeigt wird.
+    3. Kopieren Sie den **host** (auch **name** genannt) und den **value** (auch **points to**, **target** oder **content** genannt) genau wie angezeigt.
+    4. Speichern Sie den Eintrag.
+
+    <Tip>
+      Kopieren Sie Werte mit der Kopieren-Schaltfläche anstatt sie einzutippen. Ein einzelnes fehlendes Zeichen ist die häufigste Ursache für eine fehlgeschlagene Verifizierung.
+    </Tip>
+  </Step>
+  <Step title="Verifizieren Sie Ihre Domain">
+    Kehren Sie zu Webza zurück und starten Sie die Verifizierung auf dem Verifizierungsbildschirm. Webza prüft Ihre DNS-Einträge und bestätigt, dass Sie die Domain besitzen.
+
+    Wenn die Verifizierung erfolgreich ist, ist Ihre Domain verbunden und Ihre veröffentlichte Website beginnt, unter Ihrer eigenen Domain zu laden.
+  </Step>
+</Steps>
+
+<Note>
+  DNS-Änderungen können von wenigen Minuten bis zu 48 Stunden dauern, um sich im Internet zu verbreiten (das nennt man **DNS propagation**). Wenn die Verifizierung nicht sofort erfolgreich ist, warten Sie eine Weile und versuchen Sie es erneut. Sie müssen die Domain nicht entfernen und erneut hinzufügen.
+</Note>
+
+## Wie Host-Namen bei verschiedenen Providern funktionieren
+
+Domain-Provider bezeichnen das Host-Feld unterschiedlich. Wenn Webza einen Eintrag für Ihre Root-Domain anzeigt (zum Beispiel `goldencrust.com`), erwartet Ihr Provider möglicherweise eines der Folgenden im Host-Feld:
+
+- `@`
+- Ein leeres Feld
+- Ihren vollständigen Domain-Namen, zum Beispiel `goldencrust.com`
+
+Einige Provider fügen Ihre Domain automatisch am Ende des Hosts hinzu. Wenn der Host eines Eintrags `www` ist und Ihr Provider nach dem Speichern `www.goldencrust.com` anzeigt, ist das korrekt. Wenn es `www.goldencrust.com.goldencrust.com` anzeigt, entfernen Sie den doppelten Teil und speichern Sie erneut.
+
+## Nachdem Ihre Domain verbunden ist
+
+- **Teilen Sie Ihre neue Adresse.** Verwenden Sie Ihre eigene Domain überall: Visitenkarten, Social-Media-Profile und E-Mail-Signaturen.
+- **Lassen Sie Ihre DNS-Einträge bestehen.** Wenn Sie die hinzugefügten Einträge löschen oder ändern, zeigt Ihre Domain Ihre Website nicht mehr.
+- **Veröffentlichen Sie, um Ihre Seite zu aktualisieren.** Ihre Live-Seite ist ein Snapshot. Änderungen, die Sie im Editor vornehmen, erscheinen auf Ihrer eigenen Domain erst, nachdem Sie erneut veröffentlicht haben. Siehe [Veröffentlichen](/de/publish).
+
+## Fehlerbehebung
+
+<AccordionGroup>
+  <Accordion title="Die Verifizierung schlägt weiterhin fehl">
+    Prüfen Sie diese häufigen Ursachen bei Ihrem Domain-Provider:
+
+    - Der **type** des Eintrags stimmt genau mit dem überein, was Webza anzeigt.
+    - Der **value** wurde vollständig kopiert, ohne zusätzliche Leerzeichen oder fehlende Zeichen.
+    - Der **host** folgt dem Format Ihres Providers. Siehe [Wie Host-Namen bei verschiedenen Providern funktionieren](#wie-host-namen-bei-verschiedenen-providern-funktionieren).
+    - Sie haben den Eintrag gespeichert. Einige Provider erfordern einen separaten **Save**- oder **Apply changes**-Schritt.
+
+    Wenn alles korrekt aussieht, warten Sie auf die DNS-Propagation und verifizieren Sie erneut.
+  </Accordion>
+
+  <Accordion title="Meine Domain zeigt immer noch meine alte Website">
+    Ihr Domain-Provider hat wahrscheinlich noch Einträge von Ihrer vorherigen Website oder Ihrem vorherigen Hosting-Provider. Entfernen Sie alte Einträge für denselben Host, die woanders hinzeigen, damit nur die Einträge von Webza verbleiben. Warten Sie dann auf die DNS-Propagation.
+  </Accordion>
+
+  <Accordion title="Meine Domain zeigt eine leere Seite oder einen Fehler">
+    Stellen Sie sicher, dass Ihr Projekt veröffentlicht ist. Eine verbundene Domain zeigt Ihre Website erst, nachdem Sie [veröffentlicht](/de/publish) haben. Wenn Sie kürzlich veröffentlicht haben, warten Sie einige Minuten und laden Sie die Seite neu.
+  </Accordion>
+
+  <Accordion title="Ich verwende Cloudflare und meine Seite lädt nicht">
+    Wenn Ihr DNS in Cloudflare verwaltet wird, setzen Sie die Einträge, die Sie für Webza hinzugefügt haben, auf **DNS only** (graue Wolke) statt **Proxied** (orange Wolke), und verifizieren Sie erneut.
+  </Accordion>
+
+  <Accordion title="Ich finde die DNS-Einstellungen bei meinem Provider nicht">
+    Suchen Sie im Hilfe-Center Ihres Providers nach "manage DNS records" oder "add a DNS record". Wenn Ihre Domain Nameserver eines anderen Dienstes verwendet (zum Beispiel Cloudflare), fügen Sie die Einträge bei diesem Dienst hinzu statt beim Registrar, bei dem Sie die Domain gekauft haben.
+  </Accordion>
+</AccordionGroup>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Kann ich eine Domain über Webza kaufen?">
+    Nein. Webza verkauft keine Domains. Kaufen Sie eine Domain bei einem beliebigen Domain-Provider und verbinden Sie sie dann mit Ihrem Projekt über die Schritte auf dieser Seite.
+  </Accordion>
+
+  <Accordion title="Behalte ich meine webza.ai-Subdomain, nachdem ich eine eigene Domain verbunden habe?">
+    Ihr Projekt behält seine `webza.ai`-Subdomain. Besucher können Ihre Website auf Ihrer eigenen Domain erreichen, sobald sie verbunden ist.
+  </Accordion>
+
+  <Accordion title="Kann ich eine Domain verbinden, bevor ich mein Projekt veröffentliche?">
+    Ja. Sie können eine Domain jederzeit verbinden und verifizieren, aber sie zeigt Ihre Website erst, nachdem Sie Ihr Projekt veröffentlicht haben.
+  </Accordion>
+
+  <Accordion title="Muss ich meine Domain zu Webza transferieren?">
+    Nein. Ihre Domain bleibt bei Ihrem aktuellen Provider registriert. Sie fügen nur DNS-Einträge dort hinzu, um die Domain auf Ihre Webza-Website zu verweisen. Sie zahlen für und verlängern die Domain weiterhin bei Ihrem Provider.
+  </Accordion>
+
+  <Accordion title="Was bedeuten DNS, DNS-Einträge und Propagation?">
+    - **DNS** ist das System, das Browsern mitteilt, wo sie die Website für eine Domain finden.
+    - **DNS-Einträge** sind Einträge in den Einstellungen Ihrer Domain, die die Domain auf einen Dienst verweisen oder den Besitz beweisen.
+    - **Propagation** ist die Zeit, die DNS-Änderungen benötigen, um sich im Internet zu aktualisieren, normalerweise Minuten bis wenige Stunden und bis zu 48 Stunden.
+  </Accordion>
+</AccordionGroup>
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Veröffentlichen" icon="rocket" href="/de/publish">
+    Stellen Sie Ihre Website online und pushen Sie neue Änderungen live.
+  </Card>
+
+  <Card title="Einstellungen" icon="gear" href="/de/settings">
+    Verwalten Sie Domains und andere Projekteinstellungen.
+  </Card>
+</CardGroup>

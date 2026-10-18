@@ -1,0 +1,145 @@
+---
+title: "Conectar um domínio personalizado ao seu site da Webza"
+sidebarTitle: "Domínios personalizados"
+description: "Conecte um domínio que você já possui ao seu projeto da Webza. Adicione-o nas configurações do projeto, verifique-o com registros DNS e sirva seu site no seu próprio endereço."
+---
+
+Um **domínio personalizado** permite que visitantes acessem seu site da Webza no seu próprio endereço, como `goldencrust.com`, em vez do subdomínio padrão `webza.ai` (por exemplo, `golden-crust.webza.ai`). A Webza não vende domínios: você compra um domínio em qualquer provedor de domínios (registrador) e o conecta ao seu projeto. Esta página guia você pela conexão, verificação e solução de problemas do seu domínio.
+
+Um domínio personalizado melhora o seu website em:
+
+- **Identidade da marca**: seu site parece mais profissional e confiável.
+- **Visibilidade em buscas**: seu conteúdo constrói autoridade sob um domínio que você controla.
+- **Memorabilidade**: um endereço curto e de marca é mais fácil de compartilhar e lembrar.
+
+<Info>
+  Domínios personalizados estão disponíveis nos planos **Plus** e **Premium**. Eles não estão disponíveis no plano gratuito. Veja [Planos de assinatura](/pt-br/subscription-plans) para comparar os planos.
+</Info>
+
+## Antes de começar
+
+Certifique-se de ter o seguinte:
+
+- **Um domínio que você possui.** Compre um em um provedor de domínios como GoDaddy, Namecheap ou Cloudflare se ainda não tiver um.
+- **Acesso às configurações de DNS do seu domínio.** Você adiciona registros DNS no seu provedor de domínios para verificar a propriedade. Se outra pessoa gerencia seu domínio (por exemplo, uma equipe de TI ou agência), peça acesso ou envie os registros a ela.
+- **Um projeto publicado.** Você pode conectar um domínio a qualquer momento, mas o domínio só mostra seu website depois que você [publicar seu projeto](/pt-br/publish).
+
+## Conectar seu domínio
+
+<Steps>
+  <Step title="Abrir as configurações de domínio do seu projeto">
+    Abra o projeto que deseja conectar e vá para **Configurações → Domínios → Domínio personalizado**.
+  </Step>
+  <Step title="Digitar seu domínio">
+    Digite o domínio que deseja usar, por exemplo `goldencrust.com`, e continue. Digite apenas o nome do domínio, sem `https://` ou barra no final.
+  </Step>
+  <Step title="Revisar a tela de verificação">
+    A Webza mostra uma tela de verificação com os registros DNS que você precisa adicionar. Mantenha esta tela aberta: você copia cada registro daqui para o seu provedor de domínios no próximo passo.
+  </Step>
+  <Step title="Adicionar os registros DNS no seu provedor de domínios">
+    Em uma nova aba, faça login no seu provedor de domínios e abra as configurações de DNS (às vezes chamadas de **DNS management**, **DNS zone** ou **Advanced DNS**) do seu domínio. Para cada registro na tela de verificação da Webza:
+
+    1. Selecione **Add record**.
+    2. Escolha o mesmo **tipo** de registro mostrado na Webza.
+    3. Copie o **host** (também chamado de **name**) e o **value** (também chamado de **points to**, **target** ou **content**) exatamente como mostrado.
+    4. Salve o registro.
+
+    <Tip>
+      Copie os valores com o botão de copiar em vez de digitá-los. Um único caractere faltando é a razão mais comum de falha na verificação.
+    </Tip>
+  </Step>
+  <Step title="Verificar seu domínio">
+    Retorne para a Webza e inicie a verificação na tela de verificação. A Webza verifica seus registros DNS e confirma que você é o proprietário do domínio.
+
+    Quando a verificação for bem-sucedida, seu domínio estará conectado e seu website publicado começará a carregar no seu domínio personalizado.
+  </Step>
+</Steps>
+
+<Note>
+  Alterações de DNS podem levar de alguns minutos a 48 horas para se propagar pela internet (isso é chamado de **propagação de DNS**). Se a verificação não for bem-sucedida de imediato, aguarde um pouco e tente novamente. Você não precisa remover e readicionar o domínio.
+</Note>
+
+## Como nomes de host funcionam em diferentes provedores
+
+Provedores de domínios rotulam o campo de host de forma diferente. Quando a Webza mostra um registro para seu domínio raiz (por exemplo `goldencrust.com`), seu provedor pode esperar um destes no campo de host:
+
+- `@`
+- Um campo vazio
+- Seu nome de domínio completo, por exemplo `goldencrust.com`
+
+Alguns provedores adicionam automaticamente seu domínio ao final do host. Se o host de um registro for `www` e seu provedor mostrar `www.goldencrust.com` após salvar, isso está correto. Se mostrar `www.goldencrust.com.goldencrust.com`, remova a parte duplicada e salve novamente.
+
+## Depois que seu domínio está conectado
+
+- **Compartilhe seu novo endereço.** Use seu domínio personalizado em todos os lugares: cartões de visita, perfis sociais e assinaturas de email.
+- **Mantenha seus registros DNS no lugar.** Se você excluir ou alterar os registros que adicionou, seu domínio deixa de mostrar seu website.
+- **Publique para atualizar seu site.** Seu site ao vivo é um snapshot. Alterações que você faz no editor aparecem no seu domínio personalizado apenas depois que você publicar novamente. Veja [Publicar](/pt-br/publish).
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="A verificação continua falhando">
+    Verifique estas causas comuns no seu provedor de domínios:
+
+    - O **type** de registro corresponde exatamente ao que a Webza mostra.
+    - O **value** foi copiado completamente, sem espaços extras ou caracteres faltando.
+    - O **host** segue o formato do seu provedor. Veja [Como nomes de host funcionam em diferentes provedores](#como-nomes-de-host-funcionam-em-diferentes-provedores).
+    - Você salvou o registro. Alguns provedores exigem um passo separado de **Save** ou **Apply changes**.
+
+    Se tudo parecer correto, aguarde a propagação de DNS e verifique novamente.
+  </Accordion>
+
+  <Accordion title="Meu domínio ainda mostra meu website antigo">
+    Seu provedor de domínios provavelmente ainda tem registros do seu website ou provedor de hospedagem anterior. Remova registros antigos para o mesmo host que apontam para outro lugar, para que apenas os registros que a Webza pediu permaneçam. Depois aguarde a propagação de DNS.
+  </Accordion>
+
+  <Accordion title="Meu domínio mostra uma página em branco ou um erro">
+    Certifique-se de que seu projeto está publicado. Um domínio conectado só mostra seu website depois que você [publicar](/pt-br/publish). Se você publicou recentemente, aguarde alguns minutos e recarregue a página.
+  </Accordion>
+
+  <Accordion title="Eu uso Cloudflare e meu site não carrega">
+    Se seu DNS é gerenciado no Cloudflare, defina os registros que você adicionou para a Webza como **DNS only** (nuvem cinza) em vez de **Proxied** (nuvem laranja), depois verifique novamente.
+  </Accordion>
+
+  <Accordion title="Não consigo encontrar as configurações de DNS no meu provedor">
+    Procure no centro de ajuda do seu provedor por "gerenciar registros DNS" ou "adicionar um registro DNS". Se seu domínio usa nameservers de outro serviço (por exemplo, Cloudflare), adicione os registros naquele serviço em vez do registrador onde comprou o domínio.
+  </Accordion>
+</AccordionGroup>
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Posso comprar um domínio pela Webza?">
+    Não. A Webza não vende domínios. Compre um domínio em qualquer provedor de domínios e depois conecte-o ao seu projeto usando os passos desta página.
+  </Accordion>
+
+  <Accordion title="Eu mantenho meu subdomínio webza.ai depois de conectar um domínio personalizado?">
+    Seu projeto mantém seu subdomínio `webza.ai`. Visitantes podem acessar seu website no seu domínio personalizado uma vez que ele esteja conectado.
+  </Accordion>
+
+  <Accordion title="Posso conectar um domínio antes de publicar meu projeto?">
+    Sim. Você pode conectar e verificar um domínio a qualquer momento, mas ele só mostra seu website depois que você publicar seu projeto.
+  </Accordion>
+
+  <Accordion title="Preciso transferir meu domínio para a Webza?">
+    Não. Seu domínio permanece registrado com seu provedor atual. Você apenas adiciona registros DNS lá para apontar o domínio para seu website da Webza. Você continua pagando e renovando o domínio com seu provedor.
+  </Accordion>
+
+  <Accordion title="O que significam DNS, registros DNS e propagação?">
+    - **DNS** é o sistema que diz aos navegadores onde encontrar o website de um domínio.
+    - **Registros DNS** são entradas nas configurações do seu domínio que apontam o domínio para um serviço ou provam que você o possui.
+    - **Propagação** é o tempo que leva para as alterações de DNS se atualizarem pela internet, geralmente minutos a algumas horas e até 48 horas.
+  </Accordion>
+</AccordionGroup>
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Publicar seu site" icon="rocket" href="/pt-br/publish">
+    Coloque seu website online e envie novas alterações ao vivo.
+  </Card>
+
+  <Card title="Configurações do projeto" icon="gear" href="/pt-br/settings">
+    Gerencie domínios e outras configurações do projeto.
+  </Card>
+</CardGroup>

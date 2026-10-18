@@ -1,0 +1,83 @@
+---
+title: "Publish"
+description: "Learn how to publish your Webza project, manage snapshots, and control site visibility."
+---
+
+Publishing makes your project live on the web. Building alone does not put it online. You must click **Publish** to deploy.
+
+## Publish your project
+
+<Steps>
+  <Step title="Open the Publish dialog">
+    In the editor toolbar, click **Publish**.
+  </Step>
+  <Step title="Choose a subdomain">
+    Enter the name you want for your `*.webza.ai` address. Webza checks availability as you type and suggests a short name from your project name. Some names are reserved and will be refused.
+  </Step>
+  <Step title="Set visibility">
+    Choose **Public** so anyone with the URL can view the site, or **Private** so only you can view it while signed in to Webza in that browser. Everyone else is refused access.
+
+    <Note>
+      Private visibility is a plan feature. If your plan does not include it, the option shows locked with "Upgrade to unlock private visibility."
+
+      {/* TODO: confirm which Webza plans include private visibility */}
+    </Note>
+  </Step>
+  <Step title="Confirm and publish">
+    Click **Publish**. Webza captures a snapshot first, then deploys the site.
+  </Step>
+</Steps>
+
+Once published, the toolbar button reads **Published**. Clicking it reopens the dialog so you can change settings or take the site down.
+
+## Republish after changes
+
+Your live site does not update automatically when you build. Republish whenever you want the latest changes to go live. Each republish captures a new snapshot.
+
+## Publish snapshots
+
+Each publish creates a **Pre-publish snapshot** listed under **Previous Versions** in the Publish dialog. Only the five most recent snapshots per project are kept.
+
+Rolling back restores the published preview output, not the project source. The next build still regenerates from your current source. To revert actual code changes, use **Undo** or **Revision History**. See [Preview](/preview) for details.
+
+## Custom domains
+
+Once your project is published, you can point your own domain to it. Plus plans include 1 custom domain; Premium plans include 3. See [Custom domains](/custom-domains) for setup steps.
+
+The project must stay published. Unpublishing also takes the custom domain offline.
+
+## Share image
+
+Before sharing your site on social platforms, set a share image in **Settings** → **General**. See [Settings](/settings).
+
+## WordPress and Shopify themes
+
+WordPress and Shopify theme projects are not hosted by Webza. You export the theme `.zip` and install it on your own WordPress site or Shopify store. The **Domains** tab is never shown for WordPress themes.
+
+## Unpublish
+
+To take a site offline, open the Publish dialog and unpublish it. This removes the live site and any associated custom domain from the web.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Go live</span>
+    <span className="wz-ad-title">Your site, live on webza.ai</span>
+    <span className="wz-ad-text">Build a site and put it live on your own webza.ai address. Share it with the world today.</span>
+  </span>
+
+  <span className="wz-ad-btn">Start building free <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Custom domains" icon="globe" href="/custom-domains">
+    Point your own domain to a published project.
+  </Card>
+
+  <Card title="Settings" icon="sliders" href="/settings">
+    Configure your share image and other project options.
+  </Card>
+</CardGroup>

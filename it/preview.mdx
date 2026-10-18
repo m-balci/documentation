@@ -1,0 +1,108 @@
+---
+title: "Preview"
+description: "Usa il pannello di preview per visualizzare il tuo progetto live, ispezionare elementi, ridimensionare la viewport, cambiare tema e gestire la cronologia delle revisioni."
+---
+
+Il pannello di preview mostra una visualizzazione live del tuo progetto. Puoi ridimensionare la viewport, ispezionare elementi, cambiare il tema del design e scorrere la cronologia delle revisioni. La preview si ricarica automaticamente quando una build finisce, quindi non hai bisogno di un pulsante di aggiornamento manuale.
+
+## Controlli della viewport
+
+Usa i pulsanti della viewport per testare come appare il tuo progetto a diverse dimensioni.
+
+| Pulsante | Cosa fa |
+| --- | --- |
+| **Telefono** | Riduce la preview a una larghezza mobile. |
+| **Tablet** | Imposta una larghezza media tra telefono e desktop. |
+| **Larghezza intera** | Espande la preview alla larghezza massima del pannello. |
+
+## Modalità ispezione
+
+Clicca **Ispeziona** per attivare la modalità ispezione. Quando la modalità ispezione è attiva, cliccando qualsiasi elemento nella preview si apre la barra degli strumenti dell'ispezione elemento.
+
+Le azioni della barra degli strumenti dipendono dall'elemento selezionato:
+
+- **Modifica testo** (solo elementi di testo): modifica il testo dell'elemento inline. La modifica viene accodata nella barra delle modifiche in sospeso.
+- **Immagine** (solo elementi `<img>`): sostituisci la sorgente dell'immagine caricando un file o incollando un URL immagine. La modifica viene accodata nella barra delle modifiche in sospeso.
+- **Stile**: modifica gli stili inline come colori, spaziature e dimensioni. Le modifiche di stile si applicano da sole senza AI.
+- **Modifica AI**: invia l'elemento all'AI con un'istruzione. La modifica viene accodata nella barra delle modifiche in sospeso.
+- **Chiudi**: chiude l'ispezione.
+
+### Barra delle modifiche in sospeso
+
+Quando fai modifiche **Modifica testo**, **Immagine** o **Modifica AI** nell'ispezione, appare una barra delle modifiche in sospeso in fondo alla preview. Mostra il numero di modifiche accodate e due azioni:
+
+- **Salva tutto**: invia il batch all'AI, avvia una build e spende crediti.
+- **Scarta tutto**: rimuove tutte le modifiche accodate.
+
+<Warning>
+  Nulla si applica finché non clicchi **Salva tutto**. Se navighi via prima di salvare, perdi le modifiche accodate. Raggruppa le tue modifiche e salva una volta per evitare un utilizzo extra di crediti.
+</Warning>
+
+<Note>
+  Le modifiche **Stile** cambiano il sorgente direttamente senza AI e non si accodano nella barra delle modifiche in sospeso.
+</Note>
+
+## Modalità design
+
+Clicca **Design** per cambiare il tema di un sito già costruito.
+
+1. Scegli un design system.
+2. Opzionalmente scegli una palette di accenti.
+3. Clicca **Chiedi all'AI** per applicare il nuovo tema.
+
+Questo attiva una rebuild. La preview si ricarica con il design reale, e l'AI esegue un passaggio di correzione per i colori hardcoded. Consuma crediti di build come una richiesta di chat. Non puoi applicare una modifica di design mentre un'altra build è già in corso.
+
+<Info>
+  La modalità design è disponibile solo per i siti web. È nascosta per i progetti tema WordPress e Shopify, che mantengono il design system scelto alla creazione.
+</Info>
+
+## Annulla e Ripristina
+
+Usa i pulsanti **Annulla** e **Ripeti** per scorrere la cronologia del tuo progetto. Puoi anche usare queste scorciatoie da tastiera:
+
+| Azione | Scorciatoia |
+| --- | --- |
+| Annulla | Ctrl/Cmd + Z |
+| Ripristina | Ctrl/Cmd + Shift + Z, o Ctrl + Y |
+
+Ogni annullamento ripristina esattamente una modifica: una richiesta di chat AI, una modifica Stile, o un cambio di tema design. Dopo un annullamento, il progetto viene ricostruito. Il tuo lavoro più recente viene salvato come checkpoint prima di un annullamento, così il ripristino può riportarlo indietro. Ogni annullamento e ripristino viene registrato in chat così l'AI resta aggiornata.
+
+<Warning>
+  Annulla e ripeti non sono disponibili mentre una build è in corso. Un progetto nuovo di zecca non ha nulla da annullare fino alla seconda modifica.
+</Warning>
+
+<Warning>
+  Le modifiche manuali nel code editor fatte mentre sei nella cronologia (dopo aver annullato) non vengono catturate. Il prossimo Annulla, Ripeti o Ripristina le scarta senza avviso. Torna prima allo stato più recente, o lascia che l'AI faccia la modifica.
+</Warning>
+
+<Info>
+  Per i progetti Shopify, i pulsanti **Annulla**, **Ripeti** e **Cronologia revisioni** sono nascosti. Appare solo **Scarica tema (.zip)**. Le scorciatoie da tastiera funzionano comunque per i progetti Shopify.
+</Info>
+
+## Cronologia delle revisioni
+
+Clicca l'**icona dell'orologio** per aprire la cronologia delle revisioni. Un checkpoint viene catturato prima di ogni richiesta AI, modifica Stile e cambio di design. Webza conserva i 20 checkpoint più recenti.
+
+L'elenco mostra etichette, timestamp e conteggi dei file. La versione corrente ha un badge **Corrente**. Clicca **Ripristina** su qualsiasi versione per saltarci.
+
+Il ripristino salva prima lo stato attuale così che il ripristino sia reversibile. Ogni ripristino attiva una rebuild. La cronologia delle revisioni è disponibile solo per siti web e temi WordPress.
+
+<Note>
+  Gli snapshot di pubblicazione sono separati dalla cronologia delle revisioni. Vedi la pagina [Pubblica](/it/publish) per i dettagli.
+</Note>
+
+## Preview di WordPress Playground
+
+I progetti tema WordPress vengono visualizzati in anteprima all'interno di WordPress Playground. Playground ha il suo controllo di ricarica, quindi il comportamento automatico di ricarica della preview funziona diversamente lì.
+
+## Pagine correlate
+
+<CardGroup cols={2}>
+  <Card title="Chat del progetto" icon="message" href="/it/project-chat">
+    Invia istruzioni all'AI e gestisci la cronologia della chat.
+  </Card>
+
+  <Card title="Pubblica" icon="rocket" href="/it/publish">
+    Pubblica il tuo progetto e gestisci gli snapshot live.
+  </Card>
+</CardGroup>

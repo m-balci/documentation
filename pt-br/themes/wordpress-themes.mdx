@@ -1,0 +1,139 @@
+---
+title: "Temas WordPress"
+sidebarTitle: "Temas WordPress"
+description: "Gere temas de blocos WordPress instaláveis com a Webza, pré-visualize-os em um WordPress Playground no navegador e instale-os no WordPress 6.7 ou mais recente."
+---
+
+Gere um tema de blocos WordPress Full Site Editing (FSE) instalável a partir do mesmo chat que você usa para construir websites. Pré-visualize-o ao vivo no seu navegador, faça o download como um `.zip` e instale-o em qualquer site WordPress rodando 6.7 ou mais recente.
+
+<Note>
+  Temas WordPress estão disponíveis nos planos Plus e Premium.
+</Note>
+
+## O que você recebe
+
+Um projeto de tema WordPress produz um tema de blocos em vez de um website. O tema inclui:
+
+- `theme.json` com as cores, fontes e espaçamento do seu design system
+- Templates de blocos e partes de templates
+- Padrões
+- Estilos
+
+A Webza verifica a estrutura do tema e a sintaxe PHP em cada build, então o tema baixado está pronto para instalar.
+
+## Criar um projeto de tema WordPress
+
+No painel, um seletor de saída aparece ao lado do prompt:
+
+| Saída | Resultado |
+| --- | --- |
+| **Site** | O padrão. Um site que você pode publicar em um subdomínio ou domínio personalizado. |
+| **Tema WordPress** | Um tema de blocos FSE instalável. |
+
+Escolha **Tema WordPress**, digite seu prompt e inicie o projeto. O tipo de saída é definido na criação do projeto e não pode ser alterado depois.
+
+<Tip>
+  Você também pode começar a partir de um template WordPress. Templates feitos para WordPress aparecem junto com os templates de website.
+</Tip>
+
+## Pré-visualizar o seu tema
+
+A Webza pré-visualiza temas no WordPress Playground: um WordPress real rodando no seu navegador, com o seu tema instalado e ativado. Você não precisa de um servidor ou hospedagem para ver o resultado.
+
+O Playground tem seu próprio controle de recarregamento. Como ele inicializa uma instância completa do WordPress, o primeiro carregamento e as atualizações de prévia podem levar um momento.
+
+<Warning>
+  O Playground é uma prévia, não uma hospedagem. Tudo nele vive na sua aba do navegador e desaparece quando você a fecha. Para usar o tema, faça o download do `.zip` e instale-o no seu site WordPress.
+</Warning>
+
+## Editar e iterar
+
+Desfazer, Refazer e Histórico de Revisões funcionam para projetos de tema da mesma forma que funcionam para websites. Quando você restaura uma revisão, a prévia do Playground reinicializa com o tema restaurado para que você possa continuar editando a partir daquele ponto.
+
+## Download e instalação
+
+<Steps>
+  <Step title="Fazer download do tema">
+    Abra o projeto no editor da Webza e clique em **Baixar tema**. O `.zip` recebe o nome do seu projeto.
+  </Step>
+  <Step title="Fazer upload para o WordPress">
+    No seu admin do WordPress, vá para **Appearance → Themes → Add New** e clique em **Upload Theme**. Escolha o arquivo `.zip` baixado e clique em **Install Now**.
+  </Step>
+  <Step title="Ativar">
+    Após a instalação terminar, clique em **Activate** para aplicar o tema ao seu site.
+  </Step>
+</Steps>
+
+<Tip>
+  Mantenha o nome do arquivo baixado. O WordPress usa o nome do `.zip` como o nome da pasta do tema.
+</Tip>
+
+### Requisitos
+
+- **WordPress 6.7 ou mais recente.** Versões mais antigas podem recusar a instalação ou exibir templates incorretamente.
+- **PHP 7.4 ou mais recente** no seu servidor WordPress.
+
+## O que projetos de tema não podem fazer
+
+Um tema é um arquivo para download, não um site hospedado, então alguns recursos de website não estão disponíveis:
+
+- **Publicação e domínios personalizados**: a Webza não hospeda projetos de tema, então a aba **Domínios** nunca é exibida.
+- **GitHub e Supabase**: não disponíveis para temas.
+- **Modo Design**: o design system escolhido na criação é embutido no `theme.json`.
+- **Imagens geradas por IA**: disponíveis apenas para projetos de website.
+- **Analytics**: o card de analytics fica oculto. Adicione tracking diretamente no seu site WordPress.
+
+No editor, o botão **Exportar** é substituído por **Baixar tema**.
+
+## Mudar de plano
+
+Se você mudar do Plus ou Premium para um plano sem temas WordPress, ainda poderá fazer download dos seus temas existentes, mas novas builds em projetos de tema serão bloqueadas. Faça upgrade novamente para continuar editando-os.
+
+## Duplicar um projeto de tema
+
+Um projeto de tema WordPress duplicado mantém o tipo de saída WordPress.
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="Não vejo a opção Tema WordPress">
+    Temas WordPress estão disponíveis apenas nos planos Plus e Premium. Em outros planos, o seletor fica oculto.
+  </Accordion>
+
+  <Accordion title="Builds estão sendo recusadas no meu projeto de tema">
+    Seu plano atual não inclui temas WordPress. Faça upgrade para Plus ou Premium para continuar construindo. Seu projeto e seu tema para download permanecem intactos enquanto isso.
+  </Accordion>
+
+  <Accordion title="A prévia está travada em Instalando o seu tema">
+    - Aguarde um momento. O primeiro carregamento baixa um WordPress completo para o seu navegador, o que pode ser lento em algumas conexões.
+    - Uma rede corporativa restrita, VPN ou extensão do navegador pode bloquear a prévia ou o WebAssembly. Tente outra rede ou desative extensões.
+    - Verifique o console do seu navegador para requisições bloqueadas.
+
+    O botão **Baixar tema** ainda funciona, então você sempre pode instalar o tema no seu próprio site WordPress.
+  </Accordion>
+
+  <Accordion title="O WordPress não instala o tema">
+    Atualize o WordPress para 6.7 ou mais recente e certifique-se de que fez upload do arquivo `.zip` do **Baixar tema** sem descompactá-lo.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=wordpress-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">Construa seu tema WordPress com IA</span>
+    <span className="wz-ad-text">Descreva o tema que você quer e receba um tema de blocos instalável em minutos, pronto para fazer upload em qualquer site WordPress.</span>
+  </span>
+
+  <span className="wz-ad-btn">Criar um tema WordPress <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Temas Shopify" icon="shopify" href="/pt-br/themes/shopify-themes">
+    Saiba como gerar e instalar temas Shopify Online Store 2.0.
+  </Card>
+
+  <Card title="Planos de assinatura" icon="credit-card" href="/pt-br/subscription-plans">
+    Compare planos e veja quais recursos estão incluídos no seu.
+  </Card>
+</CardGroup>

@@ -1,0 +1,75 @@
+---
+title: "Registro de cambios"
+sidebarTitle: "Registro de cambios"
+description: "Nuevas funciones, mejoras y correcciones en Webza."
+mode: "center"
+---
+
+{/* TODO: Entries are grouped by month. Confirm the exact release dates for the late August and early September updates. */}
+
+<Update label="Octubre 2026">
+  ### Nuevo
+
+  - **Generación de imágenes con IA**: La IA puede crear imágenes personalizadas para proyectos de sitios web. Si tu plan lo incluye, aplica un límite mensual de imágenes. Consulta [Project chat](/es/project-chat).
+  - **Comprensión de imágenes**: Cuando el modelo seleccionado admite imágenes, la IA ahora puede ver las imágenes que adjuntas a un prompt o mensaje de chat.
+  - **Corregir gratis**: Las ejecuciones que fallan por culpa de la IA o la plataforma no se cobran. Puedes reintentar una ejecución fallida una vez gratis, y la página Uso marca estas ejecuciones como no cobradas. Consulta [Créditos y uso](/es/credits-and-usage).
+  - **Más formas de conectar Supabase**: Conéctate iniciando sesión con Supabase o con un token de acceso. Las conexiones manuales ya no necesitan tu clave secreta. Consulta [Supabase](/es/integrations/supabase).
+
+  ### Mejorado
+
+  - Las plantillas de sitios web ahora incluyen la biblioteca de animaciones Motion, así que la IA puede construir animaciones más ricas como entradas escalonadas, paralaje y contadores animados. Consulta [Templates](/es/templates).
+
+  ### Corregido
+
+  - Los temas de WordPress ahora aplican de forma fiable los colores y tokens del sistema de diseño seleccionado. Los sistemas de diseño oscuros (Carbon, Lumen y Noir) ahora inician en modo oscuro.
+  - Los temas de Shopify ahora obtienen los colores del sistema de diseño cuando la plantilla se elige automáticamente, y los archivos iniciales sin modificar ya no muestran errores de validación falsos.
+</Update>
+
+<Update label="Septiembre 2026">
+  ### Nuevo
+
+  - **Modelos de IA más recientes**: Las listas de modelos ahora incluyen los modelos de IA más recientes. Si un modelo que guardaste se retira, Webza te cambia al modelo actual más cercano de la misma clase.
+  - **Adjunta archivos a tu primer prompt**: Si tu plan incluye almacenamiento de archivos, adjunta hasta 10 archivos al crear un proyecto.
+  - **Guía de diseño para la IA**: Mientras construye, la IA ahora sigue guías enfocadas sobre composición de páginas, diseño de secciones, movimiento, rediseños seguros y precisión del texto.
+  - **Movimiento consistente**: Cada [sistema de diseño](/es/design-systems) ahora establece un estilo de movimiento único, así que el tiempo y la suavidad de las animaciones se mantienen consistentes en todo tu sitio.
+
+  ### Mejorado
+
+  - Tu primer prompt ahora puede tener hasta 10,000 caracteres, igual que los mensajes de seguimiento.
+  - Las comprobaciones de calidad ahora detectan enlaces "#" muertos en los sitios generados.
+  - Cargas de página más rápidas en todo el panel.
+  - Mejor soporte para lectores de pantalla en interruptores, filtros y botones de solo icono.
+  - Las cuentas sin créditos restantes ahora ven una advertencia de que no pueden construir.
+
+  ### Corregido
+
+  - La IA ya no enlaza a tus archivos subidos con direcciones incorrectas, lo que impedía que las imágenes se cargaran.
+  - Los cambios en sitios publicados en dominios personalizados ahora llegan a los visitantes de inmediato.
+  - Las direcciones que terminan en una barra ahora abren la página correcta en sitios publicados y de vista previa.
+  - El panel Design ya no reporta un nuevo estilo como aplicado cuando la reconstrucción detrás de él falló. La misma corrección aplica a Undo, Redo y restaurar una revisión.
+  - Las tarjetas de preguntas en el chat ya no estiran la página ni rompen el desplazamiento.
+  - La pestaña **Code** ya no muestra el error "Failed to load files" en un proyecto que nunca se ha construido.
+</Update>
+
+<Update label="Agosto 2026">
+  ### Nuevo
+
+  - **Preguntas aclaratorias**: La IA puede hacerte preguntas durante una construcción. Respóndelas con opciones seleccionables directamente en el chat. Consulta [Project chat](/es/project-chat).
+  - **Recorridos guiados**: Recorridos paso a paso del panel, creación de proyectos, el editor, billing, el administrador de archivos, bases de datos, GitHub y Shopify. Reprímelos en cualquier momento con **Reiniciar recorrido**.
+  - **Preferencias de cookies**: Cambia tus opciones de consentimiento de cookies en cualquier momento desde el enlace **Preferencias de cookies** en el pie de página.
+
+  ### Mejorado
+
+  - Cargas de página más rápidas y una revisión amplia de accesibilidad: los lectores de pantalla ahora anuncian errores de formulario, estados de carga, resultados de carga y resultados de búsqueda.
+  - La IA ahora maneja conversaciones largas mejor y ya no dice que está resumiendo en cada mensaje.
+
+  ### Corregido
+
+  - El modo oscuro ahora sigue el interruptor de tema de Webza en lugar de la configuración de tu sistema operativo.
+  - El panel Revision History, incluidos sus botones de restaurar, ya no se corta en navegadores móviles.
+  - El constructor ya no reporta "Build complete" cuando la IA no cambió ningún archivo.
+  - Los mensajes de chat ya no desaparecen cuando llegan varias actualizaciones a la vez.
+  - Crear un repositorio de GitHub ahora muestra la razón real cuando falla.
+  - Los fallos de construcción ahora muestran un único mensaje claro.
+  - Un guardado de archivo rechazado en el editor de código ya no reporta éxito y pierde tu edición.
+</Update>

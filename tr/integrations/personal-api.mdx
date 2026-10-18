@@ -1,0 +1,59 @@
+---
+title: "Kişisel API"
+sidebarTitle: "Kişisel API"
+description: "Webza hesabınıza, projelerinize, kredilerinize ve faturalandırmanıza programatik olarak erişmek için salt okunur REST API."
+---
+
+Plus ve Premium planlar API erişimini içerir. Kişisel API, Webza hesap verilerinize programatik olarak erişmenizi sağlayan salt okunur bir REST API'dir. API üzerinden proje oluşturamaz, inşa tetikleyemez veya faturalandırmayı değiştiremezsiniz.
+
+## API anahtarı oluşturma
+
+Kenar çubuğundan **API anahtarları** sayfasını açın.
+
+<Steps>
+  <Step title="Anahtar oluşturun">
+    Yeni bir anahtar oluşturmak için tıklayın. Her anahtar yalnızca oluşturulduğunda bir kez gösterilir, bu yüzden hemen kopyalayın ve güvenli bir şekilde saklayın.
+  </Step>
+  <Step title="Son kullanma tarihi belirleyin (isteğe bağlı)">
+    30, 90 veya 365 gün son kullanma tarihi seçin veya son kullanma tarihi olmadan bırakın.
+  </Step>
+  <Step title="İhtiyaç duyduğunuzda iptal edin">
+    Herhangi bir anahtarı istediğiniz zaman iptal edebilirsiniz. Hesap başına en fazla 10 anahtarınız olabilir.
+  </Step>
+</Steps>
+
+<Warning>
+  Anahtarlarınızı gizli tutun. İptal edilene veya süresi dolana kadar hesap verilerinize erişim sağlarlar.
+</Warning>
+
+## Kimlik doğrulama
+
+Anahtarınızı `Authorization` başlığında Bearer token olarak gönderin:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## Uç noktalar ve dokümanlar
+
+API, hesabınız, kredileriniz, aboneliğiniz, projeleriniz, bildirimleriniz ve faturalarınız için `/api/v1` altında kaynakları açar.
+
+Her uç noktayı görmek için kenar çubuğundan **API belgeleri** sayfasını açın. Dokümanlar, curl, JavaScript, PHP ve Python için etkileşimli bir test aracı ve kopyala-yapıştır örnekleri içerir.
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## Ayrı: yapay zeka sağlayıcı anahtarları
+
+Kendi yapay zeka sağlayıcı anahtarlarınız ayrı olarak **Ayarlar → AI ayarları** (`/settings`) bölümünde yönetilir. Bunlar Kişisel API ile ilgisizdir.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/tr/integrations/github">
+    Oluşturulan kaynağı otomatik olarak özel bir GitHub deposuna gönderin.
+  </Card>
+
+  <Card title="Supabase veritabanı" icon="database" href="/tr/integrations/supabase">
+    Oluşturulan uygulamalarınıza bir Postgres veritabanı ekleyin.
+  </Card>
+</CardGroup>

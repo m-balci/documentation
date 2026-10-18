@@ -1,0 +1,83 @@
+---
+title: "发布"
+description: "了解如何发布 Webza 项目、管理快照以及控制网站可见性。"
+---
+
+发布会让您的项目上线。仅构建不会将网站放到网上。您必须点击**发布**才能部署。
+
+## 发布您的项目
+
+<Steps>
+  <Step title="打开发布对话框">
+    在编辑器工具栏中，点击**发布**。
+  </Step>
+  <Step title="选择子域名">
+    输入您想要的 `*.webza.ai` 地址名称。Webza 会在您输入时检查可用性，并根据项目名称建议一个短名称。部分名称已被保留，将被拒绝。
+  </Step>
+  <Step title="设置可见性">
+    选择**公开**，任何拥有链接的人都可以查看网站；或选择**私有**，只有您在该浏览器中登录 Webza 后才能查看。其他所有人将被拒绝访问。
+
+    <Note>
+      私有可见性是套餐功能。如果您的套餐不包含此功能，该选项将显示为锁定状态，并提示"升级以解锁私有可见性"。
+
+      {/* TODO: confirm which Webza plans include private visibility */}
+    </Note>
+  </Step>
+  <Step title="确认并发布">
+    点击**发布**。Webza 会先捕获快照，然后部署网站。
+  </Step>
+</Steps>
+
+发布后，工具栏按钮会显示为**已发布**。点击它会重新打开对话框，您可以更改设置或将网站下线。
+
+## 更改后重新发布
+
+您的在线网站不会在构建时自动更新。每当您希望最新更改上线时，请重新发布。每次重新发布都会捕获一个新快照。
+
+## 发布快照
+
+每次发布都会创建一个**发布前快照**，列在发布对话框的**历史版本**中。每个项目仅保留最近的五个快照。
+
+回滚会恢复已发布的预览输出，而不是项目源代码。下次构建时仍会从您当前的源代码重新生成。要撤销实际的代码更改，请使用**撤销**或**修订历史**。详情请参见[预览](/zh/preview)。
+
+## 自定义域名
+
+项目发布后，您可以将自己的域名指向该项目。Plus 套餐包含 1 个自定义域名；Premium 套餐包含 3 个。设置步骤请参见[自定义域名](/zh/custom-domains)。
+
+项目必须保持发布状态。取消发布也会使自定义域名下线。
+
+## 分享图片
+
+在社交平台分享网站之前，请在**设置** → **常规**中设置分享图片。详情请参见[设置](/zh/settings)。
+
+## WordPress 和 Shopify 主题
+
+WordPress 和 Shopify 主题项目不由 Webza 托管。您需要将主题 `.zip` 导出并安装到自己的 WordPress 网站或 Shopify 商店中。WordPress 主题永远不会显示**域名**标签页。
+
+## 取消发布
+
+要将网站下线，请打开发布对话框并取消发布。这会从网络上移除在线网站及任何关联的自定义域名。
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">上线</span>
+    <span className="wz-ad-title">您的网站，在 webza.ai 上线</span>
+    <span className="wz-ad-text">构建一个网站，并通过您自己的 webza.ai 地址将其上线。今天就与世界分享。</span>
+  </span>
+
+  <span className="wz-ad-btn">免费开始构建 <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="自定义域名" icon="globe" href="/zh/custom-domains">
+    将您自己的域名指向已发布的项目。
+  </Card>
+
+  <Card title="设置" icon="sliders" href="/zh/settings">
+    配置分享图片及其他项目选项。
+  </Card>
+</CardGroup>

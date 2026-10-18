@@ -1,0 +1,68 @@
+---
+title: "Kod editörü"
+description: "Webza Monaco kod editöründe proje dosyalarını nasıl görüntüleyeceğinizi, arayacağınızı ve düzenleyeceğinizi öğrenin; salt okunur sistem dosyaları ve önemli uyarılar dahil."
+---
+
+Kod editörü, proje dosyalarını doğrudan görüntülemenize ve düzenlemenize olanak tanıyan yerleşik bir Monaco editörüdür. Sözdizimi vurgulama, arama ve değiştirme, isteğe bağlı kaydetme ve kaydedilmemiş değişiklik göstergesi sunar, böylece her zaman neyin beklediğini bilirsiniz.
+
+## Desteklenen diller
+
+Editör, en yaygın web dosya türleri için sözdizimi vurgulaması sağlar:
+
+- JavaScript ve TypeScript (`.js`, `.ts`, `.tsx`)
+- CSS ve HTML
+- JSON ve Markdown
+
+## Arama ve değiştirme
+
+Editör içerisinde arama kutusunu açmak için <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> tuşlarına basın. Mevcut dosyada arama yapabilir ve eşleşmeleri tek tek veya toplu olarak değiştirebilirsiniz.
+
+## Değişikliklerinizi kaydedin
+
+Mevcut dosyayı kaydetmek için <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> tuşlarına basın. Kaydetene kadar dosya adının yanında bir nokta veya kaydedilmemiş-değişiklik göstergesi belirir. Canlı önizleme, kaydettikten sonra güncellenir.
+
+## Salt okunur dosyalar
+
+Küçük bir sistem dosyaları grubu salt okunurdur. Bunlar şablon ve oluşturma sistemi tarafından yönetilir ve kötü bir düzenleme projenin yeniden oluşturulamaz hale gelmesine neden olabilir. Bu dosyalardan birini seçtiğinizde, editör bir **Salt okunur** kilit rozeti gösterir ve **Kaydet** düğmesini gizler.
+
+<AccordionGroup>
+  <Accordion title="Kök düzeyi salt okunur dosyalar">
+    `index.html`, `package.json`, `package-lock.json`, `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`, `components.json`, `tailwind.config.ts`, `tailwind.config.js`, `postcss.config.js`, `postcss.config.cjs`
+  </Accordion>
+
+  <Accordion title="Kaynak salt okunur dosyalar">
+    `src/main.tsx`, `src/index.css`, `src/vite-env.d.ts`
+  </Accordion>
+
+  <Accordion title="Sistem salt okunur dosyalar">
+    `memory.json`, `design-intelligence.json`, `KNOWLEDGE.md`, `template.json`
+  </Accordion>
+</AccordionGroup>
+
+Bu dosyaların kilidini açan bir ayar yoktur. `index.html`, yalnızca uygulamayı yükleyen kabuktur. Görünen her sayfa, başlık, altbilgi ve bağlantı `src/` altında yaşar ve oradaki her şey, `main.tsx`, `index.css` ve `vite-env.d.ts` dışında düzenlenebilir.
+
+## Analitik ve izleme parçaları
+
+Google Tag Manager, Google tag veya Meta Pixel eklemeniz gerekiyorsa, başlık işaretlemesini doğrudan düzenlemek yerine **Ayarlar → Genel** içerisindeki **Analitik** kartını kullanın. [Ayarlar](/tr/settings) sayfasına bakın.
+
+## Önemli uyarılar
+
+<Warning>
+  Geçmişin içindeyken (geri aldıktan sonra) yapılan manuel düzenlemeler, sonraki Geri alma, Yineleme veya Geri yükleme eylemi tarafından atılır. Düzeltme geçmişi ayrıntıları için [Önizleme](/tr/preview) sayfasına bakın.
+</Warning>
+
+<Info>
+  Oluşturulan yapay zeka görselleri `public/images/generated/` altında saklanır. Kodunuzda bunlara referans verebilirsiniz, ancak sohbet dışında taşımayın veya yeniden adlandırmayın; aksi takdirde yapay zeka onları takip edemeyebilir.
+</Info>
+
+## İlgili sayfalar
+
+<CardGroup cols={2}>
+  <Card title="Editör" icon="table-columns" href="/tr/editor">
+    Tam proje editörü düzeni ve araç çubuğuna genel bakış.
+  </Card>
+
+  <Card title="Önizleme" icon="eye" href="/tr/preview">
+    Canlı önizleme ve düzeltme geçmişinin nasıl çalıştığını öğrenin.
+  </Card>
+</CardGroup>

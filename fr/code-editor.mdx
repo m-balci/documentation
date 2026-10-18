@@ -1,0 +1,68 @@
+---
+title: "Éditeur de code"
+description: "Comment visualiser, rechercher et éditer les fichiers de projet dans l'éditeur de code Webza Monaco, y compris les fichiers système en lecture seule et les avertissements importants."
+---
+
+L'éditeur de code est un éditeur Monaco intégré qui vous permet de visualiser et d'éditer les fichiers de projet directement. Il offre la coloration syntaxique, la recherche et le remplacement, la sauvegarde à la demande, et un indicateur de modifications non sauvegardées pour que vous sachiez toujours ce qui est en attente.
+
+## Langages pris en charge
+
+L'éditeur met en évidence la syntaxe pour les types de fichiers web les plus courants :
+
+- JavaScript et TypeScript (`.js`, `.ts`, `.tsx`)
+- CSS et HTML
+- JSON et Markdown
+
+## Recherche et remplacement
+
+Appuyez sur <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> pour ouvrir la boîte de recherche à l'intérieur de l'éditeur. Vous pouvez rechercher dans le fichier actuel et remplacer les correspondances une par une ou toutes à la fois.
+
+## Sauvegarder vos modifications
+
+Appuyez sur <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> pour sauvegarder le fichier actuel. Un point ou un indicateur de modifications non sauvegardées apparaît à côté du nom de fichier jusqu'à ce que vous sauvegardiez. L'aperçu en direct se met à jour après votre sauvegarde.
+
+## Fichiers en lecture seule
+
+Un petit ensemble de fichiers système est en lecture seule. Ils sont gérés par le modèle et le système de construction, et une mauvaise modification pourrait laisser le projet incapable de se reconstruire. Lorsque vous sélectionnez l'un de ces fichiers, l'éditeur affiche un badge **Lecture seule** avec un cadenas et masque le bouton **Enregistrer**.
+
+<AccordionGroup>
+  <Accordion title="Fichiers en lecture seule au niveau racine">
+    `index.html`, `package.json`, `package-lock.json`, `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`, `components.json`, `tailwind.config.ts`, `tailwind.config.js`, `postcss.config.js`, `postcss.config.cjs`
+  </Accordion>
+
+  <Accordion title="Fichiers en lecture seule source">
+    `src/main.tsx`, `src/index.css`, `src/vite-env.d.ts`
+  </Accordion>
+
+  <Accordion title="Fichiers en lecture seule système">
+    `memory.json`, `design-intelligence.json`, `KNOWLEDGE.md`, `template.json`
+  </Accordion>
+</AccordionGroup>
+
+Il n'y a pas de paramètre pour déverrouiller ces fichiers. `index.html` n'est que l'enveloppe qui charge l'application. Chaque page visible, en-tête, pied de page et lien se trouve sous `src/`, et tout ce qui s'y trouve est éditable à l'exception de `main.tsx`, `index.css` et `vite-env.d.ts`.
+
+## Extraits d'analyses et de suivi
+
+Si vous devez ajouter Google Tag Manager, une balise Google ou un Meta Pixel, utilisez la carte **Analyses** dans **Paramètres → Général** au lieu de modifier directement le balisage de l'en-tête. Consultez [Paramètres](/fr/settings).
+
+## Avertissements importants
+
+<Warning>
+  Les modifications manuelles faites alors que vous êtes dans l'historique des révisions (après une annulation) sont supprimées par la prochaine action Annuler, Rétablir ou Restaurer. Consultez [Aperçu](/fr/preview) pour plus de détails sur l'historique des révisions.
+</Warning>
+
+<Info>
+  Les images générées par l'IA sont stockées dans `public/images/generated/`. Vous pouvez les référencer dans votre code, mais ne les déplacez pas ou ne les renommez pas en dehors de la discussion, sinon l'IA pourrait les perdre de vue.
+</Info>
+
+## Pages connexes
+
+<CardGroup cols={2}>
+  <Card title="Éditeur" icon="table-columns" href="/fr/editor">
+    Vue d'ensemble de la mise en page complète de l'éditeur de projet et de la barre d'outils.
+  </Card>
+
+  <Card title="Aperçu" icon="eye" href="/fr/preview">
+    Apprenez comment fonctionnent l'aperçu en direct et l'historique des révisions.
+  </Card>
+</CardGroup>

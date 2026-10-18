@@ -1,0 +1,145 @@
+---
+title: "Connect a custom domain to your Webza website"
+sidebarTitle: "Custom Domains"
+description: "Connect a domain you already own to your Webza project. Add it in project settings, verify it with DNS records, and serve your site on your own address."
+---
+
+A **custom domain** lets visitors reach your Webza website at your own address, such as `goldencrust.com`, instead of the default `webza.ai` subdomain (for example `golden-crust.webza.ai`). Webza does not sell domains: you buy a domain from any domain provider (registrar) and connect it to your project. This page walks you through connecting, verifying, and troubleshooting your domain.
+
+A custom domain improves your website's:
+
+- **Brand identity**: your site looks more professional and trustworthy.
+- **Search visibility**: your content builds authority under a domain you control.
+- **Memorability**: a short, branded address is easier to share and remember.
+
+<Info>
+  Custom domains are available on the **Plus** and **Premium** plans. They are not available on the free plan. See [Subscription plans](/subscription-plans) to compare plans.
+</Info>
+
+## Before you start
+
+Make sure you have the following:
+
+- **A domain you own.** Buy one from a domain provider such as GoDaddy, Namecheap, or Cloudflare if you do not have one yet.
+- **Access to your domain's DNS settings.** You add DNS records at your domain provider to verify ownership. If someone else manages your domain (for example, an IT team or agency), ask them for access or send them the records.
+- **A published project.** You can connect a domain at any time, but the domain only shows your website after you [publish your project](/publish).
+
+## Connect your domain
+
+<Steps>
+  <Step title="Open your project's domain settings">
+    Open the project you want to connect, then go to **Settings → Domains → Custom Domain**.
+  </Step>
+  <Step title="Enter your domain">
+    Type the domain you want to use, for example `goldencrust.com`, and continue. Enter only the domain name, without `https://` or a trailing slash.
+  </Step>
+  <Step title="Review the verification screen">
+    Webza shows a verification screen with the DNS records you need to add. Keep this screen open: you copy each record from here to your domain provider in the next step.
+  </Step>
+  <Step title="Add the DNS records at your domain provider">
+    In a new tab, log in to your domain provider and open the DNS settings (sometimes called **DNS management**, **DNS zone**, or **Advanced DNS**) for your domain. For every record on the Webza verification screen:
+
+    1. Select **Add record**.
+    2. Choose the same record **type** shown in Webza.
+    3. Copy the **host** (also called **name**) and the **value** (also called **points to**, **target**, or **content**) exactly as shown.
+    4. Save the record.
+
+    <Tip>
+      Copy values with the copy button instead of typing them. A single missing character is the most common reason verification fails.
+    </Tip>
+  </Step>
+  <Step title="Verify your domain">
+    Return to Webza and start verification on the verification screen. Webza checks your DNS records and confirms that you own the domain.
+
+    When verification succeeds, your domain is connected and your published website starts loading at your custom domain.
+  </Step>
+</Steps>
+
+<Note>
+  DNS changes can take anywhere from a few minutes to 48 hours to spread across the internet (this is called **DNS propagation**). If verification does not succeed right away, wait a while and try again. You do not need to remove and re-add the domain.
+</Note>
+
+## How host names work at different providers
+
+Domain providers label the host field differently. When Webza shows a record for your root domain (for example `goldencrust.com`), your provider may expect one of these in the host field:
+
+- `@`
+- An empty field
+- Your full domain name, for example `goldencrust.com`
+
+Some providers automatically add your domain to the end of the host. If a record's host is `www` and your provider shows `www.goldencrust.com` after saving, that is correct. If it shows `www.goldencrust.com.goldencrust.com`, remove the duplicated part and save again.
+
+## After your domain is connected
+
+- **Share your new address.** Use your custom domain everywhere: business cards, social profiles, and email signatures.
+- **Keep your DNS records in place.** If you delete or change the records you added, your domain stops showing your website.
+- **Publish to update your site.** Your live site is a snapshot. Changes you make in the editor appear on your custom domain only after you publish again. See [Publish](/publish).
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Verification keeps failing">
+    Check these common causes at your domain provider:
+
+    - The record **type** matches exactly what Webza shows.
+    - The **value** was copied completely, with no extra spaces or missing characters.
+    - The **host** follows your provider's format. See [How host names work at different providers](#how-host-names-work-at-different-providers).
+    - You saved the record. Some providers require a separate **Save** or **Apply changes** step.
+
+    If everything looks correct, wait for DNS propagation and verify again.
+  </Accordion>
+
+  <Accordion title="My domain still shows my old website">
+    Your domain provider probably still has records from your previous website or hosting provider. Remove old records for the same host that point somewhere else, so only the records Webza asks for remain. Then wait for DNS propagation.
+  </Accordion>
+
+  <Accordion title="My domain shows a blank page or an error">
+    Make sure your project is published. A connected domain only shows your website after you [publish](/publish). If you published recently, wait a few minutes and reload the page.
+  </Accordion>
+
+  <Accordion title="I use Cloudflare and my site does not load">
+    If your DNS is managed in Cloudflare, set the records you added for Webza to **DNS only** (gray cloud) instead of **Proxied** (orange cloud), then verify again.
+  </Accordion>
+
+  <Accordion title="I cannot find the DNS settings at my provider">
+    Search your provider's help center for "manage DNS records" or "add a DNS record". If your domain uses nameservers from another service (for example, Cloudflare), add the records at that service instead of the registrar where you bought the domain.
+  </Accordion>
+</AccordionGroup>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I buy a domain through Webza?">
+    No. Webza does not sell domains. Buy a domain from any domain provider, then connect it to your project using the steps on this page.
+  </Accordion>
+
+  <Accordion title="Do I keep my webza.ai subdomain after connecting a custom domain?">
+    Your project keeps its `webza.ai` subdomain. Visitors can reach your website on your custom domain once it is connected.
+  </Accordion>
+
+  <Accordion title="Can I connect a domain before publishing my project?">
+    Yes. You can connect and verify a domain at any time, but it only shows your website after you publish your project.
+  </Accordion>
+
+  <Accordion title="Do I need to transfer my domain to Webza?">
+    No. Your domain stays registered with your current provider. You only add DNS records there to point the domain to your Webza website. You keep paying for and renewing the domain with your provider.
+  </Accordion>
+
+  <Accordion title="What do DNS, DNS records, and propagation mean?">
+    - **DNS** is the system that tells browsers where to find the website for a domain.
+    - **DNS records** are entries in your domain's settings that point the domain to a service or prove you own it.
+    - **Propagation** is the time it takes for DNS changes to update across the internet, usually minutes to a few hours and up to 48 hours.
+  </Accordion>
+</AccordionGroup>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Publish your site" icon="rocket" href="/publish">
+    Put your website online and push new changes live.
+  </Card>
+
+  <Card title="Project settings" icon="gear" href="/settings">
+    Manage domains and other project settings.
+  </Card>
+</CardGroup>

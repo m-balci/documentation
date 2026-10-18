@@ -1,0 +1,142 @@
+---
+title: "Chat del proyecto"
+description: "Usa el chat del proyecto para decirle a la IA qué construir, modificar o corregir. Adjunta archivos, responde preguntas aclaratorias y sigue el progreso en tiempo real."
+---
+
+El chat del proyecto es tu espacio de trabajo principal para construir con IA. Escribe lo que quieres y la IA crea, edita o explica código por ti. Puedes pedir nuevas páginas, funciones, cambios de estilo, correcciones de errores o una explicación de cómo funciona algo.
+
+## Enviar un mensaje
+
+Escribe tu solicitud y presiona **Intro** o haz clic en el botón de enviar. La IA lee tu mensaje y comienza a trabajar.
+
+## Adjuntar archivos
+
+Si tu plan incluye almacenamiento de archivos, puedes adjuntar archivos para darle a la IA contexto adicional.
+
+<Steps>
+  <Step title="Subir archivos">
+    Haz clic en el botón de adjuntar y selecciona archivos de tu dispositivo. Los archivos subidos aparecen en el árbol de archivos del proyecto.
+  </Step>
+  <Step title="@mencionar archivos existentes">
+    Escribe `@` en el chat para autocompletar archivos que ya están en el proyecto.
+  </Step>
+</Steps>
+
+Los archivos adjuntos se pasan a la IA con sus URLs públicas. La IA puede usarlos como imágenes, fondos o enlaces de descarga.
+
+### Adjuntos de imagen y visión
+
+Con un modelo de IA con capacidad de visión, la IA puede ver las imágenes adjuntas directamente. Los formatos compatibles son JPG, PNG, WebP y GIF. Puedes adjuntar hasta cuatro imágenes por mensaje. Las imágenes grandes se reducen automáticamente. La IA ve las imágenes en el mensaje al que fueron adjuntadas.
+
+Con modelos solo de texto, la IA recibe solo los nombres de archivo y las URLs.
+
+## Límites de mensajes
+
+Los mensajes de chat pueden tener hasta 10,000 caracteres. Si tu solicitud es larga, considera dividirla en pasos más pequeños.
+
+## Responder preguntas de la IA
+
+Cuando una solicitud es ambigua, la IA hace preguntas aclaratorias en lugar de adivinar. Una tarjeta de preguntas aparece en la parte inferior del chat con hasta cinco respuestas cortas y seleccionables. Algunas preguntas permiten selecciones múltiples. Toca una respuesta de nuevo para deseleccionarla. Las preguntas abiertas muestran un campo de texto en su lugar.
+
+Un cuadro de texto libre en la parte inferior te permite añadir detalles adicionales antes de enviar. Tus respuestas se publican como un mensaje de chat normal e inician la siguiente ejecución de la IA. También puedes descartar la tarjeta con el botón **×** y escribir una respuesta normal. Las preguntas permanecen legibles en la transcripción.
+
+<Info>
+  Hacer una pregunta finaliza esa ejecución. La tarjeta espera tu respuesta, así que no se gastan créditos mientras está abierta.
+</Info>
+
+## Seguir el progreso de la construcción
+
+Cada ejecución de la IA avanza por etapas mostradas en el chat:
+
+| Etapa | Qué sucede |
+| --- | --- |
+| Thinking | La IA analiza tu solicitud y planifica los cambios. |
+| Actions | Los archivos se crean o modifican. |
+| Messages | La IA explica qué hizo y por qué. |
+| Complete | La ejecución termina y puedes previsualizar el resultado. |
+
+## Indicador de créditos
+
+El encabezado del chat muestra tu estado de créditos actual:
+
+- **Color predeterminado:** queda más del 20% de tus créditos.
+- **Amarillo:** queda entre el 5% y el 20%, con un enlace **Comprar créditos**.
+- **Rojo:** queda el 5% o menos.
+
+En los planes ilimitados muestra **Créditos ilimitados**. Cuando construyes con tu propia clave de API muestra **Usando tu clave API**. Para más detalles, consulta [Créditos y uso](/es/credits-and-usage).
+
+## Corregir gratis
+
+Las ejecuciones que fallan por culpa del agente de IA o de la plataforma no se cobran. Esto incluye ejecuciones donde el agente se detuvo después de errores repetidos, la verificación final de la construcción falló o se gastaron tokens sin producir nada. Las ejecuciones que fallan porque te quedaste sin créditos, o las que cancelas, sí se cobran.
+
+Después de una ejecución fallida, aparece un botón **Corregir gratis** debajo del chat. Al hacer clic en él, le pides a la IA que diagnostique y repare el problema sin añadir nuevas funciones. Esa ejecución de corrección también es gratis. El botón envía una instrucción corregida. El texto en el cuadro de chat no se incluye.
+
+<Warning>
+  Cada ejecución fallida puede corregirse gratis una vez, dentro de las 24 horas, y solo mientras sea la ejecución más reciente.
+</Warning>
+
+Las ejecuciones no cobradas aparecen en **Facturación → Uso** marcadas como **No cobrado**. Hay un límite diario de ejecuciones no cobradas por usuario.
+
+{/* TODO: confirm Webza's daily limit of uncharged runs (default is 5 per 24h). */}
+
+## Imágenes generadas por IA
+
+Si tu plan incluye imágenes de IA, la IA puede crear imágenes personalizadas para proyectos web cuando las fotos de stock no encajan o cuando pides algo específico. Por ejemplo, puedes decir, "genera una imagen de héroe personalizada de un faro al atardecer."
+
+Las imágenes generadas se guardan en `public/images/generated/` y aparecen en el árbol de archivos. Cada imagen tarda un poco más en producirse que un cambio de texto.
+
+Tu asignación mensual se muestra en la tarjeta **Plan actual** en la página **Uso**. Cuando se agota, la IA usa fotos de stock hasta el siguiente mes calendario.
+
+{/* TODO: confirm which Webza plans include AI images and how many per month. */}
+
+## Instrucciones personalizadas
+
+Añade instrucciones que la IA recibe en cada construcción. Ve a **Configuración → Conocimiento** del proyecto e introduce hasta 500 caracteres. Esto es útil para reglas sobre tono, marca o estilo de código. Consulta [Configuración](/es/settings) para más información.
+
+## Consejos para mejores resultados
+
+<AccordionGroup>
+  <Accordion title="Sé descriptivo">
+    Describe lo que quieres con detalle. Incluye diseño, colores, comportamiento y contenido. Cuanto más contexto des, más cercano será el primer resultado.
+  </Accordion>
+
+  <Accordion title="Itera por pasos">
+    Comienza con una versión básica y luego añade funciones una a la vez. Las solicitudes grandes de una sola vez son más difíciles de acertar.
+  </Accordion>
+
+  <Accordion title="Referencia ejemplos">
+    Enlaza o describe sitios web y diseños que te gusten. La IA puede coincidir con estilos, diseños y ambientes con más precisión cuando tiene una referencia.
+  </Accordion>
+
+  <Accordion title="Pide explicaciones">
+    Si quieres aprender cómo funciona algo, pídele a la IA que explique el código o el enfoque. Esto te ayudará a hacer tus propias ediciones más tarde.
+  </Accordion>
+
+  <Accordion title="Usa plantillas">
+    Comenzar desde una plantilla le da a la IA una estructura funcional. Luego puedes personalizarla en lugar de construir desde cero.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=project-chat" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Pruébalo ahora</span>
+    <span className="wz-ad-title">¿Tienes una idea? Escríbela.</span>
+    <span className="wz-ad-text">Inicia un proyecto y dale a Webza tu primera instrucción. La IA preguntará lo que necesita y construirá el resto.</span>
+  </span>
+
+  <span className="wz-ad-btn">Iniciar un proyecto <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Editor" icon="pen" href="/es/editor">
+    Edita código, gestiona archivos y revisa los cambios de la IA junto al chat.
+  </Card>
+
+  <Card title="Vista previa" icon="eye" href="/es/preview">
+    Ve tu sitio en vivo y prueba los cambios antes de publicar.
+  </Card>
+</CardGroup>

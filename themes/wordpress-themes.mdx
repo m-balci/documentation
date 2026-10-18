@@ -1,0 +1,139 @@
+---
+title: "WordPress themes"
+sidebarTitle: "WordPress themes"
+description: "Generate installable WordPress block themes with Webza, preview them in an in-browser WordPress Playground, and install them on WordPress 6.7 or newer."
+---
+
+Generate an installable WordPress Full Site Editing (FSE) block theme from the same chat you use to build websites. Preview it live in your browser, download it as a `.zip`, and install it on any WordPress site running 6.7 or newer.
+
+<Note>
+  WordPress themes are available on the Plus and Premium plans.
+</Note>
+
+## What you get
+
+A WordPress theme project produces a block theme instead of a website. The theme includes:
+
+- `theme.json` with your design system's colors, fonts, and spacing
+- Block templates and template parts
+- Patterns
+- Styles
+
+Webza checks the theme's structure and PHP syntax on every build, so the downloaded theme is ready to install.
+
+## Create a WordPress theme project
+
+On the dashboard, an output selector appears next to the prompt:
+
+| Output | Result |
+| --- | --- |
+| **Website** | The default. A site you can publish to a subdomain or custom domain. |
+| **WordPress Theme** | An installable FSE block theme. |
+
+Choose **WordPress Theme**, enter your prompt, and start the project. The output type is set when you create the project and can't be changed later.
+
+<Tip>
+  You can also start from a WordPress template. Templates built for WordPress appear alongside the website templates.
+</Tip>
+
+## Preview your theme
+
+Webza previews themes in WordPress Playground: a real WordPress running in your browser, with your theme installed and activated. You don't need a server or hosting to see the result.
+
+The Playground has its own reload control. Because it boots a complete WordPress instance, the first load and preview updates may take a moment.
+
+<Warning>
+  Playground is a preview, not a host. Everything in it lives in your browser tab and is gone when you close it. To use the theme, download the `.zip` and install it on your WordPress site.
+</Warning>
+
+## Edit and iterate
+
+Undo, Redo, and Revision History work for theme projects the same way they do for websites. When you restore a revision, the Playground preview reboots with the restored theme so you can continue editing from that point.
+
+## Download and install
+
+<Steps>
+  <Step title="Download the theme">
+    Open the project in the Webza editor and click **Download Theme**. The `.zip` is named after your project.
+  </Step>
+  <Step title="Upload to WordPress">
+    In your WordPress admin, go to **Appearance → Themes → Add New** and click **Upload Theme**. Choose the downloaded `.zip` file, then click **Install Now**.
+  </Step>
+  <Step title="Activate">
+    After installation finishes, click **Activate** to apply the theme to your site.
+  </Step>
+</Steps>
+
+<Tip>
+  Keep the downloaded file name. WordPress uses the `.zip` name as the theme's folder name.
+</Tip>
+
+### Requirements
+
+- **WordPress 6.7 or newer.** Older versions may refuse the install or display templates incorrectly.
+- **PHP 7.4 or newer** on your WordPress server.
+
+## What theme projects can't do
+
+A theme is a downloadable file, not a hosted site, so some website features aren't available:
+
+- **Publishing and custom domains**: Webza doesn't host theme projects, so the **Domains** tab is never shown.
+- **GitHub and Supabase**: not available for themes.
+- **Design mode**: the design system you choose at creation is built into `theme.json`.
+- **AI-generated images**: only available for website projects.
+- **Analytics**: the analytics card is hidden. Add tracking directly in your WordPress site.
+
+In the editor, the **Export** button is replaced by **Download Theme**.
+
+## Changing plans
+
+If you move from Plus or Premium to a plan without WordPress themes, you can still download your existing themes, but new builds on theme projects are blocked. Upgrade again to continue editing them.
+
+## Duplicate a theme project
+
+A duplicated WordPress theme project keeps the WordPress output type.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I don't see the WordPress Theme option">
+    WordPress themes are only available on the Plus and Premium plans. On other plans, the selector is hidden.
+  </Accordion>
+
+  <Accordion title="Builds are refused on my theme project">
+    Your current plan doesn't include WordPress themes. Upgrade to Plus or Premium to continue building. Your project and its downloadable theme stay untouched in the meantime.
+  </Accordion>
+
+  <Accordion title='The preview is stuck on "Installing your theme…"'>
+    - Wait a moment. The first load downloads a full WordPress into your browser, which can be slow on some connections.
+    - A strict company network, VPN, or browser extension may block the preview or WebAssembly. Try another network or disable extensions.
+    - Check your browser console for blocked requests.
+
+    The **Download Theme** button still works, so you can always install the theme on your own WordPress site.
+  </Accordion>
+
+  <Accordion title="WordPress won't install the theme">
+    Update WordPress to 6.7 or newer, and make sure you uploaded the `.zip` file from **Download Theme** without unpacking it.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=wordpress-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">Build your WordPress theme with AI</span>
+    <span className="wz-ad-text">Describe the theme you want and get an installable block theme in minutes, ready to upload to any WordPress site.</span>
+  </span>
+
+  <span className="wz-ad-btn">Create a WordPress theme <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Shopify themes" icon="shopify" href="/themes/shopify-themes">
+    Learn how to generate and install Shopify Online Store 2.0 themes.
+  </Card>
+
+  <Card title="Subscription plans" icon="credit-card" href="/subscription-plans">
+    Compare plans and see which features are included on yours.
+  </Card>
+</CardGroup>

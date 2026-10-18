@@ -1,0 +1,82 @@
+---
+title: "Éditeur"
+description: "Vue d'ensemble de l'éditeur de projet Webza, de sa mise en page, de sa barre d'outils et des raccourcis clavier."
+---
+
+L'éditeur de projet est l'espace de travail dans lequel vous entrez après avoir cliqué sur **Démarrer** sur une carte de projet dans le tableau de bord. Il rassemble la discussion, l'aperçu, le code et les paramètres en un seul endroit pour que vous puissiez construire et affiner votre site sans changer d'onglets.
+
+{/* TODO : Ajouter une capture d'écran annotée de l'éditeur avec le panneau de discussion, l'aperçu, la barre d'outils et l'onglet des paramètres étiquetés */}
+
+## Mise en page de l'éditeur
+
+L'éditeur est divisé en trois zones principales :
+
+<CardGroup cols={2}>
+  <Card title="Discussion de projet" icon="message" href="/fr/project-chat">
+    Demandez à l'IA d'éditer des pages, d'ajouter des sections, de changer des styles ou de corriger des bugs. Vos instructions se transforment en modifications de code que vous pouvez examiner en temps réel.
+  </Card>
+
+  <Card title="Aperçu en direct" icon="eye" href="/fr/preview">
+    Voyez votre site tel que les visiteurs le verront. L'aperçu se met à jour automatiquement après chaque modification IA ou sauvegarde manuelle du code.
+  </Card>
+
+  <Card title="Éditeur de code" icon="code" href="/fr/code-editor">
+    Inspectez et éditez des fichiers directement avec la coloration syntaxique, la recherche et la sauvegarde. Basé sur l'éditeur Monaco.
+  </Card>
+
+  <Card title="Paramètres" icon="gear" href="/fr/settings">
+    Gérer les domaines, les analyses, le référencement et d'autres options au niveau du projet.
+  </Card>
+</CardGroup>
+
+Vous pouvez réduire le panneau de discussion pour donner à l'aperçu toute la largeur. Cela est utile lorsque vous vous concentrez sur les détails du design et que vous n'avez pas besoin de l'assistance de l'IA.
+
+## Barre d'outils
+
+La barre d'outils supérieure vous donne des actions rapides pour le projet en cours :
+
+- **Publier** : Ouvre le flux de publication pour mettre votre site en ligne. Consultez [Publier](/fr/publish).
+- **Reconstruire** : Reconstruit le projet à partir du dernier code. Utilisez ceci si l'aperçu semble désynchronisé.
+- **Rejouer la visite** : Le bouton flèche circulaire à côté de **Reconstruire** rejoue la visite guidée de l'éditeur.
+- **Exporter** : Si votre plan inclut l'exportation de code (Plus ou Premium), ce bouton télécharge le code source complet sous forme de fichier ZIP prêt à être déployé sur Vercel ou hébergé où vous le souhaitez.
+- **Télécharger le thème** : Pour les projets de thème, cela retourne le thème WordPress bloc installable ou le thème Shopify Online Store 2.0 sous forme de fichier ZIP au lieu de l'exportation complète du code.
+
+{/* TODO : Confirmer si les plans Free voient le bouton Exporter désactivé ou masqué */}
+
+## Exporter votre projet
+
+Si votre plan le permet, vous pouvez télécharger votre projet et l'héberger en dehors de Webza.
+
+<Steps>
+  <Step title="Ouvrir l'éditeur">
+    Cliquez sur **Démarrer** sur la carte de projet depuis votre tableau de bord.
+  </Step>
+  <Step title="Cliquer sur Exporter">
+    Dans la barre d'outils, cliquez sur **Exporter** (ou **Télécharger le thème** pour les projets de thème).
+  </Step>
+  <Step title="Télécharger le ZIP">
+    Le fichier se télécharge sur votre ordinateur. Extrayez-le et suivez le README à l'intérieur pour le développement local ou le déploiement sur Vercel.
+  </Step>
+</Steps>
+
+## Raccourcis clavier
+
+| Action | Raccourci |
+| --- | --- |
+| Annuler | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| Rétablir | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> ou <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| Rechercher dans l'éditeur de code | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| Sauvegarder dans l'éditeur de code | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| Envoyer un message de discussion | <kbd>Enter</kbd> |
+
+## Pages connexes
+
+<CardGroup cols={2}>
+  <Card title="Discussion de projet" icon="message" href="/fr/project-chat">
+    Apprenez à parler à l'IA et à examiner les modifications.
+  </Card>
+
+  <Card title="Éditeur de code" icon="code" href="/fr/code-editor">
+    Éditez des fichiers directement avec l'éditeur Monaco intégré.
+  </Card>
+</CardGroup>

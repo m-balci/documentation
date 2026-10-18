@@ -1,0 +1,145 @@
+---
+title: "Collega un dominio personalizzato al tuo sito Webza"
+sidebarTitle: "Domini personalizzati"
+description: "Collega un dominio di tua proprietà al tuo progetto Webza. Aggiungilo nelle impostazioni del progetto, verificalo con record DNS e servi il tuo sito sul tuo indirizzo."
+---
+
+Un **dominio personalizzato** permette ai visitatori di raggiungere il tuo sito Webza al tuo indirizzo, come `goldencrust.com`, invece del sottodominio predefinito `webza.ai` (ad esempio `golden-crust.webza.ai`). Webza non vende domini: compri un dominio da qualsiasi provider (registrar) e lo colleghi al tuo progetto. Questa pagina ti guida attraverso il collegamento, la verifica e la risoluzione dei problemi del tuo dominio.
+
+Un dominio personalizzato migliora il tuo sito in:
+
+- **Identità del brand**: il tuo sito appare più professionale e affidabile.
+- **Visibilità sui motori di ricerca**: il tuo contenuto costruisce autorità sotto un dominio che controlli.
+- **Memorabilità**: un indirizzo breve e di marca è più facile da condividere e ricordare.
+
+<Info>
+  I domini personalizzati sono disponibili nei piani **Plus** e **Premium**. Non sono disponibili nel piano gratuito. Vedi [Piani di abbonamento](/it/subscription-plans) per confrontare i piani.
+</Info>
+
+## Prima di iniziare
+
+Assicurati di avere quanto segue:
+
+- **Un dominio di tua proprietà.** Comprane uno da un provider come GoDaddy, Namecheap o Cloudflare se non ne hai ancora uno.
+- **Accesso alle impostazioni DNS del tuo dominio.** Aggiungi record DNS presso il tuo provider per verificare la proprietà. Se qualcun altro gestisce il tuo dominio (ad esempio, un team IT o un'agenzia), chiedi l'accesso o inviagli i record.
+- **Un progetto pubblicato.** Puoi collegare un dominio in qualsiasi momento, ma il dominio mostra il tuo sito solo dopo che hai [pubblicato il progetto](/it/publish).
+
+## Collegare il tuo dominio
+
+<Steps>
+  <Step title="Apri le impostazioni del dominio del tuo progetto">
+    Apri il progetto che vuoi collegare, poi vai su **Impostazioni → Domini → Dominio personalizzato**.
+  </Step>
+  <Step title="Inserisci il tuo dominio">
+    Digita il dominio che vuoi usare, ad esempio `goldencrust.com`, e continua. Inserisci solo il nome del dominio, senza `https://` o una barra finale.
+  </Step>
+  <Step title="Rivedi la schermata di verifica">
+    Webza mostra una schermata di verifica con i record DNS che devi aggiungere. Tieni questa schermata aperta: copierai ogni record da qui al tuo provider nel passaggio successivo.
+  </Step>
+  <Step title="Aggiungi i record DNS presso il tuo provider">
+    In una nuova scheda, accedi al tuo provider di dominio e apri le impostazioni DNS (a volte chiamate **DNS management**, **DNS zone** o **Advanced DNS**) per il tuo dominio. Per ogni record nella schermata di verifica di Webza:
+
+    1. Seleziona **Aggiungi record**.
+    2. Scegli lo stesso **tipo** mostrato in Webza.
+    3. Copia l'**host** (chiamato anche **nome**) e il **valore** (chiamato anche **points to**, **target** o **content**) esattamente come mostrato.
+    4. Salva il record.
+
+    <Tip>
+      Copia i valori con il pulsante di copia invece di digitarli. Un singolo carattere mancante è la ragione più comune per cui la verifica fallisce.
+    </Tip>
+  </Step>
+  <Step title="Verifica il tuo dominio">
+    Torna a Webza e avvia la verifica nella schermata di verifica. Webza controlla i tuoi record DNS e conferma che possiedi il dominio.
+
+    Quando la verifica ha successo, il tuo dominio è collegato e il tuo sito pubblicato inizia a caricarsi sul tuo dominio personalizzato.
+  </Step>
+</Steps>
+
+<Note>
+  Le modifiche DNS possono impiegare da pochi minuti a 48 ore per propagarsi su internet (questo si chiama **propagazione DNS**). Se la verifica non ha successo subito, attendi un po' e riprova. Non devi rimuovere e riaggiungere il dominio.
+</Note>
+
+## Come funzionano i nomi host presso provider diversi
+
+I provider di dominio etichettano il campo host in modo diverso. Quando Webza mostra un record per il tuo dominio root (ad esempio `goldencrust.com`), il tuo provider potrebbe aspettarsi uno di questi nel campo host:
+
+- `@`
+- Un campo vuoto
+- Il tuo nome di dominio completo, ad esempio `goldencrust.com`
+
+Alcuni provider aggiungono automaticamente il tuo dominio alla fine dell'host. Se l'host di un record è `www` e il tuo provider mostra `www.goldencrust.com` dopo il salvataggio, è corretto. Se mostra `www.goldencrust.com.goldencrust.com`, rimuovi la parte duplicata e salva di nuovo.
+
+## Dopo che il dominio è collegato
+
+- **Condividi il tuo nuovo indirizzo.** Usa il tuo dominio personalizzato ovunque: biglietti da visita, profili social e firme email.
+- **Mantieni i record DNS al loro posto.** Se elimini o modifichi i record che hai aggiunto, il tuo dominio smette di mostrare il tuo sito.
+- **Pubblica per aggiornare il sito.** Il tuo sito live è una snapshot. Le modifiche che fai nell'editor appaiono sul tuo dominio personalizzato solo dopo che pubblichi di nuovo. Vedi [Pubblica](/it/publish).
+
+## Risoluzione dei problemi
+
+<AccordionGroup>
+  <Accordion title="La verifica continua a fallire">
+    Controlla queste cause comuni presso il tuo provider di dominio:
+
+    - Il **type** del record corrisponde esattamente a quello mostrato da Webza.
+    - Il **value** è stato copiato completamente, senza spazi extra o caratteri mancanti.
+    - L'**host** segue il formato del tuo provider. Vedi [Come funzionano i nomi host presso provider diversi](#come-funzionano-i-nomi-host-presso-provider-diversi).
+    - Hai salvato il record. Alcuni provider richiedono un passaggio separato **Salva** o **Applica modifiche**.
+
+    Se tutto sembra corretto, attendi la propagazione DNS e verifica di nuovo.
+  </Accordion>
+
+  <Accordion title="Il mio dominio mostra ancora il mio vecchio sito">
+    Il tuo provider di dominio probabilmente ha ancora i record del tuo sito o provider di hosting precedente. Rimuovi i vecchi record per lo stesso host che puntano altrove, così restano solo i record richiesti da Webza. Poi attendi la propagazione DNS.
+  </Accordion>
+
+  <Accordion title="Il mio dominio mostra una pagina vuota o un errore">
+    Assicurati che il tuo progetto sia pubblicato. Un dominio collegato mostra il tuo sito solo dopo che hai [pubblicato](/it/publish). Se hai pubblicato di recente, attendi qualche minuto e ricarica la pagina.
+  </Accordion>
+
+  <Accordion title="Uso Cloudflare e il mio sito non si carica">
+    Se il tuo DNS è gestito in Cloudflare, imposta i record che hai aggiunto per Webza su **DNS only** (nuvola grigia) invece di **Proxied** (nuvola arancione), poi verifica di nuovo.
+  </Accordion>
+
+  <Accordion title="Non trovo le impostazioni DNS presso il mio provider">
+    Cerca nel centro assistenza del tuo provider "manage DNS records" o "add a DNS record". Se il tuo dominio usa nameserver di un altro servizio (ad esempio, Cloudflare), aggiungi i record su quel servizio invece che sul registrar dove hai comprato il dominio.
+  </Accordion>
+</AccordionGroup>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Posso comprare un dominio tramite Webza?">
+    No. Webza non vende domini. Compra un dominio da qualsiasi provider, poi collegalo al tuo progetto seguendo i passaggi in questa pagina.
+  </Accordion>
+
+  <Accordion title="Mantengo il mio sottodominio webza.ai dopo aver collegato un dominio personalizzato?">
+    Il tuo progetto mantiene il suo sottodominio `webza.ai`. I visitatori possono raggiungere il tuo sito sul tuo dominio personalizzato una volta collegato.
+  </Accordion>
+
+  <Accordion title="Posso collegare un dominio prima di pubblicare il mio progetto?">
+    Sì. Puoi collegare e verificare un dominio in qualsiasi momento, ma mostrerà il tuo sito solo dopo che hai pubblicato il progetto.
+  </Accordion>
+
+  <Accordion title="Devo trasferire il mio dominio a Webza?">
+    No. Il tuo dominio resta registrato presso il tuo provider attuale. Aggiungi solo record DNS lì per puntare il dominio al tuo sito Webza. Continui a pagare e rinnovare il dominio con il tuo provider.
+  </Accordion>
+
+  <Accordion title="Cosa significano DNS, record DNS e propagazione?">
+    - **DNS** è il sistema che dice ai browser dove trovare il sito web per un dominio.
+    - **Record DNS** sono voci nelle impostazioni del tuo dominio che puntano il dominio a un servizio o dimostrano che lo possiedi.
+    - **Propagazione** è il tempo che le modifiche DNS impiegano per aggiornarsi su internet, solitamente minuti o poche ore e fino a 48 ore.
+  </Accordion>
+</AccordionGroup>
+
+## Pagine correlate
+
+<CardGroup cols={2}>
+  <Card title="Pubblica il tuo sito" icon="rocket" href="/it/publish">
+    Metti il tuo sito web online e spingi le nuove modifiche live.
+  </Card>
+
+  <Card title="Impostazioni del progetto" icon="gear" href="/it/settings">
+    Gestisci domini e altre impostazioni del progetto.
+  </Card>
+</CardGroup>

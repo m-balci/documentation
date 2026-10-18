@@ -1,0 +1,139 @@
+---
+title: "GitHub"
+sidebarTitle: "GitHub"
+description: "Connect your GitHub account so Webza pushes your project's source code to a private repository you own after every build."
+---
+
+On every Webza plan, you can connect your GitHub account so Webza pushes your project's source code to a repository in your account after each successful build. The code lives under your control, and you never have to leave Webza to keep it up to date.
+
+<Note>
+  GitHub integration is not available for WordPress or Shopify theme projects.
+</Note>
+
+## How it works
+
+<Steps>
+  <Step title="Connect your GitHub account">
+    Install the Webza GitHub App on your account or organization and link it in Webza.
+  </Step>
+  <Step title="Pick an account for a project">
+    Choose a GitHub connection when you create a project. Webza creates a new private repository for it.
+  </Step>
+  <Step title="Build">
+    After each successful build, the AI pushes the project source with a generated commit message.
+  </Step>
+</Steps>
+
+<Info>
+  Webza only pushes to your repository. It never clones, pulls, or builds from repository contents. The repository is an output, not an input.
+</Info>
+
+## Connect your GitHub account
+
+<Steps>
+  <Step title="Open GitHub in the sidebar">
+    Click **GitHub** in the sidebar, then click **Connect GitHub**.
+  </Step>
+  <Step title="Install the Webza app">
+    GitHub asks you to install the Webza app. Choose whether to grant access to all repositories or only selected ones.
+  </Step>
+  <Step title="Return to Webza">
+    You're sent back to Webza with the connection saved.
+  </Step>
+</Steps>
+
+You can link several personal accounts or organizations, up to 20 connections.
+
+## Connect a repository to a project
+
+When you create a project, click **Customize** on the dashboard prompt box, then choose **Integrations** and pick a GitHub connection. Webza creates the repository automatically.
+
+For an existing project, go to **Settings → General** and find the **GitHub repository** section. From there you can:
+
+- Create a new private repository.
+- Attach an existing repository by entering the owner and repository name.
+- Switch to a different repository or unlink it.
+- Turn **Automatic push** on or off.
+
+<Warning>
+  An existing repository must be empty. Attaching a repository that already contains code fails with "That repository already contains code", because Webza would otherwise overwrite work it can't see.
+</Warning>
+
+Duplicating a project does not copy the GitHub connection. Sharing one repository across projects would let one overwrite the other's files, so each project needs its own link.
+
+## Push on request
+
+Turning off **Automatic push** doesn't mean you have to push by hand. Ask the AI in the project chat, for example "Push this to GitHub", and it runs a one-off push regardless of the toggle.
+
+<Tip>
+  Turn off automatic push if you want to review changes before each commit lands, then ask the AI to push when you're ready.
+</Tip>
+
+## What gets pushed
+
+Webza pushes the project source a developer would want to read, not a full copy of the workspace. Dependencies, build output, and anything that looks like a credential are excluded, so secrets aren't published to your repository.
+
+## Editing the repository outside Webza
+
+Pushes are never forced. If someone commits to the repository outside Webza, the next push is skipped so your changes aren't lost.
+
+<Warning>
+  After that, your repository and your Webza project stay out of sync. Webza doesn't merge outside changes back into the project, and further pushes to that branch are skipped.
+</Warning>
+
+## Security
+
+- Your GitHub tokens are stored encrypted and are never included in any API response.
+- Each push uses a fresh token that lasts one hour and only works for that one repository.
+
+## Connection status
+
+Each connection on the **GitHub** page shows one of three states:
+
+| Status | What it means | What to do |
+| --- | --- | --- |
+| **Active** | Working normally | Nothing |
+| **Reconnect needed** | You removed Webza's authorization but left the app installed. Pushes still work, but you can't link a repository to a new project. | Click **Reconnect** |
+| **Revoked** | The app was uninstalled or suspended. Nothing works. | Click **Reconnect** |
+
+## Remove access
+
+Unlink a repository from a project in **Settings → General**. Nothing is deleted from your GitHub account.
+
+To fully revoke Webza's access, uninstall the Webza app from your GitHub settings. Your repositories and their contents stay in your account.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Pushes stopped">
+    - Someone may have committed to the repository outside Webza. Pushes are skipped to protect those changes.
+    - The Webza app may have been uninstalled from your GitHub account. Check the connection status on the **GitHub** page and reconnect.
+    - Check that **Automatic push** is on in the project's **Settings → General**.
+  </Accordion>
+
+  <Accordion title="I can't attach an existing repository">
+    The repository must be empty. Create a new empty repository on GitHub, or let Webza create one for you.
+  </Accordion>
+
+  <Accordion title="Webza can't see my repository">
+    If you granted access to selected repositories only, add the repository to the Webza app's access list in your GitHub settings.
+  </Accordion>
+
+  <Accordion title="An organization connection stopped working">
+    If authorization for an organization connection was removed, Webza may not detect it right away. You'll see it the next time you try to link a repository. Reconnect from the **GitHub** page.
+  </Accordion>
+</AccordionGroup>
+
+## Alternative: code export
+
+If your plan includes it, you can also export a Vercel-ready ZIP from the **Export** button. This is available on Plus and Premium plans.
+
+<CardGroup cols={2}>
+  <Card title="Supabase database" icon="database" href="/integrations/supabase">
+    Attach a Postgres database to your generated apps.
+  </Card>
+
+  <Card title="Personal API" icon="key" href="/integrations/personal-api">
+    Access your account data programmatically with API keys.
+  </Card>
+</CardGroup>

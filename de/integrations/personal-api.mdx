@@ -1,0 +1,59 @@
+---
+title: "Personal API"
+sidebarTitle: "Personal API"
+description: "Schreibgeschützte REST-API zum programmatischen Zugriff auf Ihr Webza-Konto, Projekte, Credits und Abrechnung."
+---
+
+Plus- und Premium-Tarife beinhalten API-Zugriff. Die Personal API ist eine schreibgeschützte REST-API, mit der Sie programmatisch auf Ihre Webza-Kontodaten zugreifen können. Sie können keine Projekte erstellen, Builds auslösen oder die Abrechnung über die API ändern.
+
+## Erstellen Sie einen API-Schlüssel
+
+Öffnen Sie die **API-Schlüssel**-Seite aus der Seitenleiste.
+
+<Steps>
+  <Step title="Generieren Sie einen Schlüssel">
+    Klicken Sie, um einen neuen Schlüssel zu erstellen. Jeder Schlüssel wird nur einmal bei der Erstellung angezeigt, kopieren Sie ihn daher sofort und bewahren Sie ihn sicher auf.
+  </Step>
+  <Step title="Ablaufdatum festlegen (optional)">
+    Wählen Sie ein Ablaufdatum von 30, 90 oder 365 Tagen, oder lassen Sie es ohne Ablaufdatum.
+  </Step>
+  <Step title="Widerrufen bei Bedarf">
+    Sie können jeden Schlüssel jederzeit widerrufen. Sie können bis zu 10 Schlüssel pro Konto haben.
+  </Step>
+</Steps>
+
+<Warning>
+  Bewahren Sie Ihre Schlüssel geheim auf. Sie gewähren Zugriff auf Ihre Kontodaten, bis sie widerrufen oder ablaufen.
+</Warning>
+
+## Authentifizieren
+
+Senden Sie Ihren Schlüssel als Bearer-Token im `Authorization`-Header:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## Endpunkte und Dokumentation
+
+Die API stellt Ressourcen unter `/api/v1` für Ihr Konto, Credits, Abonnement, Projekte, Benachrichtigungen und Rechnungen bereit.
+
+Öffnen Sie die **API-Dokumentation**-Seite aus der Seitenleiste, um jeden Endpunkt zu sehen. Die Dokumentation enthält einen interaktiven Tester und Copy-Paste-Beispiele in curl, JavaScript, PHP und Python.
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## Separat: KI-Provider-Schlüssel
+
+Ihre eigenen KI-Provider-Schlüssel werden separat in **Einstellungen → KI-Einstellungen** (`/settings`) verwaltet. Diese stehen in keinem Zusammenhang mit der Personal API.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/de/integrations/github">
+    Pushen Sie generierten Quellcode automatisch in ein privates GitHub-Repository.
+  </Card>
+
+  <Card title="Supabase-Datenbank" icon="database" href="/de/integrations/supabase">
+    Hängen Sie eine Postgres-Datenbank an Ihre generierten Apps an.
+  </Card>
+</CardGroup>

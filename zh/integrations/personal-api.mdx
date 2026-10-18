@@ -1,0 +1,59 @@
+---
+title: "个人 API"
+sidebarTitle: "个人 API"
+description: "只读 REST API，用于以编程方式访问您的 Webza 账户、项目、积分和账单信息。"
+---
+
+Plus 和 Premium 套餐包含 API 访问权限。个人 API 是一个只读 REST API，让您能够以编程方式访问 Webza 账户数据。您无法通过 API 创建项目、触发构建或更改账单。
+
+## 创建 API 密钥
+
+从侧边栏打开 **API 密钥** 页面。
+
+<Steps>
+  <Step title="生成密钥">
+    点击以创建新密钥。每个密钥仅在创建时显示一次，因此请立即复制并安全存储。
+  </Step>
+  <Step title="设置过期时间（可选）">
+    选择 30、90 或 365 天的过期时间，或保留为不过期。
+  </Step>
+  <Step title="在需要时撤销">
+    您可以随时撤销任何密钥。每个账户最多可有 10 个密钥。
+  </Step>
+</Steps>
+
+<Warning>
+  请妥善保管您的密钥。在撤销或过期之前，它们会授予对您账户数据的访问权限。
+</Warning>
+
+## 认证
+
+将您的密钥作为 Bearer token 发送到 `Authorization` 标头中：
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## 端点和文档
+
+API 在 `/api/v1` 下暴露账户、积分、订阅、项目、通知和发票的资源。
+
+从侧边栏打开 **API 文档** 页面以查看每个端点。文档包含交互式测试器和 curl、JavaScript、PHP 和 Python 的复制粘贴示例。
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## 单独管理：AI 提供商密钥
+
+您自己的 AI 提供商密钥在 **设置 → AI 设置** (`/settings`) 中单独管理。这些与个人 API 无关。
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/zh/integrations/github">
+    将生成的源代码自动推送到私有 GitHub 仓库。
+  </Card>
+
+  <Card title="Supabase 数据库" icon="database" href="/zh/integrations/supabase">
+    为生成的应用附加 Postgres 数据库。
+  </Card>
+</CardGroup>

@@ -1,0 +1,139 @@
+---
+title: "WordPressテーマ"
+sidebarTitle: "WordPressテーマ"
+description: "Webzaでインストール可能なWordPressブロックテーマを生成し、ブラウザ内のWordPress Playgroundでプレビューして、WordPress 6.7以降にインストールします。"
+---
+
+Webサイトの構築と同じチャットから、インストール可能なWordPress Full Site Editing（FSE）ブロックテーマを生成します。ブラウザでライブプレビューし、`.zip`としてダウンロードして、WordPress 6.7以降を実行している任意のWordPressサイトにインストールできます。
+
+<Note>
+  WordPressテーマはPlusおよびPremiumプランでご利用いただけます。
+</Note>
+
+## 作成されるもの
+
+WordPressテーマプロジェクトは、Webサイトの代わりにブロックテーマを生成します。テーマには以下が含まれます。
+
+- デザインシステムのカラー、フォント、スペーシングを含む`theme.json`
+- ブロックテンプレートおよびテンプレートパーツ
+- パターン
+- スタイル
+
+Webzaはすべてのビルドでテーマの構造とPHP構文をチェックするため、ダウンロードしたテーマはすぐにインストールできます。
+
+## WordPressテーマプロジェクトを作成する
+
+ダッシュボードで、プロンプトの横に出力セレクターが表示されます。
+
+| 出力 | 結果 |
+| --- | --- |
+| **Webサイト** | デフォルト。サブドメインまたはカスタムドメインに公開できるサイト。 |
+| **WordPressテーマ** | インストール可能なFSEブロックテーマ。 |
+
+**WordPressテーマ**を選択して、プロンプトを入力し、プロジェクトを開始します。出力タイプはプロジェクト作成時に設定され、後から変更することはできません。
+
+<Tip>
+  WordPressテンプレートから開始することもできます。WordPress用に構築されたテンプレートは、Webサイトテンプレートの横に表示されます。
+</Tip>
+
+## テーマをプレビューする
+
+WebzaはWordPress Playgroundでテーマをプレビューします。これはブラウザ内で動作する実際のWordPressで、テーマがインストールされて有効化されています。結果を確認するためにサーバーやホスティングは必要ありません。
+
+Playgroundには独自の再読み込みコントロールがあります。完全なWordPressインスタンスを起動するため、初回読み込みおよびプレビューの更新には少し時間がかかることがあります。
+
+<Warning>
+  Playgroundはプレビューであり、ホスティングではありません。そこにあるすべてのものはブラウザタブ内に存在し、タブを閉じると消えます。テーマを使用するには、`.zip`をダウンロードしてWordPressサイトにインストールしてください。
+</Warning>
+
+## 編集と反復
+
+元に戻す、やり直す、変更履歴は、Webサイトと同じようにテーマプロジェクトでも機能します。リビジョンを復元すると、Playgroundプレビューが復元されたテーマで再起動し、その時点から編集を続けることができます。
+
+## ダウンロードとインストール
+
+<Steps>
+  <Step title="テーマをダウンロードする">
+    Webzaエディターでプロジェクトを開き、**テーマをダウンロード**をクリックします。`.zip`はプロジェクト名に基づいて命名されます。
+  </Step>
+  <Step title="WordPressにアップロードする">
+    WordPress管理画面で、**Appearance → Themes → Add New**に移動し、**Upload Theme**をクリックします。ダウンロードした`.zip`ファイルを選択して、**Install Now**をクリックします。
+  </Step>
+  <Step title="有効化する">
+    インストールが完了したら、**Activate**をクリックしてテーマをサイトに適用します。
+  </Step>
+</Steps>
+
+<Tip>
+  ダウンロードしたファイル名は保持してください。WordPressは`.zip`の名前をテーマのフォルダ名として使用します。
+</Tip>
+
+### 要件
+
+- **WordPress 6.7以降。** 古いバージョンではインストールを拒否したり、テンプレートを正しく表示しないことがあります。
+- WordPressサーバー上で**PHP 7.4以降**。
+
+## テーマプロジェクトでできないこと
+
+テーマはダウンロード可能なファイルであり、ホスティングされるサイトではないため、一部のWebサイト機能は利用できません。
+
+- **公開およびカスタムドメイン**：Webzaはテーマプロジェクトをホスティングしないため、**ドメイン**タブは表示されません。
+- **GitHubおよびSupabase**：テーマでは利用できません。
+- **デザインモード**：作成時に選択したデザインシステムが`theme.json`に組み込まれます。
+- **AI生成画像**：Webサイトプロジェクトでのみ利用可能です。
+- **アナリティクス**：アナリティクスカードは非表示になります。トラッキングはWordPressサイトに直接追加してください。
+
+エディターでは、**エクスポート**ボタンが**テーマをダウンロード**に置き換えられます。
+
+## プランの変更
+
+PlusまたはPremiumからWordPressテーマのないプランに移行する場合、既存のテーマはダウンロードできますが、テーマプロジェクトでの新規ビルドはブロックされます。再度アップグレードして、編集を続行してください。
+
+## テーマプロジェクトを複製する
+
+複製されたWordPressテーマプロジェクトは、WordPress出力タイプを保持します。
+
+## トラブルシューティング
+
+<AccordionGroup>
+  <Accordion title="WordPressテーマのオプションが表示されない">
+    WordPressテーマはPlusおよびPremiumプランでのみ利用可能です。他のプランでは、セレクターは非表示になります。
+  </Accordion>
+
+  <Accordion title="テーマプロジェクトでビルドが拒否される">
+    現在のプランにWordPressテーマが含まれていません。PlusまたはPremiumにアップグレードして、ビルドを続行してください。その間、プロジェクトとダウンロード可能なテーマはそのまま残ります。
+  </Accordion>
+
+  <Accordion title="プレビューが「Installing your theme…」で止まる">
+    - しばらくお待ちください。初回読み込みでは完全なWordPressがブラウザにダウンロードされるため、一部の接続では遅いことがあります。
+    - 厳格な企業ネットワーク、VPN、またはブラウザ拡張機能がプレビューまたはWebAssemblyをブロックしている可能性があります。別のネットワークを試すか、拡張機能を無効にしてください。
+    - ブラウザのコンソールでブロックされたリクエストを確認してください。
+
+    **テーマをダウンロード**ボタンは引き続き機能するため、いつでも独自のWordPressサイトにテーマをインストールできます。
+  </Accordion>
+
+  <Accordion title="WordPressがテーマをインストールしない">
+    WordPressを6.7以降に更新し、**テーマをダウンロード**から`.zip`ファイルを解凍せずにアップロードしたことを確認してください。
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=wordpress-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">AIでWordPressテーマを作成する</span>
+    <span className="wz-ad-text">希望のテーマを説明するだけで、数分でインストール可能なブロックテーマが完成。任意のWordPressサイトにアップロードする準備が整います。</span>
+  </span>
+
+  <span className="wz-ad-btn">WordPressテーマを作成する <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Shopifyテーマ" icon="shopify" href="/ja/themes/shopify-themes">
+    Shopify Online Store 2.0テーマの生成とインストール方法を学びます。
+  </Card>
+
+  <Card title="サブスクリプションプラン" icon="credit-card" href="/ja/subscription-plans">
+    プランを比較して、お使いのプランに含まれる機能を確認します。
+  </Card>
+</CardGroup>

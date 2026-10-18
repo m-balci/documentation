@@ -1,0 +1,75 @@
+---
+title: "Changelog"
+sidebarTitle: "Changelog"
+description: "New features, improvements, and fixes in Webza."
+mode: "center"
+---
+
+{/* TODO: Entries are grouped by month. Confirm the exact release dates for the late August and early September updates. */}
+
+<Update label="October 2026">
+  ### New
+
+  - **AI image generation**: The AI can create custom images for website projects. If your plan includes it, a monthly image allowance applies. See [Project chat](/project-chat).
+  - **Image understanding**: When the selected model supports images, the AI can now see the images you attach to a prompt or chat message.
+  - **Fix for free**: Runs that fail because of the AI or the platform are not charged. You can retry a failed run once for free, and the Usage page marks these runs as not charged. See [Credits and usage](/credits-and-usage).
+  - **More ways to connect Supabase**: Connect by signing in with Supabase or with an access token. Manual connections no longer need your secret key. See [Supabase](/integrations/supabase).
+
+  ### Improved
+
+  - Website templates now include the Motion animation library, so the AI can build richer animations such as staggered entrances, parallax, and animated counters. See [Templates](/templates).
+
+  ### Fixed
+
+  - WordPress themes now apply the selected design system's colors and tokens reliably. Dark design systems (Carbon, Lumen, and Noir) now start in dark mode.
+  - Shopify themes now get the design system's colors when the template is picked automatically, and untouched starter files no longer show false validation errors.
+</Update>
+
+<Update label="September 2026">
+  ### New
+
+  - **Newer AI models**: The model lists now include the latest AI models. If a model you saved is retired, Webza switches you to the closest current model of the same class.
+  - **Attach files to your first prompt**: If your plan includes file storage, attach up to 10 files when you create a project.
+  - **Design guidance for the AI**: While it builds, the AI now follows focused playbooks on page composition, section layout, motion, safe redesigns, and copy accuracy.
+  - **Consistent motion**: Each [design system](/design-systems) now sets one motion style, so animation timing and easing stay consistent across your site.
+
+  ### Improved
+
+  - Your first prompt can now be up to 10,000 characters, the same as follow-up messages.
+  - Quality checks now catch dead "#" links in generated sites.
+  - Faster page loads across the dashboard.
+  - Better screen reader support for toggles, filters, and icon-only buttons.
+  - Accounts with no credits left now see a warning that they can't build.
+
+  ### Fixed
+
+  - The AI no longer links to your uploaded files with wrong addresses, which stopped images from loading.
+  - Changes to published sites on custom domains now reach visitors right away.
+  - Addresses ending in a slash now open the right page on published and preview sites.
+  - The Design panel no longer reports a new style as applied when the rebuild behind it failed. The same fix applies to Undo, Redo, and restoring a revision.
+  - Question cards in the chat no longer stretch the page or break scrolling.
+  - The **Code** tab no longer shows a "Failed to load files" error on a project that has never been built.
+</Update>
+
+<Update label="August 2026">
+  ### New
+
+  - **Clarifying questions**: The AI can ask you questions during a build. Answer them with tappable choices right in the chat. See [Project chat](/project-chat).
+  - **Guided tours**: Step-by-step tours of the dashboard, project creation, the editor, billing, the file manager, databases, GitHub, and Shopify. Replay them anytime with **Restart tour**.
+  - **Cookie preferences**: Change your cookie consent choices anytime from the **Cookie preferences** link in the footer.
+
+  ### Improved
+
+  - Faster page loads and a broad accessibility pass: screen readers now announce form errors, loading states, upload results, and search results.
+  - The AI now handles long conversations better and no longer says it is summarizing on every message.
+
+  ### Fixed
+
+  - Dark mode now follows Webza's own theme switch instead of your operating system setting.
+  - The Revision History panel, including its restore buttons, is no longer cut off on mobile browsers.
+  - The builder no longer reports "Build complete" when the AI changed no files.
+  - Chat messages no longer go missing when several updates arrive at once.
+  - Creating a GitHub repository now shows the real reason when it fails.
+  - Build failures now show a single, clear message.
+  - A rejected file save in the code editor no longer reports success and loses your edit.
+</Update>

@@ -1,0 +1,134 @@
+---
+title: "Shopifyテーマ"
+sidebarTitle: "Shopifyテーマ"
+description: "WebzaでShopify Online Store 2.0テーマを生成し、.zipとしてダウンロードしてShopifyストアにインストールします。"
+---
+
+プロンプトから、完全でインストール可能なShopify Online Store 2.0テーマを生成します。`.zip`としてダウンロードして、Shopifyストアにアップロードします。
+
+<Note>
+  ShopifyテーマはPlusおよびPremiumプランでご利用いただけます。
+</Note>
+
+## 仕組み
+
+<Steps>
+  <Step title="Shopifyテーマプロジェクトを作成する">
+    出力タイプとして**Shopifyテーマ**を選択し、テーマを説明します。
+  </Step>
+  <Step title="ビルドと洗練">
+    AIとチャットして、テーマを構築し洗練させます。
+  </Step>
+  <Step title="テーマをダウンロードする">
+    テーマを`.zip`ファイルとしてダウンロードします。
+  </Step>
+  <Step title="Shopifyにインストールする">
+    Shopify管理画面で`.zip`をアップロードし、準備ができたら公開します。
+  </Step>
+</Steps>
+
+## Shopifyテーマプロジェクトを作成する
+
+<Steps>
+  <Step title="出力タイプを選択する">
+    ダッシュボードで、プロンプトの横にある出力セレクターを開き、**Shopifyテーマ**を選択します。
+  </Step>
+  <Step title="テンプレートを選ぶ（オプション）">
+    **カスタマイズ**をクリックしてShopifyテンプレートを選ぶか、**自動**のままにします。
+  </Step>
+  <Step title="テーマを説明する">
+    プロンプトを入力して、**開始**をクリックします。
+  </Step>
+</Steps>
+
+出力タイプはプロジェクト作成時に設定され、後から変更することはできません。
+
+### 開始テンプレート
+
+すべてのShopifyプロジェクトはベーステーマから開始します。デフォルトでは、これはShopifyの公式最小限スターターである**Skeleton**です。これはAIに、組み込みスタイルのない有効なOnline Store 2.0構造を提供するため、デザインはプロンプトに合わせて一から書かれます。
+
+プランで他のShopifyテンプレートが利用可能な場合、**カスタマイズ**で1つを選んでそこから開始できます。テンプレートピッカーを**自動**にすると、AIは利用可能なShopifyテンプレートから選択します。
+
+## テーマをプレビューする
+
+Shopifyテーマは、ShopifyテーマはShopifyストアでのみレンダリングされるため、Webzaエディター内でプレビューすることはできません。ビルド後、プレビューパネルの<strong>テーマをダウンロード（.zip）</strong>を使用し、ストアにテーマをインストールして確認してください。
+
+<Tip>
+  テーマを公開せずにストアにアップロードしてください。そうすれば、ライブストアフロントを変更することなく、**Online Store → Themes**からプレビューできます。
+</Tip>
+
+パネルには元に戻す、やり直す、変更履歴のボタンは表示されません。キーボードショートカットは引き続き機能します。
+
+- 元に戻す：`Ctrl/Cmd + Z`
+- やり直す：`Ctrl/Cmd + Shift + Z`（または一部のシステムで`Ctrl + Y`）
+
+## テーマをインストールする
+
+<Steps>
+  <Step title="テーマをダウンロードする">
+    Webzaエディターで、<strong>テーマをダウンロード（.zip）</strong>をクリックします。
+  </Step>
+  <Step title="Shopifyにアップロードする">
+    Shopify管理画面で、**Online Store → Themes → Add theme → Upload zip file**に移動します。
+  </Step>
+  <Step title="プレビュー、カスタマイズ、または公開する">
+    アップロード後、テーマをプレビューするか、**Customize**をクリックしてShopifyでさらに編集するか、**Publish**をクリックしてライブにします。
+  </Step>
+</Steps>
+
+## テーマプロジェクトでできないこと
+
+テーマはShopifyにインストールされ、Webzaによってホスティングされないため、一部のWebサイト機能は利用できません。
+
+- **公開およびカスタムドメイン**：**ドメイン**タブは表示されません。
+- **GitHubおよびSupabase**：テーマでは利用できません。
+- **デザインモード**：作成時に選択したデザインシステムはビルド時に適用されます。
+- **AI生成画像**：Webサイトプロジェクトでのみ利用可能です。
+- **アナリティクス**：アナリティクスカードは非表示になります。Shopifyストアでトラッキングを追加してください。
+
+エディターでは、**エクスポート**ボタンが<strong>テーマをダウンロード（.zip）</strong>に置き換えられます。
+
+## プランの変更
+
+PlusまたはPremiumからShopifyテーマのないプランに移行する場合、既存のテーマはダウンロードできますが、テーマプロジェクトでの新規ビルドはブロックされます。再度アップグレードして、編集を続行してください。
+
+## テーマプロジェクトを複製する
+
+複製されたShopifyテーマプロジェクトは、Shopify出力タイプを保持します。
+
+## トラブルシューティング
+
+<AccordionGroup>
+  <Accordion title="Shopifyテーマのオプションが表示されない">
+    ShopifyテーマはPlusおよびPremiumプランでのみ利用可能です。
+  </Accordion>
+
+  <Accordion title="Shopifyがテーマファイルを受け付けない">
+    <strong>テーマをダウンロード（.zip）</strong>からダウンロードしたままの`.zip`をアップロードしてください。解凍や再圧縮はしないでください。
+  </Accordion>
+
+  <Accordion title="テーマプロジェクトでビルドが拒否される">
+    現在のプランにShopifyテーマが含まれていません。PlusまたはPremiumにアップグレードして、ビルドを続行してください。プロジェクトとダウンロード可能なテーマはそのまま残ります。
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=shopify-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">コードなしでShopifyテーマを立ち上げる</span>
+    <span className="wz-ad-text">ストアの見た目を説明するだけで、インストール可能なOnline Store 2.0テーマが完成します。コード不要、開発者不要、待ち時間不要。</span>
+  </span>
+
+  <span className="wz-ad-btn">Shopifyテーマを作成する <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="WordPressテーマ" icon="wordpress" href="/ja/themes/wordpress-themes">
+    WordPressブロックテーマの生成とインストール方法を学びます。
+  </Card>
+
+  <Card title="サブスクリプションプラン" icon="credit-card" href="/ja/subscription-plans">
+    プランを比較して、お使いのプランに含まれる機能を確認します。
+  </Card>
+</CardGroup>

@@ -1,0 +1,83 @@
+---
+title: "게시"
+description: "Webza 프로젝트를 게시하고, 스냅샷을 관리하며, 사이트 가시성을 제어하는 방법을 알아보세요."
+---
+
+게시하면 프로젝트가 웹에서 실제로 공개됩니다. 빌드만으로는 온라인에 올라가지 않습니다. 배포하려면 반드시 **게시**를 클릭해야 합니다.
+
+## 프로젝트 게시하기
+
+<Steps>
+  <Step title="게시 대화상자 열기">
+    편집기 도구 모음에서 **게시**를 클릭합니다.
+  </Step>
+  <Step title="하위 도메인 선택하기">
+    `*.webza.ai` 주소에 사용할 이름을 입력합니다. Webza는 입력하는 즉시 사용 가능 여부를 확인하고 프로젝트 이름에서 짧은 이름을 제안합니다. 일부 이름은 예약되어 있어 거부될 수 있습니다.
+  </Step>
+  <Step title="가시성 설정하기">
+    URL을 가진 누구나 사이트를 볼 수 있도록 하려면 **공개**를, 해당 브라우저에서 Webza에 로그인한 본인만 볼 수 있도록 하려면 **비공개**를 선택합니다. 그 외 사용자는 접근이 거부됩니다.
+
+    <Note>
+      비공개 가시성은 요금제 기능입니다. 해당 기능이 포함되지 않은 요금제라면 "비공개 가시성을 사용하려면 업그레이드하세요"라는 잠금 표시가 나타납니다.
+
+      {/* TODO: confirm which Webza plans include private visibility */}
+    </Note>
+  </Step>
+  <Step title="확인하고 게시하기">
+    **게시**를 클릭합니다. Webza는 먼저 스냅샷을 캡처한 후 사이트를 배포합니다.
+  </Step>
+</Steps>
+
+게시가 완료되면 도구 모음 버튼이 **게시됨**으로 표시됩니다. 버튼을 다시 클릭하면 대화상자가 다시 열려 설정을 변경하거나 사이트를 내릴 수 있습니다.
+
+## 변경 후 재게시하기
+
+라이브 사이트는 빌드할 때 자동으로 업데이트되지 않습니다. 최신 변경 사항을 온라인에 반영하려면 재게시해야 합니다. 재게시할 때마다 새로운 스냅샷이 캡처됩니다.
+
+## 게시 스냅샷
+
+각 게시는 게시 대화상자의 **이전 버전** 아래에 나열되는 **게시 전 스냅샷**을 생성합니다. 프로젝트당 최근 5개의 스냅샷만 보관됩니다.
+
+롤백하면 프로젝트 소스가 아닌 게시된 미리보기 출력을 복원합니다. 다음 빌드는 현재 소스에서 다시 생성됩니다. 실제 코드 변경을 되돌리려면 **실행 취소** 또는 **수정 기록**을 사용하세요. 자세한 내용은 [미리보기](/ko/preview)를 참조하세요.
+
+## 사용자 지정 도메인
+
+프로젝트를 게시한 후 자신의 도메인을 연결할 수 있습니다. Plus 요금제에는 사용자 지정 도메인 1개, Premium 요금제에는 3개가 포함됩니다. 설정 단계는 [사용자 지정 도메인](/ko/custom-domains)을 참조하세요.
+
+프로젝트는 게시 상태를 유지해야 합니다. 게시를 취소하면 사용자 지정 도메인도 함께 오프라인됩니다.
+
+## 공유 이미지
+
+소셜 플랫폼에 사이트를 공유하기 전에 **설정** → **일반**에서 공유 이미지를 설정하세요. 자세한 내용은 [설정](/ko/settings)을 참조하세요.
+
+## WordPress 및 Shopify 테마
+
+WordPress 및 Shopify 테마 프로젝트는 Webza에서 호스팅되지 않습니다. 테마 `.zip` 파일을 내보낸 후 자신의 WordPress 사이트나 Shopify 스토어에 설치하세요. WordPress 테마의 경우 **도메인** 탭이 표시되지 않습니다.
+
+## 게시 취소
+
+사이트를 오프라인으로 전환하려면 게시 대화상자를 열어 게시를 취소하세요. 그러면 라이브 사이트와 연결된 모든 사용자 지정 도메인이 웹에서 제거됩니다.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">라이브로 전환</span>
+    <span className="wz-ad-title">나만의 webza.ai 주소로 사이트 공개</span>
+    <span className="wz-ad-text">사이트를 만들고 나만의 webza.ai 주소에 게시하세요. 오늘 바로 세상과 공유하세요.</span>
+  </span>
+
+  <span className="wz-ad-btn">무료로 시작하기 <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="사용자 지정 도메인" icon="globe" href="/ko/custom-domains">
+    자신의 도메인을 게시된 프로젝트에 연결하세요.
+  </Card>
+
+  <Card title="설정" icon="sliders" href="/ko/settings">
+    공유 이미지 및 기타 프로젝트 옵션을 구성하세요.
+  </Card>
+</CardGroup>

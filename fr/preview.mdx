@@ -1,0 +1,108 @@
+---
+title: "Aperçu"
+description: "Utilisez le panneau d'aperçu pour voir votre projet en direct, inspecter des éléments, redimensionner la fenêtre, rethémer les designs et gérer l'historique des révisions."
+---
+
+Le panneau d'aperçu affiche une vue en direct de votre projet. Vous pouvez redimensionner la fenêtre, inspecter des éléments, rethémer le design, et parcourir l'historique des révisions. L'aperçu se recharge automatiquement lorsqu'une construction se termine, vous n'avez donc pas besoin d'un bouton de rafraîchissement manuel.
+
+## Contrôles de la fenêtre
+
+Utilisez les boutons de fenêtre pour tester l'aspect de votre projet à différentes tailles.
+
+| Bouton | Ce qu'il fait |
+| --- | --- |
+| **Téléphone** | Réduit l'aperçu à une largeur mobile. |
+| **Tablette** | Définit une largeur moyenne entre téléphone et ordinateur de bureau. |
+| **Pleine largeur** | Étend l'aperçu à toute la largeur du panneau. |
+
+## Mode inspecteur
+
+Cliquez sur **Inspecter** pour activer le mode inspecteur. Lorsque le mode inspecteur est activé, cliquer sur n'importe quel élément dans l'aperçu ouvre la barre d'outils de l'inspecteur d'éléments.
+
+Les actions de la barre d'outils dépendent de l'élément sélectionné :
+
+- **Éditer le texte** (éléments de texte uniquement) : éditez le texte de l'élément en ligne. Le changement est mis en file d'attente dans la barre des modifications en attente.
+- **Image** (éléments `<img>` uniquement) : remplacez la source de l'image en téléchargeant un fichier ou en collant une URL d'image. Le changement est mis en file d'attente dans la barre des modifications en attente.
+- **Style** : ajustez les styles en ligne tels que les couleurs, l'espacement et la taille. Les modifications de style s'appliquent par elles-mêmes sans l'IA.
+- **Édition IA** : envoyez l'élément à l'IA avec une instruction. Le changement est mis en file d'attente dans la barre des modifications en attente.
+- **Fermer** : fermez l'inspecteur.
+
+### Barre des modifications en attente
+
+Lorsque vous faites des modifications **Éditer le texte**, **Image** ou **Édition IA** dans l'inspecteur, une barre des modifications en attente apparaît en bas de l'aperçu. Elle affiche le nombre de modifications en file d'attente et deux actions :
+
+- **Tout enregistrer** : envoie le lot à l'IA, exécute une construction, et dépense des crédits.
+- **Tout annuler** : supprime toutes les modifications en file d'attente.
+
+<Warning>
+  Rien ne s'applique tant que vous n'avez pas cliqué sur **Tout enregistrer**. Si vous naviguez ailleurs avant de sauvegarder, vous perdez les modifications en file d'attente. Regroupez vos ajustements et sauvegardez une fois pour éviter une utilisation de crédits supplémentaire.
+</Warning>
+
+<Note>
+  Les modifications **Style** changent directement la source sans l'IA et ne sont pas mises en file d'attente dans la barre des modifications en attente.
+</Note>
+
+## Mode design
+
+Cliquez sur **Design** pour rethémer un site déjà construit.
+
+1. Choisissez un système de design.
+2. Choisissez éventuellement une palette d'accentuation.
+3. Cliquez sur **Demander à l'IA** pour appliquer le nouveau thème.
+
+Cela déclenche une reconstruction. L'aperçu se recharge avec le véritable design, et l'IA exécute une passe de correction pour les couleurs en dur. Cela consomme des crédits de construction comme une demande de discussion. Vous ne pouvez pas appliquer un changement de design pendant qu'une autre construction est déjà en cours.
+
+<Info>
+  Le mode design est disponible uniquement pour les sites web. Il est masqué pour les projets de thèmes WordPress et Shopify, qui conservent le système de design choisi lors de la création.
+</Info>
+
+## Annuler et rétablir
+
+Utilisez les boutons **Annuler** et **Rétablir** pour parcourir l'historique de votre projet. Vous pouvez aussi utiliser ces raccourcis clavier :
+
+| Action | Raccourci |
+| --- | --- |
+| Annuler | Ctrl/Cmd + Z |
+| Rétablir | Ctrl/Cmd + Shift + Z, ou Ctrl + Y |
+
+Chaque annulation revient exactement sur un changement : une demande de discussion de l'IA, une modification de style, ou un rethéming du design. Après une annulation, le projet est reconstruit. Votre travail le plus récent est mis en point de contrôle avant une annulation pour que le rétablissement puisse le ramener. Chaque annulation et rétablissement est enregistré dans la discussion pour que l'IA reste informée.
+
+<Warning>
+  Annuler et rétablir sont indisponibles pendant qu'une construction s'exécute. Un projet tout nouveau n'a rien à annuler jusqu'au deuxième changement.
+</Warning>
+
+<Warning>
+  Les modifications manuelles de l'éditeur de code faites alors que vous êtes dans l'historique (après une annulation) ne sont pas capturées. La prochaine action Annuler, Rétablir ou Restaurer les supprime sans avertissement. Revenez d'abord à l'état le plus récent, ou laissez l'IA faire le changement.
+</Warning>
+
+<Info>
+  Pour les projets Shopify, les boutons **Annuler**, **Rétablir** et **Historique des révisions** sont masqués. Seul **Télécharger le thème (.zip)** apparaît. Les raccourcis clavier fonctionnent toujours pour les projets Shopify.
+</Info>
+
+## Historique des révisions
+
+Cliquez sur l'**icône d'horloge** pour ouvrir l'historique des révisions. Un point de contrôle est capturé avant chaque demande de l'IA, modification de style et changement de design. Webza conserve les 20 points de contrôle les plus récents.
+
+La liste affiche les étiquettes, les horodatages et les comptes de fichiers. La version actuelle a un badge **Actuel**. Cliquez sur **Restaurer** sur n'importe quelle version pour y accéder.
+
+Restaurer crée d'abord un point de contrôle de votre état actuel pour que la restauration soit réversible. Chaque restauration déclenche une reconstruction. L'historique des révisions est disponible uniquement pour les sites web et les thèmes WordPress.
+
+<Note>
+  Les instantanés de publication sont distincts de l'historique des révisions. Consultez la page [Publier](/fr/publish) pour plus de détails.
+</Note>
+
+## Aperçu WordPress Playground
+
+Les projets de thèmes WordPress s'aperçoivent à l'intérieur de WordPress Playground. Playground a son propre contrôle de rechargement, le comportement de rechargement automatique de l'aperçu fonctionne donc différemment là-bas.
+
+## Pages connexes
+
+<CardGroup cols={2}>
+  <Card title="Discussion de projet" icon="message" href="/fr/project-chat">
+    Envoyez des instructions à l'IA et gérez l'historique de discussion.
+  </Card>
+
+  <Card title="Publier" icon="rocket" href="/fr/publish">
+    Publiez votre projet et gérez les instantanés en direct.
+  </Card>
+</CardGroup>

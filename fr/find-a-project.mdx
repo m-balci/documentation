@@ -1,0 +1,76 @@
+---
+title: "Trouver un projet"
+description: "Parcourez, mettez en favori, dupliquez et gérez vos projets Webza depuis une seule vue."
+---
+
+Ouvrez **Tous les projets** depuis la barre latérale (sous **Projets**) pour voir chaque projet sur lequel vous travaillez, son statut, et où reprendre. Un bouton **Nouveau projet** est également présent dans cette vue.
+
+## Onglets de projet
+
+Vos projets sont organisés en trois onglets, chacun avec un compteur :
+
+| Onglet | Ce qu'il affiche |
+| --- | --- |
+| **Tous** | Chaque projet sur lequel vous travaillez |
+| **Favoris** | Les projets que vous avez mis en favori depuis leur ligne pour les épingler ici (ce n'est qu'un filtre, cela ne change rien au projet) |
+| **Corbeille** | Les projets supprimés conservés pendant une période de récupération |
+
+{/* TODO : confirmer si Tous les projets a une zone de recherche ou un tri */}
+
+## Mettre un projet en favori
+
+Cliquez sur l'icône étoile sur n'importe quelle ligne de projet pour l'épingler dans l'onglet **Favoris**. Ce n'est qu'un filtre. Cela ne change pas les paramètres, la visibilité ou le comportement du projet.
+
+## Corbeille et récupération
+
+Les projets supprimés vont dans l'onglet **Corbeille**. Chaque ligne offre **Restaurer** ou **Supprimer définitivement**.
+
+<Warning>
+  La Corbeille se vide automatiquement. Les projets mis à la corbeille sont définitivement supprimés après la période de conservation (valeur par défaut 90 jours) avec leurs fichiers, aperçus et instantanés. La suppression définitive, manuelle ou automatique, ne peut pas être annulée.
+</Warning>
+
+Supprimer un projet libère son sous-domaine et son domaine personnalisé pour qu'ils puissent être réutilisés.
+
+{/* TODO : confirmer la période de conservation de la corbeille de Webza */}
+
+## Dupliquer un projet
+
+Ouvrez le menu d'actions sur n'importe quelle ligne de projet et choisissez **Dupliquer** pour créer une copie nommée "original (Copy)".
+
+### Ce qui est copié
+
+- Nom et description
+- Invite originale
+- Modèle et type de sortie (site web, thème WordPress, thème Shopify)
+- Historique de conversation complet et instructions personnalisées
+- Système de design et accent
+- Titre publié, description, et visibilité publique/privée
+
+### Ce qui n'est pas copié
+
+Le duplicata démarre comme un nouveau projet non publié :
+
+- Aucun sous-domaine ni domaine personnalisé
+- Aucune image de partage
+- Aucun historique de construction ni utilisation de stockage
+- Aucune miniature
+- Aucun ID d'analyse
+- Un jeton API frais
+- Aucune des connexions Supabase ou GitHub originales
+
+Un duplicata est un nouveau départ, pas un clone d'un site en direct. Il ne répondra pas sur le domaine de l'original. Publiez-le séparément et rattachez les connexions. Cela est nécessaire car un sous-domaine appartient à un seul projet, et partager un jeton API ou un dépôt permettrait à un projet d'écraser les fichiers de l'autre.
+
+## Limites de projet
+
+- Les plans **Free** et **Plus** incluent 1 projet.
+- Le plan **Premium** inclut des projets illimités.
+
+{/* TODO : confirmer si les duplicatas et les projets mis à la corbeille comptent dans la limite de projet */}
+
+<CardGroup cols={2}>
+  <Card title="Discussion de projet" icon="message" href="/fr/project-chat">
+  </Card>
+
+  <Card title="Publier" icon="globe" href="/fr/publish">
+  </Card>
+</CardGroup>

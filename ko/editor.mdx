@@ -1,0 +1,82 @@
+---
+title: "편집기"
+description: "Webza 프로젝트 편집기의 레이아웃, 도구 모음, 키보드 단축키 개요."
+---
+
+프로젝트 편집기는 대시보드의 프로젝트 카드에서 **시작**을 클릭한 후 들어가는 작업 공간입니다. 채팅, 미리보기, 코드, 설정을 한 곳에 모아 탭을 전환하지 않고도 사이트를 만들고 다듬을 수 있습니다.
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## 편집기 레이아웃
+
+편집기는 세 개의 주요 영역으로 나뉩니다:
+
+<CardGroup cols={2}>
+  <Card title="프로젝트 채팅" icon="message" href="/ko/project-chat">
+    AI에게 페이지 편집, 섹션 추가, 스타일 변경, 버그 수정을 요청하세요. 지시사항은 실시간으로 검토할 수 있는 코드 변경으로 변환됩니다.
+  </Card>
+
+  <Card title="라이브 미리보기" icon="eye" href="/ko/preview">
+    방문자가 보게 될 모습으로 사이트를 확인하세요. AI 편집이나 수동 코드 저장 후 미리보기가 자동으로 업데이트됩니다.
+  </Card>
+
+  <Card title="코드 편집기" icon="code" href="/ko/code-editor">
+    구문 강조, 검색, 저장 기능으로 파일을 직접 검토하고 편집하세요. Monaco 편집기 기반입니다.
+  </Card>
+
+  <Card title="설정" icon="gear" href="/ko/settings">
+    도메인, 분석, SEO 및 기타 프로젝트 수준 옵션을 관리합니다.
+  </Card>
+</CardGroup>
+
+채팅 패널을 접어 미리보기가 전체 너비를 차지하도록 할 수 있습니다. 디자인 세부 사항에 집중하고 AI 도움이 필요 없을 때 유용합니다.
+
+## 도구 모음
+
+상단 도구 모음은 현재 프로젝트에 대한 빠른 작업을 제공합니다:
+
+- **게시**: 사이트를 라이브로 올리는 게시 흐름을 엽니다. [게시](/ko/publish)를 참조하세요.
+- **다시 빌드**: 최신 코드로 프로젝트를 다시 빌드합니다. 미리보기가 동기화되지 않은 것처럼 보일 때 사용하세요.
+- **투어 다시 재생**: **다시 빌드** 옆의 원형 화살표 버튼이 편집기 가이드 투어를 다시 재생합니다.
+- **내보내기**: 요금제에 코드 내보내기가 포함된 경우(Plus 또는 Premium), 이 버튼은 전체 소스 코드를 ZIP 파일로 다운로드하며, Vercel에 배포하거나 원하는 곳에 호스팅할 준비가 되어 있습니다.
+- **테마 다운로드**: 테마 프로젝트의 경우, 전체 소스 내보내기 대신 설치 가능한 WordPress 블록 테마 또는 Shopify Online Store 2.0 테마를 ZIP 파일로 반환합니다.
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## 프로젝트 내보내기
+
+요금제가 지원하는 경우, 프로젝트를 다운로드하여 Webza 외부에서 호스팅할 수 있습니다.
+
+<Steps>
+  <Step title="편집기 열기">
+    대시보드의 프로젝트 카드에서 **시작**을 클릭합니다.
+  </Step>
+  <Step title="내보내기 클릭">
+    도구 모음에서 **내보내기**(또는 테마 프로젝트의 경우 **테마 다운로드**)를 클릭합니다.
+  </Step>
+  <Step title="ZIP 다운로드">
+    파일이 컴퓨터에 다운로드됩니다. 압축을 풀고 내부의 README를 따라 로컬 개발 또는 Vercel 배포를 진행하세요.
+  </Step>
+</Steps>
+
+## 키보드 단축키
+
+| 작업 | 단축키 |
+| --- | --- |
+| 실행 취소 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| 다시 실행 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> 또는 <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| 코드 편집기에서 검색 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| 코드 편집기에서 저장 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| 채팅 메시지 보내기 | <kbd>Enter</kbd> |
+
+## 관련 페이지
+
+<CardGroup cols={2}>
+  <Card title="프로젝트 채팅" icon="message" href="/ko/project-chat">
+    AI와 대화하고 변경 사항을 검토하는 방법을 알아보세요.
+  </Card>
+
+  <Card title="코드 편집기" icon="code" href="/ko/code-editor">
+    내장 Monaco 편집기로 파일을 직접 편집하세요.
+  </Card>
+</CardGroup>

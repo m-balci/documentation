@@ -1,0 +1,139 @@
+---
+title: "GitHub"
+sidebarTitle: "GitHub"
+description: "GitHub hesabınızı bağlayın, böylece Webza her başarılı inşadan sonra projenizin kaynak kodunu sizin sahibi olduğunuz özel bir depoya göndersin."
+---
+
+Her Webza planında GitHub hesabınızı bağlayabilirsiniz, böylece Webza her başarılı inşadan sonra projenizin kaynak kodunu hesabınızdaki bir depoya gönderir. Kod sizin kontrolünüzde kalır ve Webza'dan ayrılmadan güncel tutabilirsiniz.
+
+<Note>
+  GitHub entegrasyonu WordPress veya Shopify tema projeleri için mevcut değildir.
+</Note>
+
+## Nasıl çalışır
+
+<Steps>
+  <Step title="GitHub hesabınızı bağlayın">
+    Webza GitHub Uygulamasını hesabınıza veya kuruluşunuza kurun ve Webza'da bağlantı kurun.
+  </Step>
+  <Step title="Proje için bir hesap seçin">
+    Bir proje oluştururken bir GitHub bağlantısı seçin. Webza bunun için yeni bir özel depo oluşturur.
+  </Step>
+  <Step title="İnşa edin">
+    Her başarılı inşadan sonra, yapay zeka proje kaynağını otomatik oluşturulan bir commit mesajıyla gönderir.
+  </Step>
+</Steps>
+
+<Info>
+  Webza yalnızca sizin deponuza gönderir. Asla klonlama, çekme veya depo içeriğinden inşa yapmaz. Depo bir çıktıdır, girdi değil.
+</Info>
+
+## GitHub hesabınızı bağlama
+
+<Steps>
+  <Step title="Kenar çubuğunda GitHub'ı açın">
+    Kenar çubuğunda **GitHub**'a tıklayın, ardından **GitHub'ı bağla**'ya tıklayın.
+  </Step>
+  <Step title="Webza uygulamasını kurun">
+    GitHub, Webza uygulamasını kurmanızı ister. Tüm depolara veya yalnızca seçili depolara erişim izni verip vermeyeceğinizi seçin.
+  </Step>
+  <Step title="Webza'ya dönün">
+    Bağlantı kaydedilerek Webza'ya geri gönderilirsiniz.
+  </Step>
+</Steps>
+
+Birden fazla kişisel hesap veya kuruluş bağlayabilirsiniz, en fazla 20 bağlantı.
+
+## Projeye depo bağlama
+
+Bir proje oluştururken, kontrol paneli istem kutusunda **Özelleştir**'e tıklayın, ardından **Entegrasyonlar**'ı seçin ve bir GitHub bağlantısı seçin. Webza depoyu otomatik olarak oluşturur.
+
+Mevcut bir proje için, **Ayarlar → Genel**'e gidin ve **GitHub deposu** bölümünü bulun. Buradan şunları yapabilirsiniz:
+
+- Yeni bir özel depo oluşturabilirsiniz.
+- Sahip ve depo adını girerek mevcut bir depo ekleyebilirsiniz.
+- Farklı bir depoya geçebilir veya bağlantıyı kaldırabilirsiniz.
+- **Otomatik gönderimi** açıp kapatabilirsiniz.
+
+<Warning>
+  Mevcut bir depo boş olmalıdır. Zaten kod içeren bir depo eklemek, Webza'nın göremediği çalışmanın üzerine yazacağı için "Bu depo zaten kod içeriyor" hatasıyla başarısız olur.
+</Warning>
+
+Bir projeyi kopyalamak GitHub bağlantısını kopyalamaz. Bir depoyu birden fazla proje arasında paylaşmak, birinin diğerinin dosyalarının üzerine yazmasına izin vereceğinden, her projenin kendi bağlantısına ihtiyacı vardır.
+
+## İstek üzerine gönderme
+
+**Otomatik gönderiyi** kapatmak, el ile göndermek zorunda kalacağınız anlamına gelmez. Proje sohbetinde yapay zekaya isteyin, örneğin "Bunu GitHub'a gönder", ve o tek seferlik gönderiyi açma/kapama durumundan bağımsız olarak çalıştırır.
+
+<Tip>
+  Her commit öncesinde değişiklikleri incelemek istiyorsanız otomatik gönderiyi kapatın, ardından hazır olduğunuzda yapay zekaya göndermesini isteyin.
+</Tip>
+
+## Ne gönderilir
+
+Webza, bir geliştiricinin okumak isteyeceği proje kaynağını gönderir, çalışma alanının tam bir kopyasını değil. Bağımlılıklar, inşa çıktısı ve kimlik bilgisi gibi görünen her şey hariç tutulur, böylece gizli bilgiler deponuza yayınlanmaz.
+
+## Depoyu Webza dışında düzenleme
+
+Göndermeler asla zorlanmaz. Birisi Webza dışında depoya commit yaparsa, bir sonraki gönderme atlanır, böylece değişiklikleriniz kaybolmaz.
+
+<Warning>
+  Bundan sonra deponuz ve Webza projeniz senkronize kalmaz. Webza dışarıdan yapılan değişiklikleri projeye geri birleştirmez ve o dala yapılan daha sonraki göndermeler atlanır.
+</Warning>
+
+## Güvenlik
+
+- GitHub tokenleriniz şifrelenmiş olarak saklanır ve hiçbir API yanıtına dahil edilmez.
+- Her gönderme, yalnızca bir saat süren ve yalnızca o depo için çalışan yeni bir token kullanır.
+
+## Bağlantı durumu
+
+**GitHub** sayfasındaki her bağlantı üç durumdan birini gösterir:
+
+| Durum | Anlamı | Ne yapmalı |
+| --- | --- | --- |
+| **Aktif** | Normal çalışıyor | Bir şey yapmanıza gerek yok |
+| **Yeniden bağlantı gerekli** | Webza'nın yetkisini kaldırdınız ancak uygulamayı kaldırmadınız. Göndermeler hâlâ çalışır, ancak yeni bir projeye depo bağlayamazsınız. | **Yeniden bağlan**'a tıklayın |
+| **İptal edildi** | Uygulama kaldırıldı veya askıya alındı. Hiçbir şey çalışmaz. | **Yeniden bağlan**'a tıklayın |
+
+## Erişimi kaldırma
+
+Bir projeden depoyu **Ayarlar → Genel** bölümünden ayırın. GitHub hesabınızdan hiçbir şey silinmez.
+
+Webza'nın erişimini tamamen iptal etmek için, GitHub ayarlarınızdan Webza uygulamasını kaldırın. Depolarınız ve içerikleri hesabınızda kalır.
+
+## Sorun giderme
+
+<AccordionGroup>
+  <Accordion title="Göndermeler durdu">
+    - Birisi Webza dışında depoya commit yapmış olabilir. Bu değişiklikleri korumak için göndermeler atlanır.
+    - Webza uygulaması GitHub hesabınızdan kaldırılmış olabilir. **GitHub** sayfasındaki bağlantı durumunu kontrol edin ve yeniden bağlanın.
+    - Projenin **Ayarlar → Genel** bölümünde **Otomatik gönderim**'in açık olduğundan emin olun.
+  </Accordion>
+
+  <Accordion title="Mevcut bir depo ekleyemiyorum">
+    Depo boş olmalıdır. GitHub'da yeni bir boş depo oluşturun veya Webza'nın sizin için bir tane oluşturmasına izin verin.
+  </Accordion>
+
+  <Accordion title="Webza depomu göremiyor">
+    Yalnızca seçili depolara erişim izni verdiyseniz, GitHub ayarlarınızda Webza uygulamasının erişim listesine depoyu ekleyin.
+  </Accordion>
+
+  <Accordion title="Kuruluş bağlantısı çalışmayı durdurdu">
+    Bir kuruluş bağlantısı için yetki kaldırıldıysa, Webza bunu hemen algılamayabilir. Bir sonraki depo bağlama denemenizde görürsünüz. **GitHub** sayfasından yeniden bağlanın.
+  </Accordion>
+</AccordionGroup>
+
+## Alternatif: kod dışa aktarma
+
+Planınız dahilindeyse, **Dışa Aktar** butonundan Vercel hazır bir ZIP de indirebilirsiniz. Bu Plus ve Premium planlarda mevcuttur.
+
+<CardGroup cols={2}>
+  <Card title="Supabase veritabanı" icon="database" href="/tr/integrations/supabase">
+    Oluşturulan uygulamalarınıza bir Postgres veritabanı ekleyin.
+  </Card>
+
+  <Card title="Kişisel API" icon="key" href="/tr/integrations/personal-api">
+    API anahtarlarıyla hesap verilerinize programatik olarak erişin.
+  </Card>
+</CardGroup>

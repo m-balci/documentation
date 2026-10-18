@@ -1,0 +1,59 @@
+---
+title: "Personal API"
+sidebarTitle: "Personal API"
+description: "API REST de solo lectura para acceder a tu cuenta de Webza, proyectos, créditos y facturación de forma programática."
+---
+
+Los planes Plus y Premium incluyen acceso a la API. La Personal API es una API REST de solo lectura que te permite acceder a los datos de tu cuenta de Webza de forma programática. No puedes crear proyectos, activar compilaciones ni cambiar la facturación a través de la API.
+
+## Crea una clave de API
+
+Abre la página de **Claves de API** desde la barra lateral.
+
+<Steps>
+  <Step title="Genera una clave">
+    Haz clic para crear una nueva clave. Cada clave se muestra solo una vez al crearla, así que cópiala de inmediato y guárdala de forma segura.
+  </Step>
+  <Step title="Establece vencimiento (opcional)">
+    Elige un vencimiento de 30, 90 o 365 días, o déjala sin vencimiento.
+  </Step>
+  <Step title="Revoca cuando sea necesario">
+    Puedes revocar cualquier clave en cualquier momento. Puedes tener hasta 10 claves por cuenta.
+  </Step>
+</Steps>
+
+<Warning>
+  Mantén tus claves en secreto. Otorgan acceso a los datos de tu cuenta hasta que sean revocadas o expiren.
+</Warning>
+
+## Autenticación
+
+Envía tu clave como un token Bearer en el encabezado `Authorization`:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## Endpoints y documentación
+
+La API expone recursos bajo `/api/v1` para tu cuenta, créditos, suscripción, proyectos, notificaciones y facturas.
+
+Abre la página de **Documentación de la API** desde la barra lateral para ver cada endpoint. La documentación incluye un probador interactivo y ejemplos para copiar y pegar en curl, JavaScript, PHP y Python.
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## Por separado: claves de proveedor de IA
+
+Tus propias claves de proveedor de IA se administran por separado en **Configuración → Configuración de IA** (`/settings`). Estas no tienen relación con la Personal API.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/es/integrations/github">
+    Envía automáticamente el código generado a un repositorio privado de GitHub.
+  </Card>
+
+  <Card title="Supabase database" icon="database" href="/es/integrations/supabase">
+    Adjunta una base de datos Postgres a tus aplicaciones generadas.
+  </Card>
+</CardGroup>

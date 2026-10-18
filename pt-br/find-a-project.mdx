@@ -1,0 +1,76 @@
+---
+title: "Encontrar um projeto"
+description: "Navegue, favorite, duplique e gerencie seus projetos no Webza a partir de uma única visualização."
+---
+
+Abra **Todos os projetos** na barra lateral (em **Projetos**) para ver todos os projetos nos quais está trabalhando, seu status e onde continuar. Um botão **Novo projeto** também está nesta visualização.
+
+## Abas de projeto
+
+Seus projetos são organizados em três abas, cada uma com uma contagem:
+
+| Aba | O que mostra |
+| --- | --- |
+| **Todos** | Todo projeto no qual você está trabalhando |
+| **Favoritos** | Projetos que você favoritou a partir de sua linha para fixar aqui (isso é puramente um filtro, não altera nada sobre o projeto) |
+| **Lixeira** | Projetos excluídos mantidos por uma janela de recuperação |
+
+{/* TODO: confirm whether All Projects has a search box or sorting */}
+
+## Favorite um projeto
+
+Clique no ícone de estrela em qualquer linha de projeto para fixá-lo na aba **Favoritos**. Isso é apenas um filtro. Não altera as configurações, visibilidade ou comportamento do projeto.
+
+## Lixeira e recuperação
+
+Projetos excluídos vão para a aba **Lixeira**. Cada linha oferece **Restaurar** ou **Excluir permanentemente**.
+
+<Warning>
+  A Lixeira se esvazia automaticamente. Projetos na lixeira são removidos permanentemente após o período de retenção (padrão 90 dias) com seus arquivos, prévias e snapshots. A exclusão permanente, seja manual ou automática, não pode ser desfeita.
+</Warning>
+
+Excluir um projeto libera seu subdomínio e domínio personalizado para que possam ser reutilizados.
+
+{/* TODO: confirm Webza's trash retention period */}
+
+## Duplique um projeto
+
+Abra o menu de ações em qualquer linha de projeto e escolha **Duplicar** para criar uma cópia chamada "original (Copy)".
+
+### O que é copiado
+
+- Nome e descrição
+- Prompt original
+- Template e tipo de saída (website, tema WordPress, tema Shopify)
+- Histórico de conversa completo e instruções personalizadas
+- Design system e destaque
+- Título publicado, descrição e visibilidade **Público** / **Privado**
+
+### O que não é copiado
+
+A duplicata começa como um novo projeto não publicado:
+
+- Nenhum subdomínio ou domínio personalizado
+- Nenhuma imagem de compartilhamento
+- Nenhum histórico de construção ou uso de armazenamento
+- Nenhuma miniatura
+- Nenhum ID de analytics
+- Um token de API novo
+- Nenhuma das conexões Supabase ou GitHub do original
+
+Uma duplicata é um novo começo, não um clone de um site no ar. Ela não responderá no domínio do original. Publique-a separadamente e reanexe quaisquer conexões. Isso é necessário porque um subdomínio pertence a apenas um projeto, e compartilhar um token de API ou repositório permitiria que um projeto sobrescrevesse os arquivos do outro.
+
+## Limites de projeto
+
+- Planos **Free** e **Plus** incluem 1 projeto.
+- **Premium** inclui projetos **ilimitados**.
+
+{/* TODO: confirm whether duplicates and trashed projects count toward the project limit */}
+
+<CardGroup cols={2}>
+  <Card title="Chat do projeto" icon="message" href="/pt-br/project-chat">
+  </Card>
+
+  <Card title="Publicar" icon="globe" href="/pt-br/publish">
+  </Card>
+</CardGroup>

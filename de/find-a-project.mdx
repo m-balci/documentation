@@ -1,0 +1,76 @@
+---
+title: "Projekt finden"
+description: "Durchsuchen, favorisieren, duplizieren und verwalten Sie Ihre Webza-Projekte aus einer einzigen Ansicht."
+---
+
+Öffnen Sie **Alle Projekte** aus der Seitenleiste (unter **Projekte**), um jedes Projekt, an dem Sie arbeiten, seinen Status und wo Sie fortfahren können, zu sehen. Eine Schaltfläche **Neues Projekt** befindet sich ebenfalls in dieser Ansicht.
+
+## Projekt-Tabs
+
+Ihre Projekte sind in drei Tabs organisiert, jeder mit einer Zählung:
+
+| Tab | Was er zeigt |
+| --- | --- |
+| **Alle** | Jedes Projekt, an dem Sie arbeiten |
+| **Favoriten** | Projekte, die Sie aus ihrer Zeile mit einem Stern markiert haben, um sie hier anzuheften (dies ist rein ein Filter, er ändert nichts am Projekt) |
+| **Papierkorb** | Gelöschte Projekte, die für ein Wiederherstellungsfenster aufbewahrt werden |
+
+{/* TODO: confirm whether All Projects has a search box or sorting */}
+
+## Projekt favorisieren
+
+Klicken Sie auf das Stern-Symbol in einer beliebigen Projektzeile, um sie im Tab **Favoriten** anzuheften. Dies ist nur ein Filter. Er ändert nicht die Projekteinstellungen, Sichtbarkeit oder das Verhalten.
+
+## Papierkorb und Wiederherstellung
+
+Gelöschte Projekte gelangen in den Tab **Papierkorb**. Jede Zeile bietet **Wiederherstellen** oder **Endgültig löschen**.
+
+<Warning>
+  Der Papierkorb leert sich selbst. Projekte im Papierkorb werden nach der Aufbewahrungsfrist (Standard 90 Tage) dauerhaft mit ihren Dateien, Vorschauen und Snapshots entfernt. Die dauerhafte Löschung, ob manuell oder automatisch, kann nicht rückgängig gemacht werden.
+</Warning>
+
+Das Löschen eines Projekts gibt seine Subdomain und benutzerdefinierte Domain frei, damit sie wiederverwendet werden können.
+
+{/* TODO: confirm Webza's trash retention period */}
+
+## Projekt duplizieren
+
+Öffnen Sie das Aktionsmenü in einer beliebigen Projektzeile und wählen Sie **Duplizieren**, um eine Kopie mit dem Namen "original (Copy)" zu erstellen.
+
+### Was kopiert wird
+
+- Name und Beschreibung
+- Ursprünglicher Prompt
+- Template und Ausgabetyp (Website, WordPress-Theme, Shopify-Theme)
+- Vollständiger Gesprächsverlauf und benutzerdefinierte Anweisungen
+- Designsystem und Akzent
+- Veröffentlichter Titel, Beschreibung und öffentliche/private Sichtbarkeit
+
+### Was nicht kopiert wird
+
+Das Duplikat startet als neues, unveröffentlichtes Projekt:
+
+- Keine Subdomain oder benutzerdefinierte Domain
+- Kein Social-Media-Bild
+- Keine Build-Historie oder Speichernutzung
+- Kein Thumbnail
+- Keine Analyse-IDs
+- Ein neues API-Token
+- Keine der ursprünglichen Supabase- oder GitHub-Verbindungen
+
+Ein Duplikat ist ein Neuanfang, kein Klon einer Live-Site. Es wird nicht unter der ursprünglichen Domain erreichbar sein. Veröffentlichen Sie es separat und verknüpfen Sie alle Verbindungen erneut. Das ist erforderlich, weil eine Subdomain nur einem Projekt gehört und das Teilen eines API-Tokens oder Repos es einem Projekt ermöglichen würde, die Dateien des anderen zu überschreiben.
+
+## Projektlimits
+
+- Die Pläne **Free** und **Plus** umfassen 1 Projekt.
+- **Premium** umfasst unbegrenzte Projekte.
+
+{/* TODO: confirm whether duplicates and trashed projects count toward the project limit */}
+
+<CardGroup cols={2}>
+  <Card title="Projekt-Chat" icon="message" href="/de/project-chat">
+  </Card>
+
+  <Card title="Veröffentlichen" icon="globe" href="/de/publish">
+  </Card>
+</CardGroup>

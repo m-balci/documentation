@@ -1,0 +1,130 @@
+---
+title: "Design systems"
+sidebarTitle: "Design systems"
+description: "Saiba como os design systems da Webza controlam a aparência do seu site, quais design systems estão disponíveis e como trocá-los no editor."
+---
+
+Um design system é a identidade visual do seu site. Ele agrupa tokens de design (cores, tipografia, espaçamento, raio e sombras), um conjunto de paletas de destaque nomeadas, fontes web e um guia que diz à IA como aplicar a aparência.
+
+Um [template](/pt-br/templates) controla a estrutura: quais páginas e componentes o seu site tem. Um design system controla a aparência. A Webza combina os dois, então qualquer design system pode ser combinado com qualquer template, e o mesmo template pode assumir muitas aparências diferentes.
+
+<Info>
+  Design systems estão disponíveis em todos os planos. A seleção automática, a seleção manual e o modo Design funcionam da mesma forma nos planos Free, Plus e Premium.
+</Info>
+
+## Como funciona
+
+Quando a Webza constrói o seu projeto, ela parte do template e aplica o design system por cima:
+
+1. O template fornece a estrutura de páginas e componentes.
+2. Os tokens base do design system, a paleta de destaque escolhida e suas fontes web são aplicados.
+3. Alguns design systems incluem suas próprias versões de componentes específicos, que substituem ou refinam os componentes do template.
+4. A IA segue o guia do design system e ajusta o código gerado para corresponder à aparência. Por exemplo, ela substitui cores fixas para que sigam os tokens e o destaque ativos.
+
+Cada guia também define um estilo de movimento consistente para o site inteiro, para que as animações tenham a mesma sensação de uma seção a outra.
+
+A sobreposição é previsível. Escolher um design system ou destaque diferente muda a aparência sem alterar a estrutura do seu site.
+
+## Substrate (o padrão)
+
+Substrate é o design system padrão da Webza. É um estilo house warm, neutro e premium que combina **Geist** para UI e texto de corpo com a serif **Newsreader** para acentos editoriais. Ele usa um raio de canto de **10 px** e sombras suaves e em camadas.
+
+Substrate tem seis paletas de destaque:
+
+| Destaque | Notas |
+| --- | --- |
+| indigo | Destaque padrão |
+| terracotta | Destaque quente e terroso |
+| blue | Destaque frio e clássico |
+| emerald | Destaque verde |
+| ruby | Destaque vermelho vibrante |
+| mono | Destaque neutro e monocromático |
+
+## Design systems premium
+
+Além do Substrate, a Webza oferece dez design systems premium. Cada um é uma aparência completa e própria, com sua própria tipografia, cores, sombras e personalidade.
+
+| Design system | Personalidade |
+| --- | --- |
+| Aperture | SaaS nítido, frio e arquitetônico. Preciso e confiante. |
+| Atrium | SaaS empresarial confiável. Calmo, credível, nível dashboard. |
+| Bloom | Brincalhão e alegre. Robusto, arredondado, com acentos candy alegres. |
+| Botanica | Bem-estar editorial quente, orgânico. Calmo e premium. |
+| Carbon | Ferramenta de desenvolvedor elegante. Dark-first, técnico, verde terminal. |
+| Halcyon | Sereno, arejado, pastel sonhador. Leve e tranquilo. |
+| Lumen | Brilho fintech moderno vibrante. Luminoso, gradiente, glassmorphic. |
+| Monolith | Editorial suíço brutalista ousado. Alto, gráfico, alto contraste. |
+| Noir | Luxo dark e cinematográfico. Caro, contido, acento metálico. |
+| Sandstone | Quente, minimalista, editorial. Minimalismo literário com alma. |
+
+Design systems premium aparecem em todos os lugares onde o Substrate aparece: o seletor de design system em **Personalizar**, seleção **Automático** e o modo Design do editor. Novos design systems são adicionados ao longo do tempo.
+
+<Tip>
+  Muitos design systems incluem uma prévia de guia de estilo: uma página que mostra sua tipografia, cores, botões e componentes. Abra-a a partir do seletor de design system ou do painel Design do editor para ver uma aparência antes de aplicá-la.
+</Tip>
+
+## Escolher um design system
+
+Um design system e um destaque são escolhidos de uma de três formas.
+
+### Automático (padrão)
+
+Quando você cria um projeto, o seletor de design system no popover **Personalizar** está definido como **Automático**. Na primeira build, a IA escolhe o design system e o destaque que melhor se encaixam no seu prompt e salva essa escolha no projeto.
+
+### Manual
+
+Em vez de **Automático**, escolha um design system específico no popover **Personalizar**. Você também pode escolher uma de suas paletas de destaque ou manter o destaque padrão. Cada build do projeto usará então essa aparência.
+
+### Retemar no editor
+
+Você pode trocar o design system ou o destaque de um projeto de website construído a qualquer momento no editor.
+
+<Steps>
+  <Step title="Abrir o painel Design">
+    No editor, mude para o modo Design. O painel **Design** abre ao lado da prévia.
+  </Step>
+  <Step title="Escolher um design system e destaque">
+    Escolha um novo design system e, opcionalmente, uma paleta de destaque. Abra a prévia do guia de estilo primeiro se quiser comparar aparências.
+  </Step>
+  <Step title="Clique em Perguntar à IA para aplicar">
+    A Webza aplica os novos tokens e destaque e reconstrói o seu site. A prévia recarrega, e a IA então ajusta quaisquer cores fixas para que o site inteiro corresponda à nova aparência.
+  </Step>
+</Steps>
+
+Um retema usa créditos como uma solicitação de chat. Você não pode aplicar um retema enquanto outra build está em execução.
+
+<Note>
+  O modo Design está disponível apenas para projetos de website. Ele fica oculto para projetos de tema [WordPress](/pt-br/themes/wordpress-themes) e [Shopify](/pt-br/themes/shopify-themes). Eles ainda usam o design system escolhido na criação, mas você não pode trocá-lo no editor.
+</Note>
+
+## Desfazer um retema
+
+Um retema conta como um passo em Desfazer e Refazer, e cria um ponto de verificação no Histórico de Revisões. Você pode revertê-lo mais tarde a partir da prévia. Veja [Prévia](/pt-br/preview).
+
+## Duplicar um projeto
+
+Quando você duplica um projeto, seu design system e destaque são copiados para o novo projeto.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=design-systems" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Todo plano</span>
+    <span className="wz-ad-title">Encontre sua aparência em segundos</span>
+    <span className="wz-ad-text">Design systems estão incluídos em todos os planos. Inicie um projeto, escolha um estilo e troque a qualquer momento.</span>
+  </span>
+
+  <span className="wz-ad-btn">Experimente design systems <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Templates" icon="table-cells-large" href="/pt-br/templates">
+    Escolha uma estrutura inicial para o seu projeto.
+  </Card>
+
+  <Card title="Prévia" icon="eye" href="/pt-br/preview">
+    Pré-visualize o seu site e gerencie o histórico de revisões.
+  </Card>
+</CardGroup>

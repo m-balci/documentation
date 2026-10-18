@@ -1,0 +1,82 @@
+---
+title: "エディタ"
+description: "Webzaプロジェクトエディタの概要、レイアウト、ツールバー、キーボードショートカットについて説明します。"
+---
+
+プロジェクトエディタは、ダッシュボードのプロジェクトカードで**開始**をクリックした後に入るワークスペースです。チャット、プレビュー、コード、設定を1つの場所にまとめ、タブを切り替えずにサイトの構築と洗練ができます。
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## エディタのレイアウト
+
+エディタは3つの主要エリアに分割されています。
+
+<CardGroup cols={2}>
+  <Card title="プロジェクトチャット" icon="message" href="/ja/project-chat">
+    AIにページの編集、セクションの追加、スタイルの変更、バグ修正を依頼します。指示はリアルタイムで確認できるコード変更に変換されます。
+  </Card>
+
+  <Card title="ライブプレビュー" icon="eye" href="/ja/preview">
+    訪問者が見るようにサイトを確認します。プレビューは、AI編集または手動コード保存後に自動的に更新されます。
+  </Card>
+
+  <Card title="コードエディタ" icon="code" href="/ja/code-editor">
+    構文ハイライト、検索、保存機能を使ってファイルを直接確認・編集します。Monacoエディタをベースに構築されています。
+  </Card>
+
+  <Card title="設定" icon="gear" href="/ja/settings">
+    ドメイン、分析、SEO、その他のプロジェクトレベルのオプションを管理します。
+  </Card>
+</CardGroup>
+
+チャットパネルを折りたたんで、プレビューを全幅にすることもできます。これは、デザインの詳細に集中していてAIの支援が不要な場合に便利です。
+
+## ツールバー
+
+上部のツールバーには、現在のプロジェクトのクイックアクションがあります。
+
+- **公開**: 公開フローを開き、サイトをライブにします。[公開](/ja/publish)をご覧ください。
+- **再構築**: 最新のコードからプロジェクトを再構築します。プレビューが同期していないように見える場合に使用します。
+- **ツアーを再生**: **再構築**の横にある円形矢印ボタンで、ガイド付きエディタツアーを再生します。
+- **エクスポート**: プランにコードエクスポート（PlusまたはPremium）が含まれている場合、このボタンで完全なソースコードをZIPファイルとしてダウンロードします。Vercelへのデプロイや任意の場所でのホスティングにそのまま使用できます。
+- **テーマをダウンロード**: テーマプロジェクトの場合、完全なソースエクスポートの代わりに、インストール可能なWordPressブロックテーマまたはShopify Online Store 2.0テーマをZIPファイルとして返します。
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## プロジェクトのエクスポート
+
+プランでサポートされている場合、プロジェクトをダウンロードしてWebza外でホストできます。
+
+<Steps>
+  <Step title="エディタを開く">
+    ダッシュボードのプロジェクトカードで**開始**をクリックします。
+  </Step>
+  <Step title="エクスポートをクリック">
+    ツールバーで**エクスポート**（テーマプロジェクトの場合は**テーマをダウンロード**）をクリックします。
+  </Step>
+  <Step title="ZIPをダウンロード">
+    ファイルがコンピュータにダウンロードされます。展開して、内蔵のREADMEに従い、ローカル開発またはVercelへのデプロイを行います。
+  </Step>
+</Steps>
+
+## キーボードショートカット
+
+| アクション | ショートカット |
+| --- | --- |
+| 元に戻す | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| やり直す | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> または <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| コードエディタで検索 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| コードエディタで保存 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| チャットメッセージを送信 | <kbd>Enter</kbd> |
+
+## 関連ページ
+
+<CardGroup cols={2}>
+  <Card title="プロジェクトチャット" icon="message" href="/ja/project-chat">
+    AIとの話し方と変更の確認方法を学びます。
+  </Card>
+
+  <Card title="コードエディタ" icon="code" href="/ja/code-editor">
+    内蔵のMonacoエディタでファイルを直接編集します。
+  </Card>
+</CardGroup>

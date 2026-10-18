@@ -1,0 +1,68 @@
+---
+title: "代码编辑器"
+description: "如何在 Webza Monaco 代码编辑器中查看、搜索和编辑项目文件，包括只读系统文件和重要警告。"
+---
+
+代码编辑器是一个内置的 Monaco 编辑器，让您可以直接查看和编辑项目文件。它提供语法高亮、搜索和替换、按需保存，以及未保存更改指示器，让您始终知道哪些内容等待保存。
+
+## 支持的语言
+
+编辑器为最常见的网页文件类型提供语法高亮：
+
+- JavaScript 和 TypeScript（`.js`、`.ts`、`.tsx`）
+- CSS 和 HTML
+- JSON 和 Markdown
+
+## 搜索和替换
+
+按 <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> 在编辑器内打开查找框。您可以搜索当前文件并逐个或一次性替换匹配项。
+
+## 保存更改
+
+按 <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> 保存当前文件。文件名旁会出现点或未保存更改指示器，直到您保存为止。保存后实时预览会更新。
+
+## 只读文件
+
+一小部分系统文件是只读的。它们由模板和构建系统管理，错误的编辑可能导致项目无法重新构建。选择这些文件之一时，编辑器会显示**只读**锁定徽章并隐藏**保存**按钮。
+
+<AccordionGroup>
+  <Accordion title="根级只读文件">
+    `index.html`、`package.json`、`package-lock.json`、`vite.config.ts`、`tsconfig.json`、`tsconfig.node.json`、`components.json`、`tailwind.config.ts`、`tailwind.config.js`、`postcss.config.js`、`postcss.config.cjs`
+  </Accordion>
+
+  <Accordion title="源文件只读文件">
+    `src/main.tsx`、`src/index.css`、`src/vite-env.d.ts`
+  </Accordion>
+
+  <Accordion title="系统只读文件">
+    `memory.json`、`design-intelligence.json`、`KNOWLEDGE.md`、`template.json`
+  </Accordion>
+</AccordionGroup>
+
+没有设置可以解锁这些文件。`index.html` 只是加载应用的壳。每个可见页面、页眉、页脚和链接都位于 `src/` 下，除了 `main.tsx`、`index.css` 和 `vite-env.d.ts` 之外，那里的一切都是可编辑的。
+
+## 分析和跟踪代码片段
+
+如果您需要添加 Google Tag Manager、Google 标签或 Meta Pixel，请使用**设置 → 常规**中的**分析**卡片，而不是直接编辑 head 标记。请参阅[设置](/zh/settings)。
+
+## 重要警告
+
+<Warning>
+  在处于修订历史内部时（撤销后）进行的手动编辑会被下一次撤销、重做或恢复操作丢弃。有关修订历史的详细信息请参阅[预览](/zh/preview)。
+</Warning>
+
+<Info>
+  生成的 AI 图片存储在 `public/images/generated/` 中。您可以在代码中引用它们，但不要在聊天外移动或重命名它们，否则 AI 可能会找不到它们。
+</Info>
+
+## 相关页面
+
+<CardGroup cols={2}>
+  <Card title="编辑器" icon="table-columns" href="/zh/editor">
+    项目编辑器完整布局和工具栏概览。
+  </Card>
+
+  <Card title="预览" icon="eye" href="/zh/preview">
+    了解实时预览和修订历史如何运作。
+  </Card>
+</CardGroup>

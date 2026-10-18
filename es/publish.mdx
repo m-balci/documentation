@@ -1,0 +1,83 @@
+---
+title: "Publish"
+description: "Aprende cómo publicar tu proyecto de Webza, administrar instantáneas y controlar la visibilidad del sitio."
+---
+
+Publicar pone tu proyecto en línea en la web. Compilar por sí solo no lo pone en línea. Debes hacer clic en **Publicar** para desplegarlo.
+
+## Publica tu proyecto
+
+<Steps>
+  <Step title="Abre el diálogo de Publicar">
+    En la barra de herramientas del editor, haz clic en **Publicar**.
+  </Step>
+  <Step title="Elige un subdominio">
+    Ingresa el nombre que quieres para tu dirección `*.webza.ai`. Webza verifica la disponibilidad mientras escribes y sugiere un nombre corto a partir del nombre de tu proyecto. Algunos nombres están reservados y serán rechazados.
+  </Step>
+  <Step title="Establece la visibilidad">
+    Elige **Público** para que cualquiera con la URL pueda ver el sitio, o **Privado** para que solo tú puedas verlo mientras estés iniciado sesión en Webza en ese navegador. Todos los demás serán rechazados.
+
+    <Note>
+      La visibilidad privada es una función del plan. Si tu plan no la incluye, la opción aparecerá bloqueada con "Actualiza para desbloquear visibilidad privada."
+
+      {/* TODO: confirm which Webza plans include private visibility */}
+    </Note>
+  </Step>
+  <Step title="Confirma y publica">
+    Haz clic en **Publicar**. Webza captura una instantánea primero, luego despliega el sitio.
+  </Step>
+</Steps>
+
+Una vez publicado, el botón de la barra de herramientas dice **Publicado**. Hacer clic en él vuelve a abrir el diálogo para que puedas cambiar la configuración o dar de baja el sitio.
+
+## Vuelve a publicar después de cambios
+
+Tu sitio en línea no se actualiza automáticamente cuando compilas. Vuelve a publicar siempre que quieras que los cambios más recientes estén en línea. Cada nueva publicación captura una instantánea nueva.
+
+## Instantáneas de publicación
+
+Cada publicación crea una **Instantánea previa a la publicación** listada bajo **Versiones anteriores** en el diálogo de Publicar. Solo se conservan las cinco instantáneas más recientes por proyecto.
+
+Revertir restaura la salida de la vista previa publicada, no el código fuente del proyecto. La siguiente compilación aún se regenera a partir de tu código fuente actual. Para revertir cambios de código reales, usa **Deshacer** o **Historial de revisiones**. Consulta [Preview](/es/preview) para más detalles.
+
+## Dominios personalizados
+
+Una vez que tu proyecto está publicado, puedes apuntar tu propio dominio hacia él. Los planes Plus incluyen 1 dominio personalizado; los planes Premium incluyen 3. Consulta [Custom domains](/es/custom-domains) para los pasos de configuración.
+
+El proyecto debe permanecer publicado. Dar de baja la publicación también desconecta el dominio personalizado.
+
+## Imagen para compartir
+
+Antes de compartir tu sitio en plataformas sociales, establece una imagen para compartir en **Configuración → General**. Consulta [Settings](/es/settings).
+
+## Temas de WordPress y Shopify
+
+Los proyectos de temas de WordPress y Shopify no son alojados por Webza. Exportas el tema como `.zip` y lo instalas en tu propio sitio de WordPress o tienda de Shopify. La pestaña **Dominios** nunca se muestra para temas de WordPress.
+
+## Dar de baja la publicación
+
+Para sacar un sitio de línea, abre el diálogo de Publicar y dale de baja. Esto elimina el sitio en línea y cualquier dominio personalizado asociado de la web.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Go live</span>
+    <span className="wz-ad-title">Tu sitio, en vivo en webza.ai</span>
+    <span className="wz-ad-text">Construye un sitio y ponlo en vivo en tu propia dirección de webza.ai. Compártelo con el mundo hoy.</span>
+  </span>
+
+  <span className="wz-ad-btn">Empieza a construir gratis <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Custom domains" icon="globe" href="/es/custom-domains">
+    Apunta tu propio dominio a un proyecto publicado.
+  </Card>
+
+  <Card title="Configuración" icon="sliders" href="/es/settings">
+    Configura tu imagen para compartir y otras opciones del proyecto.
+  </Card>
+</CardGroup>

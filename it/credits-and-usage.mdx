@@ -1,0 +1,93 @@
+---
+title: "Crediti e utilizzo"
+description: "Comprendi come funzionano i crediti di build di Webza, monitora il tuo saldo e scopri quando i crediti vengono spesi o rimborsati."
+---
+
+I crediti di build alimentano ogni generazione AI in Webza. Ogni piano include un'assegnazione fissa e puoi acquistare pacchetti extra se ti esaurisci a metà mese.
+
+## Come funzionano i crediti
+
+I crediti vengono consumati in base all'utilizzo di token AI. Ogni generazione, modifica e chiamata di build costa una piccola quantità di token, che vengono detratti dal tuo saldo in tempo reale.
+
+Il tuo piano determina la tua assegnazione mensile:
+
+| Piano | Assegnazione mensile | Fatturazione |
+| --- | --- | --- |
+| Free | 2.000.000 crediti (una tantum) | Nessun abbonamento |
+| Plus | 7.000.000 crediti al mese | \$19,99/mese |
+| Premium | 20.000.000 crediti al mese | \$49,99/mese |
+
+{/* TODO: confirm whether unused monthly credits roll over to the next month. */}
+
+## Controlla il tuo saldo
+
+I crediti rimanenti appaiono nella barra superiore della dashboard, ad esempio **20.000.000 / 20.000.000 crediti**.
+
+L'intestazione della chat mostra anche un indicatore dei crediti:
+
+- **Colore predefinito** quando rimane più del 20% del saldo.
+- **Giallo** quando il saldo è tra il 5% e il 20%. Appare un link **Buy credits** per ricaricare rapidamente.
+- **Rosso** quando il saldo è al 5% o inferiore.
+- **"Usando la tua chiave API"** quando stai costruendo con la tua chiave invece dei crediti Webza.
+
+## Acquista crediti extra
+
+Se finisci i crediti prima del prossimo ciclo di fatturazione, apri **Fatturazione** → **Utilizzo** e clicca su **Acquista crediti**. Puoi acquistare un pacchetto di crediti una tantum con lo stesso metodo di pagamento usato per l'abbonamento. I crediti vengono aggiunti al tuo saldo non appena il pagamento è completato.
+
+I pacchetti di crediti non si rinnovano automaticamente e non modificano l'assegnazione mensile del tuo piano. Le dimensioni e i prezzi dei pacchetti possono variare in base al piano.
+
+{/* TODO: confirm exact pack sizes and prices for Webza plans. */}
+
+## Usa la tua chiave API
+
+I piani Plus e Premium ti permettono di aggiungere la tua chiave API del provider AI. Quando costruisci con la tua chiave, l'utilizzo viene comunque misurato in Webza ma non viene detratta dai crediti del tuo piano. Vieni fatturato direttamente dal tuo provider.
+
+Per configurarlo, vai su [Impostazioni](/it/settings) → **Impostazioni AI** e incolla la tua chiave API.
+
+## Quando vengono spesi i crediti
+
+I crediti vengono consumati durante:
+
+- Ridesign dei temi
+- Azioni **Salva tutto** dall'inspector
+- Qualsiasi build o generazione AI
+
+I crediti **non** vengono consumati mentre fai domande o attendi la risposta dell'AI. Solo l'esecuzione effettiva della build costa crediti.
+
+## Correggi gratuitamente
+
+Se una build fallisce a causa di un errore dell'AI o di un problema della piattaforma, non vieni addebitato per quella build. Le build che annulli o che si interrompono perché hai esaurito i crediti vengono comunque addebitate.
+
+Quando una build non viene addebitata, appare su **Fatturazione** → **Utilizzo** come **Non addebitato** con una breve motivazione. Queste build non addebitate non contano nel totale dei crediti usati.
+
+Se una build fallisce, puoi cliccare su **Correggi gratis** per riprovare una volta entro 24 ore senza costi aggiuntivi. C'è un limite giornaliero per le correzioni gratuite (il limite predefinito è 5 ogni 24 ore).
+
+{/* TODO: confirm Webza's exact daily limit for Fix for free retries. */}
+
+## Statistiche di utilizzo
+
+Apri **Fatturazione** → **Utilizzo** per vedere una suddivisione completa del consumo dei tuoi crediti:
+
+- Utilizzo per progetto
+- Utilizzo per modello AI
+- Build non addebitate e motivazioni
+
+Questo ti aiuta a individuare quali progetti o modelli consumano più crediti.
+
+## Immagini AI
+
+Il tuo piano può includere un'assegnazione mensile di immagini generate dall'AI. Il limite attuale è mostrato sulla scheda **Piano attuale** all'interno della pagina **Utilizzo**.
+
+{/* TODO: confirm AI image allowances for each Webza plan. */}
+
+## Pagine correlate
+
+<CardGroup cols={2}>
+  <Card title="Fatture e pagamenti" icon="receipt" href="/it/invoices-and-billing">
+    Visualizza pagamenti, fatture e cronologia delle transazioni.
+  </Card>
+
+  <Card title="Project chat" icon="message" href="/it/project-chat">
+    Scopri come funzionano le build e i tentativi di ripetizione nella chat.
+  </Card>
+</CardGroup>

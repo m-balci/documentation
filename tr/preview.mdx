@@ -1,0 +1,108 @@
+---
+title: "Önizleme"
+description: "Önizleme panelini kullanarak projenizi canlı olarak görün, öğeleri inceleyin, görünüm alanını yeniden boyutlandırın, tasarımları yeniden temalandırın ve düzeltme geçmişini yönetin."
+---
+
+Önizleme paneli, projenizin canlı görünümünü gösterir. Görünüm alanını yeniden boyutlandırabilir, öğeleri inceleyebilir, tasarımı yeniden temalandırabilir ve düzeltme geçmişinde adım atabilirsiniz. Önizleme, bir oluşturma tamamlandığında kendini otomatik olarak yeniden yükler, bu nedenle manuel bir yenileme düğmesine ihtiyacınız yoktur.
+
+## Görünüm alanı kontrolleri
+
+Projenizin farklı boyutlarda nasıl göründüğünü test etmek için görünüm düğmelerini kullanın.
+
+| Düğme | Ne yapar |
+| --- | --- |
+| **Telefon** | Önizlemeyi mobil genişliğe daraltır. |
+| **Tablet** | Telefon ve masaüstü arasında orta bir genişlik ayarlar. |
+| **Tam genişlik** | Önizlemeyi panelin tam genişliğine genişletir. |
+
+## İnceleme modu
+
+İnceleme modunu açmak veya kapatmak için **İncele** düğmesini tıklayın. İnceleme modu açıkken, önizlemede herhangi bir öğeye tıklamak öğe inceleme araç çubuğunu açar.
+
+Araç çubuğu eylemleri, seçtiğiniz öğeye bağlıdır:
+
+- **Metni düzenle** (yalnızca metin öğeleri): Öğe metnini satır içi olarak düzenleyin. Değişiklik, bekleyen değişiklikler çubuğunda sıraya girer.
+- **Görsel** (yalnızca `<img>` öğeleri): Bir dosya yükleyerek veya görsel URL'si yapıştırarak görsel kaynağını değiştirin. Değişiklik, bekleyen değişiklikler çubuğunda sıraya girer.
+- **Stil**: Renkler, boşluklar ve boyutlandırma gibi satır içi stilleri ayarlayın. Stil düzenlemeleri, yapay zeka olmadan kendi başına uygulanır.
+- **AI ile düzenle**: Öğeyi bir talimatla yapay zekaya gönderin. Değişiklik, bekleyen değişiklikler çubuğunda sıraya girer.
+- **Kapat**: İncelemeyi kapatır.
+
+### Bekleyen değişiklikler çubuğu
+
+İnceleme aracında **Metni düzenle**, **Görsel** veya **AI ile düzenle** değişiklikleri yaptığınızda, önizlemenin altında bir bekleyen değişiklikler çubuğu belirir. Sıradaki değişikliklerin sayısını ve iki eylemi gösterir:
+
+- **Tümünü kaydet**: Toplu işi yapay zekaya gönderir, bir oluşturma çalıştırır ve kredi harcar.
+- **Tümünü at**: Sıradaki tüm değişiklikleri kaldırır.
+
+<Warning>
+  **Tümünü kaydet**'i tıklayana kadar hiçbir şey uygulanmaz. Kaydetmeden önce ayrılırsanız, sıradaki değişiklikleri kaybedersiniz. Ayarlamalarınızı toplayıp bir kez kaydederek ek kredi kullanımından kaçının.
+</Warning>
+
+<Note>
+  **Stil** düzenlemeleri, yapay zeka olmadan doğrudan kaynağı değiştirir ve bekleyen değişiklikler çubuğunda sıraya girmez.
+</Note>
+
+## Tasarım modu
+
+Zaten oluşturulmuş bir siteyi yeniden temalandırmak için **Tasarım**'ı tıklayın.
+
+1. Bir tasarım sistemi seçin.
+2. İsteğe bağlı olarak bir vurgu paleti seçin.
+3. Yeni temayı uygulamak için **AI'ya sor** düğmesini tıklayın.
+
+Bu, bir yeniden oluşturma tetikler. Önizleme, gerçek tasarımla yeniden yüklenir ve yapay zeka, sabit kodlanmış renkler için bir düzeltme geçişi çalıştırır. Bu, bir sohbet isteği gibi oluşturma kredisi harcar. Başka bir oluşturma çalışırken tasarım değişikliği uygulayamazsınız.
+
+<Info>
+  Tasarım modu yalnızca web siteleri için kullanılabilir. WordPress ve Shopify tema projeleri için gizlidir; bunlar oluşturulurken seçilen tasarım sistemini korur.
+</Info>
+
+## Geri al ve Yinele
+
+Proje geçmişinde adım atmak için **Geri al** ve **Yinele** düğmelerini kullanın. Ayrıca şu klavye kısayollarını da kullanabilirsiniz:
+
+| Eylem | Kısayol |
+| --- | --- |
+| Geri al | Ctrl/Cmd + Z |
+| Yinele | Ctrl/Cmd + Shift + Z veya Ctrl + Y |
+
+Her geri alma, tam olarak bir değişikliği geri alır: bir yapay zeka sohbet isteği, bir Stil düzenlemesi veya bir tasarım yeniden temalama. Geri aldıktan sonra proje yeniden oluşturulur. En yeni çalışmanız, geri almadan önce kontrol noktası yapılır, böylece yineleme geri getirebilir. Her geri alma ve yineleme, yapay zekanın farkında kalması için sohbete kaydedilir.
+
+<Warning>
+  Geri alma ve yineleme, bir oluşturma çalışırken kullanılamaz. Yepyeni bir proje, ikinci değişikliğe kadar geri alınacak bir şey içermez.
+</Warning>
+
+<Warning>
+  Geçmişin içindeyken (geri aldıktan sonra) yapılan manuel kod editörü düzenlemeleri kaydedilmez. Sonraki Geri alma, Yineleme veya Geri yükleme işlemi bunları uyarıda bulunmadan atar. Önce en yeni duruma dönün veya değişikliği yapay zekaya yaptırın.
+</Warning>
+
+<Info>
+  Shopify projeleri için **Geri al**, **Yinele** ve **Revizyon geçmişi** düğmeleri gizlidir. Yalnızca **Tema indir (.zip)** görünür. Klavye kısayolları Shopify projelerinde hâlâ çalışır.
+</Info>
+
+## Düzeltme geçmişi
+
+Saat simgesini tıklayarak düzeltme geçmişini açın. Her yapay zeka isteğinden, Stil düzenlemesinden ve tasarım değişikliğinden önce bir kontrol noktası kaydedilir. Webza en son 20 kontrol noktasını tutar.
+
+Liste, etiketleri, zaman damgalarını ve dosya sayılarını gösterir. Mevcut sürümde **Güncel** rozeti bulunur. Herhangi bir sürümdeki **Geri yükle** düğmesini tıklayarak o sürüme atlayabilirsiniz.
+
+Geri yükleme önce mevcut durumunuzu kontrol noktası yapar, böylece geri yükleme tersine çevrilebilir. Her geri yükleme bir yeniden oluşturma tetikler. Düzeltme geçmişi yalnızca web siteleri ve WordPress temaları için kullanılabilir.
+
+<Note>
+  Yayın anlık görüntüleri, düzeltme geçmişinden ayrı tutulur. Ayrıntılar için [Yayınla](/tr/publish) sayfasına bakın.
+</Note>
+
+## WordPress Playground önizlemesi
+
+WordPress tema projeleri, WordPress Playground içerisinde önizlenir. Playground'un kendi yeniden yükleme kontrolü vardır, bu nedenle otomatik önizleme yeniden yükleme davranışı burada farklı çalışır.
+
+## İlgili sayfalar
+
+<CardGroup cols={2}>
+  <Card title="Proje Sohbeti" icon="message" href="/tr/project-chat">
+    Yapay zekaya talimatlar gönderin ve sohbet geçmişini yönetin.
+  </Card>
+
+  <Card title="Yayınla" icon="rocket" href="/tr/publish">
+    Projenizi yayınlayın ve canlı anlık görüntüleri yönetin.
+  </Card>
+</CardGroup>

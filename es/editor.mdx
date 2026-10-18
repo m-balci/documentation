@@ -1,0 +1,82 @@
+---
+title: "Editor"
+description: "Visión general del editor de proyectos de Webza, su diseño, barra de herramientas y atajos de teclado."
+---
+
+El editor de proyectos es el espacio de trabajo al que entras después de hacer clic en **Empezar** en la tarjeta de un proyecto en el panel de control. Reúne el chat, la vista previa, el código y la configuración en un solo lugar para que puedas crear y refinar tu sitio sin cambiar de pestaña.
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## Diseño del editor
+
+El editor se divide en tres áreas principales:
+
+<CardGroup cols={2}>
+  <Card title="Chat del proyecto" icon="message" href="/es/project-chat">
+    Pídele a la IA que edite páginas, añada secciones, cambie estilos o corrija errores. Tus instrucciones se convierten en cambios de código que puedes revisar en tiempo real.
+  </Card>
+
+  <Card title="Vista previa en vivo" icon="eye" href="/es/preview">
+    Ve tu sitio tal como lo verán los visitantes. La vista previa se actualiza automáticamente después de cada edición de la IA o guardado manual de código.
+  </Card>
+
+  <Card title="Editor de código" icon="code" href="/es/code-editor">
+    Inspecciona y edita archivos directamente con resaltado de sintaxis, búsqueda y guardado. Basado en el editor Monaco.
+  </Card>
+
+  <Card title="Configuración" icon="gear" href="/es/settings">
+    Gestiona dominios, analíticas, SEO y otras opciones a nivel de proyecto.
+  </Card>
+</CardGroup>
+
+Puedes colapsar el panel de chat para dar a la vista previa el ancho completo. Esto es útil cuando te enfocas en los detalles del diseño y no necesitas la asistencia de la IA.
+
+## Barra de herramientas
+
+La barra de herramientas superior te ofrece acciones rápidas para el proyecto actual:
+
+- **Publicar**: Abre el flujo de publicación para que puedas poner tu sitio en línea. Consulta [Publicar](/es/publish).
+- **Reconstruir**: Reconstruye el proyecto a partir del código más reciente. Úsalo si la vista previa parece desincronizada.
+- **Repetir recorrido**: El botón de flecha circular junto a **Reconstruir** reproduce el recorrido guiado del editor.
+- **Exportar**: Si tu plan incluye exportación de código (Plus o Premium), este botón descarga el código fuente completo como un archivo ZIP listo para desplegar en Vercel o alojar donde prefieras.
+- **Descargar tema**: Para proyectos de temas, esto devuelve el tema de bloques de WordPress instalable o el tema Shopify Online Store 2.0 como un archivo ZIP en lugar de la exportación completa del código.
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## Exportar tu proyecto
+
+Si tu plan lo permite, puedes descargar tu proyecto y alojarlo fuera de Webza.
+
+<Steps>
+  <Step title="Abrir el editor">
+    Haz clic en **Empezar** en la tarjeta del proyecto desde tu panel de control.
+  </Step>
+  <Step title="Hacer clic en Exportar">
+    En la barra de herramientas, haz clic en **Exportar** (o **Descargar tema** para proyectos de temas).
+  </Step>
+  <Step title="Descargar el ZIP">
+    El archivo se descarga en tu computadora. Extráelo y sigue el README incluido para el desarrollo local o el despliegue en Vercel.
+  </Step>
+</Steps>
+
+## Atajos de teclado
+
+| Acción | Atajo |
+| --- | --- |
+| Deshacer | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| Rehacer | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> o <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| Buscar en el editor de código | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| Guardar en el editor de código | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| Enviar mensaje de chat | <kbd>Intro</kbd> |
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Chat del proyecto" icon="message" href="/es/project-chat">
+    Aprende a hablar con la IA y revisar cambios.
+  </Card>
+
+  <Card title="Editor de código" icon="code" href="/es/code-editor">
+    Edita archivos directamente con el editor Monaco integrado.
+  </Card>
+</CardGroup>

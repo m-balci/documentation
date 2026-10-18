@@ -1,0 +1,68 @@
+---
+title: "コードエディタ"
+description: "Webza Monacoコードエディタでプロジェクトファイルを表示、検索、編集する方法。読み取り専用のシステムファイルと重要な警告についても説明します。"
+---
+
+コードエディタは、内蔵のMonacoエディタで、プロジェクトファイルを直接表示・編集できます。構文ハイライト、検索と置換、オンデマンド保存、未保存変更インジケーターを備えており、保留中のものが常にわかります。
+
+## 対応言語
+
+エディタは、最も一般的なWebファイルタイプの構文をハイライトします。
+
+- JavaScriptおよびTypeScript（`.js`、`.ts`、`.tsx`）
+- CSSおよびHTML
+- JSONおよびMarkdown
+
+## 検索と置換
+
+<kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd>を押して、エディタ内の検索ボックスを開きます。現在のファイルを検索し、一致を1つずつまたはすべて一度に置換できます。
+
+## 変更を保存する
+
+<kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd>を押して、現在のファイルを保存します。保存するまで、ファイル名の横にドットまたは未保存変更インジケーターが表示されます。ライブプレビューは保存後に更新されます。
+
+## 読み取り専用ファイル
+
+テンプレートとビルドシステムによって管理される、小さなシステムファイルセットは読み取り専用です。悪い編集はプロジェクトが再構築できなくなる可能性があります。これらのファイルのいずれかを選択すると、エディタは**読み取り専用**のロックバッジを表示し、**保存**ボタンを非表示にします。
+
+<AccordionGroup>
+  <Accordion title="ルートレベルの読み取り専用ファイル">
+    `index.html`、`package.json`、`package-lock.json`、`vite.config.ts`、`tsconfig.json`、`tsconfig.node.json`、`components.json`、`tailwind.config.ts`、`tailwind.config.js`、`postcss.config.js`、`postcss.config.cjs`
+  </Accordion>
+
+  <Accordion title="ソースの読み取り専用ファイル">
+    `src/main.tsx`、`src/index.css`、`src/vite-env.d.ts`
+  </Accordion>
+
+  <Accordion title="システムの読み取り専用ファイル">
+    `memory.json`、`design-intelligence.json`、`KNOWLEDGE.md`、`template.json`
+  </Accordion>
+</AccordionGroup>
+
+これらのファイルをロック解除する設定はありません。`index.html`はアプリを読み込むシェルに過ぎません。表示されるすべてのページ、ヘッダー、フッター、リンクは`src/`の下にあり、`main.tsx`、`index.css`、`vite-env.d.ts`を除いてすべて編集可能です。
+
+## 分析とトラッキングスニペット
+
+Google Tag Manager、Googleタグ、またはMeta Pixelを追加する必要がある場合、headマークアップを直接編集する代わりに、**設定 → 一般**の**分析**カードを使用してください。[設定](/ja/settings)をご覧ください。
+
+## 重要な警告
+
+<Warning>
+  リビジョン履歴内（元に戻した後）にいる間に行った手動編集は、次の元に戻す、やり直す、または復元アクションによって破棄されます。リビジョン履歴の詳細は[プレビュー](/ja/preview)をご覧ください。
+</Warning>
+
+<Info>
+  生成されたAI画像は`public/images/generated/`に保存されます。コードで参照できますが、チャット外で移動または名前変更しないでください。そうしないと、AIが追跡を失う可能性があります。
+</Info>
+
+## 関連ページ
+
+<CardGroup cols={2}>
+  <Card title="エディタ" icon="table-columns" href="/ja/editor">
+    完全なプロジェクトエディタのレイアウトとツールバーの概要。
+  </Card>
+
+  <Card title="プレビュー" icon="eye" href="/ja/preview">
+    ライブプレビューとリビジョン履歴の仕組みを学びます。
+  </Card>
+</CardGroup>

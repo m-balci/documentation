@@ -1,0 +1,68 @@
+---
+title: "Code editor"
+description: "Come visualizzare, cercare e modificare i file di progetto nel code editor Monaco di Webza, inclusi i file di sistema in sola lettura e avvisi importanti."
+---
+
+Il code editor è un editor Monaco integrato che ti permette di visualizzare e modificare i file di progetto direttamente. Offre evidenziazione della sintassi, ricerca e sostituzione, salvataggio su richiesta e un indicatore di modifiche non salvate, così sai sempre cosa è in sospeso.
+
+## Linguaggi supportati
+
+L'editor evidenzia la sintassi per i tipi di file web più comuni:
+
+- JavaScript e TypeScript (`.js`, `.ts`, `.tsx`)
+- CSS e HTML
+- JSON e Markdown
+
+## Ricerca e sostituzione
+
+Premi <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> per aprire la casella di ricerca all'interno dell'editor. Puoi cercare nel file corrente e sostituire le corrispondenze una per una o tutte insieme.
+
+## Salva le tue modifiche
+
+Premi <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> per salvare il file corrente. Un punto o un indicatore di modifiche non salvate appare accanto al nome del file finché non salvi. La preview live si aggiorna dopo il salvataggio.
+
+## File in sola lettura
+
+Un piccolo insieme di file di sistema è in sola lettura. Sono gestiti dal template e dal sistema di build, e una modifica errata potrebbe lasciare il progetto incapace di ricostruirsi. Quando selezioni uno di questi file, l'editor mostra un badge **Sola lettura** con un lucchetto e nasconde il pulsante **Salva**.
+
+<AccordionGroup>
+  <Accordion title="File in sola lettura a livello root">
+    `index.html`, `package.json`, `package-lock.json`, `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`, `components.json`, `tailwind.config.ts`, `tailwind.config.js`, `postcss.config.js`, `postcss.config.cjs`
+  </Accordion>
+
+  <Accordion title="File in sola lettura sorgente">
+    `src/main.tsx`, `src/index.css`, `src/vite-env.d.ts`
+  </Accordion>
+
+  <Accordion title="File in sola lettura sistema">
+    `memory.json`, `design-intelligence.json`, `KNOWLEDGE.md`, `template.json`
+  </Accordion>
+</AccordionGroup>
+
+Non c'è un'impostazione per sbloccare questi file. `index.html` è solo il guscio che carica l'app. Ogni pagina visibile, header, footer e link risiede sotto `src/`, e tutto lì è modificabile tranne `main.tsx`, `index.css` e `vite-env.d.ts`.
+
+## Snippet di analytics e tracking
+
+Se devi aggiungere Google Tag Manager, un Google tag o un Meta Pixel, usa la card **Analytics** in **Impostazioni → Generale** invece di modificare direttamente il markup head. Vedi [Impostazioni](/it/settings).
+
+## Avvisi importanti
+
+<Warning>
+  Le modifiche manuali fatte mentre sei nella cronologia delle revisioni (dopo aver annullato) vengono scartate dalla prossima azione Annulla, Ripeti o Ripristina. Vedi [Preview](/it/preview) per i dettagli sulla cronologia delle revisioni.
+</Warning>
+
+<Info>
+  Le immagini generate dall'AI sono archiviate in `public/images/generated/`. Puoi farvi riferimento nel tuo codice, ma non spostarle o rinominarle al di fuori della chat o l'AI potrebbe perderne traccia.
+</Info>
+
+## Pagine correlate
+
+<CardGroup cols={2}>
+  <Card title="Editor" icon="table-columns" href="/it/editor">
+    Panoramica del layout completo dell'editor di progetto e della barra degli strumenti.
+  </Card>
+
+  <Card title="Preview" icon="eye" href="/it/preview">
+    Impara come funzionano la preview live e la cronologia delle revisioni.
+  </Card>
+</CardGroup>

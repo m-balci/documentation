@@ -1,0 +1,108 @@
+---
+title: "Preview"
+description: "Use o painel de preview para visualizar seu projeto ao vivo, inspecionar elementos, redimensionar a viewport, re-temar designs e gerenciar o histórico de revisões."
+---
+
+O painel de preview mostra uma visualização ao vivo do seu projeto. Você pode redimensionar a viewport, inspecionar elementos, re-temar o design e percorrer o histórico de revisões. O preview se recarrega automaticamente quando uma construção termina, então você não precisa de um botão de atualização manual.
+
+## Controles de viewport
+
+Use os botões de viewport para testar como seu projeto fica em diferentes tamanhos.
+
+| Botão | O que faz |
+| --- | --- |
+| **Telefone** | Diminui o preview para uma largura mobile. |
+| **Tablet** | Define uma largura média entre celular e desktop. |
+| **Largura total** | Expande o preview para a largura total do painel. |
+
+## Modo de inspeção
+
+Clique em **Inspect** para alternar o modo de inspeção. Quando o modo de inspeção está ativado, clicar em qualquer elemento no preview abre a barra de ferramentas do inspetor de elementos.
+
+As ações da barra de ferramentas dependem do elemento selecionado:
+
+- **Editar texto** (somente elementos de texto): edite o texto do elemento inline. A alteração entra na barra de alterações pendentes.
+- **Imagem** (somente elementos `<img>`): troque a fonte da imagem fazendo upload de um arquivo ou colando uma URL de imagem. A alteração entra na barra de alterações pendentes.
+- **Estilo**: ajuste estilos inline como cores, espaçamento e tamanho. Edições de estilo aplicam-se por conta própria sem a IA.
+- **Edição com IA**: envie o elemento para a IA com uma instrução. A alteração entra na barra de alterações pendentes.
+- **Fechar**: fecha o inspetor.
+
+### Barra de alterações pendentes
+
+Quando você faz alterações de **Editar texto**, **Imagem** ou **Edição com IA** no inspetor, uma barra de alterações pendentes aparece na parte inferior do preview. Ela mostra o número de alterações na fila e duas ações:
+
+- **Salvar tudo**: envia o lote para a IA, executa uma construção e gasta créditos.
+- **Descartar tudo**: remove todas as alterações na fila.
+
+<Warning>
+  Nada se aplica até você clicar em **Salvar tudo**. Se você navegar para outra página antes de salvar, perde as alterações na fila. Agrupe seus ajustes e salve de uma vez para evitar uso extra de créditos.
+</Warning>
+
+<Note>
+  Edições de **Estilo** alteram a fonte diretamente sem a IA e não entram na barra de alterações pendentes.
+</Note>
+
+## Modo de design
+
+Clique em **Design** para re-temar um site já construído.
+
+1. Escolha um design system.
+2. Opcionalmente escolha uma paleta de destaque.
+3. Clique em **Perguntar à IA** para aplicar o novo tema.
+
+Isso dispara uma reconstrução. O preview recarrega com o design real, e a IA executa uma passagem de correção para cores hardcoded. Consome créditos de construção como uma solicitação de chat. Você não pode aplicar uma alteração de design enquanto outra construção já está em execução.
+
+<Info>
+  O modo de design está disponível apenas para sites. Ele fica oculto para projetos de tema WordPress e Shopify, que mantêm o design system escolhido na criação.
+</Info>
+
+## Desfazer e Refazer
+
+Use os botões **Desfazer** e **Refazer** para percorrer o histórico do seu projeto. Você também pode usar estes atalhos de teclado:
+
+| Ação | Atalho |
+| --- | --- |
+| Desfazer | Ctrl/Cmd + Z |
+| Refazer | Ctrl/Cmd + Shift + Z, ou Ctrl + Y |
+
+Cada desfazer reverte exatamente uma alteração: uma solicitação de chat da IA, uma edição de Style ou uma re-temar de design. Após um desfazer, o projeto é reconstruído. Seu trabalho mais recente é salvo em checkpoint antes de um desfazer, então o refazer pode trazê-lo de volta. Cada desfazer e refazer é registrado no chat para que a IA permaneça ciente.
+
+<Warning>
+  Desfazer e refazer estão indisponíveis enquanto uma construção roda. Um projeto novo não tem nada para desfazer até a segunda alteração.
+</Warning>
+
+<Warning>
+  Edições manuais no editor de código feitas enquanto você está dentro do histórico (após desfazer) não são capturadas. O próximo Desfazer, Refazer ou Restaurar as descarta sem aviso. Retorne ao estado mais recente primeiro, ou deixe a IA fazer a alteração.
+</Warning>
+
+<Info>
+  Para projetos Shopify, os botões **Desfazer**, **Refazer** e **Histórico de revisões** ficam ocultos. Apenas **Baixar tema (.zip)** aparece. Atalhos de teclado ainda funcionam para projetos Shopify.
+</Info>
+
+## Histórico de revisões
+
+Clique no **ícone de relógio** para abrir o histórico de revisões. Um checkpoint é capturado antes de cada solicitação da IA, edição de Estilo e alteração de design. O Webza mantém os 20 checkpoints mais recentes.
+
+A lista mostra rótulos, timestamps e contagens de arquivos. A versão atual tem uma badge **Atual**. Clique em **Restaurar** em qualquer versão para ir até ela.
+
+Restaurar primeiro salva um checkpoint do estado atual, então a restauração é reversível. Cada restauração dispara uma reconstrução. O histórico de revisões está disponível apenas para sites e temas WordPress.
+
+<Note>
+  Snapshots de publicação são separados do histórico de revisões. Veja a página [Publicar](/pt-br/publish) para detalhes.
+</Note>
+
+## Preview do WordPress Playground
+
+Projetos de tema WordPress pré-visualizam dentro do WordPress Playground. O Playground tem seu próprio controle de recarga, então o comportamento automático de recarga do preview funciona de forma diferente lá.
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Chat do projeto" icon="message" href="/pt-br/project-chat">
+    Envie instruções para a IA e gerencie o histórico de chat.
+  </Card>
+
+  <Card title="Publicar" icon="rocket" href="/pt-br/publish">
+    Publique seu projeto e gerencie snapshots ao vivo.
+  </Card>
+</CardGroup>

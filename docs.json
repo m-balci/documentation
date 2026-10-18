@@ -1,0 +1,1218 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Webza Documentation",
+  "colors": {
+    "primary": "#000000",
+    "light": "#FFFFFF",
+    "dark": "#000000"
+  },
+  "favicon": {
+    "light": "/images/Frame(4).png",
+    "dark": "/images/Frame(4).png"
+  },
+  "navigation": {
+    "languages": [
+      {
+        "language": "en",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "Documentation",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "icon": "rocket-launch",
+                "pages": [
+                  "introduction/welcome",
+                  "introduction/create-an-account",
+                  "introduction/getting-started",
+                  "introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Build",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Projects",
+                    "pages": [
+                      "editor",
+                      "project-chat",
+                      "preview",
+                      "code-editor",
+                      "settings",
+                      "find-a-project"
+                    ]
+                  },
+                  "templates",
+                  "design-systems",
+                  "file-manager"
+                ]
+              },
+              {
+                "group": "Themes",
+                "icon": "palette",
+                "pages": [
+                  "themes/wordpress-themes",
+                  "themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "icon": "plug",
+                "pages": [
+                  "integrations/github",
+                  "integrations/supabase",
+                  "integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Deploy & host",
+                "icon": "globe",
+                "pages": [
+                  "publish",
+                  "custom-domains"
+                ]
+              },
+              {
+                "group": "Plans & billing",
+                "icon": "credit-card",
+                "pages": [
+                  "subscription-plans",
+                  "change-or-cancel-your-subscription",
+                  "invoices-and-billing",
+                  "credits-and-usage"
+                ]
+              },
+              {
+                "group": "Help",
+                "icon": "life-ring",
+                "pages": [
+                  "help/prompting-tips",
+                  "help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Changelog",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Changelog",
+                "pages": [
+                  "changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "de",
+        "tabs": [
+          {
+            "tab": "Dokumentation",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Erste Schritte",
+                "icon": "rocket-launch",
+                "pages": [
+                  "de/introduction/welcome",
+                  "de/introduction/create-an-account",
+                  "de/introduction/getting-started",
+                  "de/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Erstellen",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Projekte",
+                    "pages": [
+                      "de/editor",
+                      "de/project-chat",
+                      "de/preview",
+                      "de/code-editor",
+                      "de/settings",
+                      "de/find-a-project"
+                    ]
+                  },
+                  "de/templates",
+                  "de/design-systems",
+                  "de/file-manager"
+                ]
+              },
+              {
+                "group": "Themes",
+                "icon": "palette",
+                "pages": [
+                  "de/themes/wordpress-themes",
+                  "de/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Integrationen",
+                "icon": "plug",
+                "pages": [
+                  "de/integrations/github",
+                  "de/integrations/supabase",
+                  "de/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Veröffentlichen & Hosting",
+                "icon": "globe",
+                "pages": [
+                  "de/publish",
+                  "de/custom-domains"
+                ]
+              },
+              {
+                "group": "Pläne & Abrechnung",
+                "icon": "credit-card",
+                "pages": [
+                  "de/subscription-plans",
+                  "de/change-or-cancel-your-subscription",
+                  "de/invoices-and-billing",
+                  "de/credits-and-usage"
+                ]
+              },
+              {
+                "group": "Hilfe",
+                "icon": "life-ring",
+                "pages": [
+                  "de/help/prompting-tips",
+                  "de/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Änderungsprotokoll",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Änderungsprotokoll",
+                "pages": [
+                  "de/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "tabs": [
+          {
+            "tab": "Documentación",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Primeros pasos",
+                "icon": "rocket-launch",
+                "pages": [
+                  "es/introduction/welcome",
+                  "es/introduction/create-an-account",
+                  "es/introduction/getting-started",
+                  "es/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Crear",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Proyectos",
+                    "pages": [
+                      "es/editor",
+                      "es/project-chat",
+                      "es/preview",
+                      "es/code-editor",
+                      "es/settings",
+                      "es/find-a-project"
+                    ]
+                  },
+                  "es/templates",
+                  "es/design-systems",
+                  "es/file-manager"
+                ]
+              },
+              {
+                "group": "Temas",
+                "icon": "palette",
+                "pages": [
+                  "es/themes/wordpress-themes",
+                  "es/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Integraciones",
+                "icon": "plug",
+                "pages": [
+                  "es/integrations/github",
+                  "es/integrations/supabase",
+                  "es/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Publicación y hosting",
+                "icon": "globe",
+                "pages": [
+                  "es/publish",
+                  "es/custom-domains"
+                ]
+              },
+              {
+                "group": "Planes y facturación",
+                "icon": "credit-card",
+                "pages": [
+                  "es/subscription-plans",
+                  "es/change-or-cancel-your-subscription",
+                  "es/invoices-and-billing",
+                  "es/credits-and-usage"
+                ]
+              },
+              {
+                "group": "Ayuda",
+                "icon": "life-ring",
+                "pages": [
+                  "es/help/prompting-tips",
+                  "es/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Novedades",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Novedades",
+                "pages": [
+                  "es/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "tabs": [
+          {
+            "tab": "Documentation",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Premiers pas",
+                "icon": "rocket-launch",
+                "pages": [
+                  "fr/introduction/welcome",
+                  "fr/introduction/create-an-account",
+                  "fr/introduction/getting-started",
+                  "fr/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Créer",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Projets",
+                    "pages": [
+                      "fr/editor",
+                      "fr/project-chat",
+                      "fr/preview",
+                      "fr/code-editor",
+                      "fr/settings",
+                      "fr/find-a-project"
+                    ]
+                  },
+                  "fr/templates",
+                  "fr/design-systems",
+                  "fr/file-manager"
+                ]
+              },
+              {
+                "group": "Thèmes",
+                "icon": "palette",
+                "pages": [
+                  "fr/themes/wordpress-themes",
+                  "fr/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Intégrations",
+                "icon": "plug",
+                "pages": [
+                  "fr/integrations/github",
+                  "fr/integrations/supabase",
+                  "fr/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Publication et hébergement",
+                "icon": "globe",
+                "pages": [
+                  "fr/publish",
+                  "fr/custom-domains"
+                ]
+              },
+              {
+                "group": "Forfaits et facturation",
+                "icon": "credit-card",
+                "pages": [
+                  "fr/subscription-plans",
+                  "fr/change-or-cancel-your-subscription",
+                  "fr/invoices-and-billing",
+                  "fr/credits-and-usage"
+                ]
+              },
+              {
+                "group": "Aide",
+                "icon": "life-ring",
+                "pages": [
+                  "fr/help/prompting-tips",
+                  "fr/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Nouveautés",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Nouveautés",
+                "pages": [
+                  "fr/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "it",
+        "tabs": [
+          {
+            "tab": "Documentazione",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Primi passi",
+                "icon": "rocket-launch",
+                "pages": [
+                  "it/introduction/welcome",
+                  "it/introduction/create-an-account",
+                  "it/introduction/getting-started",
+                  "it/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Crea",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Progetti",
+                    "pages": [
+                      "it/editor",
+                      "it/project-chat",
+                      "it/preview",
+                      "it/code-editor",
+                      "it/settings",
+                      "it/find-a-project"
+                    ]
+                  },
+                  "it/templates",
+                  "it/design-systems",
+                  "it/file-manager"
+                ]
+              },
+              {
+                "group": "Temi",
+                "icon": "palette",
+                "pages": [
+                  "it/themes/wordpress-themes",
+                  "it/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Integrazioni",
+                "icon": "plug",
+                "pages": [
+                  "it/integrations/github",
+                  "it/integrations/supabase",
+                  "it/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Pubblicazione e hosting",
+                "icon": "globe",
+                "pages": [
+                  "it/publish",
+                  "it/custom-domains"
+                ]
+              },
+              {
+                "group": "Piani e fatturazione",
+                "icon": "credit-card",
+                "pages": [
+                  "it/subscription-plans",
+                  "it/change-or-cancel-your-subscription",
+                  "it/invoices-and-billing",
+                  "it/credits-and-usage"
+                ]
+              },
+              {
+                "group": "Aiuto",
+                "icon": "life-ring",
+                "pages": [
+                  "it/help/prompting-tips",
+                  "it/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Novità",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Novità",
+                "pages": [
+                  "it/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "pt-BR",
+        "tabs": [
+          {
+            "tab": "Documentação",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Primeiros passos",
+                "icon": "rocket-launch",
+                "pages": [
+                  "pt-br/introduction/welcome",
+                  "pt-br/introduction/create-an-account",
+                  "pt-br/introduction/getting-started",
+                  "pt-br/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Criar",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Projetos",
+                    "pages": [
+                      "pt-br/editor",
+                      "pt-br/project-chat",
+                      "pt-br/preview",
+                      "pt-br/code-editor",
+                      "pt-br/settings",
+                      "pt-br/find-a-project"
+                    ]
+                  },
+                  "pt-br/templates",
+                  "pt-br/design-systems",
+                  "pt-br/file-manager"
+                ]
+              },
+              {
+                "group": "Temas",
+                "icon": "palette",
+                "pages": [
+                  "pt-br/themes/wordpress-themes",
+                  "pt-br/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Integrações",
+                "icon": "plug",
+                "pages": [
+                  "pt-br/integrations/github",
+                  "pt-br/integrations/supabase",
+                  "pt-br/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Publicação e hospedagem",
+                "icon": "globe",
+                "pages": [
+                  "pt-br/publish",
+                  "pt-br/custom-domains"
+                ]
+              },
+              {
+                "group": "Planos e cobrança",
+                "icon": "credit-card",
+                "pages": [
+                  "pt-br/subscription-plans",
+                  "pt-br/change-or-cancel-your-subscription",
+                  "pt-br/invoices-and-billing",
+                  "pt-br/credits-and-usage"
+                ]
+              },
+              {
+                "group": "Ajuda",
+                "icon": "life-ring",
+                "pages": [
+                  "pt-br/help/prompting-tips",
+                  "pt-br/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Novidades",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Novidades",
+                "pages": [
+                  "pt-br/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "tr",
+        "tabs": [
+          {
+            "tab": "Dokümantasyon",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Başlarken",
+                "icon": "rocket-launch",
+                "pages": [
+                  "tr/introduction/welcome",
+                  "tr/introduction/create-an-account",
+                  "tr/introduction/getting-started",
+                  "tr/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Oluştur",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Projeler",
+                    "pages": [
+                      "tr/editor",
+                      "tr/project-chat",
+                      "tr/preview",
+                      "tr/code-editor",
+                      "tr/settings",
+                      "tr/find-a-project"
+                    ]
+                  },
+                  "tr/templates",
+                  "tr/design-systems",
+                  "tr/file-manager"
+                ]
+              },
+              {
+                "group": "Temalar",
+                "icon": "palette",
+                "pages": [
+                  "tr/themes/wordpress-themes",
+                  "tr/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Entegrasyonlar",
+                "icon": "plug",
+                "pages": [
+                  "tr/integrations/github",
+                  "tr/integrations/supabase",
+                  "tr/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Yayınlama ve barındırma",
+                "icon": "globe",
+                "pages": [
+                  "tr/publish",
+                  "tr/custom-domains"
+                ]
+              },
+              {
+                "group": "Planlar ve faturalandırma",
+                "icon": "credit-card",
+                "pages": [
+                  "tr/subscription-plans",
+                  "tr/change-or-cancel-your-subscription",
+                  "tr/invoices-and-billing",
+                  "tr/credits-and-usage"
+                ]
+              },
+              {
+                "group": "Yardım",
+                "icon": "life-ring",
+                "pages": [
+                  "tr/help/prompting-tips",
+                  "tr/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Yenilikler",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Yenilikler",
+                "pages": [
+                  "tr/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ru",
+        "tabs": [
+          {
+            "tab": "Документация",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Начало работы",
+                "icon": "rocket-launch",
+                "pages": [
+                  "ru/introduction/welcome",
+                  "ru/introduction/create-an-account",
+                  "ru/introduction/getting-started",
+                  "ru/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "Создание",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "Проекты",
+                    "pages": [
+                      "ru/editor",
+                      "ru/project-chat",
+                      "ru/preview",
+                      "ru/code-editor",
+                      "ru/settings",
+                      "ru/find-a-project"
+                    ]
+                  },
+                  "ru/templates",
+                  "ru/design-systems",
+                  "ru/file-manager"
+                ]
+              },
+              {
+                "group": "Темы",
+                "icon": "palette",
+                "pages": [
+                  "ru/themes/wordpress-themes",
+                  "ru/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "Интеграции",
+                "icon": "plug",
+                "pages": [
+                  "ru/integrations/github",
+                  "ru/integrations/supabase",
+                  "ru/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "Публикация и хостинг",
+                "icon": "globe",
+                "pages": [
+                  "ru/publish",
+                  "ru/custom-domains"
+                ]
+              },
+              {
+                "group": "Тарифы и оплата",
+                "icon": "credit-card",
+                "pages": [
+                  "ru/subscription-plans",
+                  "ru/change-or-cancel-your-subscription",
+                  "ru/invoices-and-billing",
+                  "ru/credits-and-usage"
+                ]
+              },
+              {
+                "group": "Помощь",
+                "icon": "life-ring",
+                "pages": [
+                  "ru/help/prompting-tips",
+                  "ru/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Что нового",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "Что нового",
+                "pages": [
+                  "ru/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh",
+        "tabs": [
+          {
+            "tab": "文档",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "入门",
+                "icon": "rocket-launch",
+                "pages": [
+                  "zh/introduction/welcome",
+                  "zh/introduction/create-an-account",
+                  "zh/introduction/getting-started",
+                  "zh/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "构建",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "项目",
+                    "pages": [
+                      "zh/editor",
+                      "zh/project-chat",
+                      "zh/preview",
+                      "zh/code-editor",
+                      "zh/settings",
+                      "zh/find-a-project"
+                    ]
+                  },
+                  "zh/templates",
+                  "zh/design-systems",
+                  "zh/file-manager"
+                ]
+              },
+              {
+                "group": "主题",
+                "icon": "palette",
+                "pages": [
+                  "zh/themes/wordpress-themes",
+                  "zh/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "集成",
+                "icon": "plug",
+                "pages": [
+                  "zh/integrations/github",
+                  "zh/integrations/supabase",
+                  "zh/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "发布与托管",
+                "icon": "globe",
+                "pages": [
+                  "zh/publish",
+                  "zh/custom-domains"
+                ]
+              },
+              {
+                "group": "套餐与账单",
+                "icon": "credit-card",
+                "pages": [
+                  "zh/subscription-plans",
+                  "zh/change-or-cancel-your-subscription",
+                  "zh/invoices-and-billing",
+                  "zh/credits-and-usage"
+                ]
+              },
+              {
+                "group": "帮助",
+                "icon": "life-ring",
+                "pages": [
+                  "zh/help/prompting-tips",
+                  "zh/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "更新日志",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "更新日志",
+                "pages": [
+                  "zh/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ko",
+        "tabs": [
+          {
+            "tab": "문서",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "시작하기",
+                "icon": "rocket-launch",
+                "pages": [
+                  "ko/introduction/welcome",
+                  "ko/introduction/create-an-account",
+                  "ko/introduction/getting-started",
+                  "ko/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "만들기",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "프로젝트",
+                    "pages": [
+                      "ko/editor",
+                      "ko/project-chat",
+                      "ko/preview",
+                      "ko/code-editor",
+                      "ko/settings",
+                      "ko/find-a-project"
+                    ]
+                  },
+                  "ko/templates",
+                  "ko/design-systems",
+                  "ko/file-manager"
+                ]
+              },
+              {
+                "group": "테마",
+                "icon": "palette",
+                "pages": [
+                  "ko/themes/wordpress-themes",
+                  "ko/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "통합",
+                "icon": "plug",
+                "pages": [
+                  "ko/integrations/github",
+                  "ko/integrations/supabase",
+                  "ko/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "게시 및 호스팅",
+                "icon": "globe",
+                "pages": [
+                  "ko/publish",
+                  "ko/custom-domains"
+                ]
+              },
+              {
+                "group": "요금제 및 결제",
+                "icon": "credit-card",
+                "pages": [
+                  "ko/subscription-plans",
+                  "ko/change-or-cancel-your-subscription",
+                  "ko/invoices-and-billing",
+                  "ko/credits-and-usage"
+                ]
+              },
+              {
+                "group": "도움말",
+                "icon": "life-ring",
+                "pages": [
+                  "ko/help/prompting-tips",
+                  "ko/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "업데이트 소식",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "업데이트 소식",
+                "pages": [
+                  "ko/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ar",
+        "tabs": [
+          {
+            "tab": "التوثيق",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "البدء",
+                "icon": "rocket-launch",
+                "pages": [
+                  "ar/introduction/welcome",
+                  "ar/introduction/create-an-account",
+                  "ar/introduction/getting-started",
+                  "ar/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "الإنشاء",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "المشاريع",
+                    "pages": [
+                      "ar/editor",
+                      "ar/project-chat",
+                      "ar/preview",
+                      "ar/code-editor",
+                      "ar/settings",
+                      "ar/find-a-project"
+                    ]
+                  },
+                  "ar/templates",
+                  "ar/design-systems",
+                  "ar/file-manager"
+                ]
+              },
+              {
+                "group": "السمات",
+                "icon": "palette",
+                "pages": [
+                  "ar/themes/wordpress-themes",
+                  "ar/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "التكاملات",
+                "icon": "plug",
+                "pages": [
+                  "ar/integrations/github",
+                  "ar/integrations/supabase",
+                  "ar/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "النشر والاستضافة",
+                "icon": "globe",
+                "pages": [
+                  "ar/publish",
+                  "ar/custom-domains"
+                ]
+              },
+              {
+                "group": "الخطط والفوترة",
+                "icon": "credit-card",
+                "pages": [
+                  "ar/subscription-plans",
+                  "ar/change-or-cancel-your-subscription",
+                  "ar/invoices-and-billing",
+                  "ar/credits-and-usage"
+                ]
+              },
+              {
+                "group": "المساعدة",
+                "icon": "life-ring",
+                "pages": [
+                  "ar/help/prompting-tips",
+                  "ar/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "ما الجديد",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "ما الجديد",
+                "pages": [
+                  "ar/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ja",
+        "tabs": [
+          {
+            "tab": "ドキュメント",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "はじめに",
+                "icon": "rocket-launch",
+                "pages": [
+                  "ja/introduction/welcome",
+                  "ja/introduction/create-an-account",
+                  "ja/introduction/getting-started",
+                  "ja/introduction/dashboard-overview"
+                ]
+              },
+              {
+                "group": "作成",
+                "icon": "hammer",
+                "pages": [
+                  {
+                    "group": "プロジェクト",
+                    "pages": [
+                      "ja/editor",
+                      "ja/project-chat",
+                      "ja/preview",
+                      "ja/code-editor",
+                      "ja/settings",
+                      "ja/find-a-project"
+                    ]
+                  },
+                  "ja/templates",
+                  "ja/design-systems",
+                  "ja/file-manager"
+                ]
+              },
+              {
+                "group": "テーマ",
+                "icon": "palette",
+                "pages": [
+                  "ja/themes/wordpress-themes",
+                  "ja/themes/shopify-themes"
+                ]
+              },
+              {
+                "group": "連携",
+                "icon": "plug",
+                "pages": [
+                  "ja/integrations/github",
+                  "ja/integrations/supabase",
+                  "ja/integrations/personal-api"
+                ]
+              },
+              {
+                "group": "公開とホスティング",
+                "icon": "globe",
+                "pages": [
+                  "ja/publish",
+                  "ja/custom-domains"
+                ]
+              },
+              {
+                "group": "プランと請求",
+                "icon": "credit-card",
+                "pages": [
+                  "ja/subscription-plans",
+                  "ja/change-or-cancel-your-subscription",
+                  "ja/invoices-and-billing",
+                  "ja/credits-and-usage"
+                ]
+              },
+              {
+                "group": "ヘルプ",
+                "icon": "life-ring",
+                "pages": [
+                  "ja/help/prompting-tips",
+                  "ja/help/support-tickets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "更新情報",
+            "icon": "clock-rotate-left",
+            "groups": [
+              {
+                "group": "更新情報",
+                "pages": [
+                  "ja/changelog"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/Vector.svg",
+    "dark": "/images/Vector(1).svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "https://webza.ai/support/tickets",
+        "icon": "message"
+      },
+      {
+        "icon": "signal",
+        "href": "https://status.webza.ai/",
+        "label": "Status"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Webza",
+      "href": "https://webza.ai/register?utm_source=webza_docs&utm_medium=navigation"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/webzaai",
+      "linkedin": "https://linkedin.com/company/webzaai"
+    }
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "appearance": {
+    "default": "system"
+  }
+}

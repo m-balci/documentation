@@ -1,0 +1,134 @@
+---
+title: "Shopify themes"
+sidebarTitle: "Shopify themes"
+description: "Generate Shopify Online Store 2.0 themes with Webza and download them as a .zip to install in your Shopify store."
+---
+
+Generate a complete, installable Shopify Online Store 2.0 theme from a prompt. Download it as a `.zip` and upload it to your Shopify store.
+
+<Note>
+  Shopify themes are available on the Plus and Premium plans.
+</Note>
+
+## How it works
+
+<Steps>
+  <Step title="Create a Shopify theme project">
+    Choose **Shopify Theme** as the output type and describe your theme.
+  </Step>
+  <Step title="Build and refine">
+    Chat with the AI to build and refine your theme.
+  </Step>
+  <Step title="Download the theme">
+    Download the theme as a `.zip` file.
+  </Step>
+  <Step title="Install in Shopify">
+    Upload the `.zip` in your Shopify admin and publish it when you're ready.
+  </Step>
+</Steps>
+
+## Create a Shopify theme project
+
+<Steps>
+  <Step title="Choose the output type">
+    On the dashboard, open the output selector next to the prompt and choose **Shopify Theme**.
+  </Step>
+  <Step title="Pick a template (optional)">
+    Click **Customize** to pick a Shopify template, or leave it on **Automatic**.
+  </Step>
+  <Step title="Describe your theme">
+    Enter your prompt and click **Start**.
+  </Step>
+</Steps>
+
+The output type is set when you create the project and can't be changed later.
+
+### Starting templates
+
+Every Shopify project starts from a base theme. By default, this is **Skeleton**, Shopify's official minimal starter. It gives the AI a valid Online Store 2.0 structure with no built-in styles, so the design is written from scratch for your prompt.
+
+If other Shopify templates are available on your plan, pick one under **Customize** to start from it. With the template picker on **Automatic**, the AI chooses from the Shopify templates available to you.
+
+## Preview your theme
+
+Shopify themes can't be previewed inside the Webza editor, because Shopify themes only render in a Shopify store. After a build, use **Download theme (.zip)** in the preview panel and install the theme in your store to see it.
+
+<Tip>
+  Upload the theme to your store without publishing it. You can then preview it from **Online Store → Themes** without changing your live storefront.
+</Tip>
+
+The panel does not show Undo, Redo, or Revision History buttons. Keyboard shortcuts still work:
+
+- Undo: `Ctrl/Cmd + Z`
+- Redo: `Ctrl/Cmd + Shift + Z` (or `Ctrl + Y` on some systems)
+
+## Install the theme
+
+<Steps>
+  <Step title="Download the theme">
+    In the Webza editor, click **Download theme (.zip)**.
+  </Step>
+  <Step title="Upload to Shopify">
+    In your Shopify admin, go to **Online Store → Themes → Add theme → Upload zip file**.
+  </Step>
+  <Step title="Preview, customize, or publish">
+    After upload, preview the theme, click **Customize** to edit it further in Shopify, or click **Publish** to make it live.
+  </Step>
+</Steps>
+
+## What theme projects can't do
+
+A theme is installed in Shopify, not hosted by Webza, so some website features aren't available:
+
+- **Publishing and custom domains**: the **Domains** tab is not shown.
+- **GitHub and Supabase**: not available for themes.
+- **Design mode**: the design system you choose at creation is applied at build time.
+- **AI-generated images**: only available for website projects.
+- **Analytics**: the analytics card is hidden. Add tracking in your Shopify store.
+
+In the editor, the **Export** button is replaced by **Download theme (.zip)**.
+
+## Changing plans
+
+If you move from Plus or Premium to a plan without Shopify themes, you can still download your existing themes, but new builds on theme projects are blocked. Upgrade again to continue editing them.
+
+## Duplicate a theme project
+
+A duplicated Shopify theme project keeps the Shopify output type.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I don't see the Shopify Theme option">
+    Shopify themes are only available on the Plus and Premium plans.
+  </Accordion>
+
+  <Accordion title="Shopify won't accept the theme file">
+    Upload the `.zip` exactly as downloaded from **Download theme (.zip)**, without unpacking or repacking it.
+  </Accordion>
+
+  <Accordion title="Builds are refused on my theme project">
+    Your current plan doesn't include Shopify themes. Upgrade to Plus or Premium to continue building. Your project and its downloadable theme stay untouched.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=shopify-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">Launch a Shopify theme without code</span>
+    <span className="wz-ad-text">Describe your store's look and get an Online Store 2.0 theme ready to install. No code, no developers, no waiting.</span>
+  </span>
+
+  <span className="wz-ad-btn">Create a Shopify theme <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="WordPress themes" icon="wordpress" href="/themes/wordpress-themes">
+    Learn how to generate and install WordPress block themes.
+  </Card>
+
+  <Card title="Subscription plans" icon="credit-card" href="/subscription-plans">
+    Compare plans and see which features are included on yours.
+  </Card>
+</CardGroup>

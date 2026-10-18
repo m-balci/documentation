@@ -1,0 +1,59 @@
+---
+title: "Personal API"
+sidebarTitle: "Personal API"
+description: "Read-only REST API to access your Webza account, projects, credits, and billing programmatically."
+---
+
+Plus and Premium plans include API access. The Personal API is a read-only REST API that lets you access your Webza account data programmatically. You cannot create projects, trigger builds, or change billing through the API.
+
+## Create an API key
+
+Open the **API Keys** page from the sidebar.
+
+<Steps>
+  <Step title="Generate a key">
+    Click to create a new key. Each key is shown only once at creation, so copy it immediately and store it securely.
+  </Step>
+  <Step title="Set expiry (optional)">
+    Choose an expiry of 30, 90, or 365 days, or leave it without expiry.
+  </Step>
+  <Step title="Revoke when needed">
+    You can revoke any key at any time. You may have up to 10 keys per account.
+  </Step>
+</Steps>
+
+<Warning>
+  Keep your keys secret. They grant access to your account data until they are revoked or expire.
+</Warning>
+
+## Authenticate
+
+Send your key as a Bearer token in the `Authorization` header:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## Endpoints and docs
+
+The API exposes resources under `/api/v1` for your account, credits, subscription, projects, notifications, and invoices.
+
+Open the **API Docs** page from the sidebar to see every endpoint. The docs include an interactive tester and copy-paste samples in curl, JavaScript, PHP, and Python.
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## Separate: AI provider keys
+
+Your own AI provider keys are managed separately in **Settings → AI Settings** (`/settings`). These are unrelated to the Personal API.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/integrations/github">
+    Auto-push generated source to a private GitHub repository.
+  </Card>
+
+  <Card title="Supabase database" icon="database" href="/integrations/supabase">
+    Attach a Postgres database to your generated apps.
+  </Card>
+</CardGroup>

@@ -1,0 +1,82 @@
+---
+title: "Editör"
+description: "Webza proje editörüne genel bakış, düzeni, araç çubuğu ve klavye kısayolları."
+---
+
+Proje editörü, kontrol panelinde bir proje kartı üzerinde **Başlat**'ı tıkladıktan sonra girdiğiniz çalışma alanıdır. Sohbeti, önizlemeyi, kodu ve ayarları tek bir yerde bir araya getirerek, sekme değiştirmeden sitenizi oluşturmanıza ve iyileştirmenize olanak tanır.
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## Editör düzeni
+
+Editör üç ana alana ayrılır:
+
+<CardGroup cols={2}>
+  <Card title="Proje sohbeti" icon="message" href="/tr/project-chat">
+    Yapay zekadan sayfaları düzenlemesini, bölüm eklemesini, stilleri değiştirmesini veya hataları düzeltmesini isteyin. Talimatlarınız, gerçek zamanlı olarak inceleyebileceğiniz kod değişikliklerine dönüşür.
+  </Card>
+
+  <Card title="Canlı önizleme" icon="eye" href="/tr/preview">
+    Ziyaretçilerin göreceği şekilde sitenizi görün. Önizleme, her yapay zeka düzenlemesinden veya manuel kod kaydından sonra otomatik olarak güncellenir.
+  </Card>
+
+  <Card title="Kod editörü" icon="code" href="/tr/code-editor">
+    Dosyaları doğrudan sözdizimi vurgulama, arama ve kaydetme ile inceleyin ve düzenleyin. Monaco editörü üzerine kuruludur.
+  </Card>
+
+  <Card title="Ayarlar" icon="gear" href="/tr/settings">
+    Alan adlarını, analitiği, SEO'yu ve diğer proje düzeyi seçenekleri yönetin.
+  </Card>
+</CardGroup>
+
+Sohbet panelini daraltarak önizlemeye tam genişlik verebilirsiniz. Bu, tasarım detaylarına odaklandığınız ve yapay zeka yardımına ihtiyacınız olmadığında kullanışlıdır.
+
+## Araç çubuğu
+
+Üst araç çubuğu, mevcut proje için hızlı eylemler sunar:
+
+- **Yayınla**: Sitenizi canlı hale getirmek için yayınlama akışını açar. [Yayınla](/tr/publish) sayfasına bakın.
+- **Yeniden oluştur**: Projeyi en son koddan yeniden oluşturur. Önizleme senkronize görünmüyorsa bunu kullanın.
+- **Turu tekrar oynat**: **Yeniden oluştur**'un yanındaki dairesel ok düğmesi, rehberli editör turunu tekrar oynatır.
+- **Dışa aktar**: Planınız kod dışa aktarımını içeriyorsa (Plus veya Premium), bu düğme tam kaynak kodu ZIP dosyası olarak indirir; bu dosya Vercel'de yayınlamaya veya istediğiniz yerde barındırmaya hazırdır.
+- **Tema indir (.zip)**: Tema projeleri için, tam kaynak dışa aktarımı yerine kurulabilir WordPress blok teması veya Shopify Online Store 2.0 teması ZIP dosyası olarak döner.
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## Projenizi dışa aktarma
+
+Planınız bunu destekliyorsa, projenizi Webza dışında barındırmak için indirebilirsiniz.
+
+<Steps>
+  <Step title="Editörü açın">
+    Kontrol panelinizden proje kartı üzerinde **Başlat**'ı tıklayın.
+  </Step>
+  <Step title="Dışa aktar'ı tıklayın">
+    Araç çubuğunda **Dışa aktar**'ı (veya tema projeleri için **Tema indir (.zip)**'i) tıklayın.
+  </Step>
+  <Step title="ZIP dosyasını indirin">
+    Dosya bilgisayarınıza indirilir. Çıkarın ve yerel geliştirme veya Vercel dağıtımı için içindeki README dosyasını takip edin.
+  </Step>
+</Steps>
+
+## Klavye kısayolları
+
+| Eylem | Kısayol |
+| --- | --- |
+| Geri al | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| Yinele | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> veya <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| Kod editöründe ara | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| Kod editöründe kaydet | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| Sohbet mesajı gönder | <kbd>Enter</kbd> |
+
+## İlgili sayfalar
+
+<CardGroup cols={2}>
+  <Card title="Proje sohbeti" icon="message" href="/tr/project-chat">
+    Yapay zeka ile nasıl konuşacağınızı ve değişiklikleri nasıl inceleyeceğinizi öğrenin.
+  </Card>
+
+  <Card title="Kod editörü" icon="code" href="/tr/code-editor">
+    Yerleşik Monaco editörü ile dosyaları doğrudan düzenleyin.
+  </Card>
+</CardGroup>

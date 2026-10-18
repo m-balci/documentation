@@ -1,0 +1,120 @@
+---
+title: "クイックスタート: 最初のWebza Webサイトを構築して公開する"
+sidebarTitle: "クイックスタート"
+description: "Webzaで最初のWebサイトを構築し、約10分で公開します。最初のプロンプトから、誰とでも共有できる公開サイトまでをご案内します。"
+---
+
+Webzaで最初のWebサイトを構築し、約10分でインターネット上に公開しましょう。インストールも設定も不要です。欲しいものを説明すると、Webzaがデザインして構築し、共有できる実際のアドレスに公開します。このガイドでは、架空の近所のパン屋**Golden Crust**のWebサイトを作成します。ホームページ、価格付きメニュー、注文フォームを含みます。どのステップでも自分のアイデアに差し替えられます。プロセスは同じです。
+
+Webzaでの構築には[クレジット](/ja/credits-and-usage)が使用され、無料プランには初回限定で200万のAIクレジットが付与されます。各プランの内容については[サブスクリプションプラン](/ja/subscription-plans)をご覧ください。
+
+<Steps>
+  <Step title="アカウントを作成する">
+    メール、Google、またはGitHubで[無料でサインアップ](https://webza.ai/register?utm_source=webza_docs&utm_medium=content)します。Webzaがダッシュボードを開き、構築の準備が整います。ログイン、パスワードリセット、アカウント設定については[アカウントの作成](/ja/introduction/create-an-account)をご覧ください。
+  </Step>
+  <Step title="Webサイトを説明する">
+    [ダッシュボード](/ja/introduction/dashboard-overview)のプロンプトボックスは、すべてのプロジェクトの出発点です。平易な言葉で作成したいWebサイトを説明します。
+
+    以下のプロンプトを試すか、自分のアイデアに合わせて調整してください。
+
+    ```text Prompt wrap
+    Build a website for Golden Crust, a neighborhood bakery. Include a warm hero section with a headline and an "Order online" button, a menu page with sourdough, croissants, and cinnamon rolls with prices, an About section with the bakery's story, and an order form where visitors enter their name, the items they want, and a pickup time. Use realistic sample content. Cozy, modern design. Works well on mobile.
+    ```
+
+    <Tip>
+      ページ、セクション、雰囲気を具体的に説明してください。最初のプロンプトで多くの文脈を提供すればするほど、最初のバージョンはイメージに近づきます。
+    </Tip>
+
+    <Accordion title="自分のアイデアを使う">
+      以下のスターターのいずれかを調整するか、ゼロから自分のプロンプトを作成してください。このガイドのステップは同じままです。
+
+      ```text Portfolio wrap
+      Build a portfolio website for a freelance photographer: a full-width gallery, an About page, a services and pricing section, and a contact form. Minimal, elegant design.
+      ```
+
+      ```text Local business wrap
+      Build a website for a dental clinic: a homepage with services, a team section with photos, opening hours, a location section, and an appointment request form. Clean, trustworthy design.
+      ```
+
+      ```text Landing page wrap
+      Build a landing page for a mobile app that helps people track their daily water intake: a hero with a download button, a features section, testimonials, and an FAQ. Fresh, bright design.
+      ```
+    </Accordion>
+  </Step>
+  <Step title="最初のバージョンが表示されるのを待つ">
+    Webzaがプロジェクトを作成し、構築を開始します。最初のバージョンには数分かかります。
+
+    準備ができたら、[エディタ](/ja/editor)で作業します。[プロジェクトチャット](/ja/project-chat)（Webzaと会話する場所）の隣に[プレビュー](/ja/preview)（Webサイトがリアルタイムで動作する場所）があります。プレビューをクリックしてみて、メニューを開き、セクションをスクロールしてください。
+  </Step>
+  <Step title="変更を加える">
+    プロジェクトチャットで1つずつ変更を依頼し、毎回プレビューを確認します。例えば:
+
+    ```text Prompt wrap
+    Add a "Today's specials" section above the menu that highlights two items with a short description and price.
+    ```
+
+    Webサイトが機能するが、イメージ通りに見えない場合は、平易な言葉で伝えてください。これは完全に有効なプロンプトです:
+
+    ```text Prompt wrap
+    Make the whole site feel warmer and less corporate.
+    ```
+
+    また、[エディタ](/ja/editor)で視覚的に編集したり、[コードエディタ](/ja/code-editor)を開いてサイトのファイルを完全に制御したりすることもできます。変更は[公開](/ja/publish)するまで非公開のままです。
+  </Step>
+  <Step title="動作確認をする">
+    公開する前に、数分間Webサイトをテストしてください。
+
+    - すべてのボタンとリンクをクリックします。
+    - 注文フォームに入力し、すべてのフィールドが機能することを確認します。
+    - スマートフォンでの表示を確認します。ほとんどの訪問者はモバイルでリンクを開きます。
+
+    何かおかしい場合は、Webzaに正確に何が、どこで問題があるか伝えてください。
+
+    ```text Prompt wrap
+    On the menu page, the "Order online" button does nothing. It should scroll to the order form.
+    ```
+  </Step>
+  <Step title="公開する">
+    エディタで他のプロジェクトアクションの隣にある**公開**を選択します。短いデプロイ後、Webサイトは無料の`webza.ai`サブドメイン（例: `golden-crust.webza.ai`）でライブになり、共有できる状態になります。詳細は[サイトの公開](/ja/publish)を、独自ドメインの使用については[カスタムドメイン](/ja/custom-domains)をご覧ください。
+
+    <Note>
+      **ライブサイトはスナップショットです。** 公開後に行った変更はすぐにプレビューに表示されますが、ライブサイトは再度公開するまで更新されません。
+    </Note>
+  </Step>
+</Steps>
+
+これが全体の流れです。説明して、洗練して、公開する。Webzaで構築するどんなに野心的なWebサイトも、この流れの繰り返しです。
+
+<a className="wz-ad wz-ad-inverse not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=getting-started" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">無料で開始</span>
+    <span className="wz-ad-title">アイデアを形にする準備はできましたか？</span>
+    <span className="wz-ad-text">1文でWebサイトを説明すると、Webzaが構築するのを見守れます。無料プランには開始用に200万クレジットが含まれます。</span>
+  </span>
+
+  <span className="wz-ad-btn">今すぐサイトを構築 <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## さらに進む
+
+<CardGroup cols={2}>
+  <Card title="カスタムドメインを接続する" icon="globe" href="/ja/custom-domains">
+    独自のドメイン名にWebサイトを配置します。
+  </Card>
+
+  <Card title="プロジェクトチャットを使う" icon="comments" href="/ja/project-chat">
+    プロジェクトとのチャットでより良い結果を得ます。
+  </Card>
+
+  <Card title="コードエディタを使う" icon="code" href="/ja/code-editor">
+    サイトのファイルを完全に制御します。
+  </Card>
+
+  <Card title="サイトを公開する" icon="rocket" href="/ja/publish">
+    webza.aiのサブドメインにWebサイトを公開します。
+  </Card>
+</CardGroup>

@@ -1,0 +1,93 @@
+---
+title: "Credits and usage"
+description: "Understand how Webza build credits work, monitor your balance, and learn when credits are spent or refunded."
+---
+
+Build credits power every AI generation in Webza. Each plan includes a set allowance, and you can buy extra packs if you run out mid-month.
+
+## How credits work
+
+Credits are consumed based on AI token usage. Every generation, edit, and build call costs a small amount of tokens, which are deducted from your balance in real time.
+
+Your plan determines your monthly allowance:
+
+| Plan | Monthly allowance | Billing |
+| --- | --- | --- |
+| Free | 2,000,000 credits (one-time) | No subscription |
+| Plus | 7,000,000 credits per month | \$19.99/month |
+| Premium | 20,000,000 credits per month | \$49.99/month |
+
+{/* TODO: confirm whether unused monthly credits roll over to the next month. */}
+
+## Check your balance
+
+Your remaining credits appear in the top bar of the dashboard, for example **20,000,000 / 20,000,000 credits**.
+
+The chat header also shows a credit indicator:
+
+- **Default color** when more than 20% of your balance remains.
+- **Yellow** when your balance is between 5% and 20%. A **Buy credits** link appears so you can top up quickly.
+- **Red** when your balance is 5% or less.
+- **"Using your API key"** when you are building on your own key instead of Webza credits.
+
+## Buy extra credits
+
+If you run out of credits before your next billing cycle, open **Billing** → **Usage** and click **Buy Credits**. You can purchase a one-off credit pack with the same payment method you use for your subscription. The credits are added to your balance as soon as payment completes.
+
+Credit packs do not renew automatically, and they do not change your plan's monthly allowance. Pack sizes and prices may vary by plan.
+
+{/* TODO: confirm exact pack sizes and prices for Webza plans. */}
+
+## Use your own API key
+
+Plus and Premium plans let you add your own AI provider API key. When you build with your own key, usage is still measured in Webza but it is not deducted from your plan credits. You are billed directly by your provider.
+
+To set this up, go to [Settings](/settings) → **AI Settings** and paste your API key.
+
+## When credits are spent
+
+Credits are consumed during:
+
+- Design re-themes
+- **Save All** actions from the inspector
+- Any AI build or generation run
+
+Credits are **not** consumed while you are asking questions or waiting for the AI to respond. Only the actual build execution costs credits.
+
+## Fix for free
+
+If a run fails because of an AI error or a platform issue, you are not charged for that run. Runs you cancel, or runs that stop because you ran out of credits, are still charged.
+
+When a run is not charged, it appears on **Billing** → **Usage** as **Not charged** with a short reason. These uncharged runs do not count toward your credits used.
+
+If a run fails, you can click **Fix for free** to retry once within 24 hours at no cost. There is a daily limit on free retries (default is 5 per 24 hours).
+
+{/* TODO: confirm Webza's exact daily limit for Fix for free retries. */}
+
+## Usage stats
+
+Open **Billing** → **Usage** to see a full breakdown of your credit consumption:
+
+- Usage by project
+- Usage by AI model
+- Uncharged runs and reasons
+
+This helps you identify which projects or models use the most credits.
+
+## AI images
+
+Your plan may include a monthly allowance of AI-generated images. The current limit is shown on the **Current Plan** card inside the **Usage** page.
+
+{/* TODO: confirm AI image allowances for each Webza plan. */}
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Invoices and billing" icon="receipt" href="/invoices-and-billing">
+    View payments, invoices, and transaction history.
+  </Card>
+
+  <Card title="Project chat" icon="message" href="/project-chat">
+    Learn how builds and retries work in the chat.
+  </Card>
+</CardGroup>

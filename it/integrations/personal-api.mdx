@@ -1,0 +1,59 @@
+---
+title: "API personale"
+sidebarTitle: "API personale"
+description: "API REST in sola lettura per accedere programmaticamente al tuo account Webza, progetti, crediti e fatturazione."
+---
+
+I piani Plus e Premium includono l'accesso API. L'API personale è un'API REST in sola lettura che ti permette di accedere programmaticamente ai dati del tuo account Webza. Non puoi creare progetti, attivare build o modificare la fatturazione tramite l'API.
+
+## Creare una chiave API
+
+Apri la pagina **Chiavi API** dalla sidebar.
+
+<Steps>
+  <Step title="Genera una chiave">
+    Clicca per creare una nuova chiave. Ogni chiave viene mostrata solo una volta alla creazione, quindi copiala immediatamente e conservala in modo sicuro.
+  </Step>
+  <Step title="Imposta scadenza (opzionale)">
+    Scegli una scadenza di 30, 90 o 365 giorni, o lasciala senza scadenza.
+  </Step>
+  <Step title="Revoca quando necessario">
+    Puoi revocare qualsiasi chiave in qualsiasi momento. Puoi avere fino a 10 chiavi per account.
+  </Step>
+</Steps>
+
+<Warning>
+  Tieni le tue chiavi segrete. Concedono accesso ai dati del tuo account finché non vengono revocate o scadono.
+</Warning>
+
+## Autenticazione
+
+Invia la tua chiave come Bearer token nell'header `Authorization`:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## Endpoint e documentazione
+
+L'API espone risorse sotto `/api/v1` per il tuo account, crediti, abbonamento, progetti, notifiche e fatture.
+
+Apri la pagina **Documentazione API** dalla sidebar per vedere ogni endpoint. La documentazione include un tester interattivo e campioni copia-e-incolla in curl, JavaScript, PHP e Python.
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## Separato: chiavi provider AI
+
+Le tue chiavi provider AI personali sono gestite separatamente in **Impostazioni → AI Settings** (`/settings`). Queste non hanno nulla a che fare con l'API personale.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/it/integrations/github">
+    Pusha automaticamente il sorgente generato in un repository privato GitHub.
+  </Card>
+
+  <Card title="Database Supabase" icon="database" href="/it/integrations/supabase">
+    Collega un database Postgres alle tue app generate.
+  </Card>
+</CardGroup>

@@ -1,0 +1,83 @@
+---
+title: "Pubblica"
+description: "Scopri come pubblicare il tuo progetto Webza, gestire le snapshot e controllare la visibilità del sito."
+---
+
+Pubblicare rende il tuo progetto live sul web. Costruire da solo non lo mette online. Devi cliccare **Pubblica** per effettuare il deploy.
+
+## Pubblicare il tuo progetto
+
+<Steps>
+  <Step title="Apri la finestra di pubblicazione">
+    Nella barra degli strumenti dell'editor, clicca **Pubblica**.
+  </Step>
+  <Step title="Scegli un sottodominio">
+    Inserisci il nome che vuoi per il tuo indirizzo `*.webza.ai`. Webza controlla la disponibilità mentre scrivi e suggerisce un nome breve dal nome del tuo progetto. Alcuni nomi sono riservati e verranno rifiutati.
+  </Step>
+  <Step title="Imposta la visibilità">
+    Scegli **Pubblico** così chiunque abbia l'URL possa visualizzare il sito, o **Privato** così solo tu puoi visualizzarlo mentre sei loggato a Webza in quel browser. Chiunque altro viene rifiutato.
+
+    <Note>
+      La visibilità privata è una funzionalità del piano. Se il tuo piano non la include, l'opzione appare bloccata con "Upgrade to unlock private visibility."
+
+      {/* TODO: confirm which Webza plans include private visibility */}
+    </Note>
+  </Step>
+  <Step title="Conferma e pubblica">
+    Clicca **Pubblica**. Webza cattura prima una snapshot, poi effettua il deploy del sito.
+  </Step>
+</Steps>
+
+Una volta pubblicato, il pulsante della barra degli strumenti mostra **Pubblicato**. Cliccarlo riapre la finestra così puoi cambiare le impostazioni o togliere il sito offline.
+
+## Ripubblicare dopo le modifiche
+
+Il tuo sito live non si aggiorna automaticamente quando costruisci. Ripubblica ogni volta che vuoi che le ultime modifiche vadano live. Ogni ripubblicazione cattura una nuova snapshot.
+
+## Snapshot di pubblicazione
+
+Ogni pubblicazione crea una **Snapshot pre-pubblicazione** elencata sotto **Versioni precedenti** nella finestra di pubblicazione. Vengono conservate solo le cinque snapshot più recenti per progetto.
+
+Il rollback ripristina l'output dell'anteprima pubblicata, non il sorgente del progetto. La prossima build rigenera comunque dal tuo sorgente attuale. Per ripristinare modifiche effettive al codice, usa **Annulla** o **Cronologia revisioni**. Vedi [Anteprima](/it/preview) per i dettagli.
+
+## Domini personalizzati
+
+Una volta pubblicato il tuo progetto, puoi puntare il tuo dominio a esso. I piani Plus includono 1 dominio personalizzato; i piani Premium includono 3. Vedi [Domini personalizzati](/it/custom-domains) per i passaggi di configurazione.
+
+Il progetto deve restare pubblicato. Togliere la pubblicazione mette offline anche il dominio personalizzato.
+
+## Immagine di condivisione
+
+Prima di condividere il tuo sito sui social, imposta un'immagine di condivisione in **Impostazioni** → **Generale**. Vedi [Impostazioni](/it/settings).
+
+## Temi WordPress e Shopify
+
+I progetti tema WordPress e Shopify non sono ospitati da Webza. Esporti il tema `.zip` e lo installi sul tuo sito WordPress o negozio Shopify. La scheda **Domini** non viene mai mostrata per i temi WordPress.
+
+## Togliere la pubblicazione
+
+Per mettere un sito offline, apri la finestra di pubblicazione e togli la pubblicazione. Questo rimuove il sito live e qualsiasi dominio personalizzato associato dal web.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Vai live</span>
+    <span className="wz-ad-title">Il tuo sito, live su webza.ai</span>
+    <span className="wz-ad-text">Costruisci un sito e mettilo live sul tuo indirizzo webza.ai. Condividilo con il mondo oggi stesso.</span>
+  </span>
+
+  <span className="wz-ad-btn">Inizia a costruire gratis <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Domini personalizzati" icon="globe" href="/it/custom-domains">
+    Punta il tuo dominio a un progetto pubblicato.
+  </Card>
+
+  <Card title="Impostazioni" icon="sliders" href="/it/settings">
+    Configura la tua immagine di condivisione e altre opzioni del progetto.
+  </Card>
+</CardGroup>

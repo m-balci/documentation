@@ -1,0 +1,136 @@
+---
+title: "Einstellungen"
+description: "Verwalten Sie Projekteinstellungen, benutzerdefinierte Domains, Analytics und Ihre Kontoeinstellungen in Webza."
+---
+
+Der Bereich **Einstellungen** in Webza hat zwei Teile: Projekteinstellungen innerhalb des Editors und Kontoeinstellungen in der Seitenleiste. Verwenden Sie sie, um zu konfigurieren, was Sie bauen, und wie sich Ihr Konto verhält.
+
+## Projekteinstellungen
+
+Öffnen Sie die Registerkarte **Einstellungen** im Editor. Die angezeigten Tabs hängen von Ihrem Plan und Projekttyp ab.
+
+### Allgemein
+
+Legen Sie die Grundlagen fest, die Ihr Projekt prägen und wie es online erscheint.
+
+| Feld | Was es tut |
+| --- | --- |
+| **Projektname** | Interne Bezeichnung für Ihre Projektliste. |
+| **Projektbeschreibung** | Interne Notiz, um sich an den Zweck zu erinnern. |
+| **Veröffentlichter Titel** | Title-Tag und Social-Share-Titel. |
+| **Veröffentlichte Beschreibung** | Meta-Beschreibung und Social-Share-Text. |
+| **Sichtbarkeit** | **Öffentlich** (Suchmaschinen können indexieren) oder **Privat** (noindex). |
+| **Social-Media-Bild** | Social-Preview-Bild, das für `og:image` und `twitter:image` verwendet wird. Siehe unten. |
+| **Analyse-IDs** | Tracking-IDs, wenn Ihr Plan Analytics umfasst. Siehe unten. |
+| **Link zum GitHub-Repository** | Link zum verbundenen Repo, wenn GitHub aktiviert ist. |
+
+#### Social-Media-Bild
+
+Laden Sie ein JPG-, PNG- oder WebP-Bild bis zu 2 MB hoch. Die empfohlene Größe beträgt 1200×630 Pixel. Webza schreibt dies zur Build-Zeit in `og:image` und `twitter:image`.
+
+<Tip>
+  Legen Sie Ihr Social-Media-Bild fest, bevor Sie das Projekt weit verbreiten. Social-Media-Plattformen cachen den ersten Abruf, und einige bieten ein Cache-Aktualisierungswerkzeug, falls Sie es später aktualisieren müssen.
+</Tip>
+
+Duplizierte Projekte kopieren das Social-Media-Bild nicht. Sie müssen es im neuen Projekt erneut hochladen.
+
+#### Analyse
+
+Wenn Ihr Plan Analyse umfasst, erscheint eine Karte in **Einstellungen → Allgemein**, in der Sie hinzufügen können:
+
+- **Google Tag Manager container ID** (Format `GTM-XXXXXXX`)
+- **Google tag ID** (Format `G-…` oder `AW-…`)
+- **Meta Pixel ID** (8 bis 20 Ziffern)
+
+Lassen Sie ein Feld leer, um diesen Tracker zu deaktivieren. Diese werden in die veröffentlichte Website eingefügt, wenn sie ausgeliefert wird. Sie erscheinen nicht in der Editor-Vorschau oder in Code-Exports. Änderungen wirken sich ohne Rebuild auf die nächste Anfrage aus. Die KI kann diese Tags nicht für Sie entfernen.
+
+<Note>
+  Für andere Dienste (Hotjar, Clarity, LinkedIn, TikTok, benutzerdefinierte Skripte) fügen Sie einen GTM-Container hinzu und konfigurieren Sie alles innerhalb von GTM.
+</Note>
+
+Diese Karte ist für WordPress- und Shopify-Theme-Projekte ausgeblendet. Fügen Sie Tracking stattdessen direkt in Ihrer WordPress-Site oder Ihrem Shopify-Store hinzu.
+
+{/* TODO: confirm which Webza plans include Analytics */}
+
+### Domains
+
+Verwalten Sie, wie Ihr Projekt im Web erreichbar ist.
+
+- **Subdomain**: Jede veröffentlichte Website erhält eine `*.webza.ai`-Subdomain.
+- **Eigene Domain**: Fügen Sie Ihre eigene Domain in **Projekt → Einstellungen → Domains → Eigene Domain** hinzu, fügen Sie dann die erforderlichen DNS-Einträge hinzu und verifizieren Sie sie.
+
+Diese Registerkarte wird für WordPress-Theme-Projekte nie angezeigt. Erfahren Sie mehr auf der Seite [Benutzerdefinierte Domains](/de/custom-domains).
+
+### Wissensbasis
+
+Fügen Sie benutzerdefinierte Anweisungen bis zu 500 Zeichen hinzu. Diese werden bei jedem Build an die KI gesendet. Verwenden Sie dieses Feld für dauerhafte Regeln, die Sie sich wiederholt anmerken: Markenstimme, Zielsprache, eine zu vermeidende Bibliothek oder eine Namenskonvention.
+
+<Warning>
+  Halten Sie es kurz. Wissensbasis-Text wird bei jedem Build bezahlt. Einmalige Anfragen gehören in den [Projekt-Chat](/de/project-chat), nicht hier.
+</Warning>
+
+### Datenbank
+
+Verknüpfen Sie eine Ihrer Supabase-Verbindungen mit dem Projekt. Sie können eine Verbindung jetzt anhängen, später zu einer anderen wechseln oder sie jederzeit trennen. Anhängen und Wechseln erfordern die Datenbank-Funktion in Ihrem Plan. Trennen ist immer erlaubt, beispielsweise nach einem Downgrade.
+
+Die Registerkarte Datenbank bleibt sichtbar, solange eine Verbindung angehängt ist, auch wenn Ihr aktueller Plan keine neuen Anhänge mehr unterstützt.
+
+### Speicher
+
+Diese Registerkarte zeigt Projektdateien und das API-Token, das generierte Apps verwenden, um Rückrufe an Webza zu senden. Bei Plänen ohne Dateispeicher ist die Registerkarte mit **API** beschriftet und zeigt nur das Token.
+
+### GitHub-Repository
+
+Verknüpfen Sie ein Repository, um Quellcode automatisch zu pushen.
+
+- **Neues privates Repository erstellen**: Webza erstellt es für Sie.
+- **Eigenes leeres Repository anbinden**: Verknüpfen Sie ein vorhandenes leeres Repository.
+
+Sie können jederzeit zu einem anderen Repo wechseln oder die Verbindung trennen. Aktivieren Sie **Automatisches Pushen**, um den Quellcode nach jedem Build zu pushen.
+
+## Kontoeinstellungen
+
+Klicken Sie auf **Einstellungen** am unteren Rand der Seitenleiste, um Ihr Kontopanel zu öffnen. Es hat drei Abschnitte: Account, AI Settings und Privacy.
+
+### Account
+
+Aktualisieren Sie Ihren Namen und Ihre E-Mail oder ändern Sie Ihr Passwort. Sie können auch Ihr Profil unter [https://webza.ai/profile](https://webza.ai/profile) verwalten.
+
+### AI Settings
+
+Dieser Abschnitt ist bei Plus- und Premium-Plänen verfügbar, wenn Sie Ihren eigenen API-Schlüssel verwenden.
+
+- **Anbieter**: Wählen Sie einen Anbieter oder lassen Sie es auf **Systemstandard verwenden**, um Webza-Credits zu verbrauchen.
+- **Modell**: Erscheint, nachdem Sie einen Anbieter gewählt haben.
+- **API-Schlüssel**: Werden verschlüsselt gespeichert und maskiert angezeigt. Ersetzen oder entfernen Sie einen Schlüssel jederzeit. Ein **Konfiguriert**-Badge erscheint, wenn ein Schlüssel gespeichert ist.
+- **Testen**: Klicken Sie auf die Blitz-Schaltfläche, um zu prüfen, ob der Schlüssel funktioniert. Für den gewählten Anbieter prüft es auch das gewählte Modell.
+
+Builds mit Ihrem eigenen Schlüssel werden von Webza gemessen, aber nicht von Ihren Credits abgezogen. Sie werden von Ihrem KI-Anbieter abgerechnet. Wenn Sie zurück zu **Systemstandard verwenden** wechseln, werden Ihre gespeicherten Schlüssel behalten und Sie verbrauchen wieder Credits.
+
+#### Chat-Sounds
+
+Bei allen Plänen verfügbar. Wählen Sie einen Benachrichtigungston-Stil, während die KI arbeitet: **Minimal**, **Verspielt**, **Retro**, **Sci-Fi**, oder schalten Sie Töne aus.
+
+### Privacy
+
+- **Cookie-Einstellungen**: Verwalten Sie, welche Cookies Sie akzeptieren.
+- **Daten herunterladen**: Fordern Sie einen Export aller Daten an, die über Ihr Konto gespeichert sind. Dies ist möglicherweise nicht verfügbar.
+- **Konto löschen**: Beantragen Sie die Löschung. Es gibt eine Karenzzeit vor der Entfernung. Wenn die Selbstbedienungslöschung deaktiviert ist, werden Sie aufgefordert, den Support zu kontaktieren.
+
+{/* TODO: confirm whether data export and self-service deletion are enabled on Webza, and the grace period */}
+
+### Oberflächensprache
+
+Ändern Sie die Oberflächensprache über die Sprachauswahl in der oberen Leiste.
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Benutzerdefinierte Domains" icon="globe" href="/de/custom-domains">
+    Verbinden Sie Ihre eigene Domain und verifizieren Sie DNS-Einträge.
+  </Card>
+
+  <Card title="Code-Editor" icon="code" href="/de/code-editor">
+    Bearbeiten Sie Code direkt und verwalten Sie Dateien in Ihrem Projekt.
+  </Card>
+</CardGroup>

@@ -1,0 +1,234 @@
+---
+title: "Banco de dados Supabase"
+sidebarTitle: "Supabase"
+description: "Traga seu próprio projeto Supabase para dar aos apps gerados um banco de dados Postgres, autenticação, armazenamento e segurança em nível de linha."
+---
+
+Em todos os planos da Webza, você pode tornar os apps gerados com banco de dados anexando seu próprio projeto Supabase. Seus apps recebem tabelas relacionais Postgres, autenticação, armazenamento e segurança em nível de linha (RLS). A IA define tabelas e fluxos de autenticação para você enquanto constrói.
+
+<Note>
+  Conexões de banco de dados não estão disponíveis para projetos de temas WordPress ou Shopify.
+</Note>
+
+## Você possui o banco de dados
+
+A Webza usa um modelo de traga-seu-próprio-banco-de-dados. Você fornece um projeto Supabase, e os apps gerados conversam com ele através do cliente `@supabase/supabase-js`. A Webza nunca provisiona, hospeda, possui ou cobra pelo seu banco de dados.
+
+- Você mantém uma biblioteca de suas próprias conexões Supabase e anexa uma a cada projeto.
+- A Webza cria um schema dedicado no seu banco de dados para cada projeto e constrói tabelas lá.
+- A Webza nunca exclui seus dados, mesmo quando você exclui um projeto.
+
+## Como funciona
+
+<Steps>
+  <Step title="Adicionar uma conexão">
+    Salve uma ou mais conexões Supabase na página **Banco de dados** na barra lateral.
+  </Step>
+  <Step title="Escolher para um projeto">
+    Escolha uma conexão no seletor **Banco de dados** quando criar um projeto. Ela é conectada desde a primeira build.
+  </Step>
+  <Step title="Deixar a IA construir">
+    A Webza cria um schema Postgres no seu projeto Supabase com RLS habilitado. A IA adiciona tabelas a ele enquanto constrói o seu app.
+  </Step>
+</Steps>
+
+## Adicionar uma conexão Supabase
+
+Abra **Banco de dados** na barra lateral e clique em **Adicionar conexão**. Cada conexão armazena um nome e acesso a um projeto Supabase. Você pode salvar até 20 conexões e reutilizá-las entre projetos.
+
+Os métodos que você vê dependem do que está habilitado para a sua conta. Se apenas um método estiver disponível, **Adicionar conexão** abre diretamente nele.
+
+| Método | O que você precisa | Escopo de acesso |
+| --- | --- | --- |
+| **Conectar com Supabase** | Seu login do Supabase | Todo projeto na organização que você autorizar |
+| **Token de acesso** | Um token de acesso com escopo de projeto | Apenas o projeto que você selecionar |
+| **Manual** | URI do session pooler, senha do banco de dados e chave publicável | Apenas aquele projeto |
+
+<Tabs>
+  <Tab title="Conectar com Supabase">
+    <Steps>
+      <Step title="Iniciar o login">
+        Na página **Banco de dados**, clique em **Adicionar conexão** e escolha **Conectar com Supabase**.
+      </Step>
+      <Step title="Autorizar a Webza">
+        Revise as permissões na tela de consentimento do Supabase e autorize a organização que detém o seu projeto. O Supabase lista **Database** como leitura e escrita, porque o acesso de escrita inclui leitura.
+      </Step>
+      <Step title="Selecionar um projeto">
+        Escolha um projeto ativo e salve a conexão.
+      </Step>
+    </Steps>
+
+    <Warning>
+      O Supabase concede acesso por organização, então você autoriza todo projeto na organização que escolher. A Webza só trabalha no projeto que você selecionar. Para limitar o acesso a um único projeto, use um token de acesso em vez disso.
+    </Warning>
+
+    As sessões OAuth são renovadas automaticamente, então você não precisa fazer login novamente enquanto o acesso permanecer concedido.
+  </Tab>
+  <Tab title="Token de acesso">
+    <Steps>
+      <Step title="Criar um token no Supabase">
+        No Supabase, abra **Account → Access Tokens** e crie um token. Escolha **Project access**, selecione apenas o projeto que deseja conectar, e defina uma expiração.
+      </Step>
+      <Step title="Definir as permissões">
+        Conceda exatamente estas permissões:
+
+        - **Database**: Read-write
+        - **API Keys**: Read
+        - **Projects** (account-wide): Read
+      </Step>
+      <Step title="Salvar na Webza">
+        Abra **Banco de dados → Adicionar conexão → Token de acesso**, cole o token e clique em **Continue**. Selecione o seu projeto e salve. A Webza busca a URL do projeto e a chave publicável para você.
+      </Step>
+    </Steps>
+
+    <Note>
+      Apenas tokens com escopo de projeto que começam com `sbp_fc` são aceitos. Tokens legados de conta completa são recusados. Projetos pausados ou indisponíveis não podem ser selecionados.
+    </Note>
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step title="Criar um projeto no Supabase">
+        Faça login no [Painel do Supabase](https://supabase.com/dashboard) e crie um projeto. O plano gratuito é suficiente para começar.
+      </Step>
+      <Step title="Copiar a chave publicável">
+        Abra **Project Settings → API Keys** e copie a chave publicável (`sb_publishable_…`). Projetos mais antigos podem mostrar a chave legada `anon` em **Project Settings → API**, que também funciona.
+      </Step>
+      <Step title="Copiar a URI do Session pooler">
+        Clique em **Connect** no topo do seu projeto Supabase, escolha **Session pooler** e o tipo **URI**, depois copie a string de conexão. Mantenha `[YOUR-PASSWORD]` nela.
+
+        ```text
+        postgresql://postgres.abcdefgh:[YOUR-PASSWORD]@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
+        ```
+      </Step>
+      <Step title="Salvar na Webza">
+        Abra **Banco de dados → Adicionar conexão → Manual** e preencha:
+
+        - **Nome da conexão**: qualquer nome que você reconheça.
+        - **String de conexão**: a URI do Session pooler. Ela deve começar com `postgres://` ou `postgresql://`. Não cole o comando `psql`.
+        - **Senha do banco de dados**: a sua senha do banco de dados. A Webza a codifica e insere no lugar de `[YOUR-PASSWORD]`.
+        - **Publishable key**: a chave que você copiou.
+
+        A **Supabase URL** se preenche automaticamente a partir da string de conexão. Ela deve começar com `https://`.
+      </Step>
+      <Step title="Testar a conexão">
+        Clique em **Testar conexão**. Ela verifica o acesso ao banco de dados e a chave publicável separadamente.
+      </Step>
+    </Steps>
+
+    Quando você edita uma conexão manual mais tarde, deixar a string de conexão ou a chave publicável em branco mantém o valor armazenado.
+  </Tab>
+</Tabs>
+
+### Desligar confirmação por email
+
+Para que o cadastro nos seus apps gerados funcione instantaneamente, desligue a confirmação por email no Supabase. Vá para **Authentication → Sign In / Providers → Email**, desligue **Confirm email** e salve.
+
+<Warning>
+  A menos que você tenha configurado SMTP no seu projeto Supabase, deixar a confirmação ligada significa que o cadastro nunca retorna uma sessão ativa e o login falha silenciosamente.
+</Warning>
+
+## Anexar um banco de dados a um projeto
+
+Na página de criação, abra o popover **Personalizar** e escolha uma conexão no seletor **Banco de dados**. O seletor só aparece depois que você salva pelo menos uma conexão. Deixe em **Sem banco de dados** para um site estático.
+
+Para anexar, trocar ou desanexar um banco de dados mais tarde, vá para **Configurações → Banco de dados** no projeto.
+
+- Trocar de conexão nunca exclui um schema. O schema antigo permanece no banco de dados onde foi criado.
+- Você pode desanexar um banco de dados a qualquer momento.
+- Duplicar um projeto não copia a conexão do banco de dados.
+
+## Modos de acesso de tabelas
+
+Cada tabela que a IA cria usa um de três modos de acesso. O modo decide quais políticas RLS a Webza escreve para você, então é a escolha de segurança mais importante em um app com banco de dados.
+
+| Modo | Quem pode escrever | Quem pode ler | Use para |
+| --- | --- | --- | --- |
+| `public` | Qualquer pessoa | Qualquer pessoa | Livros de visitas, comentários, avaliações públicas |
+| `private` | O proprietário logado da linha | O proprietário logado da linha | Tarefas, notas, perfis, outros dados por usuário |
+| `submit` | Qualquer pessoa | Ninguém do app | Formulários de contato, consultas, listas de espera, inscrições em newsletter |
+
+<Warning>
+  Nunca use `public` para envios de formulários. A chave publicável é incluída no JavaScript do seu site por design, então qualquer pessoa pode ler e excluir cada linha em uma tabela `public`. Use `submit` para qualquer coisa que os visitantes enviem a você de forma privada.
+</Warning>
+
+Uma tabela `submit` permite que visitantes insiram linhas, mas não podem ser lidas, atualizadas ou excluídas do navegador. Seu app envia o formulário e mostra uma mensagem de sucesso. Leia os envios no seu painel do Supabase.
+
+Você pode dizer à IA qual modo usar no seu prompt, por exemplo: "Armazene mensagens do formulário de contato em uma tabela submit."
+
+### Mudar o modo de uma tabela
+
+Peça à IA para redefinir uma tabela existente com um modo diferente. A Webza reconstrói as políticas da tabela para corresponder e mantém seus dados.
+
+<Warning>
+  Trocar uma tabela `public` ou `submit` para `private` oculta suas linhas existentes. Essas linhas não têm proprietário, então nenhum usuário pode vê-las no app. Os dados ainda estão no seu painel do Supabase. Se as linhas importam, atribua proprietários ou exporte-as antes de trocar.
+</Warning>
+
+### Colunas gerenciadas
+
+Cada tabela recebe automaticamente colunas `id` e `created_at`. Tabelas `private` também recebem uma coluna `user_id`. Não defina essas colunas você mesmo.
+
+## O que o seu app recebe
+
+- **Postgres relacional**: tabelas reais, chaves estrangeiras e consultas SQL.
+- **Segurança em nível de linha**: políticas de acesso por linha aplicadas pelo Postgres.
+- **Auth e armazenamento**: seu app pode usar o Supabase Auth (email e senha ou login por provedor) e buckets de Storage. Configure provedores de Auth e buckets de Storage no seu próprio painel do Supabase.
+
+Cada projeto recebe seu próprio schema nomeado `proj_` seguido pelo ID do projeto sem hífens. Por exemplo, um projeto com o ID `3f0c1a2b-…` usa `proj_3f0c1a2b…`.
+
+Apps gerados só recebem a URL do projeto, a chave publicável e o nome do schema. Tokens de acesso e strings de conexão são criptografados e nunca chegam ao navegador.
+
+<Info>
+  Excluir um projeto, desanexar um banco de dados ou trocar conexões nunca exclui o schema ou os dados do projeto. Para liberar espaço, remova o schema `proj_…` você mesmo no seu painel do Supabase.
+</Info>
+
+## Gerenciar acesso
+
+- Um token de acesso ou login do Supabase pode dar suporte a várias conexões. Reconectar um login do Supabase corrige toda conexão feita a partir dele.
+- Um token de acesso de substituição se aplica apenas à conexão que você edita. Cole o novo token em cada conexão que usava o antigo.
+- Você pode armazenar até 10 tokens e logins.
+
+Excluir uma conexão na Webza não revoga o acesso no Supabase. Para revogar o acesso:
+
+- **Conectar com Supabase**: remova a Webza em **Configurações da organização → Apps OAuth → Apps autorizados**.
+- **Access token**: exclua o token em **Account → Access Tokens**.
+
+Quando o acesso é revogado ou um token expira, a conexão mostra **Reconectar** na página **Banco de dados** e as builds reportam que o acesso foi revogado. Reconectar repara a conexão no lugar, então projetos anexados mantêm seus schemas.
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="Testar conexão falhou">
+    - Para conexões manuais, use a URI do Session pooler de **Connect**, mantenha `[YOUR-PASSWORD]` e insira a senha em **Senha do banco de dados**.
+    - Se a chave publicável for rejeitada, copie-a novamente do mesmo projeto Supabase.
+    - Certifique-se de que o projeto Supabase está ativo, não pausado.
+    - Se a conexão mostrar **Reconectar**, substitua o token ou autorize a Webza novamente.
+  </Accordion>
+
+  <Accordion title="Meu app não mostra envios de formulários">
+    Isso é esperado para tabelas `submit`. Elas são somente escrita a partir do navegador, então os envios nunca aparecem no app. Leia-os no seu painel do Supabase. Se o seu app parece listar envios, ele está mostrando linhas de exemplo de placeholder.
+  </Accordion>
+
+  <Accordion title="Meu app não consegue ler dados">
+    - Confirme que uma conexão está anexada em **Configurações → Banco de dados** do projeto.
+    - Confirme que a chave publicável passa no **Testar conexão**.
+    - Verifique o modo de acesso da tabela. O RLS nega acesso a menos que uma política o permita.
+  </Accordion>
+
+  <Accordion title="O cadastro funciona, mas o login falha">
+    Desligue **Confirm email** no seu projeto Supabase, ou configure SMTP. Veja [Desligar confirmação por email](#desligar-confirmação-por-email).
+  </Accordion>
+
+  <Accordion title="Minhas alterações de schema no Supabase foram revertidas">
+    A Webza gerencia quais schemas são expostos à API do Supabase. Editar **Exposed schemas** no painel do Supabase é sobrescrito pelas configurações da Webza.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/pt-br/integrations/github">
+    Envie código-fonte gerado automaticamente para um repositório privado do GitHub.
+  </Card>
+
+  <Card title="API Pessoal" icon="key" href="/pt-br/integrations/personal-api">
+    Acesse os dados da sua conta programaticamente com chaves de API.
+  </Card>
+</CardGroup>

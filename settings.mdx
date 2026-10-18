@@ -1,0 +1,136 @@
+---
+title: "Settings"
+description: "Manage project settings, custom domains, analytics, and your account preferences in Webza."
+---
+
+The **Settings** area in Webza has two parts: project settings inside the editor, and account settings in the sidebar. Use them to configure what you build and how your account behaves.
+
+## Project settings
+
+Open the **Settings** tab in the editor. The tabs you see depend on your plan and project type.
+
+### General
+
+Set the basics that shape your project and how it appears online.
+
+| Field | What it does |
+| --- | --- |
+| **Project name** | Internal label for your project list. |
+| **Project description** | Internal note to help you remember the purpose. |
+| **Published title** | Title tag and social share title. |
+| **Published description** | Meta description and social share text. |
+| **Visibility** | Public (search engines can index) or private (noindex). |
+| **Share image** | Social preview image used for `og:image` and `twitter:image`. See below. |
+| **Analytics IDs** | Tracking IDs if your plan includes Analytics. See below. |
+| **GitHub repository link** | Link to the connected repo if GitHub is enabled. |
+
+#### Share image
+
+Upload a JPG, PNG, or WebP image up to 2 MB. The recommended size is 1200×630 pixels. Webza writes this into `og:image` and `twitter:image` at build time.
+
+<Tip>
+  Set your share image before you share the project widely. Social platforms cache the first scrape, and some offer a cache-refresh tool if you need to update it later.
+</Tip>
+
+Duplicated projects do not copy the share image. You must upload it again on the new project.
+
+#### Analytics
+
+If your plan includes Analytics, a card appears in **Settings → General** where you can add:
+
+- **Google Tag Manager container ID** (format `GTM-XXXXXXX`)
+- **Google tag ID** (format `G-…` or `AW-…`)
+- **Meta Pixel ID** (8 to 20 digits)
+
+Leave a field blank to disable that tracker. These are injected into the published site when it is served. They do not appear in the editor preview or in code exports. Changes take effect on the next request with no rebuild. The AI cannot remove these tags for you.
+
+<Note>
+  For other services (Hotjar, Clarity, LinkedIn, TikTok, custom scripts), add a GTM container and configure everything inside GTM.
+</Note>
+
+This card is hidden for WordPress and Shopify theme projects. Add tracking directly in your WordPress site or Shopify store instead.
+
+{/* TODO: confirm which Webza plans include Analytics */}
+
+### Domains
+
+Manage how your project is reached on the web.
+
+- **Subdomain**: every published site gets a `*.webza.ai` subdomain.
+- **Custom domain**: add your own domain in **Project → Settings → Domains → Custom Domain**, then add the required DNS records and verify.
+
+This tab is never shown for WordPress theme projects. Learn more on the [Custom domains](/custom-domains) page.
+
+### Knowledge
+
+Add custom instructions up to 500 characters. These are sent to the AI on every build. Use this field for durable rules you find yourself repeating: brand voice, target language, a library to avoid, or a naming convention.
+
+<Warning>
+  Keep it short. Knowledge text is paid for on every build. One-off requests belong in [Project chat](/project-chat), not here.
+</Warning>
+
+### Database
+
+Attach one of your Supabase connections to the project. You can attach a connection now, switch to a different one later, or detach it at any time. Attaching and switching require the Database capability on your plan. Detaching is always allowed, for example after a downgrade.
+
+The Database tab stays visible while a connection is attached, even if your current plan no longer supports new attachments.
+
+### Storage
+
+This tab shows project files and the API token that generated apps use to call back to Webza. On plans without file storage, the tab is labelled **API** and shows only the token.
+
+### GitHub repository
+
+Connect a repository to push source automatically.
+
+- **Create a new private repo**: Webza creates it for you.
+- **Attach an empty repo you own**: Link an existing empty repository.
+
+You can switch to a different repo or disconnect at any time. Turn on **Automatic push** to push source after every build.
+
+## Account settings
+
+Click **Settings** at the bottom of the sidebar to open your account panel. It has three sections: Account, AI Settings, and Privacy.
+
+### Account
+
+Update your name and email, or change your password. You can also manage your profile at [https://webza.ai/profile](https://webza.ai/profile).
+
+### AI Settings
+
+This section is available on Plus and Premium plans when you use your own API key.
+
+- **Provider**: choose a provider or leave it on **Use System Default** to spend Webza credits.
+- **Model**: appears after you choose a provider.
+- **API Keys**: stored encrypted and shown masked. Replace or remove a key at any time. A **Configured** badge appears when a key is saved.
+- **Test**: click the lightning-bolt button to check that the key works. For the selected provider, it also checks the chosen model.
+
+Builds on your own key are measured by Webza but not deducted from your credits. You are billed by your AI provider. If you switch back to **Use System Default**, your saved keys are kept and you return to spending credits.
+
+#### Chat sounds
+
+Available on all plans. Choose a notification sound style while the AI works: **Minimal**, **Playful**, **Retro**, **Sci-Fi**, or turn sounds off.
+
+### Privacy
+
+- **Cookie preferences**: manage which cookies you accept.
+- **Download your data**: request an export of everything held about your account. This may not be available.
+- **Delete your account**: request deletion. There is a grace period before removal. If self-service deletion is off, you are told to contact support.
+
+{/* TODO: confirm whether data export and self-service deletion are enabled on Webza, and the grace period */}
+
+### Interface language
+
+Change the interface language from the language selector in the top bar.
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Custom domains" icon="globe" href="/custom-domains">
+    Connect your own domain and verify DNS records.
+  </Card>
+
+  <Card title="Code editor" icon="code" href="/code-editor">
+    Edit code directly and manage files in your project.
+  </Card>
+</CardGroup>

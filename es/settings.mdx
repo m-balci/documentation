@@ -1,0 +1,136 @@
+---
+title: "Configuración"
+description: "Gestiona la configuración del proyecto, dominios personalizados, analíticas y tus preferencias de cuenta en Webza."
+---
+
+El área de **Configuración** en Webza tiene dos partes: la configuración del proyecto dentro del editor, y la configuración de la cuenta en la barra lateral. Úsalas para configurar lo que construyes y cómo se comporta tu cuenta.
+
+## Configuración del proyecto
+
+Abre la pestaña **Configuración** en el editor. Las pestañas que ves dependen de tu plan y del tipo de proyecto.
+
+### General
+
+Configura los aspectos básicos que definen tu proyecto y cómo aparece en línea.
+
+| Campo | Qué hace |
+| --- | --- |
+| **Nombre del proyecto** | Etiqueta interna para tu lista de proyectos. |
+| **Descripción del proyecto** | Nota interna para ayudarte a recordar el propósito. |
+| **Título publicado** | Etiqueta de título y título para compartir en redes sociales. |
+| **Descripción publicada** | Meta descripción y texto para compartir en redes sociales. |
+| **Visibilidad** | Público (los motores de búsqueda pueden indexar) o privado (noindex). |
+| **Imagen para compartir** | Imagen de vista previa social usada para `og:image` y `twitter:image`. Ver más abajo. |
+| **IDs de analíticas** | IDs de seguimiento si tu plan incluye Analíticas. Ver más abajo. |
+| **Enlace al repositorio GitHub** | Enlace al repositorio conectado si GitHub está habilitado. |
+
+#### Imagen para compartir
+
+Sube una imagen JPG, PNG o WebP de hasta 2 MB. El tamaño recomendado es 1200×630 píxeles. Webza escribe esto en `og:image` y `twitter:image` en el momento de la construcción.
+
+<Tip>
+  Configura tu imagen para compartir antes de difundir ampliamente el proyecto. Las plataformas sociales guardan en caché la primera captura, y algunas ofrecen una herramienta de actualización de caché si necesitas cambiarla más tarde.
+</Tip>
+
+Los proyectos duplicados no copian la imagen para compartir. Debes subirla de nuevo en el proyecto nuevo.
+
+#### Analíticas
+
+Si tu plan incluye Analíticas, aparece una tarjeta en **Configuración → General** donde puedes añadir:
+
+- **Google Tag Manager container ID** (formato `GTM-XXXXXXX`)
+- **Google tag ID** (formato `G-…` o `AW-…`)
+- **Meta Pixel ID** (8 a 20 dígitos)
+
+Deja un campo en blanco para desactivar ese rastreador. Estos se inyectan en el sitio publicado cuando se sirve. No aparecen en la vista previa del editor ni en las exportaciones de código. Los cambios entran en vigor en la siguiente solicitud sin necesidad de reconstrucción. La IA no puede eliminar estas etiquetas por ti.
+
+<Note>
+  Para otros servicios (Hotjar, Clarity, LinkedIn, TikTok, scripts personalizados), añade un contenedor de GTM y configura todo dentro de GTM.
+</Note>
+
+Esta tarjeta está oculta para proyectos de temas de WordPress y Shopify. Añade el seguimiento directamente en tu sitio WordPress o tienda Shopify en su lugar.
+
+{/* TODO: confirm which Webza plans include Analytics */}
+
+### Dominios
+
+Gestiona cómo se accede a tu proyecto en la web.
+
+- **Subdominio**: cada sitio publicado obtiene un subdominio `*.webza.ai`.
+- **Dominio personalizado**: añade tu propio dominio en **Proyecto → Configuración → Dominios → Dominio personalizado**, luego añade los registros DNS requeridos y verifica.
+
+Esta pestaña nunca se muestra para proyectos de temas de WordPress. Aprende más en la página [Dominios personalizados](/es/custom-domains).
+
+### Conocimiento
+
+Añade instrucciones personalizadas de hasta 500 caracteres en **Conocimiento**. Estas se envían a la IA en cada construcción. Usa este campo para reglas duraderas que te encuentras repitiendo: voz de marca, idioma de destino, una biblioteca que evitar o una convención de nombres.
+
+<Warning>
+  Mantenlo breve. El texto de Conocimiento se paga en cada construcción. Las solicitudes puntuales pertenecen a [Chat del proyecto](/es/project-chat), no aquí.
+</Warning>
+
+### Base de datos
+
+Adjunta una de tus conexiones de Supabase al proyecto. Puedes adjuntar una conexión ahora, cambiar a otra más tarde o desconectarla en cualquier momento. Adjuntar y cambiar requieren la capacidad Base de datos en tu plan. Desconectar siempre está permitido, por ejemplo después de una reducción de plan.
+
+La pestaña Base de datos permanece visible mientras haya una conexión adjunta, incluso si tu plan actual ya no admite nuevas adjunciones.
+
+### Almacenamiento
+
+Esta pestaña muestra los archivos del proyecto y el token de API que las aplicaciones generadas usan para llamar de vuelta a Webza. En planes sin almacenamiento de archivos, la pestaña se etiqueta **API** y muestra solo el token.
+
+### Repositorio GitHub
+
+Conecta un repositorio para enviar el código fuente automáticamente.
+
+- **Crear un nuevo repositorio privado**: Webza lo crea por ti.
+- **Adjuntar un repositorio vacío que poseas**: Vincula un repositorio vacío existente que poseas.
+
+Puedes cambiar a un repositorio diferente o desconectar en cualquier momento. Activa **Envío automático** para enviar el código fuente después de cada construcción.
+
+## Configuración de la cuenta
+
+Haz clic en **Configuración** en la parte inferior de la barra lateral para abrir tu panel de cuenta. Tiene tres secciones: Cuenta, Configuración de IA y Privacidad.
+
+### Cuenta
+
+Actualiza tu nombre y correo electrónico, o cambia tu contraseña. También puedes gestionar tu perfil en [https://webza.ai/profile](https://webza.ai/profile).
+
+### Configuración de IA
+
+Esta sección está disponible en los planes Plus y Premium cuando usas tu propia clave de API.
+
+- **Proveedor**: elige un proveedor o déjalo en **Usar predeterminado del sistema** para gastar créditos de Webza.
+- **Modelo**: aparece después de que elijas un proveedor.
+- **Claves API**: se almacenan cifradas y se muestran enmascaradas. Reemplaza o elimina una clave en cualquier momento. Aparece una insignia **Configurado** cuando se guarda una clave.
+- **Probar**: haz clic en el botón de rayo para verificar que la clave funciona. Para el proveedor seleccionado, también verifica el modelo elegido.
+
+Las construcciones con tu propia clave son medidas por Webza pero no se descuentan de tus créditos. Tu proveedor de IA te factura. Si vuelves a **Usar predeterminado del sistema**, tus claves guardadas se conservan y vuelves a gastar créditos.
+
+#### Sonidos de chat
+
+Disponible en todos los planes. Elige un estilo de sonido de notificación mientras la IA trabaja: **Minimal**, **Juguetón**, **Retro**, **Sci-Fi**, o desactiva los sonidos.
+
+### Privacidad
+
+- **Preferencias de cookies**: gestiona qué cookies aceptas.
+- **Descargar tus datos**: solicita una exportación de todo lo que se guarda sobre tu cuenta. Esto puede no estar disponible.
+- **Eliminar tu cuenta**: solicita la eliminación. Hay un período de gracia antes de la eliminación. Si la eliminación autoservicio está desactivada, se te indicará que contactes a soporte.
+
+{/* TODO: confirm whether data export and self-service deletion are enabled on Webza, and the grace period */}
+
+### Idioma de la interfaz
+
+Cambia el idioma de la interfaz desde el selector de idioma en la barra superior.
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Dominios personalizados" icon="globe" href="/es/custom-domains">
+    Conecta tu propio dominio y verifica los registros DNS.
+  </Card>
+
+  <Card title="Editor de código" icon="code" href="/es/code-editor">
+    Edita código directamente y gestiona archivos en tu proyecto.
+  </Card>
+</CardGroup>

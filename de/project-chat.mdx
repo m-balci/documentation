@@ -1,0 +1,142 @@
+---
+title: "Projekt-Chat"
+description: "Verwenden Sie den Projekt-Chat, um der KI mitzuteilen, was sie bauen, ändern oder beheben soll. Hängen Sie Dateien an, beantworten Sie Rückfragen und verfolgen Sie den Fortschritt in Echtzeit."
+---
+
+Der Projekt-Chat ist Ihr Hauptarbeitsbereich für das Bauen mit KI. Tippen Sie, was Sie möchten, und die KI erstellt, bearbeitet oder erklärt Code für Sie. Sie können nach neuen Seiten, Funktionen, Stiländerungen, Fehlerbehebungen oder einer Erklärung dafür fragen, wie etwas funktioniert.
+
+## Nachricht senden
+
+Tippen Sie Ihre Anfrage und drücken Sie **Enter** oder klicken Sie auf die Senden-Schaltfläche. Die KI liest Ihre Nachricht und beginnt mit der Arbeit.
+
+## Dateien anhängen
+
+Wenn Ihr Plan Dateispeicher umfasst, können Sie Dateien anhängen, um der KI zusätzlichen Kontext zu geben.
+
+<Steps>
+  <Step title="Dateien hochladen">
+    Klicken Sie auf die Anhang-Schaltfläche und wählen Sie Dateien von Ihrem Gerät aus. Hochgeladene Dateien erscheinen im Projekt-Dateibaum.
+  </Step>
+  <Step title="Vorhandene Dateien @erwähnen">
+    Tippen Sie `@` im Chat, um Dateien, die sich bereits im Projekt befinden, automatisch zu vervollständigen.
+  </Step>
+</Steps>
+
+Angehängte Dateien werden der KI mit ihren öffentlichen URLs übergeben. Die KI kann sie als Bilder, Hintergründe oder Download-Links verwenden.
+
+### Bildanhänge und Vision
+
+Mit einem Vision-fähigen KI-Modell kann die KI angehängte Bilder direkt sehen. Unterstützte Formate sind JPG, PNG, WebP und GIF. Sie können bis zu vier Bilder pro Nachricht anhängen. Große Bilder werden automatisch verkleinert. Die KI sieht die Bilder in der Nachricht, an die sie angehängt wurden.
+
+Bei rein textbasierten Modellen erhält die KI nur die Dateinamen und URLs.
+
+## Nachrichtenlimits
+
+Chat-Nachrichten können bis zu 10.000 Zeichen lang sein. Wenn Ihre Anfrage lang ist, sollten Sie sie in kleinere Schritte aufteilen.
+
+## KI-Fragen beantworten
+
+Wenn eine Anfrage mehrdeutig ist, stellt die KI Rückfragen anstatt zu raten. Eine Fragekarte erscheint am unteren Rand des Chats mit bis zu fünf kurzen, antippbaren Antworten. Einige Fragen erlauben mehrere Auswahlen. Tippen Sie eine Antwort erneut an, um die Auswahl aufzuheben. Offene Fragen zeigen stattdessen ein Textfeld.
+
+Ein Freitextfeld am unteren Rand ermöglicht es Ihnen, zusätzliche Details hinzuzufügen, bevor Sie senden. Ihre Antworten werden als normale Chat-Nachricht gepostet und starten den nächsten KI-Durchlauf. Sie können die Karte auch mit der Schaltfläche **×** schließen und eine normale Antwort tippen. Die Fragen bleiben im Verlauf lesbar.
+
+<Info>
+  Das Stellen einer Frage beendet diesen Durchlauf. Die Karte wartet auf Ihre Antwort, sodass keine Credits verbraucht werden, solange sie geöffnet ist.
+</Info>
+
+## Baufortschritt verfolgen
+
+Jeder KI-Durchlauf durchläuft Stufen, die im Chat angezeigt werden:
+
+| Stufe | Was passiert |
+| --- | --- |
+| Denken | Die KI analysiert Ihre Anfrage und plant Änderungen. |
+| Aktionen | Dateien werden erstellt oder geändert. |
+| Nachrichten | Die KI erklärt, was sie getan hat und warum. |
+| Abgeschlossen | Der Durchlauf ist abgeschlossen und Sie können das Ergebnis in der Vorschau betrachten. |
+
+## Credit-Anzeige
+
+Die Chat-Kopfzeile zeigt Ihren aktuellen Credit-Status:
+
+- **Standardfarbe:** Mehr als 20 % Ihrer Credits verbleiben.
+- **Gelb:** Zwischen 5 % und 20 % verbleiben, mit einem Link **Credits kaufen**.
+- **Rot:** 5 % oder weniger verbleiben.
+
+Bei unbegrenzten Plänen steht dort **Unbegrenzte Credits**. Wenn Sie mit Ihrem eigenen API-Schlüssel bauen, steht dort **Eigenen API-Schlüssel verwenden**. Für weitere Details siehe [Credits und Nutzung](/de/credits-and-usage).
+
+## Kostenlose Fehlerbehebung
+
+Durchläufe, die aufgrund des KI-Agenten oder der Plattform fehlschlagen, werden nicht berechnet. Dazu gehören Durchläufe, bei denen der Agent nach wiederholten Fehlern stoppte, bei denen der finale Build-Check fehlschlug oder bei denen Tokens verbraucht wurden, ohne etwas zu produzieren. Durchläufe, die fehlschlagen, weil Ihnen die Credits ausgegangen sind, oder Durchläufe, die Sie abbrechen, werden berechnet.
+
+Nach einem fehlgeschlagenen Durchlauf erscheint unter dem Chat eine Schaltfläche **Kostenlos beheben**. Ein Klick darauf bittet die KI, das Problem zu diagnostizieren und zu reparieren, ohne neue Funktionen hinzuzufügen. Auch dieser Korrekturdurchlauf ist kostenlos. Die Schaltfläche sendet eine feste Anweisung. Text im Chat-Feld wird nicht berücksichtigt.
+
+<Warning>
+  Jeder fehlgeschlagene Durchlauf kann einmal innerhalb von 24 Stunden kostenlos behoben werden, und nur solange er der neueste Durchlauf ist.
+</Warning>
+
+Nicht berechnete Durchläufe erscheinen unter **Abrechnung → Nutzung** mit der Markierung **Nicht berechnet**. Es gibt eine tägliche Begrenzung für nicht berechnete Durchläufe pro Benutzer.
+
+{/* TODO: confirm Webza's daily limit of uncharged runs (default is 5 per 24h). */}
+
+## KI-generierte Bilder
+
+Wenn Ihr Plan KI-Bilder umfasst, kann die KI benutzerdefinierte Bilder für Website-Projekte erstellen, wenn Stockfotos nicht passen oder wenn Sie nach etwas Spezifischem fragen. Sie können beispielsweise sagen: "generate a custom hero image of a lighthouse at dusk."
+
+Generierte Bilder werden unter `public/images/generated/` gespeichert und erscheinen im Dateibaum. Jedes Bild dauert etwas länger zu erstellen als eine Textänderung.
+
+Ihr monatliches Kontingent wird auf der Karte **Aktueller Plan** auf der Seite **Nutzung** angezeigt. Wenn es aufgebraucht ist, verwendet die KI Stockfotos bis zum nächsten Kalendermonat.
+
+{/* TODO: confirm which Webza plans include AI images and how many per month. */}
+
+## Benutzerdefinierte Anweisungen
+
+Fügen Sie Anweisungen hinzu, die die KI bei jedem Build erhält. Gehen Sie zu den Projekt-**Einstellungen → Wissensbasis** und geben Sie bis zu 500 Zeichen ein. Das ist nützlich für Regeln bezüglich Tonfall, Markenidentität oder Coding-Stil. Siehe [Einstellungen](/de/settings) für mehr Details.
+
+## Tipps für bessere Ergebnisse
+
+<AccordionGroup>
+  <Accordion title="Seien Sie beschreibend">
+    Beschreiben Sie im Detail, was Sie möchten. Nennen Sie Layout, Farben, Verhalten und Inhalt. Je mehr Kontext Sie geben, desto näher kommt das erste Ergebnis Ihren Vorstellungen.
+  </Accordion>
+
+  <Accordion title="In Schritten iterieren">
+    Beginnen Sie mit einer Basisversion und fügen Sie dann Funktionen einzeln hinzu. Große, alles-auf-einmal-Anfragen sind schwieriger richtig zu stellen.
+  </Accordion>
+
+  <Accordion title="Beispiele referenzieren">
+    Verlinken oder beschreiben Sie Websites und Designs, die Ihnen gefallen. Die KI kann Stile, Layouts und Stimmungen genauer treffen, wenn sie eine Referenz hat.
+  </Accordion>
+
+  <Accordion title="Um Erklärungen bitten">
+    Wenn Sie verstehen möchten, wie etwas funktioniert, bitten Sie die KI, den Code oder den Ansatz zu erklären. Das hilft Ihnen, später eigene Bearbeitungen vorzunehmen.
+  </Accordion>
+
+  <Accordion title="Vorlagen verwenden">
+    Wenn Sie von einer Vorlage ausgehen, hat die KI eine funktionierende Struktur. Sie können sie dann anpassen, anstatt von Grund auf neu zu bauen.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=project-chat" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Jetzt ausprobieren</span>
+    <span className="wz-ad-title">Haben Sie eine Idee? Tippen Sie sie ein.</span>
+    <span className="wz-ad-text">Starten Sie ein Projekt und geben Sie Webza Ihren ersten Prompt. Die KI fragt, was sie braucht, und baut den Rest.</span>
+  </span>
+
+  <span className="wz-ad-btn">Projekt starten <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Editor" icon="pen" href="/de/editor">
+    Code bearbeiten, Dateien verwalten und KI-Änderungen neben dem Chat überprüfen.
+  </Card>
+
+  <Card title="Vorschau" icon="eye" href="/de/preview">
+    Sehen Sie Ihre Website live und testen Sie Änderungen, bevor Sie veröffentlichen.
+  </Card>
+</CardGroup>

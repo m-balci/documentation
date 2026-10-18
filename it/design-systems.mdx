@@ -1,0 +1,130 @@
+---
+title: "Design system"
+sidebarTitle: "Design system"
+description: "Scopri come i design system di Webza controllano l'aspetto del tuo sito, quali design system sono disponibili e come cambiarli dall'editor."
+---
+
+Un design system è l'identità visiva del tuo sito. Raggruppa i token di design (colori, tipografia, spaziatura, raggio e ombre), un set di palette di accento denominate, i web font e un playbook che indica all'AI come applicare l'aspetto.
+
+Un [template](/it/templates) controlla la struttura: quali pagine e componenti ha il tuo sito. Un design system controlla l'aspetto. Webza combina i due, quindi qualsiasi design system può essere abbinato a qualsiasi template, e lo stesso template può assumere molti aspetti diversi.
+
+<Info>
+  I design system sono disponibili in ogni piano. La selezione automatica, la selezione manuale e la modalità Design funzionano allo stesso modo nei piani Free, Plus e Premium.
+</Info>
+
+## Come funziona
+
+Quando Webza costruisce il tuo progetto, parte dal template e sovrappone il design system:
+
+1. Il template fornisce la struttura delle pagine e i componenti.
+2. I token di base del design system, la palette di accento scelta e i suoi web font vengono applicati.
+3. Alcuni design system includono le proprie versioni di componenti specifici, che sostituiscono o affinano quelli del template.
+4. L'AI segue il playbook del design system e adatta il codice generato per corrispondere all'aspetto. Ad esempio, sostituisce i colori hardcoded in modo che seguano i token e l'accento attivi.
+
+Ogni playbook imposta anche uno stile di movimento coerente per l'intero sito, così le animazioni risultano uniformi da sezione a sezione.
+
+La sovrapposizione è prevedibile. Scegliere un design system o un accento diverso cambia l'aspetto senza alterare la struttura del sito.
+
+## Substrate (predefinito)
+
+Substrate è il design system predefinito di Webza. È uno stile aziendale caldo, neutro e premium che abbina **Geist** per l'interfaccia e il testo del corpo con il serif **Newsreader** per gli accenti editoriali. Utilizza un raggio d'angolo di 10px e ombre morbide e stratificate.
+
+Substrate ha sei palette di accento:
+
+| Accento | Note |
+| --- | --- |
+| indigo | Accento predefinito |
+| terracotta | Accento caldo, terroso |
+| blue | Accento freddo, classico |
+| emerald | Accento verde |
+| ruby | Accento rosso deciso |
+| mono | Accento neutro, monocromatico |
+
+## Design system Premium
+
+Oltre a Substrate, Webza offre dieci design system premium. Ognuno è un aspetto completo a sé stante, con la propria tipografia, colori, ombre e personalità.
+
+| Design system | Personalità |
+| --- | --- |
+| Aperture | SaaS nitido, freddo, architettonico. Preciso e sicuro. |
+| Atrium | SaaS aziendale affidabile. Calmo, credibile, di livello dashboard. |
+| Bloom | Giocoso e gioioso. Massiccio, arrotondato, con accenti candy allegramente colorati. |
+| Botanica | Caldo, organico, editoriale wellness. Calmo e premium. |
+| Carbon | Strumento per sviluppatori elegante. Dark-first, tecnico, verde terminale. |
+| Halcyon | Sereno, aereo, pastello onirico. Leggero e tranquillo. |
+| Lumen | Bagliore fintech moderno e vibrante. Luminoso, gradiente, glassmorphic. |
+| Monolith | Editoriale svizzero brutalista deciso. Vistoso, grafico, ad alto contrasto. |
+| Noir | Lusso dark e cinematografico. Costoso, contenuto, accento metallico. |
+| Sandstone | Caldo, minimale, editoriale. Minimalismo letterario con anima. |
+
+I design system premium appaiono ovunque Substrate lo faccia: il selettore di design system in **Personalizza**, la selezione **Automatico** e la modalità Design dell'editor. Nuovi design system vengono aggiunti nel tempo.
+
+<Tip>
+  Molti design system includono un'anteprima della styleguide: una pagina che mostra la tipografia, i colori, i pulsanti e i componenti. Aprila dal selettore di design system o dal pannello Design dell'editor per vedere un aspetto prima di applicarlo.
+</Tip>
+
+## Scegliere un design system
+
+Un design system e un accento vengono scelti in uno di tre modi.
+
+### Automatico (predefinito)
+
+Quando crei un progetto, il selettore di design system nel popover **Personalizza** è impostato su **Automatico**. Alla prima build, l'AI sceglie il design system e l'accento più adatti al tuo prompt e salva quella scelta nel progetto.
+
+### Manuale
+
+Invece di **Automatico**, scegli un design system specifico nel popover **Personalizza**. Puoi anche scegliere una delle sue palette di accento o mantenere l'accento predefinito. Ogni build del progetto utilizzerà quell'aspetto.
+
+### Ritematizzare nell'editor
+
+Puoi cambiare il design system o l'accento di un progetto sito web già costruito in qualsiasi momento dall'editor.
+
+<Steps>
+  <Step title="Apri il pannello Design">
+    Nell'editor, passa alla modalità Design. Il pannello **Design** si apre accanto all'anteprima.
+  </Step>
+  <Step title="Scegli un design system e un accento">
+    Scegli un nuovo design system e, opzionalmente, una palette di accento. Apri prima l'anteprima della styleguide se vuoi confrontare gli aspetti.
+  </Step>
+  <Step title="Clicca Chiedi all'AI per applicare">
+    Clicca **Chiedi all'AI** per applicare. Webza applica i nuovi token e l'accento e ricostruisce il tuo sito. L'anteprima si ricarica, e l'AI adatta quindi i colori hardcoded in modo che l'intero sito corrisponda al nuovo aspetto.
+  </Step>
+</Steps>
+
+Una ritematizzazione utilizza i crediti come una richiesta in chat. Non puoi applicare una ritematizzazione mentre un'altra build è in corso.
+
+<Note>
+  La modalità Design è disponibile solo per i progetti sito web. È nascosta per i progetti tema [WordPress](/it/themes/wordpress-themes) e [Shopify](/it/themes/shopify-themes). Essi utilizzano comunque il design system scelto al momento della creazione, ma non puoi cambiarlo dall'editor.
+</Note>
+
+## Annullare una ritematizzazione
+
+Una ritematizzazione conta come un passo in Annulla e Ripristina, e crea un checkpoint nella Cronologia revisioni. Puoi ripristinarla in seguito dall'anteprima. Vedi [Anteprima](/it/preview).
+
+## Duplicare un progetto
+
+Quando duplichi un progetto, il suo design system e l'accento vengono copiati nel nuovo progetto.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=design-systems" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Ogni piano</span>
+    <span className="wz-ad-title">Trova il tuo stile in pochi secondi</span>
+    <span className="wz-ad-text">I design system sono inclusi in ogni piano. Avvia un progetto, scegli uno stile e cambialo in qualsiasi momento.</span>
+  </span>
+
+  <span className="wz-ad-btn">Prova i design system <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Pagine correlate
+
+<CardGroup cols={2}>
+  <Card title="Template" icon="table-cells-large" href="/it/templates">
+    Scegli una struttura di partenza per il tuo progetto.
+  </Card>
+
+  <Card title="Anteprima" icon="eye" href="/it/preview">
+    Anteprima del tuo sito e gestione della cronologia revisioni.
+  </Card>
+</CardGroup>

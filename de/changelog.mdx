@@ -1,0 +1,75 @@
+---
+title: "Changelog"
+sidebarTitle: "Changelog"
+description: "Neue Funktionen, Verbesserungen und Korrekturen in Webza."
+mode: "center"
+---
+
+{/* TODO: Entries are grouped by month. Confirm the exact release dates for the late August and early September updates. */}
+
+<Update label="Oktober 2026">
+  ### Neu
+
+  - **KI-Bildgenerierung**: Die KI kann nun individuelle Bilder für Website-Projekte erstellen. Wenn Ihr Tarif dies enthält, gilt eine monatliche Bildmenge. Siehe [Projekt-Chat](/de/project-chat).
+  - **Bildverständnis**: Wenn das ausgewählte Modell Bilder unterstützt, kann die KI nun die Bilder erkennen, die Sie einem Prompt oder einer Chat-Nachricht anhängen.
+  - **Kostenlos beheben**: Läufe, die aufgrund der KI oder der Plattform fehlschlagen, werden nicht berechnet. Sie können einen fehlgeschlagenen Lauf einmal kostenlos wiederholen, und die Seite Nutzung markiert diese Läufe als nicht berechnet. Siehe [Credits und Nutzung](/de/credits-and-usage).
+  - **Weitere Möglichkeiten zur Supabase-Verbindung**: Verbinden Sie sich durch Anmeldung mit Supabase oder mit einem Access-Token. Manuelle Verbindungen benötigen nicht mehr Ihren Secret Key. Siehe [Supabase](/de/integrations/supabase).
+
+  ### Verbessert
+
+  - Website-Templates enthalten nun die Motion-Animationsbibliothek, sodass die KI reichhaltigere Animationen wie gestaffelte Einblendungen, Parallax und animierte Zähler erstellen kann. Siehe [Templates](/de/templates).
+
+  ### Behoben
+
+  - WordPress-Themes wenden die Farben und Tokens des ausgewählten Design-Systems nun zuverlässig an. Dunkle Design-Systeme (Carbon, Lumen und Noir) starten nun im Dunkelmodus.
+  - Shopify-Themes erhalten nun die Farben des Design-Systems, wenn das Template automatisch ausgewählt wird, und unberührte Starter-Dateien zeigen keine falschen Validierungsfehler mehr.
+</Update>
+
+<Update label="September 2026">
+  ### Neu
+
+  - **Neuere KI-Modelle**: Die Modelllisten enthalten nun die aktuellsten KI-Modelle. Wenn ein von Ihnen gespeichertes Modell eingestellt wird, wechselt Webza Sie automatisch zum nächstgelegenen aktuellen Modell derselben Klasse.
+  - **Dateien an ersten Prompt anhängen**: Wenn Ihr Tarif Dateispeicher enthält, können Sie bis zu 10 Dateien beim Erstellen eines Projekts anhängen.
+  - **Design-Anleitung für die KI**: Während des Builds folgt die KI nun fokussierten Playbooks zu Seitenaufbau, Abschnittslayout, Animation, sicheren Neugestaltungen und Textgenauigkeit.
+  - **Konsistente Animation**: Jedes [Design-System](/de/design-systems) legt nun einen einheitlichen Animationsstil fest, sodass Animationsdauer und -easing auf Ihrer gesamten Website konsistent bleiben.
+
+  ### Verbessert
+
+  - Ihr erster Prompt kann nun bis zu 10.000 Zeichen umfassen, genau wie Folgenachrichten.
+  - Qualitätsprüfungen erkennen nun tote "#"-Links in generierten Websites.
+  - Schnellere Seitenladezeiten im gesamten Dashboard.
+  - Bessere Screenreader-Unterstützung für Schalter, Filter und rein iconbasierte Schaltflächen.
+  - Konten ohne verbleibende Credits erhalten nun eine Warnung, dass sie nicht bauen können.
+
+  ### Behoben
+
+  - Die KI verlinkt nicht mehr auf Ihre hochgeladenen Dateien mit falschen Adressen, was Bilder nicht laden ließ.
+  - Änderungen an veröffentlichten Websites auf eigenen Domains erreichen Besucher nun sofort.
+  - Adressen, die mit einem Schrägstrich enden, öffnen nun die richtige Seite auf veröffentlichten und Vorschau-Websites.
+  - Das Design-Panel meldet nicht mehr einen neuen Stil als angewendet, wenn der dahinterliegende Build fehlgeschlagen ist. Dasselbe gilt für Rückgängig, Wiederherstellen und das Zurücksetzen einer Revision.
+  - Fragekarten im Chat dehnen die Seite nicht mehr aus oder brechen das Scrollen.
+  - Die Registerkarte **Code** zeigt nicht mehr den Fehler "Failed to load files" bei einem Projekt, das noch nie gebaut wurde.
+</Update>
+
+<Update label="August 2026">
+  ### Neu
+
+  - **Klärende Fragen**: Die KI kann während eines Builds Fragen an Sie stellen. Beantworten Sie sie mit antippbaren Auswahlmöglichkeiten direkt im Chat. Siehe [Projekt-Chat](/de/project-chat).
+  - **Geführte Touren**: Schritt-für-Schritt-Touren durch Dashboard, Projekterstellung, Editor, Abrechnung, Dateimanager, Datenbanken, GitHub und Shopify. Spielen Sie sie jederzeit mit **Tour neu starten** erneut ab.
+  - **Cookie-Einstellungen**: Ändern Sie Ihre Cookie-Einwilligungen jederzeit über den Link **Cookie-Einstellungen** in der Fußzeile.
+
+  ### Verbessert
+
+  - Schnellere Seitenladezeiten und ein umfassender Accessibility-Durchlauf: Screenreader melden nun Formularfehler, Ladezustände, Upload-Ergebnisse und Suchergebnisse.
+  - Die KI verarbeitet lange Gespräche nun besser und sagt nicht mehr bei jeder Nachricht, dass sie zusammenfasst.
+
+  ### Behoben
+
+  - Der Dunkelmodus folgt nun dem Webza-eigenen Theme-Schalter statt der Einstellung Ihres Betriebssystems.
+  - Das Versionsverlauf-Panel einschließlich seiner Wiederherstellungsschaltflächen wird auf mobilen Browsern nicht mehr abgeschnitten.
+  - Der Builder meldet nicht mehr "Build complete", wenn die KI keine Dateien geändert hat.
+  - Chat-Nachrichten gehen nicht mehr verloren, wenn mehrere Updates gleichzeitig eintreffen.
+  - Das Erstellen eines GitHub-Repositorys zeigt nun den tatsächlichen Grund an, wenn es fehlschlägt.
+  - Build-Fehler zeigen nun eine einzelne, klare Meldung.
+  - Eine abgelehnte Dateispeicherung im Code-Editor meldet nicht mehr Erfolg und verliert Ihre Bearbeitung nicht mehr.
+</Update>

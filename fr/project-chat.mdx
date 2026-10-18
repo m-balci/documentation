@@ -1,0 +1,142 @@
+---
+title: "Discussion de projet"
+description: "Utilisez la discussion de projet pour dire à l'IA ce qu'elle doit construire, modifier ou réparer. Joignez des fichiers, répondez aux questions de clarification et suivez la progression en temps réel."
+---
+
+La discussion de projet est votre principal espace de travail pour construire avec l'IA. Saisissez ce que vous voulez et l'IA crée, édite ou explique du code pour vous. Vous pouvez demander de nouvelles pages, des fonctionnalités, des changements de style, des corrections de bugs, ou une explication du fonctionnement de quelque chose.
+
+## Envoyer un message
+
+Saisissez votre demande et appuyez sur **Enter** ou cliquez sur le bouton d'envoi. L'IA lit votre message et commence à travailler.
+
+## Joindre des fichiers
+
+Si votre plan inclut le stockage de fichiers, vous pouvez joindre des fichiers pour donner à l'IA un contexte supplémentaire.
+
+<Steps>
+  <Step title="Télécharger des fichiers">
+    Cliquez sur le bouton de pièce jointe et sélectionnez des fichiers depuis votre appareil. Les fichiers téléchargés apparaissent dans l'arborescence du projet.
+  </Step>
+  <Step title="@mentionner des fichiers existants">
+    Tapez `@` dans la discussion pour l'autocomplétion des fichiers déjà présents dans le projet.
+  </Step>
+</Steps>
+
+Les fichiers joints sont transmis à l'IA avec leurs URL publiques. L'IA peut les utiliser comme images, arrière-plans ou liens de téléchargement.
+
+### Pièces jointes image et vision
+
+Avec un modèle d'IA capable de vision, l'IA peut voir directement les images jointes. Les formats pris en charge sont JPG, PNG, WebP et GIF. Vous pouvez joindre jusqu'à quatre images par message. Les grandes images sont réduites automatiquement. L'IA voit les images sur le message auquel elles ont été jointes.
+
+Avec les modèles texte uniquement, l'IA ne reçoit que les noms de fichiers et les URL.
+
+## Limites de messages
+
+Les messages de discussion peuvent contenir jusqu'à 10 000 caractères. Si votre demande est longue, envisagez de la diviser en étapes plus petites.
+
+## Répondre aux questions de l'IA
+
+Lorsqu'une demande est ambiguë, l'IA pose des questions de clarification au lieu de deviner. Une carte de question apparaît en bas de la discussion avec jusqu'à cinq réponses courtes et cliquables. Certaines questions permettent plusieurs sélections. Tapez à nouveau sur une réponse pour la désélectionner. Les questions ouvertes affichent un champ de texte à la place.
+
+Une zone de texte libre en bas vous permet d'ajouter des détails supplémentaires avant d'envoyer. Vos réponses sont publiées comme un message de discussion normal et démarrent la prochaine exécution de l'IA. Vous pouvez aussi fermer la carte avec le bouton **×** et saisir une réponse normale. Les questions restent lisibles dans le transcript.
+
+<Info>
+  Poser une question met fin à cette exécution. La carte attend votre réponse, donc aucun crédit n'est dépensé tant qu'elle est ouverte.
+</Info>
+
+## Suivre la progression de la construction
+
+Chaque exécution de l'IA passe par des étapes affichées dans la discussion :
+
+| Étape | Ce qui se passe |
+| --- | --- |
+| Thinking | L'IA analyse votre demande et planifie les modifications. |
+| Actions | Les fichiers sont créés ou modifiés. |
+| Messages | L'IA explique ce qu'elle a fait et pourquoi. |
+| Complete | L'exécution se termine et vous pouvez prévisualiser le résultat. |
+
+## Indicateur de crédits
+
+L'en-tête de la discussion affiche votre statut de crédits actuel :
+
+- **Couleur par défaut :** plus de 20% de vos crédits restent.
+- **Jaune :** entre 5% et 20% restent, avec un lien **Acheter des crédits**.
+- **Rouge :** 5% ou moins restent.
+
+Sur les plans illimités, il affiche **Crédits illimités**. Lorsque vous construisez avec votre propre clé API, il affiche **Utiliser votre clé API**. Pour plus de détails, consultez [Crédits et utilisation](/fr/credits-and-usage).
+
+## Correction gratuite
+
+Les exécutions qui échouent à cause de l'agent IA ou de la plateforme ne sont pas facturées. Cela inclut les exécutions où l'agent s'est arrêté après des erreurs répétées, la vérification finale de construction a échoué, ou des jetons ont été dépensés sans rien produire. Les exécutions qui échouent parce que vous avez manqué de crédits, ou les exécutions que vous annulez, sont facturées.
+
+Après une exécution échouée, un bouton **Corriger gratuitement** apparaît sous la discussion. Cliquer dessus demande à l'IA de diagnostiquer et de réparer le problème sans ajouter de nouvelles fonctionnalités. Cette exécution de correction est également gratuite. Le bouton envoie une instruction fixée. Le texte dans la zone de discussion n'est pas inclus.
+
+<Warning>
+  Chaque exécution échouée peut être corrigée gratuitement une fois, dans les 24 heures, et uniquement tant qu'elle est la dernière exécution.
+</Warning>
+
+Les exécutions non facturées apparaissent dans **Facturation → Utilisation** marquées comme **Non facturé**. Il existe une limite quotidienne d'exécutions non facturées par utilisateur.
+
+{/* TODO : confirmer la limite quotidienne d'exécutions non facturées de Webza (la valeur par défaut est de 5 par 24h). */}
+
+## Images générées par l'IA
+
+Si votre plan inclut des images IA, l'IA peut créer des images personnalisées pour les projets de site web lorsque les photos de stock ne conviennent pas ou lorsque vous demandez quelque chose de spécifique. Par exemple, vous pouvez dire : "générez une image hero personnalisée d'un phare au crépuscule."
+
+Les images générées sont enregistrées sous `public/images/generated/` et apparaissent dans l'arborescence de fichiers. Chaque image prend un peu plus de temps à produire qu'une modification de texte.
+
+Votre allocation mensuelle est affichée sur la carte **Forfait actuel** de la page **Utilisation**. Lorsque vous êtes à court, l'IA utilise des photos de stock jusqu'au prochain mois calendaire.
+
+{/* TODO : confirmer quels plans Webza incluent des images IA et combien par mois. */}
+
+## Instructions personnalisées
+
+Ajoutez des instructions que l'IA reçoit à chaque construction. Allez dans les paramètres du projet **Paramètres → Connaissances** et saisissez jusqu'à 500 caractères. Cela est utile pour les règles concernant le ton, la marque ou le style de codage. Consultez [Paramètres](/fr/settings) pour plus de détails.
+
+## Conseils pour de meilleurs résultats
+
+<AccordionGroup>
+  <Accordion title="Soyez descriptif">
+    Décrivez ce que vous voulez en détail. Incluez la mise en page, les couleurs, le comportement et le contenu. Plus vous donnez de contexte, plus le premier résultat sera proche de ce que vous souhaitez.
+  </Accordion>
+
+  <Accordion title="Itérez par étapes">
+    Commencez avec une version de base, puis ajoutez les fonctionnalités une par une. Les grandes demandes tout d'un coup sont plus difficiles à réaliser correctement.
+  </Accordion>
+
+  <Accordion title="Référencez des exemples">
+    Liez ou décrivez des sites web et des designs que vous aimez. L'IA peut reproduire des styles, des mises en page et des ambiances plus précisément lorsqu'elle dispose d'une référence.
+  </Accordion>
+
+  <Accordion title="Demandez des explications">
+    Si vous voulez comprendre comment quelque chose fonctionne, demandez à l'IA d'expliquer le code ou l'approche. Cela vous aide à faire vos propres modifications plus tard.
+  </Accordion>
+
+  <Accordion title="Utilisez des modèles">
+    Partir d'un modèle donne à l'IA une structure fonctionnelle. Vous pouvez ensuite la personnaliser au lieu de construire à partir de zéro.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=project-chat" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Essayez maintenant</span>
+    <span className="wz-ad-title">Vous avez une idée ? Saisissez-la.</span>
+    <span className="wz-ad-text">Démarrez un projet et donnez à Webza votre première invite. L'IA demande ce dont elle a besoin et construit le reste.</span>
+  </span>
+
+  <span className="wz-ad-btn">Démarrer un projet <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Pages connexes
+
+<CardGroup cols={2}>
+  <Card title="Éditeur" icon="pen" href="/fr/editor">
+    Éditez du code, gérez des fichiers et examinez les modifications de l'IA côte à côte avec la discussion.
+  </Card>
+
+  <Card title="Aperçu" icon="eye" href="/fr/preview">
+    Voyez votre site en direct et testez les modifications avant de publier.
+  </Card>
+</CardGroup>

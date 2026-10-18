@@ -1,0 +1,82 @@
+---
+title: "Editor"
+description: "Overview of the Webza project editor, its layout, toolbar, and keyboard shortcuts."
+---
+
+The project editor is the workspace you enter after you click **Start** on a project card in the dashboard. It brings together chat, preview, code, and settings in one place so you can build and refine your site without switching tabs.
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## Editor layout
+
+The editor is split into three main areas:
+
+<CardGroup cols={2}>
+  <Card title="Project chat" icon="message" href="/project-chat">
+    Ask the AI to edit pages, add sections, change styles, or fix bugs. Your instructions turn into code changes you can review in real time.
+  </Card>
+
+  <Card title="Live preview" icon="eye" href="/preview">
+    See your site as visitors will see it. The preview updates automatically after each AI edit or manual code save.
+  </Card>
+
+  <Card title="Code editor" icon="code" href="/code-editor">
+    Inspect and edit files directly with syntax highlighting, search, and save. Built on the Monaco editor.
+  </Card>
+
+  <Card title="Settings" icon="gear" href="/settings">
+    Manage domains, analytics, SEO, and other project-level options.
+  </Card>
+</CardGroup>
+
+You can collapse the chat panel to give the preview full width. This is useful when you are focused on design details and do not need AI assistance.
+
+## Toolbar
+
+The top toolbar gives you quick actions for the current project:
+
+- **Publish**: Opens the publishing flow so you can put your site live. See [Publish](/publish).
+- **Rebuild**: Rebuilds the project from the latest code. Use this if the preview looks out of sync.
+- **Replay tour**: The circular-arrow button next to **Rebuild** replays the guided editor tour.
+- **Export**: If your plan includes code export (Plus or Premium), this button downloads the full source code as a ZIP file that is ready to deploy on Vercel or host anywhere you choose.
+- **Download Theme**: For theme projects, this returns the installable WordPress block theme or Shopify Online Store 2.0 theme as a ZIP file instead of the full source export.
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## Exporting your project
+
+If your plan supports it, you can download your project and host it outside of Webza.
+
+<Steps>
+  <Step title="Open the editor">
+    Click **Start** on the project card from your dashboard.
+  </Step>
+  <Step title="Click Export">
+    In the toolbar, click **Export** (or **Download Theme** for theme projects).
+  </Step>
+  <Step title="Download the ZIP">
+    The file downloads to your computer. Extract it and follow the README inside for local development or Vercel deployment.
+  </Step>
+</Steps>
+
+## Keyboard shortcuts
+
+| Action | Shortcut |
+| --- | --- |
+| Undo | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| Redo | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> or <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| Search in code editor | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| Save in code editor | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| Send chat message | <kbd>Enter</kbd> |
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Project chat" icon="message" href="/project-chat">
+    Learn how to talk to the AI and review changes.
+  </Card>
+
+  <Card title="Code editor" icon="code" href="/code-editor">
+    Edit files directly with the built-in Monaco editor.
+  </Card>
+</CardGroup>

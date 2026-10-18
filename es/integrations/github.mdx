@@ -1,0 +1,139 @@
+---
+title: "GitHub"
+sidebarTitle: "GitHub"
+description: "Conecta tu cuenta de GitHub para que Webza envíe el código fuente de tu proyecto a un repositorio privado que tú posees después de cada compilación."
+---
+
+En todos los planes de Webza, puedes conectar tu cuenta de GitHub para que Webza envíe el código fuente de tu proyecto a un repositorio en tu cuenta después de cada compilación exitosa. El código está bajo tu control y nunca tienes que salir de Webza para mantenerlo actualizado.
+
+<Note>
+  La integración con GitHub no está disponible para proyectos de WordPress o temas de Shopify.
+</Note>
+
+## Cómo funciona
+
+<Steps>
+  <Step title="Conecta tu cuenta de GitHub">
+    Instala la aplicación de Webza en tu cuenta u organización y vincúlala en Webza.
+  </Step>
+  <Step title="Elige una cuenta para un proyecto">
+    Selecciona una conexión de GitHub cuando crees un proyecto. Webza crea un nuevo repositorio privado para él.
+  </Step>
+  <Step title="Compila">
+    Después de cada compilación exitosa, la IA envía el código fuente del proyecto con un mensaje de confirmación generado.
+  </Step>
+</Steps>
+
+<Info>
+  Webza solo envía a tu repositorio. Nunca clona, extrae ni compila a partir del contenido del repositorio. El repositorio es una salida, no una entrada.
+</Info>
+
+## Conecta tu cuenta de GitHub
+
+<Steps>
+  <Step title="Abre GitHub en la barra lateral">
+    Haz clic en **GitHub** en la barra lateral, luego haz clic en **Conectar GitHub**.
+  </Step>
+  <Step title="Instala la aplicación de Webza">
+    GitHub te pedirá instalar la aplicación de Webza. Elige si quieres otorgar acceso a todos los repositorios o solo a los seleccionados.
+  </Step>
+  <Step title="Regresa a Webza">
+    Serás redirigido a Webza con la conexión guardada.
+  </Step>
+</Steps>
+
+Puedes vincular varias cuentas personales u organizaciones, hasta 20 conexiones.
+
+## Conecta un repositorio a un proyecto
+
+Cuando creas un proyecto, haz clic en **Personalizar** en el cuadro de solicitud del panel, luego elige **Integraciones** y selecciona una conexión de GitHub. Webza crea el repositorio automáticamente.
+
+Para un proyecto existente, ve a **Configuración → General** y busca la sección **Repositorio de GitHub**. Desde allí puedes:
+
+- Crear un nuevo repositorio privado.
+- Adjuntar un repositorio existente ingresando el propietario y el nombre del repositorio.
+- Cambiar a un repositorio diferente o desvincularlo.
+- Activar o desactivar **Envío automático**.
+
+<Warning>
+  Un repositorio existente debe estar vacío. Adjuntar un repositorio que ya contenga código fallará con "That repository already contains code", porque Webza de lo contrario sobrescribiría trabajo que no puede ver.
+</Warning>
+
+Duplicar un proyecto no copia la conexión de GitHub. Compartir un repositorio entre proyectos permitiría que uno sobrescriba los archivos del otro, así que cada proyecto necesita su propio enlace.
+
+## Envío bajo demanda
+
+Desactivar **Envío automático** no significa que tengas que enviar manualmente. Pídele a la IA en el chat del proyecto, por ejemplo "Push this to GitHub", y ejecutará un envío único independientemente del interruptor.
+
+<Tip>
+  Desactiva el envío automático si quieres revisar los cambios antes de que cada confirmación se registre, luego pídele a la IA que envíe cuando estés listo.
+</Tip>
+
+## Qué se envía
+
+Webza envía el código fuente del proyecto que un desarrollador querría leer, no una copia completa del espacio de trabajo. Las dependencias, los resultados de compilación y cualquier cosa que parezca una credencial se excluyen, así que los secretos no se publican en tu repositorio.
+
+## Editar el repositorio fuera de Webza
+
+Los envíos nunca son forzados. Si alguien confirma cambios en el repositorio fuera de Webza, el siguiente envío se omite para que tus cambios no se pierdan.
+
+<Warning>
+  Después de eso, tu repositorio y tu proyecto de Webza quedan desincronizados. Webza no fusiona cambios externos de vuelta al proyecto, y los envíos posteriores a esa rama se omiten.
+</Warning>
+
+## Seguridad
+
+- Tus tokens de GitHub se almacenan encriptados y nunca se incluyen en ninguna respuesta de la API.
+- Cada envío usa un token fresco que dura una hora y solo funciona para ese repositorio.
+
+## Estado de la conexión
+
+Cada conexión en la página de **GitHub** muestra uno de tres estados:
+
+| Estado | Qué significa | Qué hacer |
+| --- | --- | --- |
+| **Activo** | Funcionando normalmente | Nada |
+| **Reconexión necesaria** | Eliminaste la autorización de Webza pero dejaste la aplicación instalada. Los envíos aún funcionan, pero no puedes vincular un repositorio a un proyecto nuevo. | Haz clic en **Reconectar** |
+| **Revocado** | La aplicación fue desinstalada o suspendida. Nada funciona. | Haz clic en **Reconectar** |
+
+## Eliminar acceso
+
+Desvincula un repositorio de un proyecto en **Configuración → General**. No se elimina nada de tu cuenta de GitHub.
+
+Para revocar completamente el acceso de Webza, desinstala la aplicación de Webza desde tu configuración de GitHub. Tus repositorios y su contenido permanecen en tu cuenta.
+
+## Solución de problemas
+
+<AccordionGroup>
+  <Accordion title="Los envíos se detuvieron">
+    - Alguien puede haber confirmado cambios en el repositorio fuera de Webza. Los envíos se omiten para proteger esos cambios.
+    - Es posible que la aplicación de Webza haya sido desinstalada de tu cuenta de GitHub. Verifica el estado de la conexión en la página de **GitHub** y reconecta.
+    - Verifica que **Envío automático** esté activado en **Configuración → General** del proyecto.
+  </Accordion>
+
+  <Accordion title="No puedo adjuntar un repositorio existente">
+    El repositorio debe estar vacío. Crea un nuevo repositorio vacío en GitHub, o deja que Webza lo cree por ti.
+  </Accordion>
+
+  <Accordion title="Webza no ve mi repositorio">
+    Si otorgaste acceso solo a repositorios seleccionados, agrega el repositorio a la lista de acceso de la aplicación de Webza en tu configuración de GitHub.
+  </Accordion>
+
+  <Accordion title="Una conexión de organización dejó de funcionar">
+    Si se eliminó la autorización para una conexión de organización, Webza puede no detectarlo de inmediato. Lo verás la próxima vez que intentes vincular un repositorio. Reconecta desde la página de **GitHub**.
+  </Accordion>
+</AccordionGroup>
+
+## Alternativa: exportación de código
+
+Si tu plan lo incluye, también puedes exportar un ZIP listo para Vercel desde el botón **Exportar**. Esto está disponible en los planes Plus y Premium.
+
+<CardGroup cols={2}>
+  <Card title="Supabase database" icon="database" href="/es/integrations/supabase">
+    Adjunta una base de datos Postgres a tus aplicaciones generadas.
+  </Card>
+
+  <Card title="Personal API" icon="key" href="/es/integrations/personal-api">
+    Accede a los datos de tu cuenta programáticamente con claves de API.
+  </Card>
+</CardGroup>

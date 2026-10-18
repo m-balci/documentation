@@ -1,0 +1,139 @@
+---
+title: "GitHub"
+sidebarTitle: "GitHub"
+description: "Connectez votre compte GitHub pour que Webza pousse le code source de votre projet vers un dépôt privé que vous possédez après chaque build."
+---
+
+Sur chaque plan Webza, vous pouvez connecter votre compte GitHub pour que Webza pousse le code source de votre projet vers un dépôt dans votre compte après chaque build réussi. Le code vit sous votre contrôle, et vous n'avez jamais à quitter Webza pour le maintenir à jour.
+
+<Note>
+  L'intégration GitHub n'est pas disponible pour les projets de thème WordPress ou Shopify.
+</Note>
+
+## Comment ça marche
+
+<Steps>
+  <Step title="Connectez votre compte GitHub">
+    Installez l'application Webza GitHub sur votre compte ou organisation et liez-la dans Webza.
+  </Step>
+  <Step title="Choisissez un compte pour un projet">
+    Choisissez une connexion GitHub lorsque vous créez un projet. Webza crée un nouveau dépôt privé pour celui-ci.
+  </Step>
+  <Step title="Build">
+    Après chaque build réussi, l'IA pousse le code source du projet avec un message de commit généré.
+  </Step>
+</Steps>
+
+<Info>
+  Webza pousse uniquement vers votre dépôt. Elle ne clone, ne tire ni ne build à partir du contenu du dépôt. Le dépôt est une sortie, pas une entrée.
+</Info>
+
+## Connecter votre compte GitHub
+
+<Steps>
+  <Step title="Ouvrez GitHub dans la barre latérale">
+    Cliquez sur **GitHub** dans la barre latérale, puis cliquez sur **Connecter GitHub**.
+  </Step>
+  <Step title="Installez l'application Webza">
+    GitHub vous demande d'installer l'application Webza. Choisissez d'accorder l'accès à tous les dépôts ou uniquement à ceux sélectionnés.
+  </Step>
+  <Step title="Retournez sur Webza">
+    Vous êtes renvoyé sur Webza avec la connexion enregistrée.
+  </Step>
+</Steps>
+
+Vous pouvez lier plusieurs comptes personnels ou organisations, jusqu'à 20 connexions.
+
+## Connecter un dépôt à un projet
+
+Lorsque vous créez un projet, cliquez sur **Personnaliser** sur la zone de saisie du tableau de bord, puis choisissez **Intégrations** et sélectionnez une connexion GitHub. Webza crée le dépôt automatiquement.
+
+Pour un projet existant, allez dans **Paramètres → Général** et trouvez la section **Dépôt GitHub**. Depuis là, vous pouvez :
+
+- Créer un nouveau dépôt privé.
+- Attacher un dépôt existant en saisissant le propriétaire et le nom du dépôt.
+- Changer pour un autre dépôt ou le détacher.
+- Activer ou désactiver **Push automatique**.
+
+<Warning>
+  Un dépôt existant doit être vide. Attacher un dépôt qui contient déjà du code échoue avec le message "That repository already contains code", car Webza écraserait autrement du travail qu'elle ne peut pas voir.
+</Warning>
+
+Dupliquer un projet ne copie pas la connexion GitHub. Partager un dépôt entre plusieurs projets laisserait l'un écraser les fichiers de l'autre, donc chaque projet a besoin de son propre lien.
+
+## Push sur demande
+
+Désactiver **Push automatique** ne signifie pas que vous devez pousser à la main. Demandez à l'IA dans le chat du projet, par exemple "Push this to GitHub", et elle exécute un push ponctuel indépendamment du bouton.
+
+<Tip>
+  Désactivez le push automatique si vous souhaitez réviser les changements avant que chaque commit n'atterrisse, puis demandez à l'IA de pousser quand vous êtes prêt.
+</Tip>
+
+## Ce qui est poussé
+
+Webza pousse le code source du projet qu'un développeur voudrait lire, pas une copie complète de l'espace de travail. Les dépendances, les sorties de build et tout ce qui ressemble à un identifiant sont exclus, afin que les secrets ne soient pas publiés dans votre dépôt.
+
+## Modifier le dépôt en dehors de Webza
+
+Les pushes ne sont jamais forcés. Si quelqu'un commit dans le dépôt en dehors de Webza, le prochain push est ignoré afin que vos changements ne soient pas perdus.
+
+<Warning>
+  Après cela, votre dépôt et votre projet Webza restent désynchronisés. Webza ne fusionne pas les changements extérieurs dans le projet, et les pushes ultérieurs vers cette branche sont ignorés.
+</Warning>
+
+## Sécurité
+
+- Vos tokens GitHub sont stockés chiffrés et ne sont jamais inclus dans une réponse API.
+- Chaque push utilise un token frais qui dure une heure et ne fonctionne que pour ce dépôt spécifique.
+
+## État de la connexion
+
+Chaque connexion sur la page **GitHub** affiche l'un des trois états suivants :
+
+| Statut | Ce que cela signifie | Que faire |
+| --- | --- | --- |
+| **Actif** | Fonctionne normalement | Rien |
+| **Reconnexion nécessaire** | Vous avez supprimé l'autorisation de Webza mais laissé l'application installée. Les pushes fonctionnent toujours, mais vous ne pouvez pas lier un dépôt à un nouveau projet. | Cliquez sur **Reconnecter** |
+| **Révoqué** | L'application a été désinstallée ou suspendue. Rien ne fonctionne. | Cliquez sur **Reconnecter** |
+
+## Supprimer l'accès
+
+Détachez un dépôt d'un projet dans **Paramètres → Général**. Rien n'est supprimé de votre compte GitHub.
+
+Pour révoquer complètement l'accès de Webza, désinstallez l'application Webza depuis vos paramètres GitHub. Vos dépôts et leur contenu restent dans votre compte.
+
+## Dépannage
+
+<AccordionGroup>
+  <Accordion title="Les pushes ont cessé">
+    - Quelqu'un a peut-être commit dans le dépôt en dehors de Webza. Les pushes sont ignorés pour protéger ces changements.
+    - L'application Webza a peut-être été désinstallée de votre compte GitHub. Vérifiez l'état de la connexion sur la page **GitHub** et reconnectez-vous.
+    - Vérifiez que **Push automatique** est activé dans les **Paramètres → Général** du projet.
+  </Accordion>
+
+  <Accordion title="Je ne peux pas attacher un dépôt existant">
+    Le dépôt doit être vide. Créez un nouveau dépôt vide sur GitHub, ou laissez Webza en créer un pour vous.
+  </Accordion>
+
+  <Accordion title="Webza ne voit pas mon dépôt">
+    Si vous avez accordé l'accès uniquement à des dépôts sélectionnés, ajoutez le dépôt à la liste d'accès de l'application Webza dans vos paramètres GitHub.
+  </Accordion>
+
+  <Accordion title="Une connexion organisation a cessé de fonctionner">
+    Si l'autorisation pour une connexion organisation a été supprimée, Webza peut ne pas le détecter immédiatement. Vous le verrez la prochaine fois que vous essaierez de lier un dépôt. Reconnectez-vous depuis la page **GitHub**.
+  </Accordion>
+</AccordionGroup>
+
+## Alternative : export de code
+
+Si votre plan l'inclut, vous pouvez également exporter un ZIP prêt pour Vercel depuis le bouton **Exporter**. Cela est disponible sur les plans Plus et Premium.
+
+<CardGroup cols={2}>
+  <Card title="Base de données Supabase" icon="database" href="/fr/integrations/supabase">
+    Attachez une base de données Postgres à vos applications générées.
+  </Card>
+
+  <Card title="API personnelle" icon="key" href="/fr/integrations/personal-api">
+    Accédez aux données de votre compte par programmation avec des clés API.
+  </Card>
+</CardGroup>

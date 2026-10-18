@@ -1,0 +1,234 @@
+---
+title: "Supabase 数据库"
+sidebarTitle: "Supabase"
+description: "接入您自己的 Supabase 项目，为生成的应用提供 Postgres 数据库、身份验证、存储和行级安全。"
+---
+
+在任何 Webza 套餐上，您都可以通过接入自己的 Supabase 项目，让生成的应用拥有数据库支持。您的应用将获得关系型 Postgres 表、身份验证、存储和行级安全（RLS）。AI 在构建过程中会为您定义表和身份验证流程。
+
+<Note>
+  数据库连接不适用于 WordPress 或 Shopify 主题项目。
+</Note>
+
+## 您拥有数据库
+
+Webza 采用自带数据库模式。您提供 Supabase 项目，生成的应用通过 `@supabase/supabase-js` 客户端与其通信。Webza 从不配置、托管、拥有或向您的数据库收费。
+
+- 您保存自己的 Supabase 连接库，并将其中一个附加到每个项目。
+- Webza 会在您的数据库中为每个项目创建一个专用架构，并在其中构建表。
+- Webza 从不删除您的数据，即使您删除了项目。
+
+## 工作原理
+
+<Steps>
+  <Step title="添加连接">
+    在侧边栏的**数据库**页面保存一个或多个 Supabase 连接。
+  </Step>
+  <Step title="为项目选择">
+    创建项目时从**数据库**选择器中选择一个连接。它从第一次构建开始就接入其中。
+  </Step>
+  <Step title="让 AI 构建">
+    Webza 在您的 Supabase 项目中创建一个启用 RLS 的 Postgres 架构。AI 在构建应用时会向其中添加表。
+  </Step>
+</Steps>
+
+## 添加 Supabase 连接
+
+从侧边栏打开**数据库**，然后点击**添加连接**。每个连接存储一个名称和一个 Supabase 项目的访问权限。您最多可以保存 20 个连接，并在不同项目中重复使用它们。
+
+您看到的方法取决于为您的账户启用了哪些功能。如果只有一种方法可用，**添加连接**会直接打开它。
+
+| 方法 | 所需内容 | 访问范围 |
+| --- | --- | --- |
+| **通过 Supabase 连接** | 您的 Supabase 登录信息 | 您授权的组织中的每个项目 |
+| **访问令牌** | 项目范围的访问令牌 | 仅您选择的项目 |
+| **手动** | Session pooler URI、数据库密码和 publishable key | 仅该项目 |
+
+<Tabs>
+  <Tab title="通过 Supabase 连接">
+    <Steps>
+      <Step title="开始登录">
+        在**数据库**页面上，点击**添加连接**并选择 **通过 Supabase 连接**。
+      </Step>
+      <Step title="授权 Webza">
+        在 Supabase 同意屏幕上查看权限，并授权包含您项目的组织。Supabase 将 **数据库** 列为读写，因为写入权限包含读取。
+      </Step>
+      <Step title="选择项目">
+        选择一个活跃项目并保存连接。
+      </Step>
+    </Steps>
+
+    <Warning>
+      Supabase 按组织授予访问权限，因此您授权所选组织中的每个项目。Webza 仅在您选择的项目中工作。要限制对单个项目的访问，请改用访问令牌。
+    </Warning>
+
+    OAuth 会话会自动续期，因此只要访问权限保持授予状态，您就无需再次登录。
+  </Tab>
+  <Tab title="访问令牌">
+    <Steps>
+      <Step title="在 Supabase 中创建令牌">
+        在 Supabase 中，打开 **Account → Access Tokens** 并创建一个令牌。选择 **Project access**，仅选择要连接的项目，并设置过期时间。
+      </Step>
+      <Step title="设置权限">
+        授予以下确切权限：
+
+        - **数据库**: Read-write
+        - **API 密钥**: Read
+        - **项目** (account-wide): Read
+      </Step>
+      <Step title="在 Webza 中保存">
+        打开 **数据库 → 添加连接 → 访问令牌**，粘贴令牌，然后点击 **继续**。选择您的项目并保存。Webza 会为您获取项目 URL 和 publishable key。
+      </Step>
+    </Steps>
+
+    <Note>
+      仅接受以 `sbp_fc` 开头的项目范围令牌。旧版的全账户令牌会被拒绝。已暂停或不可用的项目无法选择。
+    </Note>
+  </Tab>
+  <Tab title="手动">
+    <Steps>
+      <Step title="创建 Supabase 项目">
+        登录 [Supabase Dashboard](https://supabase.com/dashboard) 并创建一个项目。免费套餐足以开始。
+      </Step>
+      <Step title="复制 publishable key">
+        打开 **Project Settings → API Keys** 并复制 publishable key（`sb_publishable_…`）。旧项目可能会在 **Project Settings → API** 下显示旧版 `anon` 密钥，它也可以使用。
+      </Step>
+      <Step title="复制 Session pooler URI">
+        点击 Supabase 项目顶部的 **Connect**，选择 **Session pooler** 和 **URI** 类型，然后复制连接字符串。保留其中的 `[YOUR-PASSWORD]`。
+
+        ```text
+        postgresql://postgres.abcdefgh:[YOUR-PASSWORD]@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
+        ```
+      </Step>
+      <Step title="在 Webza 中保存">
+        打开 **数据库 → 添加连接 → 手动** 并填写：
+
+        - **连接名称**: 任何您能识别的名称。
+        - **连接字符串**: Session pooler URI。它必须以 `postgres://` 或 `postgresql://` 开头。不要粘贴 `psql` 命令。
+        - **数据库密码**: 您的数据库密码。Webza 会对其进行编码并替换 `[YOUR-PASSWORD]`。
+        - **可发布密钥**: 您复制的密钥。
+
+        **Supabase URL** 会从连接字符串自动填充。它必须以 `https://` 开头。
+      </Step>
+      <Step title="测试连接">
+        点击 **测试连接**。它会分别检查数据库访问权限和 publishable key。
+      </Step>
+    </Steps>
+
+    稍后编辑手动连接时，将连接字符串或 publishable key 留空会保留已存储的值。
+  </Tab>
+</Tabs>
+
+### 关闭邮件确认
+
+为了让生成的应用中的注册即时生效，请在 Supabase 中关闭邮件确认。转到 **Authentication → Sign In / Providers → Email**，关闭 **Confirm email** 并保存。
+
+<Warning>
+  除非您已在 Supabase 项目中配置 SMTP，否则保留确认开启意味着注册永远不会返回活跃会话，登录会静默失败。
+</Warning>
+
+## 将数据库附加到项目
+
+在创建页面上，打开**自定义**弹窗并从**数据库**选择器中选择一个连接。只有在保存至少一个连接后，选择器才会出现。对于静态网站，保留为 **无数据库**。
+
+要稍后附加、切换或分离数据库，请转到项目中的 **设置 → 数据库**。
+
+- 切换连接永远不会删除架构。旧架构保留在创建它的数据库中。
+- 您可以随时分离数据库。
+- 复制项目不会复制数据库连接。
+
+## 表访问模式
+
+AI 创建的每个表使用以下三种访问模式之一。该模式决定 Webza 为您编写哪些 RLS 策略，因此它是数据库支持应用中最重要的安全选择。
+
+| 模式 | 谁可以写入 | 谁可以读取 | 用于 |
+| --- | --- | --- | --- |
+| `public` | 任何人 | 任何人 | 留言簿、评论、公开评价 |
+| `private` | 该行的已登录所有者 | 该行的已登录所有者 | 待办事项、笔记、个人资料、其他用户专属数据 |
+| `submit` | 任何人 | 应用内无人 | 联系表单、咨询、等待列表、邮件订阅 |
+
+<Warning>
+  永远不要将 `public` 用于表单提交。publishable key 按设计包含在您网站的 JavaScript 中，因此任何人都可以读取和删除 `public` 表中的每一行。对于访客私密发送给您的任何内容，请使用 `submit`。
+</Warning>
+
+`submit` 表允许访客插入行，但无法从浏览器中读取、更新或删除。您的应用提交表单并显示成功消息。在您的 Supabase 仪表板中读取提交内容。
+
+您可以在提示中告诉 AI 使用哪种模式，例如："Store contact form messages in a submit table."
+
+### 更改表的模式
+
+让 AI 用不同的模式重新定义现有表。Webza 会重建表的策略以匹配新模式，并保留其数据。
+
+<Warning>
+  将 `public` 或 `submit` 表切换为 `private` 会隐藏现有行。这些行没有所有者，因此没有用户可以在应用中查看它们。数据仍在您的 Supabase 仪表板中。如果这些数据重要，请在切换前分配所有者或导出它们。
+</Warning>
+
+### 托管列
+
+每个表自动获得 `id` 和 `created_at` 列。`private` 表还会获得 `user_id` 列。不要自己定义这些列。
+
+## 您的应用获得什么
+
+- **关系型 Postgres**：真正的表、外键和 SQL 查询。
+- **行级安全**：由 Postgres 强制执行的逐行访问策略。
+- **身份验证和存储**：您的应用可以使用 Supabase Auth（邮箱和密码或提供商登录）和 Storage 存储桶。在您的 Supabase 仪表板中配置 Auth 提供商和 Storage 存储桶。
+
+每个项目获得自己的架构，名称为 `proj_` 后跟无连字符的项目 ID。例如，ID 为 `3f0c1a2b-…` 的项目使用 `proj_3f0c1a2b…`。
+
+生成的应用仅接收项目 URL、publishable key 和架构名称。Access token 和连接字符串被加密，永远不会到达浏览器。
+
+<Info>
+  删除项目、分离数据库或切换连接永远不会删除项目的架构或数据。要释放空间，请自己在 Supabase 仪表板中删除 `proj_…` 架构。
+</Info>
+
+## 管理访问权限
+
+- 一个 access token 或 Supabase 登录可以支持多个连接。重新连接 Supabase 登录会修复从它创建的每个连接。
+- 替换的 access token 仅适用于您编辑的连接。将新令牌粘贴到每个使用旧令牌的连接中。
+- 您最多可以存储 10 个令牌和登录。
+
+在 Webza 中删除连接不会撤销 Supabase 中的访问权限。要撤销访问权限：
+
+- **通过 Supabase 连接**：在您组织的 **Settings → OAuth Apps → Authorized apps** 下移除 Webza。
+- **访问令牌**：在 **Account → Access Tokens** 下删除令牌。
+
+当访问权限被撤销或令牌过期时，连接会在**数据库**页面上显示 **重新连接**，构建会报告访问权限已被撤销。重新连接会就地修复连接，因此附加的项目保留其架构。
+
+## 故障排除
+
+<AccordionGroup>
+  <Accordion title="测试连接失败">
+    - 对于手动连接，请使用 **Connect** 中的 Session pooler URI，保留 `[YOUR-PASSWORD]`，并在 **数据库密码** 字段中输入密码。
+    - 如果 publishable key 被拒绝，请从同一个 Supabase 项目中重新复制。
+    - 确保 Supabase 项目处于活跃状态，而非暂停。
+    - 如果连接显示 **重新连接**，请替换令牌或重新授权 Webza。
+  </Accordion>
+
+  <Accordion title="我的应用不显示表单提交">
+    对于 `submit` 表，这是预期行为。它们从浏览器端只能写入，因此提交永远不会出现在应用中。在您的 Supabase 仪表板中读取它们。如果您的应用似乎列出了提交内容，它显示的是示例占位行。
+  </Accordion>
+
+  <Accordion title="我的应用无法读取数据">
+    - 确认项目的 **设置 → 数据库** 中已附加连接。
+    - 确认 publishable key 通过 **测试连接**。
+    - 检查表的访问模式。除非策略允许，否则 RLS 会拒绝访问。
+  </Accordion>
+
+  <Accordion title="注册有效但登录失败">
+    在 Supabase 项目中关闭 **Confirm email**，或配置 SMTP。请参阅[关闭邮件确认](#关闭邮件确认)。
+  </Accordion>
+
+  <Accordion title="我在 Supabase 中的架构更改被还原">
+    Webza 管理哪些架构对 Supabase API 暴露。在 Supabase 仪表板中编辑 **Exposed schemas** 会被 Webza 的设置覆盖。
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/zh/integrations/github">
+    将生成的源代码自动推送到私有 GitHub 仓库。
+  </Card>
+
+  <Card title="个人 API" icon="key" href="/zh/integrations/personal-api">
+    使用 API 密钥以编程方式访问您的账户数据。
+  </Card>
+</CardGroup>

@@ -1,0 +1,83 @@
+---
+title: "Yayınlama"
+description: "Webza projenizi nasıl yayınlayacağınızı, anlık görüntüleri nasıl yöneteceğinizi ve site görünürlüğünü nasıl kontrol edeceğinizi öğrenin."
+---
+
+Yayınlama, projenizi web üzerinde canlı hale getirir. Yalnızca inşa etmek onu çevrimiçi yapmaz. Dağıtmak için **Yayınla**'ya tıklamanız gerekir.
+
+## Projenizi yayınlama
+
+<Steps>
+  <Step title="Yayınla iletişim kutusunu açın">
+    Editör araç çubuğunda **Yayınla**'ya tıklayın.
+  </Step>
+  <Step title="Alt alan adı seçin">
+    `*.webza.ai` adresiniz için istediğiniz adı girin. Webza, yazarken kullanılabilirliği kontrol eder ve proje adınızdan kısa bir ad önerir. Bazı adlar ayrılmıştır ve reddedilecektir.
+  </Step>
+  <Step title="Görünürlüğü ayarlayın">
+    **Herkese Açık** seçin, böylece URL'ye sahip olan herkes siteyi görüntüleyebilir; veya **Özel** seçin, böylece yalnızca o tarayıcıda Webza'ya oturum açmış siz görüntüleyebilirsiniz. Diğer herkes erişimi reddedilir.
+
+    <Note>
+      Özel görünürlük bir plan özelliğidir. Planınız bunu içermiyorsa, seçenek "Özel görünürlüğün kilidini açmak için yükseltin" yazısıyla kilitli olarak gösterilir.
+
+      {/* TODO: confirm which Webza plans include private visibility */}
+    </Note>
+  </Step>
+  <Step title="Onaylayın ve yayınlayın">
+    **Yayınla**'ya tıklayın. Webza önce bir anlık görüntü yakalar, ardından siteyi dağıtır.
+  </Step>
+</Steps>
+
+Yayınlandıktan sonra araç çubuğu butonu **Yayınlandı** olarak görünür. Üzerine tıklamak, ayarları değiştirmek veya siteyi çevrimdışı almak için iletişim kutusunu yeniden açar.
+
+## Değişikliklerden sonra yeniden yayınlama
+
+Canlı siteniz inşa ettiğinizde otomatik olarak güncellenmez. En son değişikliklerin canlıya geçmesini istediğinizde yeniden yayınlayın. Her yeniden yayınlama yeni bir anlık görüntü yakalar.
+
+## Yayınlama anlık görüntüleri
+
+Her yayınlama, Yayınla iletişim kutusundaki **Önceki sürümler** altında listelenen bir **Yayın öncesi anlık görüntü** oluşturur. Proje başına yalnızca en son beş anlık görüntü tutulur.
+
+Geri alma, yayınlanan önizleme çıktısını geri yükler, proje kaynağını değil. Bir sonraki inşa yine mevcut kaynağınızdan yeniden oluşturulur. Gerçek kod değişikliklerini geri almak için **Geri al** veya **Revizyon geçmişi** kullanın. Detaylar için bkz. [Önizleme](/tr/preview).
+
+## Özel alan adları
+
+Projeniz yayınlandıktan sonra, kendi alan adınızı ona yönlendirebilirsiniz. Plus planlar 1 özel alan adı içerir; Premium planlar 3 özel alan adı içerir. Kurulum adımları için bkz. [Özel alan adları](/tr/custom-domains).
+
+Proje yayınlanmış kalması gerekir. Yayınlamayı kaldırmak, özel alan adını da çevrimdışı alır.
+
+## Paylaşım görüntüsü
+
+Sitenizi sosyal platformlarda paylaşmadan önce, **Ayarlar** → **Genel** bölümünde bir paylaşım görüntüsü ayarlayın. Detaylar için bkz. [Ayarlar](/tr/settings).
+
+## WordPress ve Shopify temaları
+
+WordPress ve Shopify teması projeleri Webza tarafından barındırılmaz. Tema `.zip` dosyasını dışa aktarın ve kendi WordPress sitenize veya Shopify mağazanıza kurun. WordPress temaları için **Alan adları** sekmesi hiç gösterilmez.
+
+## Yayınlamayı kaldırma
+
+Bir siteyi çevrimdışı almak için Yayınla iletişim kutusunu açın ve yayınlamayı kaldırın. Bu, canlı siteyi ve ilişkili özel alan adını webden kaldırır.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Canlıya geçin</span>
+    <span className="wz-ad-title">Siteniz, webza.ai üzerinde canlı</span>
+    <span className="wz-ad-text">Bir site oluşturun ve kendi webza.ai adresinizde canlı hale getirin. Bugün dünyayla paylaşın.</span>
+  </span>
+
+  <span className="wz-ad-btn">Ücretsiz başlayın <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Özel alan adları" icon="globe" href="/tr/custom-domains">
+    Yayınlanan bir projeye kendi alan adınızı yönlendirin.
+  </Card>
+
+  <Card title="Ayarlar" icon="sliders" href="/tr/settings">
+    Paylaşım görüntünüzü ve diğer proje seçeneklerini yapılandırın.
+  </Card>
+</CardGroup>

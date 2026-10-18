@@ -1,0 +1,93 @@
+---
+title: "Crédits et utilisation"
+description: "Comprenez comment fonctionnent les crédits de construction Webza, surveillez votre solde et apprenez quand les crédits sont dépensés ou remboursés."
+---
+
+Les crédits de construction alimentent chaque génération IA dans Webza. Chaque forfait inclut une allocation fixe, et vous pouvez acheter des packs supplémentaires si vous en manquez en milieu de mois.
+
+## Comment fonctionnent les crédits
+
+Les crédits sont consommés en fonction de l'utilisation des tokens IA. Chaque génération, modification et appel de construction coûte un petit nombre de tokens, qui sont déduits de votre solde en temps réel.
+
+Votre forfait détermine votre allocation mensuelle :
+
+| Forfait | Allocation mensuelle | Facturation |
+| --- | --- | --- |
+| Free | 2 000 000 crédits (une seule fois) | Aucun abonnement |
+| Plus | 7 000 000 crédits par mois | 19,99 \$/mois |
+| Premium | 20 000 000 crédits par mois | 49,99 \$/mois |
+
+{/* TODO: confirm whether unused monthly credits roll over to the next month. */}
+
+## Vérifier votre solde
+
+Vos crédits restants apparaissent dans la barre supérieure du tableau de bord, par exemple **20 000 000 / 20 000 000 crédits**.
+
+L'en-tête du chat affiche également un indicateur de crédits :
+
+- **Couleur par défaut** quand il reste plus de 20 % de votre solde.
+- **Jaune** quand votre solde est entre 5 % et 20 %. Un lien **Acheter des crédits** apparaît pour vous permettre de recharger rapidement.
+- **Rouge** quand votre solde est à 5 % ou moins.
+- **"Utilisation de votre clé API"** quand vous construisez avec votre propre clé au lieu des crédits Webza.
+
+## Acheter des crédits supplémentaires
+
+Si vous manquez de crédits avant votre prochain cycle de facturation, ouvrez **Facturation** → **Utilisation** et cliquez sur **Acheter des crédits**. Vous pouvez acheter un pack de crédits ponctuel avec le même mode de paiement que celui utilisé pour votre abonnement. Les crédits sont ajoutés à votre solde dès que le paiement est finalisé.
+
+Les packs de crédits ne se renouvellent pas automatiquement, et ils ne modifient pas l'allocation mensuelle de votre forfait. Les tailles et prix des packs peuvent varier selon le forfait.
+
+{/* TODO: confirm exact pack sizes and prices for Webza plans. */}
+
+## Utiliser votre propre clé API
+
+Les forfaits Plus et Premium vous permettent d'ajouter votre propre clé API de fournisseur IA. Quand vous construisez avec votre propre clé, l'utilisation est toujours mesurée dans Webza mais elle n'est pas déduite de vos crédits de forfait. Vous êtes facturé directement par votre fournisseur.
+
+Pour configurer cela, allez dans [Paramètres](/fr/settings) → **Paramètres IA** et collez votre clé API.
+
+## Quand les crédits sont dépensés
+
+Les crédits sont consommés lors de :
+
+- Retheming de design
+- Actions **Tout enregistrer** depuis l'inspecteur
+- Toute construction ou génération IA
+
+Les crédits ne sont **pas** consommés quand vous posez des questions ou attendez la réponse de l'IA. Seule l'exécution réelle de la construction coûte des crédits.
+
+## Correction gratuite
+
+Si une exécution échoue à cause d'une erreur IA ou d'un problème de plateforme, vous n'êtes pas facturé pour cette exécution. Les exécutions que vous annulez, ou celles qui s'arrêtent parce que vous avez manqué de crédits, sont toujours facturées.
+
+Quand une exécution n'est pas facturée, elle apparaît dans **Facturation** → **Utilisation** comme **Non facturé** avec une courte raison. Ces exécutions non facturées ne comptent pas dans vos crédits utilisés.
+
+Si une exécution échoue, vous pouvez cliquer sur **Corriger gratuitement** pour réessayer une fois dans les 24 heures sans frais. Il existe une limite quotidienne pour les réessais gratuits (la valeur par défaut est de 5 par 24 heures).
+
+{/* TODO: confirm Webza's exact daily limit for Fix for free retries. */}
+
+## Statistiques d'utilisation
+
+Ouvrez **Facturation** → **Utilisation** pour voir un détail complet de votre consommation de crédits :
+
+- Utilisation par projet
+- Utilisation par modèle IA
+- Exécutions non facturées et raisons
+
+Cela vous aide à identifier quels projets ou modèles consomment le plus de crédits.
+
+## Images IA
+
+Votre forfait peut inclure une allocation mensuelle d'images générées par IA. La limite actuelle est affichée sur la carte **Forfait actuel** dans la page **Utilisation**.
+
+{/* TODO: confirm AI image allowances for each Webza plan. */}
+
+## Pages connexes
+
+<CardGroup cols={2}>
+  <Card title="Factures et paiement" icon="receipt" href="/fr/invoices-and-billing">
+    Consultez les paiements, les factures et l'historique des transactions.
+  </Card>
+
+  <Card title="Chat de projet" icon="message" href="/fr/project-chat">
+    Découvrez comment fonctionnent les constructions et les réessais dans le chat.
+  </Card>
+</CardGroup>

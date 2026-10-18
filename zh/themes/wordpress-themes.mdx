@@ -1,0 +1,139 @@
+---
+title: "WordPress 主题"
+sidebarTitle: "WordPress 主题"
+description: "使用 Webza 生成可安装的 WordPress 块主题，在浏览器内的 WordPress Playground 中预览它们，并将其安装到 WordPress 6.7 或更新版本上。"
+---
+
+从您用于构建网站的同一个聊天中生成可安装的 WordPress 全站编辑（FSE）块主题。在浏览器中实时预览，将其下载为 `.zip` 文件，并安装到任何运行 6.7 或更新版本的 WordPress 网站上。
+
+<Note>
+  WordPress 主题在 Plus 和 Premium 套餐上可用。
+</Note>
+
+## 您会得到什么
+
+WordPress 主题项目生成的是块主题，而不是网站。主题包括：
+
+- 包含设计系统颜色、字体和间距的 `theme.json`
+- 块模板和模板部件
+- 样式模式
+- 样式
+
+Webza 在每次构建时检查主题的结构和 PHP 语法，因此下载的主题可以直接安装。
+
+## 创建 WordPress 主题项目
+
+在仪表盘上，提示框旁边会出现一个输出选择器：
+
+| 输出 | 结果 |
+| --- | --- |
+| **网站** | 默认。可以发布到子域名或自定义域名的网站。 |
+| **WordPress 主题** | 可安装的 FSE 块主题。 |
+
+选择 **WordPress 主题**，输入您的提示，然后启动项目。输出类型在创建项目时设置，之后无法更改。
+
+<Tip>
+  您也可以从 WordPress 模板开始。为 WordPress 构建的模板会显示在网站模板旁边。
+</Tip>
+
+## 预览您的主题
+
+Webza 在 WordPress Playground 中预览主题：一个运行在您浏览器中的真实 WordPress 实例，您的主题已安装并激活。您不需要服务器或托管即可查看结果。
+
+Playground 有自己的重新加载控制。因为它启动了一个完整的 WordPress 实例，首次加载和预览更新可能需要一些时间。
+
+<Warning>
+  Playground 是预览环境，不是托管环境。其中的所有内容都存在于您的浏览器标签页中，关闭后就会消失。要使用主题，请下载 `.zip` 文件并将其安装到您的 WordPress 网站上。
+</Warning>
+
+## 编辑和迭代
+
+撤销、重做和修订历史对主题项目的工作方式与网站相同。当您恢复某个修订版本时，Playground 预览会重新启动并加载恢复后的主题，您可以从此处继续编辑。
+
+## 下载和安装
+
+<Steps>
+  <Step title="下载主题">
+    在 Webza 编辑器中打开项目，然后点击**下载主题**。`.zip` 文件以您的项目名称命名。
+  </Step>
+  <Step title="上传到 WordPress">
+    在您的 WordPress 后台中，转到 **Appearance → Themes → Add New**，然后点击 **Upload Theme**。选择下载的 `.zip` 文件，然后点击 **Install Now**。
+  </Step>
+  <Step title="激活">
+    安装完成后，点击 **Activate** 将主题应用到您的网站。
+  </Step>
+</Steps>
+
+<Tip>
+  保留下载的文件名。WordPress 使用 `.zip` 名称作为主题的文件夹名称。
+</Tip>
+
+### 要求
+
+- **WordPress 6.7 或更新版本。** 旧版本可能拒绝安装或错误显示模板。
+- 您的 WordPress 服务器上的 **PHP 7.4 或更新版本**。
+
+## 主题项目无法做到的事
+
+主题是可下载的文件，不是托管网站，因此某些网站功能不可用：
+
+- **发布和自定义域名**：Webza 不托管主题项目，因此**域名**标签页永远不会显示。
+- **GitHub 和 Supabase**：主题项目不可用。
+- **设计模式**：创建时选择的设计系统会内置到 `theme.json` 中。
+- **AI 生成的图片**：仅适用于网站项目。
+- **分析**：分析卡片被隐藏。直接在您的 WordPress 网站中添加跟踪。
+
+在编辑器中，**导出**按钮被替换为**下载主题**。
+
+## 更改套餐
+
+如果您从 Plus 或 Premium 切换到不包含 WordPress 主题的套餐，您仍然可以下载现有主题，但主题项目上的新构建会被阻止。再次升级即可继续编辑它们。
+
+## 复制主题项目
+
+复制的 WordPress 主题项目会保留 WordPress 输出类型。
+
+## 故障排除
+
+<AccordionGroup>
+  <Accordion title="我看不到 WordPress 主题选项">
+    WordPress 主题仅在 Plus 和 Premium 套餐上可用。在其他套餐上，选择器会被隐藏。
+  </Accordion>
+
+  <Accordion title="我的主题项目上的构建被拒绝">
+    您当前的套餐不包含 WordPress 主题。升级到 Plus 或 Premium 以继续构建。在此期间，您的项目和可下载主题保持原样。
+  </Accordion>
+
+  <Accordion title='预览卡在 "Installing your theme…" 上'>
+    - 稍等片刻。首次加载会将完整的 WordPress 下载到您的浏览器中，在某些连接上可能较慢。
+    - 严格的公司网络、VPN 或浏览器扩展程序可能会阻止预览或 WebAssembly。尝试其他网络或禁用扩展程序。
+    - 检查浏览器控制台中是否有被阻止的请求。
+
+    **下载主题**按钮仍然可用，因此您始终可以将主题安装到自己的 WordPress 网站上。
+  </Accordion>
+
+  <Accordion title="WordPress 无法安装主题">
+    将 WordPress 更新到 6.7 或更新版本，并确保您上传的是从**下载主题**下载的 `.zip` 文件，且未解压。
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=wordpress-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">用 AI 构建您的 WordPress 主题</span>
+    <span className="wz-ad-text">描述您想要的主题，几分钟内即可获得可安装的块主题，准备好上传到任何 WordPress 网站。</span>
+  </span>
+
+  <span className="wz-ad-btn">创建 WordPress 主题 <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Shopify 主题" icon="shopify" href="/zh/themes/shopify-themes">
+    了解如何生成和安装 Shopify Online Store 2.0 主题。
+  </Card>
+
+  <Card title="订阅套餐" icon="credit-card" href="/zh/subscription-plans">
+    比较套餐并查看您的套餐包含哪些功能。
+  </Card>
+</CardGroup>

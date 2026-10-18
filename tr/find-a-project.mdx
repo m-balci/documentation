@@ -1,0 +1,76 @@
+---
+title: "Proje bul"
+description: "Tüm Webza projelerinizi tek bir görünümden göz atın, favori yapın, kopyalayın ve yönetin."
+---
+
+Kenar çubuğundan (**Projeler** altında) **Tüm projeler**'i açarak üzerinde çalıştığınız her projeyi, durumunu ve nereden devam edeceğinizi görün. Bu görünümde aynı zamanda bir **Yeni proje** düğmesi bulunur.
+
+## Proje sekmeleri
+
+Projeleriniz üç sekme halinde, her biri bir sayaçla düzenlenir:
+
+| Sekme | Ne gösterir |
+| --- | --- |
+| **Tümü** | Üzerinde çalıştığınız her proje |
+| **Favoriler** | Satırlarından yıldızlayarak buraya sabitlediğiniz projeler (bu yalnızca bir filtre, projeyi değiştirmez) |
+| **Çöp kutusu** | Kurtarma penceresinde tutulan silinmiş projeler |
+
+{/* TODO: confirm whether All Projects has a search box or sorting */}
+
+## Bir projeyi favori yapma
+
+Herhangi bir proje satırındaki yıldız simgesini tıklayarak **Favoriler** sekmesine sabitleyin. Bu yalnızca bir filtredir. Proje ayarlarını, görünürlüğünü veya davranışını değiştirmez.
+
+## Çöp ve kurtarma
+
+Silinmiş projeler **Çöp kutusu** sekmesine gider. Her satır **Geri yükle** veya **Kalıcı olarak sil** sunar.
+
+<Warning>
+  Çöp kendini boşaltır. Çöpteki projeler, bekletme süresi sonunda (varsayılan 90 gün) dosyaları, önizlemeleri ve anlık görüntüleriyle birlikte kalıcı olarak kaldırılır. Kalıcı silme, manuel veya otomatik, geri alınamaz.
+</Warning>
+
+Bir projeyi silmek, alt alan adını ve özel alan adını yeniden kullanılmak üzere serbest bırakır.
+
+{/* TODO: confirm Webza's trash retention period */}
+
+## Bir projeyi kopyalama
+
+Herhangi bir proje satırındaki eylem menüsünü açın ve **Çoğalt**'ı seçerek "original (Copy)" adında bir kopya oluşturun.
+
+### Neler kopyalanır
+
+- Ad ve açıklama
+- Orijinal istem
+- Şablon ve çıktı türü (web sitesi, WordPress teması, Shopify teması)
+- Tam konuşma geçmişi ve özel talimatlar
+- Tasarım sistemi ve vurgu
+- Yayınlanmış başlık, açıklama ve public/private görünürlük
+
+### Neler kopyalanmaz
+
+Kopya, yeni, yayınlanmamış bir proje olarak başlar:
+
+- Alt alan adı veya özel alan adı yok
+- Paylaşım görseli yok
+- Oluşturma geçmişi veya depolama kullanımı yok
+- Küçük resim yok
+- Analitik kimlikleri yok
+- Yeni bir API tokeni
+- Orijinalin hiçbir Supabase veya GitHub bağlantısı
+
+Bir kopya, canlı bir sitenin klonu değil, yeni bir başlangıçtır. Orijinalin alan adında yanıt vermez. Ayrı olarak yayınlayın ve bağlantıları yeniden ekleyin. Bunun nedeni, bir alt alan adının yalnızca bir projeye ait olması ve bir API tokeni veya depo paylaşmanın bir projenin diğerinin dosyalarının üzerine yazmasına izin vermesidir.
+
+## Proje limitleri
+
+- **Free** ve **Plus** planlar 1 proje içerir.
+- **Premium** sınırsız proje içerir.
+
+{/* TODO: confirm whether duplicates and trashed projects count toward the project limit */}
+
+<CardGroup cols={2}>
+  <Card title="Proje sohbeti" icon="message" href="/tr/project-chat">
+  </Card>
+
+  <Card title="Yayınla" icon="globe" href="/tr/publish">
+  </Card>
+</CardGroup>

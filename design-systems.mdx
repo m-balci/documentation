@@ -1,0 +1,130 @@
+---
+title: "Design systems"
+sidebarTitle: "Design systems"
+description: "Learn how Webza design systems control the look of your site, which design systems are available, and how to switch them from the editor."
+---
+
+A design system is the visual identity of your site. It bundles design tokens (colors, typography, spacing, radius, and shadows), a set of named accent palettes, web fonts, and a playbook that tells the AI how to apply the look.
+
+A [template](/templates) controls structure: which pages and components your site has. A design system controls the look. Webza combines the two, so any design system can pair with any template, and the same template can take on many different looks.
+
+<Info>
+  Design systems are available on every plan. Automatic selection, manual selection, and Design mode work the same on Free, Plus, and Premium.
+</Info>
+
+## How it works
+
+When Webza builds your project, it starts from the template and layers the design system on top:
+
+1. The template supplies the page structure and components.
+2. The design system's base tokens, your chosen accent palette, and its web fonts are applied.
+3. Some design systems include their own versions of specific components, which replace or refine the template's components.
+4. The AI follows the design system's playbook and adjusts the generated code to match the look. For example, it replaces hardcoded colors so they follow the active tokens and accent.
+
+Each playbook also sets one consistent motion style for the whole site, so animations feel the same from section to section.
+
+The overlay is predictable. Picking a different design system or accent changes the look without changing your site's structure.
+
+## Substrate (the default)
+
+Substrate is Webza's default design system. It is a warm, neutral, premium house style that pairs **Geist** for UI and body text with the **Newsreader** serif for editorial accents. It uses a 10px corner radius and soft, layered shadows.
+
+Substrate has six accent palettes:
+
+| Accent | Notes |
+| --- | --- |
+| indigo | Default accent |
+| terracotta | Warm, earthy accent |
+| blue | Cool, classic accent |
+| emerald | Green accent |
+| ruby | Bold red accent |
+| mono | Neutral, monochrome accent |
+
+## Premium design systems
+
+Beyond Substrate, Webza offers ten premium design systems. Each one is a complete look of its own, with its own typography, colors, shadows, and personality.
+
+| Design system | Personality |
+| --- | --- |
+| Aperture | Crisp, cool, architectural SaaS. Precise and confident. |
+| Atrium | Trustworthy enterprise SaaS. Calm, credible, dashboard-grade. |
+| Bloom | Playful and joyful. Chunky, rounded, with cheerful candy accents. |
+| Botanica | Warm, organic, editorial wellness. Calm and premium. |
+| Carbon | Sleek developer tool. Dark-first, technical, terminal green. |
+| Halcyon | Serene, airy, dreamy pastel. Weightless and tranquil. |
+| Lumen | Vibrant modern fintech glow. Luminous, gradient, glassmorphic. |
+| Monolith | Bold brutalist Swiss editorial. Loud, graphic, high-contrast. |
+| Noir | Dark luxe and cinematic. Expensive, restrained, metallic accent. |
+| Sandstone | Warm, minimal, editorial. Literary minimalism with soul. |
+
+Premium design systems appear everywhere Substrate does: the design system picker in **Customize**, **Automatic** selection, and the editor's Design mode. New design systems are added over time.
+
+<Tip>
+  Many design systems include a styleguide preview: a page that shows their typography, colors, buttons, and components. Open it from the design system picker or the editor's Design panel to see a look before you apply it.
+</Tip>
+
+## Choose a design system
+
+A design system and accent are chosen in one of three ways.
+
+### Automatic (default)
+
+When you create a project, the design system picker in the **Customize** popover is set to **Automatic**. On the first build, AI picks the design system and accent that best fit your prompt and saves that choice to the project.
+
+### Manual
+
+Instead of **Automatic**, pick a specific design system in the **Customize** popover. You can also choose one of its accent palettes or keep its default accent. Every build of the project then uses that look.
+
+### Re-theme in the editor
+
+You can switch the design system or accent of a built website project at any time from the editor.
+
+<Steps>
+  <Step title="Open the Design panel">
+    In the editor, switch to Design mode. The **Design** panel opens beside the preview.
+  </Step>
+  <Step title="Pick a design system and accent">
+    Choose a new design system and, optionally, an accent palette. Open its styleguide preview first if you want to compare looks.
+  </Step>
+  <Step title="Click Ask AI to apply">
+    Webza applies the new tokens and accent and rebuilds your site. The preview reloads, and the AI then adjusts any hardcoded colors so the whole site matches the new look.
+  </Step>
+</Steps>
+
+A re-theme uses credits like a chat request. You can't apply a re-theme while another build is running.
+
+<Note>
+  Design mode is available for website projects only. It is hidden for [WordPress](/themes/wordpress-themes) and [Shopify](/themes/shopify-themes) theme projects. They still use the design system chosen when you created them, but you can't switch it from the editor.
+</Note>
+
+## Undo a re-theme
+
+A re-theme counts as one step in Undo and Redo, and it creates a checkpoint in Revision History. You can revert it later from the preview. See [Preview](/preview).
+
+## Duplicate a project
+
+When you duplicate a project, its design system and accent are copied to the new project.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=design-systems" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Every plan</span>
+    <span className="wz-ad-title">Find your look in seconds</span>
+    <span className="wz-ad-text">Design systems are included on every plan. Start a project, pick a style, and switch it anytime.</span>
+  </span>
+
+  <span className="wz-ad-btn">Try design systems <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Templates" icon="table-cells-large" href="/templates">
+    Pick a starting structure for your project.
+  </Card>
+
+  <Card title="Preview" icon="eye" href="/preview">
+    Preview your site and manage revision history.
+  </Card>
+</CardGroup>

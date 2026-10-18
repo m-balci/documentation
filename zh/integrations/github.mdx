@@ -1,0 +1,139 @@
+---
+title: "GitHub"
+sidebarTitle: "GitHub"
+description: "连接您的 GitHub 账户，让 Webza 在每次构建后将项目源代码推送到您拥有的私有仓库。"
+---
+
+在任何 Webza 套餐上，您都可以连接 GitHub 账户，让 Webza 在每次成功构建后将项目源代码推送到您账户中的仓库。代码由您掌控，您无需离开 Webza 即可保持其最新状态。
+
+<Note>
+  GitHub 集成不适用于 WordPress 或 Shopify 主题项目。
+</Note>
+
+## 工作原理
+
+<Steps>
+  <Step title="连接您的 GitHub 账户">
+    在您的账户或组织上安装 Webza GitHub App，并在 Webza 中关联它。
+  </Step>
+  <Step title="为项目选择账户">
+    创建项目时选择 GitHub 连接。Webza 会为其创建一个新的私有仓库。
+  </Step>
+  <Step title="构建">
+    每次成功构建后，AI 会推送项目源代码并附带自动生成的提交信息。
+  </Step>
+</Steps>
+
+<Info>
+  Webza 只推送到您的仓库。它从不克隆、拉取或根据仓库内容构建。仓库是输出，不是输入。
+</Info>
+
+## 连接您的 GitHub 账户
+
+<Steps>
+  <Step title="在侧边栏中打开 GitHub">
+    点击侧边栏中的 **GitHub**，然后点击 **连接 GitHub**。
+  </Step>
+  <Step title="安装 Webza 应用">
+    GitHub 会要求您安装 Webza 应用。选择是授予对所有仓库的访问权限还是仅对选定仓库的访问权限。
+  </Step>
+  <Step title="返回 Webza">
+    您会被重定向回 Webza，连接已保存。
+  </Step>
+</Steps>
+
+您可以关联多个个人账户或组织，最多 20 个连接。
+
+## 将仓库连接到项目
+
+创建项目时，点击仪表盘提示框上的**自定义**，然后选择**集成**并选择一个 GitHub 连接。Webza 会自动创建仓库。
+
+对于现有项目，转到**设置 → 常规**并找到 **GitHub 仓库** 部分。从那里您可以：
+
+- 创建一个新的私有仓库。
+- 通过输入所有者和仓库名称来附加现有仓库。
+- 切换到不同的仓库或取消关联。
+- 打开或关闭 **自动推送**。
+
+<Warning>
+  现有仓库必须为空。附加已包含代码的仓库会失败并显示 "That repository already contains code"，因为 Webza 否则会覆盖它无法看到的工作。
+</Warning>
+
+复制项目不会复制 GitHub 连接。跨项目共享一个仓库会导致一个项目覆盖另一个项目的文件，因此每个项目都需要自己的链接。
+
+## 按需推送
+
+关闭 **自动推送** 并不意味着您必须手动推送。在项目聊天中询问 AI，例如 "Push this to GitHub"，它会运行一次一次性推送，不受开关状态影响。
+
+<Tip>
+  如果您想在每次提交前审查更改，请关闭自动推送，然后在准备好后让 AI 推送。
+</Tip>
+
+## 推送内容
+
+Webza 推送的是开发者希望阅读的项目源代码，而不是工作区的完整副本。依赖项、构建输出和任何看起来像凭据的内容都会被排除，因此机密不会发布到您的仓库。
+
+## 在 Webza 外部编辑仓库
+
+推送永远不会强制进行。如果有人通过 Webza 外部的方式向仓库提交代码，下一次推送会被跳过，以免您的更改丢失。
+
+<Warning>
+  此后，您的仓库和 Webza 项目将不同步。Webza 不会将外部更改合并回项目中，并且对该分支的后续推送会被跳过。
+</Warning>
+
+## 安全
+
+- 您的 GitHub 令牌以加密形式存储，不会包含在任何 API 响应中。
+- 每次推送使用一个仅持续一小时且仅对该仓库有效的新令牌。
+
+## 连接状态
+
+**GitHub** 页面上的每个连接显示以下三种状态之一：
+
+| 状态 | 含义 | 操作 |
+| --- | --- | --- |
+| **活跃** | 正常工作 | 无需操作 |
+| **需要重新连接** | 您移除了 Webza 的授权但保留了应用安装。推送仍然有效，但您无法将仓库关联到新项目。 | 点击 **重新连接** |
+| **已撤销** | 应用已被卸载或暂停。一切停止工作。 | 点击 **重新连接** |
+
+## 移除访问权限
+
+在**设置 → 常规**中取消仓库与项目的关联。不会从您的 GitHub 账户中删除任何内容。
+
+要完全撤销 Webza 的访问权限，请从您的 GitHub 设置中卸载 Webza 应用。您的仓库及其内容会保留在您的账户中。
+
+## 故障排除
+
+<AccordionGroup>
+  <Accordion title="推送已停止">
+    - 有人可能通过 Webza 外部的方式向仓库提交了代码。推送被跳过以保护这些更改。
+    - Webza 应用可能已从您的 GitHub 账户中卸载。检查 **GitHub** 页面上的连接状态并重新连接。
+    - 检查项目**设置 → 常规**中的 **自动推送** 是否已开启。
+  </Accordion>
+
+  <Accordion title="我无法附加现有仓库">
+    仓库必须为空。在 GitHub 上创建一个新的空仓库，或让 Webza 为您创建。
+  </Accordion>
+
+  <Accordion title="Webza 看不到我的仓库">
+    如果您仅授予了对选定仓库的访问权限，请在 GitHub 设置中将该仓库添加到 Webza 应用的访问列表中。
+  </Accordion>
+
+  <Accordion title="组织连接停止工作">
+    如果组织连接的授权被移除，Webza 可能不会立即检测到。下次您尝试关联仓库时会看到提示。从 **GitHub** 页面**重新连接**。
+  </Accordion>
+</AccordionGroup>
+
+## 替代方案：代码导出
+
+如果您的套餐包含此功能，您还可以从**导出**按钮导出 Vercel 就绪的 ZIP 文件。这在 Plus 和 Premium 套餐上可用。
+
+<CardGroup cols={2}>
+  <Card title="Supabase 数据库" icon="database" href="/zh/integrations/supabase">
+    为生成的应用附加 Postgres 数据库。
+  </Card>
+
+  <Card title="个人 API" icon="key" href="/zh/integrations/personal-api">
+    使用 API 密钥以编程方式访问您的账户数据。
+  </Card>
+</CardGroup>

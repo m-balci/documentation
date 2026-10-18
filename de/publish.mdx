@@ -1,0 +1,83 @@
+---
+title: "Veröffentlichen"
+description: "Erfahren Sie, wie Sie Ihr Webza-Projekt veröffentlichen, Snapshots verwalten und die Sichtbarkeit Ihrer Seite steuern."
+---
+
+Das Veröffentlichen bringt Ihr Projekt ins Web. Allein das Bauen stellt es nicht online. Sie müssen auf **Veröffentlichen** klicken, um es bereitzustellen.
+
+## Veröffentlichen Sie Ihr Projekt
+
+<Steps>
+  <Step title="Öffnen Sie den Veröffentlichen-Dialog">
+    Klicken Sie in der Editor-Symbolleiste auf **Veröffentlichen**.
+  </Step>
+  <Step title="Wählen Sie eine Subdomain">
+    Geben Sie den Namen ein, den Sie für Ihre `*.webza.ai`-Adresse wünschen. Webza prüft die Verfügbarkeit während der Eingabe und schlägt einen kurzen Namen basierend auf Ihrem Projektnamen vor. Einige Namen sind reserviert und werden abgelehnt.
+  </Step>
+  <Step title="Sichtbarkeit festlegen">
+    Wählen Sie **Öffentlich**, damit jeder mit der URL die Seite ansehen kann, oder **Privat**, damit nur Sie sie ansehen können, während Sie in diesem Browser bei Webza angemeldet sind. Alle anderen erhalten keinen Zugriff.
+
+    <Note>
+      Private Sichtbarkeit ist eine Tarif-Funktion. Wenn Ihr Tarif sie nicht beinhaltet, wird die Option gesperrt mit „Tarif upgraden, um private Sichtbarkeit freizuschalten.“ angezeigt.
+
+      {/* TODO: confirm which Webza plans include private visibility */}
+    </Note>
+  </Step>
+  <Step title="Bestätigen und veröffentlichen">
+    Klicken Sie auf **Veröffentlichen**. Webza erstellt zuerst einen Snapshot und stellt dann die Seite bereit.
+  </Step>
+</Steps>
+
+Nach der Veröffentlichung zeigt die Schaltfläche in der Symbolleiste **Veröffentlicht**. Ein Klick darauf öffnet den Dialog erneut, damit Sie Einstellungen ändern oder die Seite offline nehmen können.
+
+## Neu veröffentlichen nach Änderungen
+
+Ihre Live-Seite aktualisiert sich nicht automatisch, wenn Sie bauen. Veröffentlichen Sie erneut, wann immer Sie möchten, dass die neuesten Änderungen live gehen. Jede Neuveröffentlichung erstellt einen neuen Snapshot.
+
+## Veröffentlichen-Snapshots
+
+Jede Veröffentlichung erstellt einen **Vorab-Snapshot**, der unter **Vorherige Versionen** im Veröffentlichen-Dialog aufgeführt wird. Es werden nur die fünf neuesten Snapshots pro Projekt aufbewahrt.
+
+Ein Rollback stellt die veröffentlichte Vorschau-Ausgabe wieder her, nicht den Projektquellcode. Der nächste Build generiert weiterhin aus Ihrem aktuellen Quellcode. Um tatsächliche Code-Änderungen rückgängig zu machen, verwenden Sie **Rückgängig** oder **Revisionsverlauf**. Siehe [Vorschau](/de/preview) für Details.
+
+## Eigene Domains
+
+Sobald Ihr Projekt veröffentlicht ist, können Sie Ihre eigene Domain darauf verweisen. Plus-Tarife beinhalten 1 eigene Domain; Premium-Tarife beinhalten 3. Siehe [Eigene Domains](/de/custom-domains) für Einrichtungsschritte.
+
+Das Projekt muss veröffentlicht bleiben. Das Zurücknehmen der Veröffentlichung nimmt auch die eigene Domain offline.
+
+## Share-Bild
+
+Bevor Sie Ihre Seite auf sozialen Plattformen teilen, setzen Sie ein Share-Bild in **Einstellungen** → **Allgemein**. Siehe [Einstellungen](/de/settings).
+
+## WordPress und Shopify Themes
+
+WordPress- und Shopify-Theme-Projekte werden nicht von Webza gehostet. Sie exportieren das Theme als `.zip` und installieren es auf Ihrer eigenen WordPress-Seite oder in Ihrem Shopify-Store. Die Registerkarte **Domains** wird für WordPress-Themes niemals angezeigt.
+
+## Veröffentlichung zurücknehmen
+
+Um eine Seite offline zu nehmen, öffnen Sie den Veröffentlichen-Dialog und nehmen Sie die Veröffentlichung zurück. Dadurch wird die Live-Seite und jede zugehörige eigene Domain aus dem Web entfernt.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Go live</span>
+    <span className="wz-ad-title">Your site, live on webza.ai</span>
+    <span className="wz-ad-text">Build a site and put it live on your own webza.ai address. Share it with the world today.</span>
+  </span>
+
+  <span className="wz-ad-btn">Start building free <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Eigene Domains" icon="globe" href="/de/custom-domains">
+    Verweisen Sie Ihre eigene Domain auf ein veröffentlichtes Projekt.
+  </Card>
+
+  <Card title="Einstellungen" icon="sliders" href="/de/settings">
+    Konfigurieren Sie Ihr Share-Bild und andere Projektoptionen.
+  </Card>
+</CardGroup>

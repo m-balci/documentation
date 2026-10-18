@@ -1,0 +1,130 @@
+---
+title: "Sistemas de diseño"
+sidebarTitle: "Sistemas de diseño"
+description: "Aprende cómo los sistemas de diseño de Webza controlan la apariencia de tu sitio, qué sistemas de diseño están disponibles y cómo cambiarlos desde el editor."
+---
+
+Un sistema de diseño es la identidad visual de tu sitio. Agrupa tokens de diseño (colores, tipografía, espaciado, radio y sombras), un conjunto de paletas de acento nombradas, fuentes web y un manual que le indica a la IA cómo aplicar la apariencia.
+
+Una [plantilla](/es/templates) controla la estructura: qué páginas y componentes tiene tu sitio. Un sistema de diseño controla la apariencia. Webza combina ambos, por lo que cualquier sistema de diseño puede emparejarse con cualquier plantilla, y la misma plantilla puede adoptar muchas apariencias diferentes.
+
+<Info>
+  Los sistemas de diseño están disponibles en todos los planes. La selección automática, la selección manual y el modo Diseño funcionan igual en Free, Plus y Premium.
+</Info>
+
+## Cómo funciona
+
+Cuando Webza construye tu proyecto, parte de la plantilla y superpone el sistema de diseño encima:
+
+1. La plantilla proporciona la estructura de página y los componentes.
+2. Se aplican los tokens base del sistema de diseño, la paleta de acento elegida y sus fuentes web.
+3. Algunos sistemas de diseño incluyen sus propias versiones de componentes específicos, que reemplazan o refinan los componentes de la plantilla.
+4. La IA sigue el manual del sistema de diseño y ajusta el código generado para que coincida con la apariencia. Por ejemplo, reemplaza los colores codificados para que sigan los tokens y el acento activos.
+
+Cada manual también establece un estilo de movimiento consistente para todo el sitio, para que las animaciones se sientan iguales de una sección a otra.
+
+La superposición es predecible. Elegir un sistema de diseño o un acento diferente cambia la apariencia sin cambiar la estructura de tu sitio.
+
+## Substrate (el predeterminado)
+
+Substrate es el sistema de diseño predeterminado de Webza. Es un estilo propio cálido, neutro y premium que empareja **Geist** para la interfaz y el texto del cuerpo con la serif **Newsreader** para acentos editoriales. Usa un radio de esquina de 10px y sombras suaves y superpuestas.
+
+Substrate tiene seis paletas de acento:
+
+| Acento | Notas |
+| --- | --- |
+| indigo | Acento predeterminado |
+| terracotta | Acento cálido y terroso |
+| blue | Acento fresco y clásico |
+| emerald | Acento verde |
+| ruby | Acento rojo intenso |
+| mono | Acento neutro y monocromático |
+
+## Sistemas de diseño Premium
+
+Además de Substrate, Webza ofrece diez sistemas de diseño premium. Cada uno es una apariencia completa propia, con su propia tipografía, colores, sombras y personalidad.
+
+| Sistema de diseño | Personalidad |
+| --- | --- |
+| Aperture | SaaS nítido, fresco y arquitectónico. Preciso y seguro. |
+| Atrium | SaaS empresarial confiable. Tranquilo, creíble, de nivel dashboard. |
+| Bloom | Juguetón y alegre. Rechoncho, redondeado, con acentos alegres de caramelo. |
+| Botanica | Bienestar editorial cálido y orgánico. Tranquilo y premium. |
+| Carbon | Herramienta de desarrollo elegante. Primero oscuro, técnica, verde terminal. |
+| Halcyon | Pastel sereno, aéreo y soñador. Liviano y tranquilo. |
+| Lumen | Brillo fintech moderno y vibrante. Luminoso, degradado, glassmorphic. |
+| Monolith | Editorial suiza brutalista audaz. Ruidoso, gráfico, alto contraste. |
+| Noir | Lujo oscuro y cinematográfico. Caro, contenido, acento metálico. |
+| Sandstone | Editorial cálida y minimalista. Minimalismo literario con alma. |
+
+Los sistemas de diseño premium aparecen en todos los lugares donde aparece Substrate: el selector de sistemas de diseño en **Personalizar**, la selección **Automático** y el modo Diseño del editor. Se añaden nuevos sistemas de diseño con el tiempo.
+
+<Tip>
+  Muchos sistemas de diseño incluyen una vista previa de guía de estilo: una página que muestra su tipografía, colores, botones y componentes. Ábrelas desde el selector de sistemas de diseño o el panel Diseño del editor para ver una apariencia antes de aplicarla.
+</Tip>
+
+## Elige un sistema de diseño
+
+Un sistema de diseño y un acento se eligen de una de tres formas.
+
+### Automático (predeterminado)
+
+Cuando creas un proyecto, el selector de sistemas de diseño en el popover **Personalizar** está configurado en **Automático**. En la primera construcción, la IA elige el sistema de diseño y el acento que mejor se adapten a tu indicación y guarda esa elección en el proyecto.
+
+### Manual
+
+En lugar de **Automático**, elige un sistema de diseño específico en el popover **Personalizar**. También puedes elegir una de sus paletas de acento o mantener su acento predeterminado. Cada construcción del proyecto usará entonces esa apariencia.
+
+### Re-tematizar en el editor
+
+Puedes cambiar el sistema de diseño o el acento de un proyecto de sitio web construido en cualquier momento desde el editor.
+
+<Steps>
+  <Step title="Abre el panel Diseño">
+    En el editor, cambia al modo Diseño. El panel **Diseño** se abre junto a la vista previa.
+  </Step>
+  <Step title="Elige un sistema de diseño y un acento">
+    Elige un nuevo sistema de diseño y, opcionalmente, una paleta de acento. Abre primero su vista previa de guía de estilo si quieres comparar apariencias.
+  </Step>
+  <Step title="Haz clic en Preguntar a la IA para aplicar">
+    Webza aplica los nuevos tokens y el acento y reconstruye tu sitio. La vista previa se recarga, y luego la IA ajusta cualquier color codificado para que todo el sitio coincida con la nueva apariencia.
+  </Step>
+</Steps>
+
+Un re-tematizado usa créditos como una solicitud de chat. No puedes aplicar un re-tematizado mientras otra construcción esté en ejecución.
+
+<Note>
+  El modo Diseño está disponible solo para proyectos de sitio web. Está oculto para proyectos de temas de [WordPress](/es/themes/wordpress-themes) y [Shopify](/es/themes/shopify-themes). Aún usan el sistema de diseño elegido cuando los creaste, pero no puedes cambiarlo desde el editor.
+</Note>
+
+## Deshacer un re-tematizado
+
+Un re-tematizado cuenta como un paso en Deshacer y Rehacer, y crea un punto de control en el Historial de revisiones. Puedes revertirlo más tarde desde la vista previa. Consulta [Vista previa](/es/preview).
+
+## Duplicar un proyecto
+
+Cuando duplicas un proyecto, su sistema de diseño y acento se copian al nuevo proyecto.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=design-systems" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Cada plan</span>
+    <span className="wz-ad-title">Encuentra tu apariencia en segundos</span>
+    <span className="wz-ad-text">Los sistemas de diseño están incluidos en cada plan. Inicia un proyecto, elige un estilo y cámbialo cuando quieras.</span>
+  </span>
+
+  <span className="wz-ad-btn">Prueba los sistemas de diseño <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Plantillas" icon="table-cells-large" href="/es/templates">
+    Elige una estructura inicial para tu proyecto.
+  </Card>
+
+  <Card title="Vista previa" icon="eye" href="/es/preview">
+    Previsualiza tu sitio y gestiona el historial de revisiones.
+  </Card>
+</CardGroup>

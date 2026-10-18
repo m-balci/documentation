@@ -1,0 +1,142 @@
+---
+title: "Project chat"
+description: "Use the project chat to tell the AI what to build, modify, or fix. Attach files, answer clarifying questions, and track progress in real time."
+---
+
+The project chat is your main workspace for building with AI. Type what you want and the AI creates, edits, or explains code for you. You can ask for new pages, features, style changes, bug fixes, or a walkthrough of how something works.
+
+## Send a message
+
+Type your request and press **Enter** or click the send button. The AI reads your message and starts working.
+
+## Attach files
+
+If your plan includes file storage, you can attach files to give the AI extra context.
+
+<Steps>
+  <Step title="Upload files">
+    Click the attachment button and select files from your device. Uploaded files appear in the project file tree.
+  </Step>
+  <Step title="@mention existing files">
+    Type `@` in the chat to autocomplete files already in the project.
+  </Step>
+</Steps>
+
+Attached files are passed to the AI with their public URLs. The AI can use them as images, backgrounds, or download links.
+
+### Image attachments and vision
+
+With a vision-capable AI model, the AI can see attached images directly. Supported formats are JPG, PNG, WebP, and GIF. You can attach up to four images per message. Large images are scaled down automatically. The AI sees the images on the message they were attached to.
+
+With text-only models, the AI receives only the file names and URLs.
+
+## Message limits
+
+Chat messages can be up to 10,000 characters. If your request is long, consider splitting it into smaller steps.
+
+## Answer AI questions
+
+When a request is ambiguous, the AI asks clarifying questions instead of guessing. A question card appears at the bottom of the chat with up to five short, tappable answers. Some questions allow multiple selections. Tap an answer again to deselect it. Open-ended questions show a text field instead.
+
+A free-text box at the bottom lets you add extra detail before you send. Your answers are posted as a normal chat message and start the next AI run. You can also dismiss the card with the **×** button and type a normal reply. The questions stay readable in the transcript.
+
+<Info>
+  Asking a question ends that run. The card waits for your answer, so no credits are spent while it is open.
+</Info>
+
+## Track build progress
+
+Each AI run moves through stages shown in the chat:
+
+| Stage | What happens |
+| --- | --- |
+| Thinking | The AI analyzes your request and plans changes. |
+| Actions | Files are created or modified. |
+| Messages | The AI explains what it did and why. |
+| Complete | The run finishes and you can preview the result. |
+
+## Credit indicator
+
+The chat header shows your current credit status:
+
+- **Default color:** more than 20% of your credits remain.
+- **Yellow:** between 5% and 20% remain, with a **Buy credits** link.
+- **Red:** 5% or less remain.
+
+On unlimited plans it reads **Unlimited credits**. When you are building on your own API key it reads **Using your API key**. For more details, see [Credits and usage](/credits-and-usage).
+
+## Fix for free
+
+Runs that fail because of the AI agent or the platform are not charged. This includes runs where the agent stopped after repeated errors, the final build check failed, or tokens were spent without producing anything. Runs that fail because you ran out of credits, or runs that you cancel, are charged.
+
+After a failed run, a **Fix for free** button appears under the chat. Clicking it asks the AI to diagnose and repair the problem without adding new features. That fix run is also free. The button sends a fixed instruction. Text in the chat box is not included.
+
+<Warning>
+  Each failed run can be fixed for free once, within 24 hours, and only while it is the latest run.
+</Warning>
+
+Uncharged runs appear on **Billing → Usage** marked as **Not charged**. There is a daily limit of uncharged runs per user.
+
+{/* TODO: confirm Webza's daily limit of uncharged runs (default is 5 per 24h). */}
+
+## AI-generated images
+
+If your plan includes AI images, the AI can create custom images for website projects when stock photos do not fit or when you ask for something specific. For example, you can say, "generate a custom hero image of a lighthouse at dusk."
+
+Generated images are saved under `public/images/generated/` and appear in the file tree. Each image takes a bit longer to produce than a text change.
+
+Your monthly allowance is shown on the **Current Plan** card on the **Usage** page. When you run out, the AI uses stock photos until the next calendar month.
+
+{/* TODO: confirm which Webza plans include AI images and how many per month. */}
+
+## Custom instructions
+
+Add instructions that the AI receives on every build. Go to project **Settings → Knowledge** and enter up to 500 characters. This is useful for rules about tone, branding, or coding style. See [Settings](/settings) for more.
+
+## Tips for better results
+
+<AccordionGroup>
+  <Accordion title="Be descriptive">
+    Describe what you want in detail. Include layout, colors, behavior, and content. The more context you give, the closer the first result will be.
+  </Accordion>
+
+  <Accordion title="Iterate in steps">
+    Start with a basic version, then add features one at a time. Large, all-at-once requests are harder to get right.
+  </Accordion>
+
+  <Accordion title="Reference examples">
+    Link or describe websites and designs you like. The AI can match styles, layouts, and moods more accurately when it has a reference.
+  </Accordion>
+
+  <Accordion title="Ask for explanations">
+    If you want to learn how something works, ask the AI to explain the code or the approach. This helps you make your own edits later.
+  </Accordion>
+
+  <Accordion title="Use templates">
+    Starting from a template gives the AI a working structure. You can then customize it instead of building from scratch.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=project-chat" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Try it now</span>
+    <span className="wz-ad-title">Have an idea? Type it in.</span>
+    <span className="wz-ad-text">Start a project and give Webza your first prompt. The AI asks what it needs and builds the rest.</span>
+  </span>
+
+  <span className="wz-ad-btn">Start a project <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Editor" icon="pen" href="/editor">
+    Edit code, manage files, and review AI changes side by side with the chat.
+  </Card>
+
+  <Card title="Preview" icon="eye" href="/preview">
+    See your site live and test changes before you publish.
+  </Card>
+</CardGroup>

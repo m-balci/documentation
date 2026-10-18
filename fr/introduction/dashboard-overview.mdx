@@ -1,0 +1,128 @@
+---
+title: "Vue d'ensemble du tableau de bord"
+description: "Apprenez à naviguer dans le tableau de bord Webza, à démarrer de nouveaux projets et à accéder à vos fichiers, bases de données, facturation et paramètres."
+---
+
+Le tableau de bord est votre point de départ dans Webza. C'est l'endroit où vous démarrez de nouveaux projets, ouvrez des projets existants, vérifiez votre solde de crédits et accédez à vos outils de compte tels que la facturation, l'assistance et les paramètres.
+
+{/* TODO : Ajouter une capture d'écran du tableau de bord ici (par exemple /images/webza-dashboard.png). Utiliser un compte de démonstration pour qu'aucun nom ni e-mail personnel ne soit visible. */}
+
+## Démarrer un nouveau projet
+
+La zone de saisie se trouve au centre du tableau de bord, sous le message de bienvenue **Que puis-je vous aider à construire ?**. Décrivez ce que vous voulez construire et sélectionnez **Démarrer** pour créer le projet et ouvrir sa discussion. Consultez [Démarrage rapide](/fr/introduction/getting-started) pour un guide complet pas à pas.
+
+### La zone de saisie
+
+Saisissez votre idée dans le champ de texte. Vous pouvez être bref ou détaillé, par exemple `un site portfolio pour un photographe` ou une description de plusieurs paragraphes de chaque page et section. Plus vous êtes spécifique sur les fonctionnalités, les préférences de design et les exigences, meilleur est le premier résultat. La zone inclut également :
+
+- **Type de sortie** : Le sélecteur à côté de l'invite (réglé sur **Site web** par défaut) choisit ce que Webza crée. Il apparaît lorsque votre plan inclut des thèmes WordPress ou Shopify (Plus et Premium) :
+  - **Site web** : Un site hébergé par Webza.
+  - **Thème WordPress** : Un thème WordPress bloc installable. Il s'aperçoit dans un WordPress Playground navigateur et s'exporte sous forme de thème `.zip`.
+  - **Thème Shopify** : Un thème Shopify Online Store 2.0 installable. Vous téléchargez le thème `.zip` et l'installez dans votre boutique Shopify.
+- **Personnaliser** : Ouvre une fenêtre contextuelle avec toutes les options pour votre point de départ. Consultez [Personnaliser votre projet](#personnaliser-votre-projet).
+- **Microphone** : Décrivez votre projet mains libres avec la saisie vocale intégrée, basée sur le navigateur.
+- **Joindre** : Joignez jusqu'à 10 fichiers à votre première invite, tels que des logos, des photos ou des PDF. Les pièces jointes sont disponibles sur les plans incluant le stockage de fichiers, et chaque fichier est vérifié par rapport aux limites de taille, de type et de stockage de votre plan avant que le projet ne soit créé.
+- **Démarrer** : Crée le projet et ouvre la discussion.
+
+<Note>
+  Votre première invite peut contenir jusqu'à 10 000 caractères, comme les messages de discussion ultérieurs. Un compteur apparaît à mesure que vous approchez de la limite.
+</Note>
+
+### Personnaliser votre projet
+
+La fenêtre contextuelle **Personnaliser** contient tous les sélecteurs pour votre point de départ :
+
+- **Modèle** : La structure depuis laquelle votre projet démarre, c'est-à-dire quelles pages et composants existent. Laissez-le sur **Automatique** et l'IA en choisit un au moment de la construction, ou choisissez un modèle spécifique. Les modèles Premium sont disponibles sur les plans Plus et Premium. Consultez [Modèles](/fr/templates).
+- **Système de design** : L'identité visuelle de votre site : ses jetons de couleur, sa palette d'accentuation et ses polices. Laissez-le sur **Automatique** et l'IA choisit la meilleure correspondance pour votre invite lors de la première construction, ou choisissez un système de design spécifique pour verrouiller un aspect. Substrate et dix systèmes de design premium sont disponibles sur chaque plan. Consultez [Systèmes de design](/fr/design-systems).
+- **Accent** : Lorsque vous choisissez un système de design spécifique, choisissez l'une de ses palettes d'accentuation nommées ou conservez son accent par défaut.
+- **Base de données** : Attachez l'une de vos connexions Supabase pour rendre votre application basée sur une base de données. Consultez [Bases de données](#projets).
+- **Intégrations** : Connectez un dépôt GitHub.
+
+Les modèles et les systèmes de design sont indépendants, vous pouvez donc associer n'importe quel système de design avec n'importe quel modèle. Pour les thèmes WordPress et Shopify, les options Base de données et GitHub ne s'appliquent pas.
+
+{/* TODO : Confirmer quels modèles et systèmes de design sont installés sur Webza (Substrate est le système de design par défaut inclus). */}
+
+### Suggestions d'invites
+
+Sous la zone de saisie, une rangée de suggestions telles que **Créer un site portfolio**, **Concevoir une page de destination** et **Créer une boutique en ligne** défile. Sélectionnez-en une pour remplir la zone de saisie, puis modifiez-la ou démarrez immédiatement.
+
+## Barre supérieure
+
+La barre en haut du tableau de bord affiche :
+
+- **Basculeur de barre latérale** : Réduire ou développer la barre latérale.
+- **Solde de crédits** : Vos crédits restants à côté du total de votre plan, par exemple `20.000.000 / 20.000.000 crédits`. Consultez [Crédits et utilisation](/fr/credits-and-usage).
+- **Langue** : Changez la langue de l'interface Webza. {/* TODO : Lister les langues d'interface prises en charge. */}
+- **Notifications** : Ouvrez vos notifications dans l'application, telles que les mises à jour de statut de construction lorsque Webza termine de construire un projet. {/* TODO : Confirmer les autres types de notifications (réponses d'assistance, facturation, mises à jour produit). */}
+- **Thème** : Basculez l'interface Webza entre le mode clair et le mode sombre. {/* TODO : Confirmer que l'icône de moniteur est le commutateur de thème. */}
+- **Votre compte** : Votre nom, e-mail et avatar. {/* TODO : Décrire le menu qui s'ouvre lorsque vous sélectionnez l'avatar (Profile, Log out, etc.). Profile se trouve à https://webza.ai/profile. */}
+
+## Barre latérale et navigation
+
+La barre latérale à gauche vous donne accès à tout dans votre compte.
+
+- **Créer** : Retournez à la zone de saisie du tableau de bord pour démarrer un nouveau projet.
+
+### Projets
+
+La section **Projets** peut être réduite avec la flèche à côté de son titre.
+
+- **Tous les projets** : Parcourez, mettez en favori, dupliquez et supprimez vos projets. Consultez [Gérer les projets](#gérer-les-projets).
+- **Gestionnaire de fichiers** : Téléchargez des fichiers tels que des images et des documents, prévisualisez des images et des PDF en ligne, supprimez des fichiers et vérifiez votre utilisation de stockage. Les limites de stockage et de taille de fichier dépendent de votre plan et s'appliquent à l'ensemble de votre compte, pas à chaque projet. Consultez [Gestionnaire de fichiers](/fr/file-manager).
+- **Bases de données** : Ajoutez vos propres connexions Supabase. Selon ce qui est activé, vous pouvez vous connecter en vous connectant à Supabase (**Se connecter avec Supabase**), en collant un jeton d'accès à l'échelle du projet, ou manuellement avec une chaîne de connexion. Les applications qui utilisent une connexion obtiennent des tables Postgres relationnelles, l'authentification, le stockage et la sécurité au niveau des lignes (RLS). Consultez [Supabase](/fr/integrations/supabase).
+- **GitHub** : Connectez un dépôt GitHub à un projet, soit en créant un nouveau dépôt privé, soit en attachant un dépôt vide que vous possédez déjà. Avec la poussée automatique activée, Webza pousse votre code source généré vers le dépôt après chaque construction. Vous pouvez connecter, changer ou déconnecter un dépôt ultérieurement depuis les paramètres du projet. Consultez [GitHub](/fr/integrations/github).
+- **Clés API** : Créez des clés API personnelles pour l'API REST Webza en lecture seule. Chaque clé n'est affichée qu'une seule fois lors de sa création, peut expirer après 30, 90 ou 365 jours, et vous pouvez en avoir jusqu'à 10. L'accès API est disponible sur les plans Plus et Premium. Consultez [API personnelle](/fr/integrations/personal-api).
+- **Documentation de l'API** : Liste chaque point de terminaison API avec un testeur interactif et des exemples copier-coller en curl, JavaScript, PHP et Python. L'API expose votre compte, vos crédits, votre abonnement, vos projets, vos notifications et vos factures.
+- **Facturation** : Consultez votre plan, vos crédits, votre utilisation et votre historique de transactions, ou annulez votre abonnement. Consultez [Factures et facturation](/fr/invoices-and-billing) et [Modifier ou annuler votre abonnement](/fr/change-or-cancel-your-subscription).
+- **Assistance** : Ouvrez et suivez vos tickets d'assistance. Consultez [Tickets d'assistance](/fr/help/support-tickets).
+- **Paramètres** : Gérer votre compte, vos paramètres IA et votre confidentialité. Consultez [Paramètres](/fr/settings).
+
+<Warning>
+  L'API est en lecture seule : elle ne peut pas créer de projets, déclencher des constructions ou modifier la facturation. Gardez vos clés API secrètes. Elles donnent accès aux données de votre compte jusqu'à ce que vous les révoquiez ou qu'elles expirent.
+</Warning>
+
+### Inviter des amis
+
+Sélectionnez la carte **Inviter des amis** en bas de la barre latérale pour partager Webza et gagner des crédits pour les parrainages.
+
+{/* TODO : Ajouter les détails du programme de parrainage : comment fonctionne le lien d'invitation, combien de crédits vous et la personne invitée recevez, quand les crédits sont accordés, les limites et l'expiration. */}
+
+### Rejouer la visite
+
+La première fois que vous ouvrez le tableau de bord, une courte visite guidée peut vous montrer les parties de l'interface dont vous avez besoin en premier. Vous pouvez la suivre étape par étape ou la fermer. Sélectionnez **Rejouer la visite** en bas de la barre latérale pour la rejouer à tout moment. À l'intérieur d'un projet, le bouton flèche circulaire à droite de la barre d'outils de l'éditeur (à côté de **Reconstruire**) rejoue la visite de l'éditeur.
+
+## Gérer les projets
+
+**Tous les projets** liste vos projets dans trois onglets, chacun avec un compteur :
+
+- **Tous** : Tout ce sur quoi vous travaillez.
+- **Favoris** : Les projets que vous avez mis en favori depuis leur ligne. Mettre en favori n'est qu'un filtre pour votre commodité et ne change pas le projet.
+- **Corbeille** : Les projets supprimés. Sélectionnez **Restaurer** pour en ramener un, ou **Supprimer définitivement** pour le supprimer définitivement.
+
+Chaque ligne de projet possède également un menu d'actions avec **Dupliquer**, qui crée un nouveau projet nommé `<original> (Copie)`. Consultez [Trouver un projet](/fr/find-a-project) pour plus de détails.
+
+<Warning>
+  Les projets dans la Corbeille sont définitivement supprimés après la période de conservation, avec leurs fichiers, aperçus et instantanés. La suppression définitive ne peut pas être annulée. {/* TODO : Confirmer la période de conservation de la corbeille de Webza (la valeur par défaut du script est de 90 jours). */}
+</Warning>
+
+## Obtenir de l'aide
+
+Sélectionnez **Assistance** dans la barre latérale pour voir vos tickets, puis sélectionnez **Nouveau ticket** pour en ouvrir un. Ajoutez un sujet, décrivez le problème et joignez des fichiers tels qu'une capture d'écran de l'erreur. Les réponses arrivent par e-mail et sont enfilées dans le ticket.
+
+Un ticket est **Ouvert** tant que l'équipe d'assistance y travaille, **En attente** lorsqu'il attend une réponse de votre part, et **Fermé** lorsqu'il est terminé. Répondre à un ticket fermé le rouvre, vous n'avez donc jamais besoin d'en ouvrir un doublon. Tous les membres peuvent ouvrir des tickets, et les plans Plus et Premium incluent une assistance prioritaire.
+
+<Tip>
+  Seuls vous et l'équipe Webza pouvez lire vos tickets, ils sont donc l'endroit idéal pour les détails spécifiques à votre compte. Ne collez jamais de mots de passe ou de clés API à moins qu'on ne vous les demande explicitement.
+</Tip>
+
+## Étapes suivantes
+
+<CardGroup cols={2}>
+  <Card title="Démarrage rapide" icon="rocket" href="/fr/introduction/getting-started">
+    Construisez et publiez votre premier site web.
+  </Card>
+
+  <Card title="Plans d'abonnement" icon="credit-card" href="/fr/subscription-plans">
+    Comparez les plans Free, Plus et Premium.
+  </Card>
+</CardGroup>

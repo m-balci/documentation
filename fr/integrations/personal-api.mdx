@@ -1,0 +1,59 @@
+---
+title: "API personnelle"
+sidebarTitle: "API personnelle"
+description: "API REST en lecture seule pour accéder à votre compte Webza, vos projets, vos crédits et votre facturation par programmation."
+---
+
+Les plans Plus et Premium incluent l'accès API. L'API personnelle est une API REST en lecture seule qui vous permet d'accéder aux données de votre compte Webza par programmation. Vous ne pouvez pas créer de projets, déclencher des builds ou modifier la facturation via l'API.
+
+## Créer une clé API
+
+Ouvrez la page **Clés API** depuis la barre latérale.
+
+<Steps>
+  <Step title="Générez une clé">
+    Cliquez pour créer une nouvelle clé. Chaque clé n'est affichée qu'une seule fois à la création, copiez-la immédiatement et stockez-la en toute sécurité.
+  </Step>
+  <Step title="Définissez une expiration (optionnel)">
+    Choisissez une expiration de 30, 90 ou 365 jours, ou laissez-la sans expiration.
+  </Step>
+  <Step title="Révoquez si besoin">
+    Vous pouvez révoquer n'importe quelle clé à tout moment. Vous pouvez avoir jusqu'à 10 clés par compte.
+  </Step>
+</Steps>
+
+<Warning>
+  Gardez vos clés secrètes. Elles donnent accès aux données de votre compte jusqu'à ce qu'elles soient révoquées ou expirées.
+</Warning>
+
+## Authentifier
+
+Envoyez votre clé en tant que token Bearer dans l'en-tête `Authorization` :
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## Points de terminaison et documentation
+
+L'API expose des ressources sous `/api/v1` pour votre compte, vos crédits, votre abonnement, vos projets, vos notifications et vos factures.
+
+Ouvrez la page **Documentation API** depuis la barre latérale pour voir chaque point de terminaison. La documentation inclut un testeur interactif et des exemples copier-coller en curl, JavaScript, PHP et Python.
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## Séparé : clés de fournisseur d'IA
+
+Vos propres clés de fournisseur d'IA sont gérées séparément dans **Paramètres → Paramètres IA** (`/settings`). Elles sont sans lien avec l'API personnelle.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/fr/integrations/github">
+    Poussez automatiquement le code source généré vers un dépôt privé GitHub.
+  </Card>
+
+  <Card title="Base de données Supabase" icon="database" href="/fr/integrations/supabase">
+    Attachez une base de données Postgres à vos applications générées.
+  </Card>
+</CardGroup>

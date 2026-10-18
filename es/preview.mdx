@@ -1,0 +1,108 @@
+---
+title: "Vista previa"
+description: "Usa el panel de vista previa para ver tu proyecto en vivo, inspeccionar elementos, redimensionar la ventana, cambiar el tema del diseño y gestionar el historial de revisiones."
+---
+
+El panel de vista previa muestra una vista en vivo de tu proyecto. Puedes redimensionar la ventana, inspeccionar elementos, cambiar el tema del diseño y avanzar por el historial de revisiones. La vista previa se recarga automáticamente cuando termina una construcción, así que no necesitas un botón de actualización manual.
+
+## Controles de ventana
+
+Usa los botones de ventana para probar cómo se ve tu proyecto en diferentes tamaños.
+
+| Botón | Qué hace |
+| --- | --- |
+| **Teléfono** | Reduce la vista previa a un ancho móvil. |
+| **Tableta** | Establece un ancho medio entre móvil y escritorio. |
+| **Ancho completo** | Expande la vista previa al ancho completo del panel. |
+
+## Modo de inspección
+
+Haz clic en **Inspeccionar** para activar el modo de inspección. Cuando el modo de inspección está activo, hacer clic en cualquier elemento de la vista previa abre la barra de herramientas del inspector de elementos.
+
+Las acciones de la barra de herramientas dependen del elemento que seleccionaste:
+
+- **Editar texto** (solo elementos de texto): edita el texto del elemento en línea. El cambio se encola en la barra de cambios pendientes.
+- **Imagen** (solo elementos `<img>`): cambia la fuente de la imagen subiendo un archivo o pegando una URL de imagen. El cambio se encola en la barra de cambios pendientes.
+- **Estilo**: ajusta estilos en línea como colores, espaciado y tamaño. Las ediciones de estilo se aplican por sí solas sin la IA.
+- **Editar con IA**: envía el elemento a la IA con una instrucción. El cambio se encola en la barra de cambios pendientes.
+- **Cerrar**: cierra el inspector.
+
+### Barra de cambios pendientes
+
+Cuando haces cambios de **Editar texto**, **Imagen** o **Editar con IA** en el inspector, aparece una barra de cambios pendientes en la parte inferior de la vista previa. Muestra el número de cambios encolados y dos acciones:
+
+- **Guardar todo**: envía el lote a la IA, ejecuta una construcción y gasta créditos.
+- **Descartar todo**: elimina todos los cambios encolados.
+
+<Warning>
+  Nada se aplica hasta que haces clic en **Guardar todo**. Si navegas antes de guardar, pierdes los cambios encolados. Agrupa tus ajustes y guarda una vez para evitar gastar créditos extra.
+</Warning>
+
+<Note>
+  Las ediciones de **Estilo** cambian el código fuente directamente sin la IA y no se encolan en la barra de cambios pendientes.
+</Note>
+
+## Modo de diseño
+
+Haz clic en **Diseño** para cambiar el tema de un sitio ya construido.
+
+1. Elige un sistema de diseño.
+2. Opcionalmente elige una paleta de acentos.
+3. Haz clic en **Preguntar a la IA** para aplicar el nuevo tema.
+
+Esto activa una reconstrucción. La vista previa se recarga con el diseño real, y la IA ejecuta una pasada de corrección para los colores codificados. Consume créditos de construcción como una solicitud de chat. No puedes aplicar un cambio de diseño mientras otra construcción está en ejecución.
+
+<Info>
+  El modo de diseño está disponible solo para sitios web. Está oculto para proyectos de temas de WordPress y Shopify, que mantienen el sistema de diseño elegido en la creación.
+</Info>
+
+## Deshacer y rehacer
+
+Usa los botones **Deshacer** y **Rehacer** para avanzar por el historial de tu proyecto. También puedes usar estos atajos de teclado:
+
+| Acción | Atajo |
+| --- | --- |
+| Deshacer | Ctrl/Cmd + Z |
+| Rehacer | Ctrl/Cmd + Shift + Z, o Ctrl + Y |
+
+Cada deshacer revierte exactamente un cambio: una solicitud de chat de la IA, una edición de estilo o un cambio de tema de diseño. Después de un deshacer, el proyecto se reconstruye. Tu trabajo más reciente se guarda como punto de control antes de un deshacer, así que rehacer puede recuperarlo. Cada deshacer y rehacer se registra en el chat para que la IA se mantenga informada.
+
+<Warning>
+  Deshacer y rehacer no están disponibles mientras se ejecuta una construcción. Un proyecto nuevo no tiene nada que deshacer hasta el segundo cambio.
+</Warning>
+
+<Warning>
+  Las ediciones manuales del editor de código hechas mientras estás dentro del historial (después de deshacer) no se capturan. El siguiente Deshacer, Rehacer o Restaurar las descarta sin advertencia. Vuelve al estado más reciente primero, o deja que la IA haga el cambio.
+</Warning>
+
+<Info>
+  Para proyectos Shopify, los botones **Deshacer**, **Rehacer** e **Historial de revisiones** están ocultos. Solo aparece **Descargar tema (.zip)**. Los atajos de teclado siguen funcionando para proyectos Shopify.
+</Info>
+
+## Historial de revisiones
+
+Haz clic en el **icono de reloj** para abrir el historial de revisiones. Se captura un punto de control antes de cada solicitud de IA, edición de estilo y cambio de diseño. Webza conserva los 20 puntos de control más recientes.
+
+La lista muestra etiquetas, marcas de tiempo y conteos de archivos. La versión actual tiene una insignia **Actual**. Haz clic en **Restaurar** en cualquier versión para saltar a ella.
+
+Restaurar primero guarda un punto de control de tu estado actual para que la restauración sea reversible. Cada restauración activa una reconstrucción. El historial de revisiones está disponible solo para sitios web y temas de WordPress.
+
+<Note>
+  Las instantáneas de publicación son independientes del historial de revisiones. Consulta la página [Publicar](/es/publish) para más detalles.
+</Note>
+
+## Vista previa de WordPress Playground
+
+Los proyectos de temas de WordPress se previsualizan dentro de WordPress Playground. Playground tiene su propio control de recarga, así que el comportamiento automático de recarga de la vista previa funciona de manera diferente allí.
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Chat del proyecto" icon="message" href="/es/project-chat">
+    Envía instrucciones a la IA y gestiona el historial de chat.
+  </Card>
+
+  <Card title="Publicar" icon="rocket" href="/es/publish">
+    Publica tu proyecto y gestiona instantáneas en vivo.
+  </Card>
+</CardGroup>

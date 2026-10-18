@@ -1,0 +1,82 @@
+---
+title: "Editor"
+description: "Übersicht über den Webza-Projekteditor, sein Layout, die Toolbar und Tastenkürzel."
+---
+
+Der Projekteditor ist der Arbeitsbereich, in den Sie gelangen, nachdem Sie auf einem Projektkarte in der Übersicht auf **Starten** klicken. Er vereint Chat, Vorschau, Code und Einstellungen an einem Ort, sodass Sie Ihre Website erstellen und verfeinern können, ohne Tabs zu wechseln.
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## Editor-Layout
+
+Der Editor ist in drei Hauptbereiche unterteilt:
+
+<CardGroup cols={2}>
+  <Card title="Projekt-Chat" icon="message" href="/de/project-chat">
+    Bitten Sie die KI, Seiten zu bearbeiten, Abschnitte hinzuzufügen, Stile zu ändern oder Fehler zu beheben. Ihre Anweisungen werden zu Code-Änderungen, die Sie in Echtzeit überprüfen können.
+  </Card>
+
+  <Card title="Live-Vorschau" icon="eye" href="/de/preview">
+    Sehen Sie Ihre Website so, wie Besucher sie sehen werden. Die Vorschau aktualisiert sich automatisch nach jeder KI-Bearbeitung oder manuellen Code-Speicherung.
+  </Card>
+
+  <Card title="Code-Editor" icon="code" href="/de/code-editor">
+    Durchsuchen und bearbeiten Sie Dateien direkt mit Syntaxhervorhebung, Suche und Speicherung. Basiert auf dem Monaco-Editor.
+  </Card>
+
+  <Card title="Einstellungen" icon="gear" href="/de/settings">
+    Verwalten Sie Domains, Analytics, SEO und andere projektbezogene Optionen.
+  </Card>
+</CardGroup>
+
+Sie können das Chat-Panel einklappen, um der Vorschau die volle Breite zu geben. Das ist nützlich, wenn Sie sich auf Design-Details konzentrieren und keine KI-Unterstützung benötigen.
+
+## Toolbar
+
+Die obere Toolbar bietet Ihnen schnelle Aktionen für das aktuelle Projekt:
+
+- **Veröffentlichen**: Öffnet den Veröffentlichungsablauf, damit Sie Ihre Website live schalten können. Siehe [Veröffentlichen](/de/publish).
+- **Neu erstellen**: Baut das Projekt aus dem aktuellen Code neu auf. Verwenden Sie dies, wenn die Vorschau nicht mehr synchron aussieht.
+- **Tour wiederholen**: Die Schaltfläche mit dem Kreispfeil neben **Neu erstellen** spielt die geführte Editor-Tour erneut ab.
+- **Exportieren**: Wenn Ihr Plan Code-Export umfasst (Plus oder Premium), lädt diese Schaltfläche den vollständigen Quellcode als ZIP-Datei herunter, die bereit für die Bereitstellung auf Vercel oder für das Hosting an einem Ort Ihrer Wahl ist.
+- **Theme herunterladen**: Bei Theme-Projekten liefert diese Schaltfläche das installierbare WordPress-Block-Theme oder das Shopify Online Store 2.0-Theme als ZIP-Datei anstelle des vollständigen Quellcode-Exports.
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## Exportieren Ihres Projekts
+
+Wenn Ihr Plan dies unterstützt, können Sie Ihr Projekt herunterladen und außerhalb von Webza hosten.
+
+<Steps>
+  <Step title="Öffnen Sie den Editor">
+    Klicken Sie auf dem Projektkarte in Ihrer Übersicht auf **Starten**.
+  </Step>
+  <Step title="Auf Export klicken">
+    Klicken Sie in der Toolbar auf **Exportieren** (oder **Theme herunterladen** bei Theme-Projekten).
+  </Step>
+  <Step title="ZIP herunterladen">
+    Die Datei wird auf Ihren Computer heruntergeladen. Entpacken Sie sie und folgen Sie der README-Datei für die lokale Entwicklung oder die Vercel-Bereitstellung.
+  </Step>
+</Steps>
+
+## Tastenkürzel
+
+| Aktion | Tastenkürzel |
+| --- | --- |
+| Rückgängig | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| Wiederherstellen | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> oder <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| Im Code-Editor suchen | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| Im Code-Editor speichern | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| Chat-Nachricht senden | <kbd>Enter</kbd> |
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Projekt-Chat" icon="message" href="/de/project-chat">
+    Erfahren Sie, wie Sie mit der KI sprechen und Änderungen überprüfen.
+  </Card>
+
+  <Card title="Code-Editor" icon="code" href="/de/code-editor">
+    Bearbeiten Sie Dateien direkt mit dem integrierten Monaco-Editor.
+  </Card>
+</CardGroup>

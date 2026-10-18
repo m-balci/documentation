@@ -1,0 +1,76 @@
+---
+title: "Buscar un proyecto"
+description: "Explora, marca como favorito, duplica y gestiona tus proyectos de Webza desde una sola vista."
+---
+
+Abre **Todos los proyectos** desde la barra lateral (bajo **Proyectos**) para ver todos los proyectos en los que estás trabajando, su estado y dónde continuar. Un botón **Nuevo proyecto** también está en esta vista.
+
+## Pestañas de proyectos
+
+Tus proyectos se organizan en tres pestañas, cada una con un conteo:
+
+| Pestaña | Qué muestra |
+| --- | --- |
+| **Todos** | Cada proyecto en el que estás trabajando |
+| **Favoritos** | Proyectos que marcaste con una estrella desde su fila para fijarlos aquí (esto es solo un filtro, no cambia nada del proyecto) |
+| **Papelera** | Proyectos eliminados guardados durante una ventana de recuperación |
+
+{/* TODO: confirm whether All Projects has a search box or sorting */}
+
+## Marcar un proyecto como favorito
+
+Haz clic en el icono de estrella en cualquier fila de proyecto para fijarlo en la pestaña **Favoritos**. Esto es solo un filtro. No cambia la configuración, visibilidad o comportamiento del proyecto.
+
+## Papelera y recuperación
+
+Los proyectos eliminados van a la pestaña **Papelera**. Cada fila ofrece **Restaurar** o **Eliminar definitivamente**.
+
+<Warning>
+  La papelera se vacía automáticamente. Los proyectos en la papelera se eliminan permanentemente después del período de retención (predeterminado 90 días) junto con sus archivos, vistas previas e instantáneas. La eliminación permanente, ya sea manual o automática, no se puede deshacer.
+</Warning>
+
+Eliminar un proyecto libera su subdominio y dominio personalizado para que puedan reutilizarse.
+
+{/* TODO: confirm Webza's trash retention period */}
+
+## Duplicar un proyecto
+
+Abre el menú de acciones en cualquier fila de proyecto y elige **Duplicar** para crear una copia llamada "original (Copy)".
+
+### Qué se copia
+
+- Nombre y descripción
+- Instrucción original
+- Plantilla y tipo de salida (sitio web, tema de WordPress, tema de Shopify)
+- Historial de conversación completo e instrucciones personalizadas
+- Sistema de diseño y acento
+- Título publicado, descripción y visibilidad pública/privada
+
+### Qué no se copia
+
+El duplicado comienza como un proyecto nuevo y no publicado:
+
+- Sin subdominio ni dominio personalizado
+- Sin imagen para compartir
+- Sin historial de construcciones ni uso de almacenamiento
+- Sin miniatura
+- Sin IDs de analíticas
+- Un token de API nuevo
+- Ninguna de las conexiones originales de Supabase o GitHub
+
+Un duplicado es un nuevo comienzo, no un clon de un sitio en vivo. No responderá en el dominio original. Publícalo por separado y vuelve a adjuntar las conexiones. Esto es necesario porque un subdominio pertenece a un solo proyecto, y compartir un token de API o un repositorio permitiría que un proyecto sobrescriba los archivos del otro.
+
+## Límites de proyectos
+
+- Los planes **Free** y **Plus** incluyen 1 proyecto.
+- El plan **Premium** incluye proyectos ilimitados.
+
+{/* TODO: confirm whether duplicates and trashed projects count toward the project limit */}
+
+<CardGroup cols={2}>
+  <Card title="Chat del proyecto" icon="message" href="/es/project-chat">
+  </Card>
+
+  <Card title="Publicar" icon="globe" href="/es/publish">
+  </Card>
+</CardGroup>

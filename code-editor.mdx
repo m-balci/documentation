@@ -1,0 +1,68 @@
+---
+title: "Code editor"
+description: "How to view, search, and edit project files in the Webza Monaco code editor, including read-only system files and important warnings."
+---
+
+The code editor is a built-in Monaco editor that lets you view and edit project files directly. It offers syntax highlighting, search and replace, save on demand, and an unsaved-changes indicator so you always know what is pending.
+
+## Supported languages
+
+The editor highlights syntax for the most common web file types:
+
+- JavaScript and TypeScript (`.js`, `.ts`, `.tsx`)
+- CSS and HTML
+- JSON and Markdown
+
+## Search and replace
+
+Press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to open the find box inside the editor. You can search the current file and replace matches one by one or all at once.
+
+## Save your changes
+
+Press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> to save the current file. A dot or unsaved-changes indicator appears next to the filename until you save. The live preview updates after you save.
+
+## Read-only files
+
+A small set of system files is read-only. They are managed by the template and build system, and a bad edit could leave the project unable to rebuild. When you select one of these files, the editor shows a **Read-only** lock badge and hides the **Save** button.
+
+<AccordionGroup>
+  <Accordion title="Root-level read-only files">
+    `index.html`, `package.json`, `package-lock.json`, `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`, `components.json`, `tailwind.config.ts`, `tailwind.config.js`, `postcss.config.js`, `postcss.config.cjs`
+  </Accordion>
+
+  <Accordion title="Source read-only files">
+    `src/main.tsx`, `src/index.css`, `src/vite-env.d.ts`
+  </Accordion>
+
+  <Accordion title="System read-only files">
+    `memory.json`, `design-intelligence.json`, `KNOWLEDGE.md`, `template.json`
+  </Accordion>
+</AccordionGroup>
+
+There is no setting to unlock these files. `index.html` is only the shell that loads the app. Every visible page, header, footer, and link lives under `src/`, and everything there is editable apart from `main.tsx`, `index.css`, and `vite-env.d.ts`.
+
+## Analytics and tracking snippets
+
+If you need to add Google Tag Manager, a Google tag, or a Meta Pixel, use the **Analytics** card in **Settings → General** instead of editing head markup directly. See [Settings](/settings).
+
+## Important warnings
+
+<Warning>
+  Manual edits made while you are inside the revision history (after undoing) are discarded by the next Undo, Redo, or Restore action. See [Preview](/preview) for details on revision history.
+</Warning>
+
+<Info>
+  Generated AI images are stored in `public/images/generated/`. You can reference them in your code, but do not move or rename them outside of the chat or the AI may lose track of them.
+</Info>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Editor" icon="table-columns" href="/editor">
+    Overview of the full project editor layout and toolbar.
+  </Card>
+
+  <Card title="Preview" icon="eye" href="/preview">
+    Learn how the live preview and revision history work.
+  </Card>
+</CardGroup>

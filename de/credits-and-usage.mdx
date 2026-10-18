@@ -1,0 +1,93 @@
+---
+title: "Credits und Nutzung"
+description: "Verstehen Sie, wie Webza Build-Credits funktionieren, überwachen Sie Ihr Guthaben, und erfahren Sie, wann Credits verbraucht oder erstattet werden."
+---
+
+Build-Credits treiben jede KI-Generierung in Webza an. Jeder Tarif enthält eine feste Menge, und Sie können bei Bedarf zusätzliche Packs erwerben.
+
+## Wie Credits funktionieren
+
+Credits werden basierend auf der KI-Token-Nutzung verbraucht. Jede Generierung, Bearbeitung und jeder Build-Aufruf kostet eine kleine Menge Tokens, die in Echtzeit von Ihrem Guthaben abgezogen werden.
+
+Ihr Tarif bestimmt Ihre monatliche Zuweisung:
+
+| Tarif | Monatliche Zuweisung | Abrechnung |
+| --- | --- | --- |
+| Free | 2.000.000 Credits (einmalig) | Kein Abonnement |
+| Plus | 7.000.000 Credits pro Monat | \$19,99/Monat |
+| Premium | 20.000.000 Credits pro Monat | \$49,99/Monat |
+
+{/* TODO: confirm whether unused monthly credits roll over to the next month. */}
+
+## Guthaben prüfen
+
+Ihr verbleibendes Guthaben wird in der oberen Leiste des Dashboards angezeigt, zum Beispiel **20.000.000 / 20.000.000 credits**.
+
+Die Chat-Kopfzeile zeigt ebenfalls einen Credit-Indikator:
+
+- **Standardfarbe**, wenn mehr als 20 % Ihres Guthabens verbleiben.
+- **Gelb**, wenn Ihr Guthaben zwischen 5 % und 20 % liegt. Ein Link **Credits kaufen** erscheint, damit Sie schnell aufladen können.
+- **Rot**, wenn Ihr Guthaben bei 5 % oder weniger liegt.
+- **"Eigenen API-Key verwenden"**, wenn Sie mit Ihrem eigenen Key statt Webza-Credits bauen.
+
+## Extra-Credits kaufen
+
+Wenn Ihnen vor dem nächsten Abrechnungszyklus die Credits ausgehen, öffnen Sie **Abrechnung** → **Nutzung** und klicken Sie auf **Credits kaufen**. Sie können ein einmaliges Credit-Pack mit derselben Zahlungsmethode wie für Ihr Abonnement erwerben. Die Credits werden sofort nach Zahlungsabschluss Ihrem Guthaben gutgeschrieben.
+
+Credit-Packs verlängern sich nicht automatisch und ändern nicht die monatliche Zuweisung Ihres Tarifs. Pack-Größen und Preise können je nach Tarif variieren.
+
+{/* TODO: confirm exact pack sizes and prices for Webza plans. */}
+
+## Eigenen API-Key verwenden
+
+Die Tarife Plus und Premium ermöglichen es Ihnen, einen eigenen KI-Anbieter-API-Key hinzuzufügen. Wenn Sie mit Ihrem eigenen Key bauen, wird die Nutzung weiterhin in Webza gemessen, aber nicht von Ihren Tarif-Credits abgezogen. Sie werden direkt von Ihrem Anbieter abgerechnet.
+
+Um dies einzurichten, gehen Sie zu [Einstellungen](/de/settings) → **KI-Einstellungen** und fügen Sie Ihren API-Key ein.
+
+## Wann Credits verbraucht werden
+
+Credits werden verbraucht bei:
+
+- Design-Neugestaltungen
+- **Alle speichern**-Aktionen aus dem Inspector
+- Jedem KI-Build oder jeder Generierungsausführung
+
+Credits werden **nicht** verbraucht, während Sie Fragen stellen oder auf die KI-Antwort warten. Nur die eigentliche Build-Ausführung kostet Credits.
+
+## Kostenlos beheben
+
+Wenn ein Lauf aufgrund eines KI-Fehlers oder eines Plattformproblems fehlschlägt, wird Ihnen dieser Lauf nicht berechnet. Läufe, die Sie abbrechen, oder Läufe, die wegen erschöpftem Guthaben stoppen, werden weiterhin berechnet.
+
+Wenn ein Lauf nicht berechnet wird, erscheint er unter **Abrechnung** → **Nutzung** als **Nicht berechnet** mit einer kurzen Begründung. Diese unberechneten Läufe zählen nicht zu Ihrem verbrauchten Guthaben.
+
+Wenn ein Lauf fehlschlägt, können Sie **Kostenlos beheben** klicken, um einmal innerhalb von 24 Stunden kostenlos erneut zu versuchen. Es gibt ein tägliches Limit für kostenlose Wiederholungen (Standard ist 5 pro 24 Stunden).
+
+{/* TODO: confirm Webza's exact daily limit for Fix for free retries. */}
+
+## Nutzungsstatistiken
+
+Öffnen Sie **Abrechnung** → **Nutzung**, um eine vollständige Aufschlüsselung Ihres Credit-Verbrauchs einzusehen:
+
+- Nutzung nach Projekt
+- Nutzung nach KI-Modell
+- Unberechnete Läufe und Gründe
+
+So erkennen Sie, welche Projekte oder Modelle die meisten Credits verbrauchen.
+
+## KI-Bilder
+
+Ihr Tarif kann eine monatliche Menge an KI-generierten Bildern enthalten. Das aktuelle Limit wird auf der Karte **Aktueller Plan** innerhalb der Seite **Nutzung** angezeigt.
+
+{/* TODO: confirm AI image allowances for each Webza plan. */}
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Rechnungen und Abrechnung" icon="receipt" href="/de/invoices-and-billing">
+    Zahlungen, Rechnungen und Transaktionsverlauf einsehen.
+  </Card>
+
+  <Card title="Projekt-Chat" icon="message" href="/de/project-chat">
+    Erfahren Sie, wie Builds und Wiederholungen im Chat funktionieren.
+  </Card>
+</CardGroup>

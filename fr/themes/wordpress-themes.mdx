@@ -1,0 +1,139 @@
+---
+title: "Thèmes WordPress"
+sidebarTitle: "Thèmes WordPress"
+description: "Générez des thèmes de blocs WordPress installables avec Webza, prévisualisez-les dans un WordPress Playground dans votre navigateur et installez-les sur WordPress 6.7 ou plus récent."
+---
+
+Générez un thème de blocs WordPress Full Site Editing (FSE) installable depuis le même chat que celui utilisé pour construire des sites web. Prévisualisez-le en direct dans votre navigateur, téléchargez-le en `.zip` et installez-le sur n'importe quel site WordPress fonctionnant sous 6.7 ou plus récent.
+
+<Note>
+  Les thèmes WordPress sont disponibles sur les plans Plus et Premium.
+</Note>
+
+## Ce que vous obtenez
+
+Un projet de thème WordPress produit un thème de blocs au lieu d'un site web. Le thème inclut :
+
+- `theme.json` avec les couleurs, polices et espacement de votre design system
+- Modèles de blocs et parties de modèles
+- Patterns
+- Styles
+
+Webza vérifie la structure du thème et la syntaxe PHP à chaque build, afin que le thème téléchargé soit prêt à être installé.
+
+## Créer un projet de thème WordPress
+
+Sur le tableau de bord, un sélecteur de sortie apparaît à côté du prompt :
+
+| Sortie | Résultat |
+| --- | --- |
+| **Site web** | La valeur par défaut. Un site que vous pouvez publier sur un sous-domaine ou un domaine personnalisé. |
+| **Thème WordPress** | Un thème de blocs FSE installable. |
+
+Choisissez **Thème WordPress**, saisissez votre prompt et démarrez le projet. Le type de sortie est défini lors de la création du projet et ne peut pas être changé ultérieurement.
+
+<Tip>
+  Vous pouvez également partir d'un template WordPress. Les templates conçus pour WordPress apparaissent aux côtés des templates de site web.
+</Tip>
+
+## Prévisualiser votre thème
+
+Webza prévisualise les thèmes dans WordPress Playground : un vrai WordPress fonctionnant dans votre navigateur, avec votre thème installé et activé. Vous n'avez besoin d'aucun serveur ni hébergement pour voir le résultat.
+
+Le Playground dispose de sa propre commande de rechargement. Comme il démarre une instance WordPress complète, le premier chargement et les mises à jour de l'aperçu peuvent prendre un moment.
+
+<Warning>
+  Playground est un aperçu, pas un hébergement. Tout ce qu'il contient vit dans votre onglet de navigateur et disparaît lorsque vous le fermez. Pour utiliser le thème, téléchargez le `.zip` et installez-le sur votre site WordPress.
+</Warning>
+
+## Modifier et itérer
+
+Annuler, Refaire et l'**Historique des révisions** fonctionnent pour les projets de thème de la même manière que pour les sites web. Lorsque vous restaurez une révision, l'aperçu du Playground redémarre avec le thème restauré afin que vous puissiez continuer à modifier à partir de ce point.
+
+## Télécharger et installer
+
+<Steps>
+  <Step title="Téléchargez le thème">
+    Ouvrez le projet dans l'éditeur Webza et cliquez sur **Télécharger le thème**. Le `.zip` porte le nom de votre projet.
+  </Step>
+  <Step title="Téléchargez sur WordPress">
+    Dans votre admin WordPress, allez dans **Appearance → Themes → Add New** et cliquez sur **Upload Theme**. Choisissez le fichier `.zip` téléchargé, puis cliquez sur **Install Now**.
+  </Step>
+  <Step title="Activez">
+    Une fois l'installation terminée, cliquez sur **Activate** pour appliquer le thème à votre site.
+  </Step>
+</Steps>
+
+<Tip>
+  Conservez le nom du fichier téléchargé. WordPress utilise le nom du `.zip` comme nom du dossier du thème.
+</Tip>
+
+### Prérequis
+
+- **WordPress 6.7 ou plus récent.** Les versions antérieures peuvent refuser l'installation ou afficher incorrectement les modèles.
+- **PHP 7.4 ou plus récent** sur votre serveur WordPress.
+
+## Ce que les projets de thème ne peuvent pas faire
+
+Un thème est un fichier téléchargeable, pas un site hébergé, donc certaines fonctionnalités de site web ne sont pas disponibles :
+
+- **Publication et domaines personnalisés** : Webza n'héberge pas les projets de thème, donc l'onglet **Domains** n'est jamais affiché.
+- **GitHub et Supabase** : non disponibles pour les thèmes.
+- **Mode Design** : le design system choisi lors de la création est intégré dans `theme.json`.
+- **Images générées par l'IA** : disponibles uniquement pour les projets de site web.
+- **Analytics** : la carte analytics est masquée. Ajoutez le suivi directement dans votre site WordPress.
+
+Dans l'éditeur, le bouton **Exporter** est remplacé par **Télécharger le thème**.
+
+## Changement de plans
+
+Si vous passez de Plus ou Premium à un plan sans thèmes WordPress, vous pouvez toujours télécharger vos thèmes existants, mais les nouveaux builds sur les projets de thème sont bloqués. Passez à nouveau à un plan supérieur pour continuer à les modifier.
+
+## Dupliquer un projet de thème
+
+Un projet de thème WordPress dupliqué conserve le type de sortie WordPress.
+
+## Dépannage
+
+<AccordionGroup>
+  <Accordion title="Je ne vois pas l'option Thème WordPress">
+    Les thèmes WordPress sont disponibles uniquement sur les plans Plus et Premium. Sur les autres plans, le sélecteur est masqué.
+  </Accordion>
+
+  <Accordion title="Les builds sont refusés sur mon projet de thème">
+    Votre plan actuel n'inclut pas les thèmes WordPress. Passez à Plus ou Premium pour continuer à construire. Votre projet et son thème téléchargeable restent intacts en attendant.
+  </Accordion>
+
+  <Accordion title="L'aperçu reste bloqué sur Installing your theme…">
+    - Attendez un moment. Le premier chargement télécharge un WordPress complet dans votre navigateur, ce qui peut être lent sur certaines connexions.
+    - Un réseau d'entreprise strict, un VPN ou une extension de navigateur peut bloquer l'aperçu ou WebAssembly. Essayez un autre réseau ou désactivez les extensions.
+    - Consultez la console de votre navigateur pour les requêtes bloquées.
+
+    Le bouton **Télécharger le thème** fonctionne toujours, vous pouvez donc toujours installer le thème sur votre propre site WordPress.
+  </Accordion>
+
+  <Accordion title="WordPress refuse d'installer le thème">
+    Mettez à jour WordPress vers 6.7 ou plus récent, et assurez-vous d'avoir téléchargé le fichier `.zip` depuis **Télécharger le thème** sans le décompresser.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=wordpress-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">Construisez votre thème WordPress avec l'IA</span>
+    <span className="wz-ad-text">Décrivez le thème que vous souhaitez et obtenez un thème de blocs installable en quelques minutes, prêt à être téléchargé sur n'importe quel site WordPress.</span>
+  </span>
+
+  <span className="wz-ad-btn">Créer un thème WordPress <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Thèmes Shopify" icon="shopify" href="/fr/themes/shopify-themes">
+    Découvrez comment générer et installer des thèmes Shopify Online Store 2.0.
+  </Card>
+
+  <Card title="Plans d'abonnement" icon="credit-card" href="/fr/subscription-plans">
+    Comparez les plans et voyez quelles fonctionnalités sont incluses sur le vôtre.
+  </Card>
+</CardGroup>

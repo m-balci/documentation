@@ -1,0 +1,83 @@
+---
+title: "Publicar"
+description: "Saiba como publicar o seu projeto da Webza, gerenciar snapshots e controlar a visibilidade do site."
+---
+
+Publicar coloca o seu projeto no ar. Apenas construir não o coloca online. Você deve clicar em **Publicar** para fazer o deploy.
+
+## Publicar o seu projeto
+
+<Steps>
+  <Step title="Abrir o diálogo de publicação">
+    Na barra de ferramentas do editor, clique em **Publicar**.
+  </Step>
+  <Step title="Escolher um subdomínio">
+    Digite o nome que deseja para o seu endereço `*.webza.ai`. A Webza verifica a disponibilidade enquanto você digita e sugere um nome curto baseado no nome do seu projeto. Alguns nomes são reservados e serão recusados.
+  </Step>
+  <Step title="Definir visibilidade">
+    Escolha **Público** para que qualquer pessoa com a URL possa visualizar o site, ou **Privado** para que apenas você possa visualizá-lo enquanto estiver logado na Webza naquele navegador. Todos os outros são recusados.
+
+    <Note>
+      Visibilidade privada é um recurso do plano. Se o seu plano não o incluir, a opção aparecerá bloqueada com "Faça upgrade para desbloquear visibilidade privada."
+
+      {/* TODO: confirmar quais planos da Webza incluem visibilidade privada */}
+    </Note>
+  </Step>
+  <Step title="Confirmar e publicar">
+    Clique em **Publicar**. A Webza captura um snapshot primeiro, depois faz o deploy do site.
+  </Step>
+</Steps>
+
+Uma vez publicado, o botão da barra de ferramentas mostra **Publicado**. Clicar nele reabre o diálogo para que você possa alterar as configurações ou tirar o site do ar.
+
+## Republicar após alterações
+
+O seu site ao vivo não se atualiza automaticamente quando você constrói. Republicar sempre que quiser que as alterações mais recentes fiquem ao vivo. Cada republicação captura um novo snapshot.
+
+## Snapshots de publicação
+
+Cada publicação cria um **Snapshot pré-publicação** listado em **Versões anteriores** no diálogo de publicação. Apenas os cinco snapshots mais recentes por projeto são mantidos.
+
+Reverter restaura a saída da prévia publicada, não o código-fonte do projeto. A próxima build ainda regenera a partir do seu código-fonte atual. Para reverter alterações reais de código, use **Desfazer** ou **Histórico de revisões**. Veja [Prévia](/pt-br/preview) para detalhes.
+
+## Domínios personalizados
+
+Uma vez que o seu projeto está publicado, você pode apontar seu próprio domínio para ele. Os planos Plus incluem 1 domínio personalizado; os planos Premium incluem 3. Veja [Domínios personalizados](/pt-br/custom-domains) para os passos de configuração.
+
+O projeto deve permanecer publicado. Despublicar também tira o domínio personalizado do ar.
+
+## Imagem de compartilhamento
+
+Antes de compartilhar o seu site em plataformas sociais, defina uma imagem de compartilhamento em **Configurações** → **Geral**. Veja [Configurações](/pt-br/settings).
+
+## Temas WordPress e Shopify
+
+Projetos de temas WordPress e Shopify não são hospedados pela Webza. Você exporta o tema como `.zip` e instala-o no seu próprio site WordPress ou loja Shopify. A aba **Domínios** nunca é exibida para temas WordPress.
+
+## Despublicar
+
+Para tirar um site do ar, abra o diálogo de publicação e despublique-o. Isso remove o site ao vivo e qualquer domínio personalizado associado da web.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=publish" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <img className="wz-ad-logo" src="/images/webza-mark.svg" alt="" noZoom />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Vá ao ar</span>
+    <span className="wz-ad-title">Seu site, ao vivo em webza.ai</span>
+    <span className="wz-ad-text">Construa um site e coloque-o ao vivo no seu próprio endereço webza.ai. Compartilhe com o mundo hoje.</span>
+  </span>
+
+  <span className="wz-ad-btn">Comece a construir de graça <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Domínios personalizados" icon="globe" href="/pt-br/custom-domains">
+    Aponte seu próprio domínio para um projeto publicado.
+  </Card>
+
+  <Card title="Configurações" icon="sliders" href="/pt-br/settings">
+    Configure sua imagem de compartilhamento e outras opções do projeto.
+  </Card>
+</CardGroup>

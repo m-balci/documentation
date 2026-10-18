@@ -1,0 +1,128 @@
+---
+title: "Dashboard overview"
+description: "Learn how to navigate the Webza dashboard, start new projects, and reach your files, databases, billing, and settings."
+---
+
+The dashboard is your starting point in Webza. It is where you start new projects, open existing ones, check your credit balance, and reach your account tools such as billing, support, and settings.
+
+{/* TODO: Add a dashboard screenshot here (e.g. /images/webza-dashboard.png). Use a demo account so no personal name or email is visible. */}
+
+## Start a new project
+
+The prompt box sits in the center of the dashboard, under the greeting **What can I help you build?**. Describe what you want to build and select **Start** to create the project and open its chat. See [Quick start](/introduction/getting-started) for a full walkthrough.
+
+### The prompt box
+
+Type your idea into the text field. You can be as brief or as detailed as you like, for example `a portfolio website for a photographer` or a multi-paragraph description of every page and section. The more specific you are about features, design preferences, and requirements, the better the first result. The box also includes:
+
+- **Output type**: The selector next to the prompt (set to **Website** by default) chooses what Webza creates. It appears when your plan includes WordPress or Shopify themes (Plus and Premium):
+  - **Website**: A site hosted by Webza.
+  - **WordPress Theme**: An installable WordPress block theme. It previews in an in-browser WordPress Playground and exports as a theme `.zip`.
+  - **Shopify Theme**: An installable Shopify Online Store 2.0 theme. You download the theme `.zip` and install it in your Shopify store.
+- **Customize**: Opens a popover with every option for your starting point. See [Customize your project](#customize-your-project).
+- **Microphone**: Describe your project hands-free with built-in, browser-based voice input.
+- **Attach**: Attach up to 10 files to your first prompt, such as logos, photos, or PDFs. File attachments are available on plans that include file storage, and each file is checked against your plan's file size, type, and storage limits before the project is created.
+- **Start**: Creates the project and opens the chat.
+
+<Note>
+  Your first prompt can be up to 10,000 characters, the same as later chat messages. A counter appears as you approach the limit.
+</Note>
+
+### Customize your project
+
+The **Customize** popover holds every picker for your starting point:
+
+- **Template**: The structure your project starts from, meaning which pages and components exist. Leave it on **Automatic** and the AI picks one at build time, or choose a specific template. Premium templates are available on the Plus and Premium plans. See [Templates](/templates).
+- **Design system**: The visual identity of your site: its color tokens, accent palette, and fonts. Leave it on **Automatic** and the AI picks the best fit for your prompt at the first build, or choose a specific design system to lock in a look. Substrate and ten premium design systems are available on every plan. See [Design systems](/design-systems).
+- **Accent**: When you pick a specific design system, choose one of its named accent palettes or keep its default accent.
+- **Database**: Attach one of your Supabase connections to make your app database-backed. See [Databases](#projects).
+- **Integrations**: Connect a GitHub repository.
+
+Templates and design systems are independent, so you can pair any design system with any template. For WordPress and Shopify themes, the Database and GitHub options do not apply.
+
+{/* TODO: Confirm which templates and design systems are installed on Webza (Substrate is the bundled default design system). */}
+
+### Suggested prompts
+
+Below the prompt box, a row of suggestions such as **Create a portfolio website**, **Design a landing page**, and **Make an e-commerce store** scrolls past. Select one to fill the prompt box, then edit it or start right away.
+
+## Top bar
+
+The bar across the top of the dashboard shows:
+
+- **Sidebar toggle**: Collapse or expand the sidebar.
+- **Credit balance**: Your remaining credits next to your plan's total, for example `20.000.000 / 20.000.000 credits`. See [Credits and usage](/credits-and-usage).
+- **Language**: Change the language of the Webza interface. {/* TODO: List supported interface languages. */}
+- **Notifications**: Open your in-app notifications, such as build status updates when Webza finishes building a project. {/* TODO: Confirm other notification types (support replies, billing, product updates). */}
+- **Theme**: Switch the Webza interface between light and dark mode. {/* TODO: Confirm the monitor icon is the theme switch. */}
+- **Your account**: Your name, email, and avatar. {/* TODO: Describe the menu that opens when you select the avatar (Profile, Log out, etc.). Profile is at https://webza.ai/profile. */}
+
+## Sidebar and navigation
+
+The sidebar on the left gives you access to everything in your account.
+
+- **Create**: Return to the dashboard prompt box to start a new project.
+
+### Projects
+
+The **Projects** section can be collapsed with the arrow next to its heading.
+
+- **All Projects**: Browse, favorite, duplicate, and delete your projects. See [Manage projects](#manage-projects).
+- **File Manager**: Upload files such as images and documents, preview images and PDFs inline, delete files, and check your storage usage. Storage and file size limits depend on your plan and apply to your whole account, not to each project. See [File manager](/file-manager).
+- **Databases**: Add your own Supabase connections. Depending on what is enabled, you can connect by signing in to Supabase (**Connect with Supabase**), by pasting a project-scoped access token, or manually with a connection string. Apps that use a connection get relational Postgres tables, authentication, storage, and row-level security (RLS). See [Supabase](/integrations/supabase).
+- **GitHub**: Connect a GitHub repository to a project, either by creating a new private repository or by attaching an empty one you already own. With automatic push turned on, Webza pushes your generated source code to the repository after every build. You can connect, switch, or disconnect a repository later from the project's settings. See [GitHub](/integrations/github).
+- **API Keys**: Create personal API keys for the read-only Webza REST API. Each key is shown only once when you create it, can expire after 30, 90, or 365 days, and you can have up to 10 keys. API access is available on the Plus and Premium plans. See [Personal API](/integrations/personal-api).
+- **API Docs**: Lists every API endpoint with an interactive tester and copy-paste samples in curl, JavaScript, PHP, and Python. The API exposes your account, credits, subscription, projects, notifications, and invoices.
+- **Billing**: View your plan, credits, usage, and transaction history, or cancel your subscription. See [Invoices and billing](/invoices-and-billing) and [Change or cancel your subscription](/change-or-cancel-your-subscription).
+- **Support**: Open and follow your support tickets. See [Support tickets](/help/support-tickets).
+- **Settings**: Manage your account, AI settings, and privacy. See [Settings](/settings).
+
+<Warning>
+  The API is read-only: it cannot create projects, trigger builds, or change billing. Keep your API keys secret. They grant access to your account data until you revoke them or they expire.
+</Warning>
+
+### Invite Friends
+
+Select the **Invite Friends** card at the bottom of the sidebar to share Webza and earn credits for referrals.
+
+{/* TODO: Add referral program details: how the invite link works, how many credits you and the invited person get, when credits are granted, limits, and expiry. */}
+
+### Restart tour
+
+The first time you open the dashboard, a short guided tour may point out the parts of the interface you need first. You can step through it or dismiss it. Select **Restart tour** at the bottom of the sidebar to replay it at any time. Inside a project, the circular-arrow button at the right of the editor toolbar (next to **Rebuild**) replays the editor tour.
+
+## Manage projects
+
+**All Projects** lists your projects in three tabs, each with a count:
+
+- **All**: Everything you are working on.
+- **Favorites**: Projects you starred from their row. Starring is only a filter for your convenience and does not change the project.
+- **Trash**: Deleted projects. Select **Restore** to bring one back, or **Delete permanently** to remove it now.
+
+Each project row also has an action menu with **Duplicate**, which creates a new project named `<original> (Copy)`. See [Find a project](/find-a-project) for details.
+
+<Warning>
+  Projects in Trash are deleted permanently after the retention period, together with their files, previews, and snapshots. Permanent deletion cannot be undone. {/* TODO: Confirm Webza's trash retention period (script default is 90 days). */}
+</Warning>
+
+## Get help
+
+Select **Support** in the sidebar to see your tickets, then select **New Ticket** to open one. Add a subject, describe the problem, and attach files such as a screenshot of the error. Replies arrive by email and are threaded into the ticket.
+
+A ticket is **Open** while the support team is working on it, **Pending** when it is waiting on you, and **Closed** when it is done. Replying to a closed ticket reopens it, so you never need to open a duplicate. All members can open tickets, and Plus and Premium include priority support.
+
+<Tip>
+  Only you and the Webza team can read your tickets, so they are the right place for account-specific details. Never paste passwords or API keys unless you are explicitly asked for them.
+</Tip>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Quick start" icon="rocket" href="/introduction/getting-started">
+    Build and publish your first website.
+  </Card>
+
+  <Card title="Subscription plans" icon="credit-card" href="/subscription-plans">
+    Compare Free, Plus, and Premium.
+  </Card>
+</CardGroup>

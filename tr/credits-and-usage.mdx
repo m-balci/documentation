@@ -1,0 +1,93 @@
+---
+title: "Krediler ve kullanım"
+description: "Webza build kredilerinin nasıl çalıştığını anlayın, bakiyenizi izleyin ve kredilerin ne zaman harcandığını veya iade edildiğini öğrenin."
+---
+
+Derleme kredileri, Webza'daki her AI üretimini gerçekleştirir. Her plan belirli bir miktar içerir ve ay içinde tükenirseniz ek paketler satın alabilirsiniz.
+
+## Krediler nasıl çalışır
+
+Krediler, AI token kullanımına göre harcanır. Her üretim, düzenleme ve derleme çağrısı küçük bir miktar token maliyetine sahiptir ve bu, bakiyenizden gerçek zamanlı olarak düşülür.
+
+Planınız aylık tahsisatınızı belirler:
+
+| Plan | Aylık tahsisat | Ödeme |
+| --- | --- | --- |
+| Free | 2.000.000 kredi (tek seferlik) | Abonelik yok |
+| Plus | Ayda 7.000.000 kredi | \$19.99/ay |
+| Premium | Ayda 20.000.000 kredi | \$49.99/ay |
+
+{/* TODO: confirm whether unused monthly credits roll over to the next month. */}
+
+## Bakiyenizi kontrol etme
+
+Kalan kredileriniz kontrol panelinin üst çubuğunda görünür, örneğin **20.000.000 / 20.000.000 kredi**.
+
+Sohbet başlığı ayrıca bir kredi göstergesi içerir:
+
+- **Varsayılan renk** bakiyenizin yüzde 20'sinden fazlası kaldığında.
+- **Sarı** bakiyeniz yüzde 5 ile 20 arasındayken. Hızlı bir şekilde ek kredi alabilmeniz için bir **Kredi satın al** bağlantısı belirir.
+- **Kırmızı** bakiyeniz yüzde 5 veya daha az olduğunda.
+- **"API anahtarınız kullanılıyor"** kendi API anahtarınızla derleme yaptığınızda; Webza kredileri yerine kendi anahtarınızı kullanıyorsunuz.
+
+## Ek kredi satın alma
+
+Bir sonraki fatura döngüsünden önce kredileriniz biterse, **Faturalandırma** > **Kullanım** yolunu açın ve **Kredi satın al** düğmesine tıklayın. Aboneliğiniz için kullandığınız aynı ödeme yöntemiyle tek seferlik bir kredi paketi satın alabilirsiniz. Ödeme tamamlandığında krediler bakiyenize eklenir.
+
+Kredi paketleri otomatik olarak yenilenmez ve planınızın aylık tahsisatını değiştirmez. Paket boyutları ve fiyatları plana göre değişiklik gösterebilir.
+
+{/* TODO: confirm exact pack sizes and prices for Webza plans. */}
+
+## Kendi API anahtarınızı kullanma
+
+Plus ve Premium planlar, kendi AI sağlayıcı API anahtarınızı eklemenize olanak tanır. Kendi anahtarınızla derleme yaptığınızda, kullanım Webza üzerinden ölçülür ancak plan kredilerinizden düşülmez. Doğrudan sağlayıcınız tarafından faturalandırılırsınız.
+
+Bunu ayarlamak için [Ayarlar](/tr/settings) > **AI ayarları** yoluna gidin ve API anahtarınızı yapıştırın.
+
+## Krediler ne zaman harcanır
+
+Krediler şu durumlarda harcanır:
+
+- Tasarım yeniden temalandırma
+- Denetleyiciden **Tümünü kaydet** işlemleri
+- Herhangi bir AI derleme veya üretim çalıştırması
+
+Soru sorduğunuzda veya AI'nın yanıt vermesini beklerken kredi harcanmaz. Sadece gerçek derleme işlemi kredi maliyetine sahiptir.
+
+## Ücretsiz düzeltme
+
+Bir çalışma AI hatası veya platform sorunu nedeniyle başarısız olursa, o çalışma için ücretlendirilmezsiniz. İptal ettiğiniz çalışmalar veya kredileriniz bittiği için duran çalışmalar hâlâ ücretlendirilir.
+
+Ücretlendirilmeyen bir çalışma, **Faturalandırma** > **Kullanım** bölümünde kısa bir nedenle birlikte **Ücret alınmadı** olarak görünür. Bu ücretlendirilmeyen çalışmalar, harcanan kredilerinize dahil edilmez.
+
+Bir çalışma başarısız olursa, 24 saat içinde bir kez ücretsiz olarak tekrar denemek için **Ücretsiz düzelt** seçeneğine tıklayabilirsiniz. Ücretsiz tekrar deneme günlük bir limiti vardır (varsayılan 24 saatte 5'tir).
+
+{/* TODO: confirm Webza's exact daily limit for Fix for free retries. */}
+
+## Kullanım istatistikleri
+
+**Faturalandırma** > **Kullanım** bölümünü açarak kredi tüketiminizin tam bir dağılımını görebilirsiniz:
+
+- Proje bazında kullanım
+- AI modeli bazında kullanım
+- Ücret alınmayan çalışmalar ve nedenleri
+
+Bu, hangi projelerin veya modellerin en çok kredi kullandığını belirlemenize yardımcı olur.
+
+## AI görselleri
+
+Planınız, ayda belirli sayıda AI üretilmiş görsel içeriyor olabilir. Mevcut limit, **Kullanım** sayfasındaki **Mevcut plan** kartında gösterilir.
+
+{/* TODO: confirm AI image allowances for each Webza plan. */}
+
+## İlgili sayfalar
+
+<CardGroup cols={2}>
+  <Card title="Faturalar ve ödeme" icon="receipt" href="/tr/invoices-and-billing">
+    Ödemeleri, faturaları ve işlem geçmişini görün.
+  </Card>
+
+  <Card title="Proje sohbeti" icon="message" href="/tr/project-chat">
+    Derleme işlemlerinin ve tekrar denemelerin sohbette nasıl çalıştığını öğrenin.
+  </Card>
+</CardGroup>

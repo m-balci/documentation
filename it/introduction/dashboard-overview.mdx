@@ -1,0 +1,128 @@
+---
+title: "Panoramica della dashboard"
+description: "Impara a navigare nella dashboard di Webza, avviare nuovi progetti e accedere ai tuoi file, database, fatturazione e impostazioni."
+---
+
+La dashboard è il tuo punto di partenza in Webza. È qui che avvii nuovi progetti, apri quelli esistenti, controlli il tuo saldo crediti e accedi agli strumenti del tuo account come fatturazione, supporto e impostazioni.
+
+{/* TODO: Add a dashboard screenshot here (e.g. /images/webza-dashboard.png). Use a demo account so no personal name or email is visible. */}
+
+## Avvia un nuovo progetto
+
+La casella del prompt si trova al centro della dashboard, sotto il saluto **Cosa posso aiutarti a costruire?**. Descrivi cosa vuoi costruire e seleziona **Inizia** per creare il progetto e aprire la sua chat. Vedi [Avvio rapido](/it/introduction/getting-started) per una guida completa.
+
+### La casella del prompt
+
+Digita la tua idea nel campo di testo. Puoi essere breve o dettagliato, ad esempio `a portfolio website for a photographer` o una descrizione di più paragrafi di ogni pagina e sezione. Più sei specifico su funzionalità, preferenze di design e requisiti, migliore sarà il primo risultato. La casella include anche:
+
+- **Tipo di output**: Il selettore accanto al prompt (impostato su **Sito web** di default) sceglie cosa crea Webza. Appare quando il tuo piano include temi WordPress o Shopify (Plus e Premium):
+  - **Sito web**: Un sito ospitato da Webza.
+  - **Tema WordPress**: Un tema a blocchi WordPress installabile. Viene visualizzato in un WordPress Playground nel browser ed esportato come tema `.zip`.
+  - **Tema Shopify**: Un tema Shopify Online Store 2.0 installabile. Scarichi il tema `.zip` e lo installi nel tuo negozio Shopify.
+- **Personalizza**: Apre un popover con ogni opzione per il tuo punto di partenza. Vedi [Personalizza il tuo progetto](#personalizza-il-tuo-progetto).
+- **Microfono**: Descrivi il tuo progetto a mani libere con l'input vocale integrato nel browser.
+- **Allega**: Allega fino a 10 file al tuo primo prompt, come loghi, foto o PDF. Gli allegati file sono disponibili sui piani che includono l'archiviazione file, e ogni file viene verificato rispetto ai limiti di dimensione, tipo e archiviazione del tuo piano prima che il progetto venga creato.
+- **Inizia**: Crea il progetto e apre la chat.
+
+<Note>
+  Il tuo primo prompt può essere lungo fino a 10.000 caratteri, come i messaggi di chat successivi. Un contatore appare man mano che ti avvicini al limite.
+</Note>
+
+### Personalizza il tuo progetto
+
+Il popover **Personalizza** contiene ogni selettore per il tuo punto di partenza:
+
+- **Template**: La struttura da cui parte il tuo progetto, ovvero quali pagine e componenti esistono. Lascialo su **Automatico** e l'AI ne sceglie uno al momento della build, oppure scegli un template specifico. I template Premium sono disponibili sui piani Plus e Premium. Vedi [Template](/it/templates).
+- **Design system**: L'identità visiva del tuo sito: i suoi token di colore, palette di accenti e font. Lascialo su **Automatico** e l'AI sceglie la soluzione migliore per il tuo prompt alla prima build, oppure scegli un design system specifico per bloccare un look. Substrate e dieci design system premium sono disponibili su ogni piano. Vedi [Design system](/it/design-systems).
+- **Accento**: Quando scegli un design system specifico, scegli una delle sue palette di accenti denominate o mantieni il suo accento di default.
+- **Database**: Allega una delle tue connessioni Supabase per rendere la tua app basata su database. Vedi [Database](#progetti).
+- **Integrazioni**: Collega un repository GitHub.
+
+I template e i design system sono indipendenti, quindi puoi abbinare qualsiasi design system a qualsiasi template. Per i temi WordPress e Shopify, le opzioni Database e GitHub non si applicano.
+
+{/* TODO: Confirm which templates and design systems are installed on Webza (Substrate is the bundled default design system). */}
+
+### Prompt suggeriti
+
+Sotto la casella del prompt, una riga di suggerimenti come **Crea un sito portfolio**, **Crea una landing page** e **Crea un negozio online** scorre. Selezionane uno per riempire la casella del prompt, poi modificalo o avvia subito.
+
+## Barra superiore
+
+La barra in cima alla dashboard mostra:
+
+- **Attiva/disattiva sidebar**: Comprime o espande la sidebar.
+- **Saldo crediti**: I tuoi crediti rimanenti accanto al totale del tuo piano, ad esempio `20.000.000 / 20.000.000 crediti`. Vedi [Crediti e utilizzo](/it/credits-and-usage).
+- **Lingua**: Cambia la lingua dell'interfaccia Webza. {/* TODO: List supported interface languages. */}
+- **Notifiche**: Apri le tue notifiche in-app, come gli aggiornamenti di stato della build quando Webza finisce di costruire un progetto. {/* TODO: Confirm other notification types (support replies, billing, product updates). */}
+- **Tema**: Passa l'interfaccia Webza dalla modalità chiara a quella scura. {/* TODO: Confirm the monitor icon is the theme switch. */}
+- **Il tuo account**: Il tuo nome, email e avatar. {/* TODO: Describe the menu that opens when you select the avatar (Profile, Log out, etc.). Profile is at https://webza.ai/profile. */}
+
+## Sidebar e navigazione
+
+La sidebar a sinistra ti dà accesso a tutto nel tuo account.
+
+- **Crea**: Torna alla casella del prompt della dashboard per avviare un nuovo progetto.
+
+### Progetti
+
+La sezione **Progetti** può essere compressa con la freccia accanto alla sua intestazione.
+
+- **Tutti i progetti**: Sfoglia, aggiungi ai preferiti, duplica ed elimina i tuoi progetti. Vedi [Gestisci progetti](#gestisci-progetti).
+- **Gestione file**: Carica file come immagini e documenti, visualizza in anteprima immagini e PDF inline, elimina file e controlla il tuo utilizzo di archiviazione. I limiti di archiviazione e dimensione file dipendono dal tuo piano e si applicano all'intero account, non a ogni progetto. Vedi [File manager](/it/file-manager).
+- **Database**: Aggiungi le tue connessioni Supabase. A seconda di ciò che è abilitato, puoi connetterti accedendo a Supabase (**Connetti con Supabase**), incollando un token di accesso con ambito progetto, o manualmente con una stringa di connessione. Le app che usano una connessione ottengono tabelle Postgres relazionali, autenticazione, archiviazione e sicurezza a livello di riga (RLS). Vedi [Supabase](/it/integrations/supabase).
+- **GitHub**: Collega un repository GitHub a un progetto, creando un nuovo repository privato o allegandone uno vuoto che già possiedi. Con il **Push automatico** attivato, Webza invia il tuo codice sorgente generato al repository dopo ogni build. Puoi collegare, cambiare o scollegare un repository in seguito dalle impostazioni del progetto. Vedi [GitHub](/it/integrations/github).
+- **Chiavi API**: Crea chiavi API personali per la Webza REST API in sola lettura. Ogni chiave viene mostrata una sola volta quando la crei, può scadere dopo 30, 90 o 365 giorni, e puoi averne fino a 10. L'accesso API è disponibile sui piani Plus e Premium. Vedi [API personale](/it/integrations/personal-api).
+- **Documentazione API**: Elenca ogni endpoint API con un tester interattivo e esempi da copia e incolla in curl, JavaScript, PHP e Python. L'API espone il tuo account, crediti, abbonamento, progetti, notifiche e fatture.
+- **Fatturazione**: Visualizza il tuo piano, crediti, utilizzo e cronologia delle transazioni, o cancella il tuo abbonamento. Vedi [Fatture e fatturazione](/it/invoices-and-billing) e [Cambia o cancella il tuo abbonamento](/it/change-or-cancel-your-subscription).
+- **Supporto**: Apri e segui i tuoi ticket di supporto. Vedi [Ticket di supporto](/it/help/support-tickets).
+- **Impostazioni**: Gestisci il tuo account, le impostazioni AI e la privacy. Vedi [Impostazioni](/it/settings).
+
+<Warning>
+  L'API è in sola lettura: non può creare progetti, avviare build o modificare la fatturazione. Tieni segrete le tue chiavi API. Concedono accesso ai dati del tuo account finché non le revochi o non scadono.
+</Warning>
+
+### Invita amici
+
+Seleziona la card **Invita amici** in fondo alla sidebar per condividere Webza e guadagnare crediti per i referral.
+
+{/* TODO: Add referral program details: how the invite link works, how many credits you and the invited person get, when credits are granted, limits, and expiry. */}
+
+### Riproduci tour
+
+La prima volta che apri la dashboard, un breve tour guidato può indicarti le parti dell'interfaccia di cui hai bisogno per prima. Puoi seguirlo o chiuderlo. Seleziona **Riproduci tour** in fondo alla sidebar per riprodurlo in qualsiasi momento. All'interno di un progetto, il pulsante a freccia circolare a destra della barra degli strumenti dell'editor (accanto a **Ricostruisci**) riproduce il tour dell'editor.
+
+## Gestisci progetti
+
+**Tutti i progetti** elenca i tuoi progetti in tre schede, ciascuna con un conteggio:
+
+- **Tutti**: Tutto ciò su cui stai lavorando.
+- **Preferiti**: Progetti che hai aggiunto ai preferiti dalla loro riga. Aggiungere ai preferiti è solo un filtro per la tua comodità e non cambia il progetto.
+- **Cestino**: Progetti eliminati. Seleziona **Ripristina** per ripristinarne uno, o **Elimina definitivamente** per rimuoverlo definitivamente.
+
+Ogni riga di progetto ha anche un menu azioni con **Duplica**, che crea un nuovo progetto denominato `<original> (Copy)`. Vedi [Trova un progetto](/it/find-a-project) per i dettagli.
+
+<Warning>
+  I progetti nel Cestino vengono eliminati definitivamente dopo il periodo di conservazione, insieme ai loro file, preview e snapshot. L'eliminazione permanente non può essere annullata. {/* TODO: Confirm Webza's trash retention period (script default is 90 days). */}
+</Warning>
+
+## Ottieni aiuto
+
+Seleziona **Supporto** nella sidebar per vedere i tuoi ticket, poi seleziona **Nuovo ticket** per aprirne uno. Aggiungi un oggetto, descrivi il problema e allega file come uno screenshot dell'errore. Le risposte arrivano via email e sono raggruppate nel ticket.
+
+Un ticket è **Aperto** mentre il team di supporto ci sta lavorando, **In attesa** quando è in attesa di te, e **Chiuso** quando è risolto. Rispondere a un ticket chiuso lo riapre, quindi non devi mai aprirne uno duplicato. Tutti i membri possono aprire ticket, e Plus e Premium includono supporto prioritario.
+
+<Tip>
+  Solo tu e il team Webza potete leggere i tuoi ticket, quindi sono il posto giusto per i dettagli specifici dell'account. Non incollare mai password o chiavi API a meno che non te le chiedano esplicitamente.
+</Tip>
+
+## Prossimi passi
+
+<CardGroup cols={2}>
+  <Card title="Avvio rapido" icon="rocket" href="/it/introduction/getting-started">
+    Costruisci e pubblica il tuo primo sito web.
+  </Card>
+
+  <Card title="Piani di abbonamento" icon="credit-card" href="/it/subscription-plans">
+    Confronta Free, Plus e Premium.
+  </Card>
+</CardGroup>

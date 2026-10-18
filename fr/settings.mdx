@@ -1,0 +1,136 @@
+---
+title: "Paramètres"
+description: "Gérer les paramètres de projet, les domaines personnalisés, les analyses et vos préférences de compte dans Webza."
+---
+
+La zone **Paramètres** dans Webza comporte deux parties : les paramètres de projet à l'intérieur de l'éditeur, et les paramètres de compte dans la barre latérale. Utilisez-les pour configurer ce que vous construisez et comment se comporte votre compte.
+
+## Paramètres de projet
+
+Ouvrez l'onglet **Paramètres** dans l'éditeur. Les onglets que vous voyez dépendent de votre plan et du type de projet.
+
+### Général
+
+Définissez les bases qui façonnent votre projet et comment il apparaît en ligne.
+
+| Champ | Ce qu'il fait |
+| --- | --- |
+| **Nom du projet** | Étiquette interne pour votre liste de projets. |
+| **Description du projet** | Note interne pour vous aider à vous souvenir de l'objectif. |
+| **Titre publié** | Balise titre et titre de partage social. |
+| **Description publiée** | Meta description et texte de partage social. |
+| **Visibilité** | Public (les moteurs de recherche peuvent indexer) ou privé (noindex). |
+| **Image de partage** | Image d'aperçu social utilisée pour `og:image` et `twitter:image`. Voir ci-dessous. |
+| **IDs d'analyses** | IDs de suivi si votre plan inclut Analyses. Voir ci-dessous. |
+| **Lien du dépôt GitHub** | Lien vers le dépôt connecté si GitHub est activé. |
+
+#### Image de partage
+
+Téléchargez une image JPG, PNG ou WebP jusqu'à 2 Mo. La taille recommandée est de 1200×630 pixels. Webza l'écrit dans `og:image` et `twitter:image` au moment de la construction.
+
+<Tip>
+  Définissez votre image de partage avant de partager largement le projet. Les plateformes sociales mettent en cache le premier scrape, et certaines offrent un outil de rafraîchissement du cache si vous devez la mettre à jour plus tard.
+</Tip>
+
+Les projets dupliqués ne copient pas l'image de partage. Vous devez la télécharger à nouveau sur le nouveau projet.
+
+#### Analyses
+
+Si votre plan inclut Analyses, une carte apparaît dans **Paramètres → Général** où vous pouvez ajouter :
+
+- **Google Tag Manager container ID** (format `GTM-XXXXXXX`)
+- **Google tag ID** (format `G-...` ou `AW-...`)
+- **Meta Pixel ID** (8 à 20 chiffres)
+
+Laissez un champ vide pour désactiver ce traceur. Ceux-ci sont injectés dans le site publié lorsqu'il est servi. Ils n'apparaissent pas dans l'aperçu de l'éditeur ni dans les exportations de code. Les changements prennent effet à la prochaine requête sans reconstruction. L'IA ne peut pas supprimer ces balises pour vous.
+
+<Note>
+  Pour d'autres services (Hotjar, Clarity, LinkedIn, TikTok, scripts personnalisés), ajoutez un conteneur GTM et configurez tout à l'intérieur de GTM.
+</Note>
+
+Cette carte est masquée pour les projets de thèmes WordPress et Shopify. Ajoutez le suivi directement dans votre site WordPress ou votre boutique Shopify à la place.
+
+{/* TODO : confirmer quels plans Webza incluent Analytics */}
+
+### Domaines
+
+Gérer comment votre projet est accessible sur le web.
+
+- **Sous-domaine** : chaque site publié obtient un sous-domaine `*.webza.ai`.
+- **Domaine personnalisé** : ajoutez votre propre domaine dans **Projet → Paramètres → Domaines → Domaine personnalisé**, puis ajoutez les enregistrements DNS requis et vérifiez.
+
+Cet onglet n'est jamais affiché pour les projets de thèmes WordPress. En savoir plus sur la page [Domaines personnalisés](/fr/custom-domains).
+
+### Connaissances
+
+Ajoutez des instructions personnalisées jusqu'à 500 caractères. Celles-ci sont envoyées à l'IA à chaque construction. Utilisez ce champ pour les règles durables que vous vous retrouvez à répéter : voix de marque, langue cible, une bibliothèque à éviter, ou une convention de nommage.
+
+<Warning>
+  Gardez-le court. Le texte de connaissances est payé à chaque construction. Les demandes ponctuelles appartiennent à la [Discussion de projet](/fr/project-chat), pas ici.
+</Warning>
+
+### Base de données
+
+Attachez l'une de vos connexions Supabase au projet. Vous pouvez attacher une connexion maintenant, changer pour une différente plus tard, ou la détacher à tout moment. Attacher et changer nécessitent la capacité Base de données sur votre plan. Détacher est toujours autorisé, par exemple après une rétrogradation.
+
+L'onglet Base de données reste visible tant qu'une connexion est attachée, même si votre plan actuel ne prend plus en charge les nouveaux attachements.
+
+### Stockage
+
+Cet onglet affiche les fichiers de projet et le jeton API que les applications générées utilisent pour rappeler Webza. Sur les plans sans stockage de fichiers, l'onglet est étiqueté **API** et affiche uniquement le jeton.
+
+### Dépôt GitHub
+
+Connectez un dépôt pour pousser le code source automatiquement.
+
+- **Créer un nouveau dépôt privé** : Webza le crée pour vous.
+- **Attacher un dépôt vide que vous possédez** : Liez un dépôt vide existant que vous possédez déjà.
+
+Vous pouvez changer pour un dépôt différent ou vous déconnecter à tout moment. Activez **Pousser automatiquement** pour pousser le code source après chaque construction.
+
+## Paramètres de compte
+
+Cliquez sur **Paramètres** en bas de la barre latérale pour ouvrir votre panneau de compte. Il comporte trois sections : Compte, Paramètres IA et Confidentialité.
+
+### Compte
+
+Mettez à jour votre nom et votre e-mail, ou changez votre mot de passe. Vous pouvez aussi gérer votre profil sur [https://webza.ai/profile](https://webza.ai/profile).
+
+### Paramètres IA
+
+Cette section est disponible sur les plans Plus et Premium lorsque vous utilisez votre propre clé API.
+
+- **Fournisseur** : choisissez un fournisseur ou laissez-le sur **Utiliser la valeur par défaut du système** pour dépenser des crédits Webza.
+- **Modèle** : apparaît après que vous avez choisi un fournisseur.
+- **Clés API** : stockées chiffrées et affichées masquées. Remplacez ou supprimez une clé à tout moment. Un badge **Configuré** apparaît lorsqu'une clé est sauvegardée.
+- **Test** : cliquez sur le bouton éclair pour vérifier que la clé fonctionne. Pour le fournisseur sélectionné, il vérifie aussi le modèle choisi.
+
+Les constructions sur votre propre clé sont mesurées par Webza mais ne sont pas déduites de vos crédits. Vous êtes facturé par votre fournisseur d'IA. Si vous revenez à **Utiliser la valeur par défaut du système**, vos clés sauvegardées sont conservées et vous retournez à dépenser des crédits.
+
+#### Sons de discussion
+
+Disponible sur tous les plans. Choisissez un style de son de notification pendant que l'IA travaille : **Minimal**, **Ludique**, **Rétro**, **Sci-Fi**, ou désactivez les sons.
+
+### Confidentialité
+
+- **Préférences de cookies** : gérez les cookies que vous acceptez.
+- **Télécharger vos données** : demandez une exportation de tout ce qui est détenu à propos de votre compte. Cela peut ne pas être disponible.
+- **Supprimer votre compte** : demandez la suppression. Il y a une période de grâce avant le retrait. Si la suppression en libre-service est désactivée, on vous demande de contacter l'assistance.
+
+{/* TODO : confirmer si l'exportation de données et la suppression en libre-service sont activées sur Webza, et la période de grâce */}
+
+### Langue de l'interface
+
+Changez la langue de l'interface depuis le sélecteur de langue dans la barre supérieure.
+
+## Pages connexes
+
+<CardGroup cols={2}>
+  <Card title="Domaines personnalisés" icon="globe" href="/fr/custom-domains">
+    Connectez votre propre domaine et vérifiez les enregistrements DNS.
+  </Card>
+
+  <Card title="Éditeur de code" icon="code" href="/fr/code-editor">
+    Éditez du code directement et gérez des fichiers dans votre projet.
+  </Card>
+</CardGroup>

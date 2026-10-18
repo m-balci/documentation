@@ -1,0 +1,75 @@
+---
+title: "Journal des modifications"
+sidebarTitle: "Changelog"
+description: "Nouvelles fonctionnalités, améliorations et corrections dans Webza."
+mode: "center"
+---
+
+{/* TODO: Entries are grouped by month. Confirm the exact release dates for the late August and early September updates. */}
+
+<Update label="Octobre 2026">
+  ### Nouveautés
+
+  - **Génération d'images IA** : L'IA peut désormais créer des images personnalisées pour vos projets de site web. Si votre forfait l'inclut, une allocation mensuelle d'images s'applique. Consultez [Chat de projet](/fr/project-chat).
+  - **Compréhension d'images** : Quand le modèle sélectionné prend en charge les images, l'IA peut désormais voir les images que vous joignez à un prompt ou à un message de chat.
+  - **Correction gratuite** : Les exécutions qui échouent à cause de l'IA ou de la plateforme ne sont pas facturées. Vous pouvez réessayer une exécution échouée une fois gratuitement, et la page Utilisation marque ces exécutions comme non facturées. Consultez [Crédits et utilisation](/fr/credits-and-usage).
+  - **Plus de façons de connecter Supabase** : Connectez-vous en vous authentifiant avec Supabase ou avec un jeton d'accès. Les connexions manuelles n'ont plus besoin de votre clé secrète. Consultez [Supabase](/fr/integrations/supabase).
+
+  ### Améliorations
+
+  - Les templates de site web incluent désormais la bibliothèque d'animations Motion, pour que l'IA puisse créer des animations plus riches comme des entrées échelonnées, du parallaxe et des compteurs animés. Consultez [Templates](/fr/templates).
+
+  ### Corrections
+
+  - Les thèmes WordPress appliquent désormais de manière fiable les couleurs et tokens du design system sélectionné. Les design systems sombres (Carbon, Lumen et Noir) démarrent désormais en mode sombre.
+  - Les thèmes Shopify reçoivent désormais les couleurs du design system quand le template est choisi automatiquement, et les fichiers de démarrage non modifiés n'affichent plus de faux messages de validation.
+</Update>
+
+<Update label="Septembre 2026">
+  ### Nouveautés
+
+  - **Modèles IA plus récents** : La liste des modèles inclut désormais les derniers modèles IA. Si un modèle que vous aviez enregistré est retiré, Webza vous bascule vers le modèle actuel le plus proche de la même classe.
+  - **Joindre des fichiers à votre premier prompt** : Si votre forfait inclut le stockage de fichiers, joignez jusqu'à 10 fichiers quand vous créez un projet.
+  - **Conseils de design pour l'IA** : Pendant la construction, l'IA suit désormais des playbooks ciblés sur la composition des pages, la mise en page des sections, le mouvement, les refontes sûres et la précision du contenu.
+  - **Mouvement cohérent** : Chaque [design system](/fr/design-systems) définit désormais un style de mouvement unique, pour que le timing et l'accélération des animations restent cohérents sur l'ensemble de votre site.
+
+  ### Améliorations
+
+  - Votre premier prompt peut désormais faire jusqu'à 10 000 caractères, comme les messages de suivi.
+  - Les contrôles qualité détectent désormais les liens morts "#" dans les sites générés.
+  - Chargement plus rapide des pages dans l'ensemble du tableau de bord.
+  - Meilleure prise en charge des lecteurs d'écran pour les bascules, les filtres et les boutons avec icône uniquement.
+  - Les comptes sans crédits restants voient désormais un avertissement indiquant qu'ils ne peuvent pas construire.
+
+  ### Corrections
+
+  - L'IA ne lie plus vos fichiers téléchargés avec de mauvaises adresses, ce qui empêchait les images de se charger.
+  - Les modifications apportées aux sites publiés sur des domaines personnalisés atteignent désormais les visiteurs immédiatement.
+  - Les adresses se terminant par une barre oblique ouvrent désormais la bonne page sur les sites publiés et en aperçu.
+  - Le panneau Design ne signale plus un nouveau style comme appliqué quand la reconstruction sous-jacente a échoué. La même correction s'applique à Annuler, Rétablir et la restauration d'une révision.
+  - Les cartes de questions dans le chat n'étirent plus la page ou ne cassent plus le défilement.
+  - L'onglet **Code** n'affiche plus d'erreur "Failed to load files" sur un projet qui n'a jamais été construit.
+</Update>
+
+<Update label="Août 2026">
+  ### Nouveautés
+
+  - **Questions de clarification** : L'IA peut vous poser des questions pendant une construction. Répondez-leur avec des choix cliquables directement dans le chat. Consultez [Chat de projet](/fr/project-chat).
+  - **Visites guidées** : Visites pas à pas du tableau de bord, de la création de projet, de l'éditeur, de la facturation, du gestionnaire de fichiers, des bases de données, de GitHub et de Shopify. Rejouez-les à tout moment avec **Rejouer la visite**.
+  - **Préférences de cookies** : Modifiez vos choix de consentement aux cookies à tout moment depuis le lien **Préférences de cookies** dans le pied de page.
+
+  ### Améliorations
+
+  - Chargement plus rapide des pages et un large passage sur l'accessibilité : les lecteurs d'écran annoncent désormais les erreurs de formulaire, les états de chargement, les résultats de téléchargement et les résultats de recherche.
+  - L'IA gère désormais mieux les longues conversations et ne dit plus qu'elle résume à chaque message.
+
+  ### Corrections
+
+  - Le mode sombre suit désormais le sélecteur de thème de Webza au lieu du paramètre de votre système d'exploitation.
+  - Le panneau Historique des révisions, y compris ses boutons de restauration, n'est plus coupé sur les navigateurs mobiles.
+  - Le constructeur ne signale plus "Construction terminée" quand l'IA n'a changé aucun fichier.
+  - Les messages de chat ne disparaissent plus quand plusieurs mises à jour arrivent en même temps.
+  - La création d'un dépôt GitHub affiche désormais la vraie raison quand elle échoue.
+  - Les échecs de construction affichent désormais un seul message clair.
+  - Un rejet de sauvegarde de fichier dans l'éditeur de code ne signale plus le succès et ne perd plus votre modification.
+</Update>

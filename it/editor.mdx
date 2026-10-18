@@ -1,0 +1,82 @@
+---
+title: "Editor"
+description: "Panoramica dell'editor di progetto Webza, del suo layout, della barra degli strumenti e delle scorciatoie da tastiera."
+---
+
+L'editor di progetto è l'area di lavoro in cui entri dopo aver cliccato **Inizia** su una card di progetto nella dashboard. Riunisce chat, preview, codice e impostazioni in un unico posto, così puoi costruire e perfezionare il tuo sito senza cambiare schede.
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## Layout dell'editor
+
+L'editor è diviso in tre aree principali:
+
+<CardGroup cols={2}>
+  <Card title="Chat del progetto" icon="message" href="/it/project-chat">
+    Chiedi all'AI di modificare pagine, aggiungere sezioni, cambiare stili o correggere bug. Le tue istruzioni si trasformano in modifiche al codice che puoi rivedere in tempo reale.
+  </Card>
+
+  <Card title="Live preview" icon="eye" href="/it/preview">
+    Vedi il tuo sito come lo vedranno i visitatori. La preview si aggiorna automaticamente dopo ogni modifica AI o salvataggio manuale del codice.
+  </Card>
+
+  <Card title="Code editor" icon="code" href="/it/code-editor">
+    Ispeziona e modifica i file direttamente con evidenziazione della sintassi, ricerca e salvataggio. Basato sull'editor Monaco.
+  </Card>
+
+  <Card title="Impostazioni" icon="gear" href="/it/settings">
+    Gestisci domini, analytics, SEO e altre opzioni a livello di progetto.
+  </Card>
+</CardGroup>
+
+Puoi comprimere il pannello della chat per dare alla preview la larghezza massima. Questo è utile quando ti concentri sui dettagli del design e non hai bisogno dell'assistenza AI.
+
+## Barra degli strumenti
+
+La barra degli strumenti in cima ti offre azioni rapide per il progetto corrente:
+
+- **Pubblica**: Apre il flusso di pubblicazione per mettere il tuo sito live. Vedi [Pubblica](/it/publish).
+- **Ricostruisci**: Ricostruisce il progetto dall'ultimo codice. Usalo se la preview sembra non sincronizzata.
+- **Riproduci tour**: Il pulsante a freccia circolare accanto a **Ricostruisci** riproduce il tour guidato dell'editor.
+- **Esporta**: Se il tuo piano include l'esportazione del codice (Plus o Premium), questo pulsante scarica il codice sorgente completo come file ZIP pronto per il deploy su Vercel o per l'hosting dove preferisci.
+- **Scarica tema (.zip)**: Per i progetti tema, restituisce il tema a blocchi WordPress o il tema Shopify Online Store 2.0 installabile come file ZIP invece dell'esportazione completa del codice.
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## Esportare il tuo progetto
+
+Se il tuo piano lo supporta, puoi scaricare il tuo progetto e ospitarlo al di fuori di Webza.
+
+<Steps>
+  <Step title="Apri l'editor">
+    Clicca **Inizia** sulla card del progetto dalla tua dashboard.
+  </Step>
+  <Step title="Clicca Esporta">
+    Nella barra degli strumenti, clicca **Esporta** (o **Scarica tema (.zip)** per i progetti tema).
+  </Step>
+  <Step title="Scarica lo ZIP">
+    Il file viene scaricato sul tuo computer. Estrailo e segui il README all'interno per lo sviluppo locale o il deploy su Vercel.
+  </Step>
+</Steps>
+
+## Scorciatoie da tastiera
+
+| Azione | Scorciatoia |
+| --- | --- |
+| Annulla | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| Ripristina | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> o <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| Cerca nel code editor | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| Salva nel code editor | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| Invia messaggio in chat | <kbd>Enter</kbd> |
+
+## Pagine correlate
+
+<CardGroup cols={2}>
+  <Card title="Chat del progetto" icon="message" href="/it/project-chat">
+    Impara come parlare all'AI e rivedere le modifiche.
+  </Card>
+
+  <Card title="Code editor" icon="code" href="/it/code-editor">
+    Modifica i file direttamente con l'editor Monaco integrato.
+  </Card>
+</CardGroup>

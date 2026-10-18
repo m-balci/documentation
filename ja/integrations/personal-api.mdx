@@ -1,0 +1,59 @@
+---
+title: "パーソナルAPI"
+sidebarTitle: "パーソナルAPI"
+description: "Webzaアカウント、プロジェクト、クレジット、および請求にプログラムからアクセスするための読み取り専用REST API。"
+---
+
+PlusおよびPremiumプランにはAPIアクセスが含まれます。パーソナルAPIは読み取り専用のREST APIで、プログラムからWebzaアカウントデータにアクセスできます。APIを通じてプロジェクトの作成、ビルドのトリガー、または請求の変更は行えません。
+
+## APIキーを作成する
+
+サイドバーから**APIキー**ページを開きます。
+
+<Steps>
+  <Step title="キーを生成する">
+    新しいキーを作成するためにクリックします。各キーは作成時に一度のみ表示されるため、すぐにコピーして安全に保管してください。
+  </Step>
+  <Step title="有効期限を設定する（オプション）">
+    30日、90日、または365日の有効期限を選ぶか、有効期限なしにすることもできます。
+  </Step>
+  <Step title="必要に応じて取り消す">
+    いつでも任意のキーを取り消すことができます。アカウントあたり最大10個のキーを保有できます。
+  </Step>
+</Steps>
+
+<Warning>
+  キーは秘密にしてください。取り消されるか有効期限が切れるまで、アカウントデータへのアクセスを許可します。
+</Warning>
+
+## 認証
+
+キーをBearerトークンとして`Authorization`ヘッダーに送信します。
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## エンドポイントとドキュメント
+
+APIは、アカウント、クレジット、サブスクリプション、プロジェクト、通知、および請求書のリソースを`/api/v1`の下に公開します。
+
+サイドバーから**APIドキュメント**ページを開くと、すべてのエンドポイントを確認できます。ドキュメントにはインタラクティブなテスターと、curl、JavaScript、PHP、Pythonのコピー＆ペーストサンプルが含まれています。
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## 別物：AIプロバイダーキー
+
+独自のAIプロバイダーキーは、**設定 → AI設定**（`/settings`）で別々に管理されます。これらはパーソナルAPIとは無関係です。
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/ja/integrations/github">
+    生成されたソースコードをプライベートGitHubリポジトリに自動プッシュします。
+  </Card>
+
+  <Card title="Supabaseデータベース" icon="database" href="/ja/integrations/supabase">
+    生成されたアプリにPostgresデータベースをアタッチします。
+  </Card>
+</CardGroup>

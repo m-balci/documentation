@@ -1,0 +1,82 @@
+---
+title: "编辑器"
+description: "Webza 项目编辑器的概览，包括布局、工具栏和键盘快捷键。"
+---
+
+项目编辑器是您点击控制台中项目卡片上的**开始**后进入的工作区。它将聊天、预览、代码和设置整合在一个地方，让您无需切换标签页即可构建和优化网站。
+
+{/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
+
+## 编辑器布局
+
+编辑器分为三个主要区域：
+
+<CardGroup cols={2}>
+  <Card title="项目聊天" icon="message" href="/zh/project-chat">
+    让 AI 编辑页面、添加版块、更改样式或修复错误。您的指令会实时转化为可查看的代码更改。
+  </Card>
+
+  <Card title="实时预览" icon="eye" href="/zh/preview">
+    以访客将看到的方式查看您的网站。每次 AI 编辑或手动保存代码后，预览会自动更新。
+  </Card>
+
+  <Card title="代码编辑器" icon="code" href="/zh/code-editor">
+    直接检查和编辑文件，支持语法高亮、搜索和保存。基于 Monaco 编辑器构建。
+  </Card>
+
+  <Card title="设置" icon="gear" href="/zh/settings">
+    管理域名、分析、SEO 和其他项目级选项。
+  </Card>
+</CardGroup>
+
+您可以折叠聊天面板，让预览占据全宽。当您专注于设计细节且不需要 AI 协助时，这很有用。
+
+## 工具栏
+
+顶部工具栏提供当前项目的快捷操作：
+
+- **发布**：打开发布流程，将您的网站上线。请参阅[发布](/zh/publish)。
+- **重新构建**：从最新代码重新构建项目。如果预览看起来不同步，请使用此功能。
+- **重新播放导览**：**重新构建**旁边的圆形箭头按钮可重新播放编辑器引导导览。
+- **导出**：如果您的套餐包含代码导出（Plus 或 Premium），此按钮会下载完整的源代码 ZIP 文件，可部署到 Vercel 或托管到任何您选择的地方。
+- **下载主题**：对于主题项目，此按钮会返回可安装的 WordPress 块主题或 Shopify Online Store 2.0 主题 ZIP 文件，而非完整的源代码导出。
+
+{/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
+
+## 导出项目
+
+如果您的套餐支持，您可以下载项目并在 Webza 外部托管。
+
+<Steps>
+  <Step title="打开编辑器">
+    点击控制台中项目卡片上的**开始**。
+  </Step>
+  <Step title="点击导出">
+    在工具栏中，点击**导出**（对于主题项目点击**下载主题**）。
+  </Step>
+  <Step title="下载 ZIP">
+    文件会下载到您的电脑。解压它并按照里面的 README 进行本地开发或 Vercel 部署。
+  </Step>
+</Steps>
+
+## 键盘快捷键
+
+| 操作 | 快捷键 |
+| --- | --- |
+| 撤销 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Z</kbd> |
+| 重做 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> 或 <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| 在代码编辑器中搜索 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> |
+| 在代码编辑器中保存 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> |
+| 发送聊天消息 | <kbd>Enter</kbd> |
+
+## 相关页面
+
+<CardGroup cols={2}>
+  <Card title="项目聊天" icon="message" href="/zh/project-chat">
+    了解如何与 AI 对话并查看更改。
+  </Card>
+
+  <Card title="代码编辑器" icon="code" href="/zh/code-editor">
+    使用内置 Monaco 编辑器直接编辑文件。
+  </Card>
+</CardGroup>

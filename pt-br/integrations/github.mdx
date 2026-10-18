@@ -1,0 +1,139 @@
+---
+title: "GitHub"
+sidebarTitle: "GitHub"
+description: "Conecte sua conta do GitHub para que a Webza envie o código-fonte do seu projeto para um repositório privado que você possui após cada build."
+---
+
+Em todos os planos da Webza, você pode conectar sua conta do GitHub para que a Webza envie o código-fonte do seu projeto para um repositório na sua conta após cada build bem-sucedida. O código fica sob o seu controle, e você nunca precisa sair da Webza para mantê-lo atualizado.
+
+<Note>
+  A integração com GitHub não está disponível para projetos de temas WordPress ou Shopify.
+</Note>
+
+## Como funciona
+
+<Steps>
+  <Step title="Conectar sua conta do GitHub">
+    Instale o Webza GitHub App na sua conta ou organização e vincule-o na Webza.
+  </Step>
+  <Step title="Escolher uma conta para um projeto">
+    Escolha uma conexão do GitHub quando criar um projeto. A Webza cria um novo repositório privado para ele.
+  </Step>
+  <Step title="Build">
+    Após cada build bem-sucedida, a IA envia o código-fonte do projeto com uma mensagem de commit gerada.
+  </Step>
+</Steps>
+
+<Info>
+  A Webza só envia para o seu repositório. Ela nunca clona, puxa ou constrói a partir do conteúdo do repositório. O repositório é uma saída, não uma entrada.
+</Info>
+
+## Conectar sua conta do GitHub
+
+<Steps>
+  <Step title="Abrir GitHub na barra lateral">
+    Clique em **GitHub** na barra lateral e depois em **Conectar GitHub**.
+  </Step>
+  <Step title="Instalar o app da Webza">
+    O GitHub pede para você instalar o app da Webza. Escolha se deseja conceder acesso a todos os repositórios ou apenas a repositórios selecionados.
+  </Step>
+  <Step title="Retornar para a Webza">
+    Você é redirecionado de volta para a Webza com a conexão salva.
+  </Step>
+</Steps>
+
+Você pode vincular várias contas pessoais ou organizações, até 20 conexões.
+
+## Conectar um repositório a um projeto
+
+Quando você cria um projeto, clique em **Personalizar** na caixa de prompt do painel, depois escolha **Integrações** e selecione uma conexão do GitHub. A Webza cria o repositório automaticamente.
+
+Para um projeto existente, vá para **Configurações → Geral** e encontre a seção **Repositório do GitHub**. A partir daí você pode:
+
+- Criar um novo repositório privado.
+- Anexar um repositório vazio seu digitando o proprietário e o nome do repositório.
+- Trocar para um repositório diferente ou desvinculá-lo.
+- Ligar ou desligar o **Envio automático**.
+
+<Warning>
+  Um repositório existente deve estar vazio. Anexar um repositório que já contém código falha com a mensagem "Esse repositório já contém código", porque a Webza sobrescreveria trabalho que ela não consegue ver.
+</Warning>
+
+Duplicar um projeto não copia a conexão do GitHub. Compartilhar um repositório entre projetos faria com que um sobrescrevesse os arquivos do outro, então cada projeto precisa de seu próprio vínculo.
+
+## Envio sob demanda
+
+Desligar o **Envio automático** não significa que você precisa enviar manualmente. Peça à IA no chat do projeto, por exemplo "Envie isso para o GitHub", e ela executa um envio único independentemente do interruptor.
+
+<Tip>
+  Desligue o envio automático se quiser revisar as alterações antes de cada commit, e depois peça à IA para enviar quando estiver pronto.
+</Tip>
+
+## O que é enviado
+
+A Webza envia o código-fonte do projeto que um desenvolvedor gostaria de ler, não uma cópia completa do workspace. Dependências, saída de build e qualquer coisa que pareça uma credencial são excluídas, então segredos não são publicados no seu repositório.
+
+## Editar o repositório fora da Webza
+
+Os envios nunca são forçados. Se alguém fizer commit no repositório fora da Webza, o próximo envio é pulado para que as suas alterações não sejam perdidas.
+
+<Warning>
+  Depois disso, o seu repositório e o seu projeto na Webza ficam fora de sincronia. A Webza não mescla alterações externas de volta no projeto, e envios futuros para aquele branch são pulados.
+</Warning>
+
+## Segurança
+
+- Seus tokens do GitHub são armazenados criptografados e nunca são incluídos em nenhuma resposta da API.
+- Cada envio usa um token fresco que dura uma hora e só funciona para aquele repositório.
+
+## Status da conexão
+
+Cada conexão na página **GitHub** mostra um de três estados:
+
+| Status | O que significa | O que fazer |
+| --- | --- | --- |
+| **Ativo** | Funcionando normalmente | Nada |
+| **Reconexão necessária** | Você removeu a autorização da Webza, mas deixou o app instalado. Os envios ainda funcionam, mas você não pode vincular um repositório a um novo projeto. | Clique em **Reconectar** |
+| **Revogado** | O app foi desinstalado ou suspenso. Nada funciona. | Clique em **Reconectar** |
+
+## Remover acesso
+
+Desvincule um repositório de um projeto em **Configurações → Geral**. Nada é excluído da sua conta do GitHub.
+
+Para revogar completamente o acesso da Webza, desinstale o app da Webza nas suas configurações do GitHub. Seus repositórios e seus conteúdos permanecem na sua conta.
+
+## Solução de problemas
+
+<AccordionGroup>
+  <Accordion title="Os envios pararam">
+    - Alguém pode ter feito commit no repositório fora da Webza. Os envios são pulados para proteger essas alterações.
+    - O app da Webza pode ter sido desinstalado da sua conta do GitHub. Verifique o status da conexão na página **GitHub** e reconecte.
+    - Verifique se o **Envio automático** está ligado em **Configurações → Geral** do projeto.
+  </Accordion>
+
+  <Accordion title="Não consigo anexar um repositório existente">
+    O repositório deve estar vazio. Crie um novo repositório vazio no GitHub, ou deixe a Webza criar um para você.
+  </Accordion>
+
+  <Accordion title="A Webza não enxerga meu repositório">
+    Se você concedeu acesso apenas a repositórios selecionados, adicione o repositório à lista de acesso do app da Webza nas suas configurações do GitHub.
+  </Accordion>
+
+  <Accordion title="Uma conexão de organização parou de funcionar">
+    Se a autorização para uma conexão de organização foi removida, a Webza pode não detectar isso imediatamente. Você verá isso na próxima vez que tentar vincular um repositório. Reconecte a partir da página **GitHub**.
+  </Accordion>
+</AccordionGroup>
+
+## Alternativa: exportação de código
+
+Se o seu plano incluir, você também pode exportar um ZIP pronto para Vercel a partir do botão **Exportar**. Isso está disponível nos planos Plus e Premium.
+
+<CardGroup cols={2}>
+  <Card title="Banco de dados Supabase" icon="database" href="/pt-br/integrations/supabase">
+    Anexe um banco de dados Postgres aos seus apps gerados.
+  </Card>
+
+  <Card title="API Pessoal" icon="key" href="/pt-br/integrations/personal-api">
+    Acesse os dados da sua conta programaticamente com chaves de API.
+  </Card>
+</CardGroup>

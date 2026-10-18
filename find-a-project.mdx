@@ -1,0 +1,76 @@
+---
+title: "Find a project"
+description: "Browse, favorite, duplicate, and manage your Webza projects from a single view."
+---
+
+Open **All Projects** from the sidebar (under **Projects**) to see every project you are working on, its status, and where to continue. A **New Project** button is also on this view.
+
+## Project tabs
+
+Your projects are organized into three tabs, each with a count:
+
+| Tab | What it shows |
+| --- | --- |
+| **All** | Every project you are working on |
+| **Favorites** | Projects you starred from their row to pin here (this is purely a filter, it changes nothing about the project) |
+| **Trash** | Deleted projects kept for a recovery window |
+
+{/* TODO: confirm whether All Projects has a search box or sorting */}
+
+## Favorite a project
+
+Click the star icon on any project row to pin it to the **Favorites** tab. This is only a filter. It does not change the project settings, visibility, or behavior.
+
+## Trash and recovery
+
+Deleted projects go to the **Trash** tab. Each row offers **Restore** or **Delete permanently**.
+
+<Warning>
+  Trash empties itself. Trashed projects are permanently removed after the retention period (default 90 days) with their files, previews, and snapshots. Permanent deletion, whether manual or automatic, cannot be undone.
+</Warning>
+
+Deleting a project frees its subdomain and custom domain so they can be reused.
+
+{/* TODO: confirm Webza's trash retention period */}
+
+## Duplicate a project
+
+Open the action menu on any project row and choose **Duplicate** to create a copy named "original (Copy)".
+
+### What is copied
+
+- Name and description
+- Original prompt
+- Template and output type (website, WordPress theme, Shopify theme)
+- Full conversation history and custom instructions
+- Design system and accent
+- Published title, description, and public/private visibility
+
+### What is not copied
+
+The duplicate starts as a new, unpublished project:
+
+- No subdomain or custom domain
+- No share image
+- No build history or storage usage
+- No thumbnail
+- No analytics IDs
+- A fresh API token
+- None of the original's Supabase or GitHub connections
+
+A duplicate is a new start, not a clone of a live site. It will not answer on the original's domain. Publish it separately and re-attach any connections. This is required because a subdomain belongs to one project only, and sharing an API token or repo would let one project overwrite the other's files.
+
+## Project limits
+
+- **Free** and **Plus** plans include 1 project.
+- **Premium** includes unlimited projects.
+
+{/* TODO: confirm whether duplicates and trashed projects count toward the project limit */}
+
+<CardGroup cols={2}>
+  <Card title="Project chat" icon="message" href="/project-chat">
+  </Card>
+
+  <Card title="Publish" icon="globe" href="/publish">
+  </Card>
+</CardGroup>

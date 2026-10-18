@@ -1,0 +1,139 @@
+---
+title: "WordPress temaları"
+sidebarTitle: "WordPress temaları"
+description: "Webza ile kurulabilir WordPress blok temaları oluşturun, bunları tarayıcı içi WordPress Playground'da önizleyin ve WordPress 6.7 veya daha yeni bir sürüme kurun."
+---
+
+Web siteleri oluşturmak için kullandığınız aynı sohbetten kurulabilir bir WordPress Full Site Editing (FSE) blok teması oluşturun. Bunu tarayıcınızda canlı önizleyin, `.zip` olarak indirin ve 6.7 veya daha yeni sürüm çalıştıran herhangi bir WordPress sitesine kurun.
+
+<Note>
+  WordPress temaları Plus ve Premium planlarda mevcuttur.
+</Note>
+
+## Ne elde edersiniz
+
+Bir WordPress teması projesi, bir web sitesi yerine bir blok teması üretir. Tema şunları içerir:
+
+- Tasarım sisteminizin renklerini, yazı tiplerini ve boşluklarını içeren `theme.json`
+- Blok şablonları ve şablon parçaları
+- Desenler
+- Stiller
+
+Webza, temanın yapısını ve PHP sözdizimini her inşada kontrol eder, böylece indirilen tema kuruluma hazırdır.
+
+## WordPress teması projesi oluşturma
+
+Kontrol panelinde, istemin yanında bir çıktı seçici görünür:
+
+| Çıktı | Sonuç |
+| --- | --- |
+| **Web sitesi** | Varsayılan. Alt alan adına veya özel alan adına yayınlanabilir bir site. |
+| **WordPress teması** | Kurulabilir bir FSE blok teması. |
+
+**WordPress teması**'nı seçin, isteminizi girin ve projeyi başlatın. Çıktı türü proje oluşturulduğunda ayarlanır ve daha sonra değiştirilemez.
+
+<Tip>
+  Ayrıca bir WordPress şablonundan başlayabilirsiniz. WordPress için oluşturulmuş şablonlar, web sitesi şablonlarının yanında görünür.
+</Tip>
+
+## Temanızı önizleme
+
+Webza, temaları WordPress Playground'da önizler: tarayıcınızda çalışan gerçek bir WordPress, temanız kurulu ve etkin. Sonucu görmek için bir sunucu veya barındırma hizmetine ihtiyacınız yoktur.
+
+Playground'un kendi yeniden yükleme kontrolü vardır. Tam bir WordPress örneği başlattığı için, ilk yükleme ve önizleme güncellemeleri biraz zaman alabilir.
+
+<Warning>
+  Playground bir önizlemedir, bir barındırma hizmeti değil. İçindeki her şey tarayıcı sekmesinde yaşar ve sekmeyi kapattığınızda kaybolur. Temayı kullanmak için `.zip` dosyasını indirin ve WordPress sitenize kurun.
+</Warning>
+
+## Düzenleme ve yineleme
+
+Geri Al, Yinele ve Revizyon Geçmişi, tema projeleri için web sitelerindekiyle aynı şekilde çalışır. Bir revizyonu geri yüklediğinizde, Playground önizlemesi geri yüklenen tema ile yeniden başlar ve bu noktadan düzenlemeye devam edebilirsiniz.
+
+## İndirme ve kurulum
+
+<Steps>
+  <Step title="Temayı indirin">
+    Projeyi Webza editöründe açın ve **Temayı indir**'e tıklayın. `.zip` dosyası projenizin adına göre adlandırılır.
+  </Step>
+  <Step title="WordPress'e yükleyin">
+    WordPress yönetici panelinizde, **Appearance → Themes → Add New**'e gidin ve **Upload Theme**'e tıklayın. İndirilen `.zip` dosyasını seçin, ardından **Install Now**'a tıklayın.
+  </Step>
+  <Step title="Etkinleştirin">
+    Kurulum tamamlandığında, temayı sitenize uygulamak için **Activate**'e tıklayın.
+  </Step>
+</Steps>
+
+<Tip>
+  İndirilen dosya adını koruyun. WordPress, `.zip` adını temanın klasör adı olarak kullanır.
+</Tip>
+
+### Gereksinimler
+
+- **WordPress 6.7 veya daha yeni.** Eski sürümler kurulumu reddedebilir veya şablonları yanlış görüntüleyebilir.
+- WordPress sunucunuzda **PHP 7.4 veya daha yeni**.
+
+## Tema projelerinin yapamayacakları
+
+Bir tema indirilebilir bir dosyadır, barındırılan bir site değil, bu yüzden bazı web sitesi özellikleri mevcut değildir:
+
+- **Yayınlama ve özel alan adları**: Webza tema projelerini barındırmaz, bu yüzden **Alan Adları** sekmesi hiç gösterilmez.
+- **GitHub ve Supabase**: temalar için mevcut değildir.
+- **Tasarım modu**: oluşturulduğunda seçilen tasarım sistemi `theme.json` içine inşa edilir.
+- **Yapay zeka tarafından oluşturulan görüntüler**: yalnızca web sitesi projelerinde mevcuttur.
+- **Analitik**: analitik kartı gizlidir. İzlemeyi doğrudan WordPress sitenize ekleyin.
+
+Editörde **Dışa aktar** butonu yerine **Temayı indir** görünür.
+
+## Plan değiştirme
+
+Plus veya Premium'dan WordPress temaları olmayan bir plana geçerseniz, mevcut temalarınızı hâlâ indirebilirsiniz, ancak tema projelerinde yeni inşalar engellenir. Düzenlemeye devam etmek için tekrar yükseltme yapın.
+
+## Tema projesini kopyalama
+
+Kopyalanan bir WordPress teması projesi, WordPress çıktı türünü korur.
+
+## Sorun giderme
+
+<AccordionGroup>
+  <Accordion title="WordPress teması seçeneğini göremiyorum">
+    WordPress temaları yalnızca Plus ve Premium planlarda mevcuttur. Diğer planlarda seçici gizlidir.
+  </Accordion>
+
+  <Accordion title="Tema projemde inşalar reddediliyor">
+    Mevcut planınız WordPress temalarını içermiyor. Düzenlemeye devam etmek için Plus veya Premium'a yükseltin. Projeniz ve indirilebilir temanız bu süre boyunca dokunulmaz kalır.
+  </Accordion>
+
+  <Accordion title="Önizleme Temanız yükleniyor... ekranında takılı kaldı">
+    - Biraz bekleyin. İlk yükleme, tarayıcınıza tam bir WordPress indirir ve bazı bağlantılarda yavaş olabilir.
+    - Katı bir şirket ağı, VPN veya tarayıcı uzantısı önizlemeyi veya WebAssembly'i engelleyebilir. Başka bir ağ deneyin veya uzantıları devre dışı bırakın.
+    - Tarayıcı konsolunuzu engellenen istekler için kontrol edin.
+
+    **Temayı indir** butonu hâlâ çalışır, bu yüzden temayı kendi WordPress sitenize her zaman kurabilirsiniz.
+  </Accordion>
+
+  <Accordion title="WordPress temayı kurmuyor">
+    WordPress'i 6.7 veya daha yeni sürüme güncelleyin ve **Temayı indir**'den indirilen `.zip` dosyasını açmadan yüklediğinizden emin olun.
+  </Accordion>
+</AccordionGroup>
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=wordpress-themes" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-title">Yapay zeka ile WordPress temanızı oluşturun</span>
+    <span className="wz-ad-text">İstediğiniz temayı tanımlayın ve dakikalar içinde herhangi bir WordPress sitesine yüklemeye hazır kurulabilir bir blok tema alın.</span>
+  </span>
+
+  <span className="wz-ad-btn">WordPress teması oluşturun <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+<CardGroup cols={2}>
+  <Card title="Shopify temaları" icon="shopify" href="/tr/themes/shopify-themes">
+    Shopify Online Store 2.0 temalarının nasıl oluşturulacağını ve kurulacağını öğrenin.
+  </Card>
+
+  <Card title="Abonelik planları" icon="credit-card" href="/tr/subscription-plans">
+    Planları karşılaştırın ve hangi özelliklerin planınızda dahil olduğunu görün.
+  </Card>
+</CardGroup>

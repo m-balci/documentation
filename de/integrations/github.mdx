@@ -1,0 +1,139 @@
+---
+title: "GitHub"
+sidebarTitle: "GitHub"
+description: "Verbinden Sie Ihr GitHub-Konto, damit Webza den Quellcode Ihres Projekts nach jedem Build in ein privates Repository Ihres Kontos pusht."
+---
+
+In jedem Webza-Tarif können Sie Ihr GitHub-Konto verbinden, damit Webza den Quellcode Ihres Projekts nach jedem erfolgreichen Build in ein Repository Ihres Kontos pusht. Der Code liegt unter Ihrer Kontrolle, und Sie müssen Webza nicht verlassen, um ihn aktuell zu halten.
+
+<Note>
+  Die GitHub-Integration ist für WordPress- oder Shopify-Theme-Projekte nicht verfügbar.
+</Note>
+
+## So funktioniert es
+
+<Steps>
+  <Step title="Verbinden Sie Ihr GitHub-Konto">
+    Installieren Sie die Webza GitHub App auf Ihrem Konto oder in Ihrer Organisation und verknüpfen Sie sie in Webza.
+  </Step>
+  <Step title="Wählen Sie ein Konto für ein Projekt">
+    Wählen Sie eine GitHub-Verbindung, wenn Sie ein Projekt erstellen. Webza erstellt dafür ein neues privates Repository.
+  </Step>
+  <Step title="Build">
+    Nach jedem erfolgreichen Build pusht die KI den Projektquellcode mit einer generierten Commit-Nachricht.
+  </Step>
+</Steps>
+
+<Info>
+  Webza pusht nur in Ihr Repository. Es klont, pullt oder baut niemals aus dem Repository-Inhalt. Das Repository ist ein Output, kein Input.
+</Info>
+
+## Verbinden Sie Ihr GitHub-Konto
+
+<Steps>
+  <Step title="Öffnen Sie GitHub in der Seitenleiste">
+    Klicken Sie in der Seitenleiste auf **GitHub** und dann auf **GitHub verbinden**.
+  </Step>
+  <Step title="Installieren Sie die Webza App">
+    GitHub fragt Sie, die Webza App zu installieren. Wählen Sie, ob Sie Zugriff auf alle Repositories oder nur auf ausgewählte gewähren möchten.
+  </Step>
+  <Step title="Zurück zu Webza">
+    Sie werden zurück zu Webza geleitet, und die Verbindung wird gespeichert.
+  </Step>
+</Steps>
+
+Sie können mehrere persönliche Konten oder Organisationen verknüpfen, bis zu 20 Verbindungen.
+
+## Verbinden Sie ein Repository mit einem Projekt
+
+Wenn Sie ein Projekt erstellen, klicken Sie auf **Anpassen** im Dashboard-Eingabefeld, wählen Sie dann **Integrationen** und picken Sie eine GitHub-Verbindung. Webza erstellt das Repository automatisch.
+
+Für ein bestehendes Projekt gehen Sie zu **Einstellungen → Allgemein** und finden Sie den Abschnitt **GitHub-Repository**. Dort können Sie:
+
+- Ein neues privates Repository erstellen.
+- Ein bestehendes Repository anhängen, indem Sie Besitzer und Repository-Name eingeben.
+- Zu einem anderen Repository wechseln oder die Verknüpfung aufheben.
+- **Automatischer Push** ein- oder ausschalten.
+
+<Warning>
+  Ein bestehendes Repository muss leer sein. Das Anhängen eines Repositories, das bereits Code enthält, schlägt mit "That repository already contains code" fehl, da Webza sonst Arbeit überschreiben würde, die es nicht sehen kann.
+</Warning>
+
+Das Duplizieren eines Projekts kopiert nicht die GitHub-Verbindung. Die gemeinsame Nutzung eines Repositories über mehrere Projekte würde es einem erlauben, die Dateien des anderen zu überschreiben, daher benötigt jedes Projekt seine eigene Verknüpfung.
+
+## Push auf Anfrage
+
+Das Ausschalten von **Automatischer Push** bedeutet nicht, dass Sie manuell pushen müssen. Bitten Sie die KI im Projekt-Chat, zum Beispiel "Push this to GitHub", und sie führt einen einmaligen Push aus, unabhängig vom Schalter.
+
+<Tip>
+  Schalten Sie den **Automatischer Push** aus, wenn Sie Änderungen vor jedem Commit prüfen möchten, und bitten Sie dann die KI zu pushen, wenn Sie bereit sind.
+</Tip>
+
+## Was gepusht wird
+
+Webza pusht den Projektquellcode, den ein Entwickler lesen möchte, nicht eine vollständige Kopie des Arbeitsbereichs. Abhängigkeiten, Build-Output und alles, was wie ein Credential aussieht, werden ausgeschlossen, damit keine Secrets in Ihr Repository veröffentlicht werden.
+
+## Bearbeiten des Repositories außerhalb von Webza
+
+Pushes werden niemals erzwungen. Wenn jemand außerhalb von Webza im Repository committet, wird der nächste Push übersprungen, damit Ihre Änderungen nicht verloren gehen.
+
+<Warning>
+  Danach sind Ihr Repository und Ihr Webza-Projekt nicht mehr synchron. Webza führt externe Änderungen nicht zurück in das Projekt zusammen, und weitere Pushes auf diesen Branch werden übersprungen.
+</Warning>
+
+## Sicherheit
+
+- Ihre GitHub-Tokens werden verschlüsselt gespeichert und sind in keiner API-Antwort enthalten.
+  - Jeder Push verwendet ein frisches Token, das eine Stunde gültig ist und nur für dieses eine Repository funktioniert.
+
+## Verbindungsstatus
+
+Jede Verbindung auf der **GitHub**-Seite zeigt einen von drei Zuständen:
+
+| Status | Was es bedeutet | Was zu tun ist |
+| --- | --- | --- |
+| **Aktiv** | Funktioniert normal | Nichts |
+| **Erneut verbinden nötig** | Sie haben die Autorisierung von Webza entfernt, aber die App ist installiert. Pushes funktionieren noch, aber Sie können kein Repository mit einem neuen Projekt verknüpfen. | Klicken Sie auf **Erneut verbinden** |
+| **Widerrufen** | Die App wurde deinstalliert oder suspendiert. Nichts funktioniert. | Klicken Sie auf **Erneut verbinden** |
+
+## Zugriff entfernen
+
+Heben Sie die Verknüpfung eines Repositories von einem Projekt in **Einstellungen → Allgemein** auf. Nichts wird von Ihrem GitHub-Konto gelöscht.
+
+Um den Zugriff von Webza vollständig zu widerrufen, deinstallieren Sie die Webza App in Ihren GitHub-Einstellungen. Ihre Repositories und deren Inhalte bleiben in Ihrem Konto.
+
+## Fehlerbehebung
+
+<AccordionGroup>
+  <Accordion title="Pushes haben aufgehört">
+    - Jemand hat möglicherweise außerhalb von Webza im Repository committet. Pushes werden übersprungen, um diese Änderungen zu schützen.
+    - Die Webza App wurde möglicherweise von Ihrem GitHub-Konto deinstalliert. Prüfen Sie den Verbindungsstatus auf der **GitHub**-Seite und verbinden Sie neu.
+    - Prüfen Sie, ob **Automatischer Push** in den **Einstellungen → Allgemein** des Projekts eingeschaltet ist.
+  </Accordion>
+
+  <Accordion title="Ich kann kein bestehendes Repository anhängen">
+    Das Repository muss leer sein. Erstellen Sie ein neues leeres Repository auf GitHub, oder lassen Sie Webza eines für Sie erstellen.
+  </Accordion>
+
+  <Accordion title="Webza kann mein Repository nicht sehen">
+    Wenn Sie Zugriff nur auf ausgewählte Repositories gewährt haben, fügen Sie das Repository der Zugriffsliste der Webza App in Ihren GitHub-Einstellungen hinzu.
+  </Accordion>
+
+  <Accordion title="Eine Organisationsverbindung funktioniert nicht mehr">
+    Wenn die Autorisierung für eine Organisationsverbindung entfernt wurde, erkennt Webza das möglicherweise nicht sofort. Sie sehen es, wenn Sie das nächste Mal ein Repository verknüpfen möchten. Verbinden Sie neu von der **GitHub**-Seite.
+  </Accordion>
+</AccordionGroup>
+
+## Alternative: Code-Export
+
+Wenn Ihr Tarif es beinhaltet, können Sie auch ein Vercel-fertiges ZIP über die Schaltfläche **Exportieren** exportieren. Dies ist in den Plus- und Premium-Tarifen verfügbar.
+
+<CardGroup cols={2}>
+  <Card title="Supabase-Datenbank" icon="database" href="/de/integrations/supabase">
+    Hängen Sie eine Postgres-Datenbank an Ihre generierten Apps an.
+  </Card>
+
+  <Card title="Personal API" icon="key" href="/de/integrations/personal-api">
+    Greifen Sie programmatisch mit API-Schlüsseln auf Ihre Kontodaten zu.
+  </Card>
+</CardGroup>

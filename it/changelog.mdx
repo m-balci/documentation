@@ -1,0 +1,75 @@
+---
+title: "Changelog"
+sidebarTitle: "Changelog"
+description: "Nuove funzionalità, miglioramenti e correzioni in Webza."
+mode: "center"
+---
+
+{/* TODO: Entries are grouped by month. Confirm the exact release dates for the late August and early September updates. */}
+
+<Update label="Ottobre 2026">
+  ### Nuovo
+
+  - **Generazione immagini AI**: L'AI può creare immagini personalizzate per i progetti di siti web. Se il tuo piano lo include, si applica un limite mensile di immagini. Consulta [Chat del progetto](/it/project-chat).
+  - **Comprensione delle immagini**: Quando il modello selezionato supporta le immagini, l'AI può ora vedere le immagini che allegi a un prompt o a un messaggio di chat.
+  - **Correzione gratuita**: Le build che falliscono a causa dell'AI o della piattaforma non vengono addebitate. Puoi riprovare una build fallita una volta gratuitamente, e la pagina Utilizzo contrassegna queste build come non addebitate. Consulta [Crediti e utilizzo](/it/credits-and-usage).
+  - **Più modi per connettere Supabase**: Connettiti effettuando l'accesso con Supabase o con un token di accesso. Le connessioni manuali non richiedono più la tua chiave segreta. Consulta [Supabase](/it/integrations/supabase).
+
+  ### Migliorato
+
+  - I template di siti web ora includono la libreria di animazione Motion, così l'AI può creare animazioni più ricche come ingressi scaglionati, parallasse e contatori animati. Consulta [Template](/it/templates).
+
+  ### Corretto
+
+  - I temi WordPress ora applicano in modo affidabile i colori e i token del design system selezionato. I design system scuri (Carbon, Lumen e Noir) ora partono in modalità scura.
+  - I temi Shopify ora ottengono i colori del design system quando il template viene scelto automaticamente, e i file di partenza non modificati non mostrano più falsi errori di validazione.
+</Update>
+
+<Update label="Settembre 2026">
+  ### Nuovo
+
+  - **Modelli AI più recenti**: Le liste dei modelli ora includono gli ultimi modelli AI. Se un modello che hai salvato viene ritirato, Webza ti passa al modello attuale più vicino della stessa classe.
+  - **Allega file al tuo primo prompt**: Se il tuo piano include lo spazio di archiviazione file, allega fino a 10 file quando crei un progetto.
+  - **Guida al design per l'AI**: Mentre costruisce, l'AI ora segue playbook mirati sulla composizione delle pagine, il layout delle sezioni, il motion, i redesign sicuri e l'accuratezza del copy.
+  - **Motion coerente**: Ogni [design system](/it/design-systems) ora imposta uno stile di motion, così i tempi e le easing delle animazioni restano coerenti in tutto il sito.
+
+  ### Migliorato
+
+  - Il tuo primo prompt può ora essere lungo fino a 10.000 caratteri, come i messaggi di follow-up.
+  - I controlli di qualità ora rilevano i link morti "#" nei siti generati.
+  - Caricamenti più veloci in tutta la dashboard.
+  - Migliore supporto per lettori di schermo per toggle, filtri e pulsanti con solo icona.
+  - Gli account senza crediti rimasti ora vedono un avviso che non possono eseguire build.
+
+  ### Corretto
+
+  - L'AI non collega più i tuoi file caricati con indirizzi errati, il che impediva il caricamento delle immagini.
+  - Le modifiche ai siti pubblicati su domini personalizzati ora raggiungono i visitatori immediatamente.
+  - Gli indirizzi che terminano con una barra ora aprono la pagina corretta sui siti pubblicati e in anteprima.
+  - Il pannello Design non segnala più un nuovo stile come applicato quando la build sottostante è fallita. La stessa correzione si applica a Annulla, Ripristina e al ripristino di una revisione.
+  - Le question card nella chat non allargano più la pagina o bloccano lo scrolling.
+  - La scheda **Codice** non mostra più l'errore "Impossibile caricare i file" su un progetto che non è mai stato buildato.
+</Update>
+
+<Update label="Agosto 2026">
+  ### Nuovo
+
+  - **Domande di chiarimento**: L'AI può farti domande durante una build. Rispondi con scelte toccabili direttamente nella chat. Consulta [Chat del progetto](/it/project-chat).
+  - **Tour guidati**: Tour passo dopo passo della dashboard, della creazione progetto, dell'editor, della fatturazione, del file manager, dei database, di GitHub e di Shopify. Ripetili in qualsiasi momento con **Replay tour**.
+  - **Preferenze cookie**: Modifica le tue scelte di consenso ai cookie in qualsiasi momento dal link **Preferenze cookie** nel footer.
+
+  ### Migliorato
+
+  - Caricamenti più veloci e un ampio passaggio di accessibilità: i lettori di schermo ora annunciano errori nei moduli, stati di caricamento, risultati degli upload e risultati di ricerca.
+  - L'AI ora gestisce meglio le conversazioni lunghe e non dice più che sta riassumendo a ogni messaggio.
+
+  ### Corretto
+
+  - La modalità scura ora segue l'interruttore del tema di Webza invece dell'impostazione del sistema operativo.
+  - Il pannello Cronologia revisioni, inclusi i suoi pulsanti di ripristino, non viene più tagliato sui browser mobile.
+  - Il builder non segnala più "Build completata" quando l'AI non ha modificato alcun file.
+  - I messaggi di chat non scompaiono più quando arrivano diversi aggiornamenti contemporaneamente.
+  - La creazione di un repository GitHub ora mostra il motivo reale quando fallisce.
+  - I fallimenti di build ora mostrano un singolo messaggio chiaro.
+  - Un salvataggio di file rifiutato nell'editor di codice non segnala più successo e non perde la tua modifica.
+</Update>

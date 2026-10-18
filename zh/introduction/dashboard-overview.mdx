@@ -1,0 +1,128 @@
+---
+title: "控制台概览"
+description: "了解如何浏览 Webza 控制台、启动新项目，以及访问文件、数据库、账单和设置。"
+---
+
+控制台是您在 Webza 中的起点。在这里启动新项目、打开现有项目、查看积分余额，以及访问账户工具，如账单、支持和设置。
+
+{/* TODO: Add a dashboard screenshot here (e.g. /images/webza-dashboard.png). Use a demo account so no personal name or email is visible. */}
+
+## 启动新项目
+
+提示框位于控制台中央，在问候语**我能帮您构建什么？下方。描述您想要构建的内容，然后选择开始**来创建项目并打开聊天。完整操作指南请参阅[快速入门](/zh/introduction/getting-started)。
+
+### 提示框
+
+在文本框中输入您的创意。您可以简洁或详细，例如 `a portfolio website for a photographer`，也可以逐段描述每个页面和版块。您对功能、设计偏好和需求的描述越具体，第一版结果就越好。提示框还包含：
+
+- **输出类型**：提示框旁边的选择器（默认设置为**网站**），用于选择 Webza 创建的内容。当您的套餐包含 WordPress 或 Shopify 主题时（Plus 和 Premium），它会出现：
+  - **网站**：由 Webza 托管的网站。
+  - **WordPress 主题**：可安装的 WordPress 块主题。在浏览器内的 WordPress Playground 中预览，并以主题 `.zip` 格式导出。
+  - **Shopify 主题**：可安装的 Shopify Online Store 2.0 主题。您下载主题 `.zip` 并在 Shopify 商店中安装。
+- **自定义**：打开一个弹出窗口，包含起点的所有选项。请参阅[自定义您的项目](#自定义您的项目)。
+- **麦克风**：使用基于浏览器的内置语音输入，免手描述您的项目。
+- **附加**：在第一条提示中附加最多 10 个文件，例如 Logo、照片或 PDF。文件附加功能在包含文件存储的套餐中可用，每个文件会在项目创建前根据您套餐的文件大小、类型和存储限制进行检查。
+- **开始**：创建项目并打开聊天。
+
+<Note>
+  您的第一条提示最多可包含 10,000 个字符，与后续聊天消息相同。接近限制时会出现计数器。
+</Note>
+
+### 自定义您的项目
+
+**自定义**弹出窗口包含起点的所有选择器：
+
+- **模板**：项目启动时的结构，即存在哪些页面和组件。保留为**自动**，AI 会在构建时选择一个，或选择特定模板。Plus 和 Premium 套餐可使用高级模板。请参阅[模板](/zh/templates)。
+- **设计系统**：网站的视觉识别：颜色令牌、强调色板和字体。保留为**自动**，AI 会在首次构建时为您的提示选择最合适的，或选择特定设计系统以锁定外观。每个套餐都包含 Substrate 和十个高级设计系统。请参阅[设计系统](/zh/design-systems)。
+- **强调色**：选择特定设计系统时，选择其命名强调色板之一，或保留默认强调色。
+- **数据库**：附加您的某个 Supabase 连接，使您的应用具备数据库支持。请参阅[数据库](#项目)。
+- **集成**：连接 GitHub 仓库。
+
+模板和设计系统相互独立，因此您可以将任何设计系统与任何模板配对。对于 WordPress 和 Shopify 主题，数据库和 GitHub 选项不适用。
+
+{/* TODO: Confirm which templates and design systems are installed on Webza (Substrate is the bundled default design system). */}
+
+### 建议提示
+
+提示框下方有一排建议滚动显示，例如**创建作品集网站**、**设计落地页**和**创建电商商店**。选择一个即可填充提示框，然后编辑或直接开始。
+
+## 顶部栏
+
+控制台顶部的栏显示：
+
+- **侧边栏切换**：折叠或展开侧边栏。
+- **积分余额**：您剩余的积分和套餐总额，例如 `20.000.000 / 20.000.000 credits`。请参阅[积分与用量](/zh/credits-and-usage)。
+- **语言**：更改 Webza 界面的语言。{/* TODO: List supported interface languages. */}
+- **通知**：打开应用内通知，例如 Webza 完成项目构建时的状态更新。{/* TODO: Confirm other notification types (support replies, billing, product updates). */}
+- **主题**：在 Webza 界面的浅色和深色模式之间切换。{/* TODO: Confirm the monitor icon is the theme switch. */}
+- **您的账户**：您的姓名、邮箱和头像。{/* TODO: Describe the menu that opens when you select the avatar (Profile, Log out, etc.). Profile is at https://webza.ai/profile. */}
+
+## 侧边栏和导航
+
+左侧的侧边栏让您可以访问账户中的所有内容。
+
+- **创建**：返回控制台提示框以启动新项目。
+
+### 项目
+
+**项目**部分可以通过标题旁边的箭头折叠。
+
+- **所有项目**：浏览、收藏、复制和删除您的项目。请参阅[管理项目](#管理项目)。
+- **文件管理器**：上传图片和文档等文件，内联预览图片和 PDF，删除文件，并检查存储用量。存储和文件大小限制取决于您的套餐，适用于整个账户而非每个项目。请参阅[文件管理器](/zh/file-manager)。
+- **数据库**：添加您的 Supabase 连接。根据启用的功能，您可以通过登录 Supabase（**连接 Supabase**）、粘贴项目范围的访问令牌，或使用连接字符串手动连接。使用连接的应用获得关系型 Postgres 表、身份验证、存储和行级安全（RLS）。请参阅[Supabase](/zh/integrations/supabase)。
+- **GitHub**：将 GitHub 仓库连接到项目，可以创建新的私有仓库，也可以附加您已有的空仓库。开启自动推送后，Webza 会在每次构建后将生成的源代码推送到仓库。您可以稍后从项目设置中连接、切换或断开仓库。请参阅[GitHub](/zh/integrations/github)。
+- **API 密钥**：为只读的 Webza REST API 创建个人 API 密钥。每个密钥仅在创建时显示一次，可在 30、90 或 365 天后过期，您最多可拥有 10 个密钥。Plus 和 Premium 套餐可使用 API 访问。请参阅[个人 API](/zh/integrations/personal-api)。
+- **API 文档**：列出每个 API 端点，附带交互式测试器和 curl、JavaScript、PHP、Python 的复制粘贴示例。API 公开您的账户、积分、订阅、项目、通知和发票。
+- **账单**：查看您的套餐、积分、用量和交易记录，或取消订阅。请参阅[发票与账单](/zh/invoices-and-billing)和[更改或取消订阅](/zh/change-or-cancel-your-subscription)。
+- **支持**：打开并跟踪您的支持工单。请参阅[支持工单](/zh/help/support-tickets)。
+- **设置**：管理您的账户、AI 设置和隐私。请参阅[设置](/zh/settings)。
+
+<Warning>
+  API 是只读的：它不能创建项目、触发构建或更改账单。请保密您的 API 密钥。它们会授予您账户数据的访问权限，直到您撤销它们或它们过期。
+</Warning>
+
+### 邀请好友
+
+选择侧边栏底部的**邀请好友**卡片来分享 Webza，并通过推荐赚取积分。
+
+{/* TODO: Add referral program details: how the invite link works, how many credits you and the invited person get, when credits are granted, limits, and expiry. */}
+
+### 重新开始导览
+
+首次打开控制台时，一个简短的引导导览可能会指出您最先需要的界面部分。您可以逐步完成或关闭它。选择侧边栏底部的**重新开始导览**，随时重新播放。在项目内，编辑器工具栏右侧的圆形箭头按钮（**重新构建**旁边）可重新播放编辑器导览。
+
+## 管理项目
+
+**所有项目**以三个标签页列出您的项目，每个标签页都有计数：
+
+- **全部**：您正在处理的所有内容。
+- **收藏**：您从项目行中标记星号的项目。加星仅是为了方便您的筛选，不会改变项目。
+- **回收站**：已删除的项目。选择**恢复**来找回一个，或选择**永久删除**来立即移除它。
+
+每个项目行还有一个操作菜单，其中包含**复制**，它会创建一个名为 `<原项目> (Copy)` 的新项目。详细信息请参阅[查找项目](/zh/find-a-project)。
+
+<Warning>
+  回收站中的项目在保留期后会被永久删除，连同它们的文件、预览和快照。永久删除无法撤销。{/* TODO: Confirm Webza's trash retention period (script default is 90 days). */}
+</Warning>
+
+## 获取帮助
+
+在侧边栏中选择**支持**查看您的工单，然后选择**新建工单**来创建一个。添加主题、描述问题，并附加文件，例如错误截图。回复通过邮件发送，并在工单中按线程组织。
+
+工单在支持团队处理时为**打开**状态，等待您回复时为**待处理**，完成后为**已关闭**。回复已关闭的工单会重新打开它，因此您无需创建重复工单。所有成员都可以创建工单，Plus 和 Premium 包含优先支持。
+
+<Tip>
+  只有您和 Webza 团队可以阅读您的工单，因此它们是提供账户特定详细信息的最佳场所。除非明确要求，否则切勿粘贴密码或 API 密钥。
+</Tip>
+
+## 下一步
+
+<CardGroup cols={2}>
+  <Card title="快速入门" icon="rocket" href="/zh/introduction/getting-started">
+    构建并发布您的第一个网站。
+  </Card>
+
+  <Card title="订阅套餐" icon="credit-card" href="/zh/subscription-plans">
+    比较 Free、Plus 和 Premium。
+  </Card>
+</CardGroup>

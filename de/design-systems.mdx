@@ -1,0 +1,130 @@
+---
+title: "Design-Systeme"
+sidebarTitle: "Design-Systeme"
+description: "Erfahren Sie, wie Webza-Design-Systeme das Aussehen Ihrer Website steuern, welche Design-Systeme verfügbar sind und wie Sie sie im Editor wechseln."
+---
+
+Ein Design-System ist die visuelle Identität Ihrer Website. Es bündelt Design-Tokens (Farben, Typografie, Abstände, Radius und Schatten), eine Reihe benannter Akzentpaletten, Webfonts und ein Playbook, das der KI vorgibt, wie das Aussehen angewendet wird.
+
+Ein [Template](/de/templates) steuert die Struktur: welche Seiten und Komponenten Ihre Website hat. Ein Design-System steuert das Aussehen. Webza kombiniert beides, sodass sich jedes Design-System mit jedem Template paaren lässt und das gleiche Template viele verschiedene Looks annehmen kann.
+
+<Info>
+  Design-Systeme sind in jedem Plan verfügbar. Automatische Auswahl, manuelle Auswahl und der Design-Modus funktionieren gleichermaßen auf Free, Plus und Premium.
+</Info>
+
+## So funktioniert es
+
+Wenn Webza Ihr Projekt aufbaut, startet es vom Template und legt das Design-System darüber:
+
+1. Das Template liefert die Seitenstruktur und Komponenten.
+2. Die Basis-Tokens des Design-Systems, Ihre gewählte Akzentpalette und dessen Webfonts werden angewendet.
+3. Einige Design-Systeme enthalten eigene Versionen bestimmter Komponenten, die die Template-Komponenten ersetzen oder verfeinern.
+4. Die KI folgt dem Playbook des Design-Systems und passt den generierten Code an, damit er zum Look passt. Zum Beispiel ersetzt sie hartcodierte Farben, sodass sie den aktiven Tokens und dem Akzent folgen.
+
+Jedes Playbook legt auch einen konsistenten Motion-Stil für die gesamte Website fest, sodass Animationen von Abschnitt zu Abschnitt gleichermaßen wirken.
+
+Die Überlagerung ist vorhersehbar. Die Auswahl eines anderen Design-Systems oder Akzents ändert das Aussehen, ohne die Struktur Ihrer Website zu verändern.
+
+## Substrate (der Standard)
+
+Substrate ist Webzas Standard-Design-System. Es ist ein warmer, neutraler, Premium-Hausstil, der **Geist** für UI- und Fließtext mit der Serifenschrift **Newsreader** für redaktionelle Akzente kombiniert. Es verwendet einen 10-Pixel-Eckenradius und weiche, gestaffelte Schatten.
+
+Substrate hat sechs Akzentpaletten:
+
+| Akzent | Hinweise |
+| --- | --- |
+| indigo | Standard-Akzent |
+| terracotta | Warmer, erdiger Akzent |
+| blue | Kühler, klassischer Akzent |
+| emerald | Grüner Akzent |
+| ruby | Kräftiger roter Akzent |
+| mono | Neutraler, monochromer Akzent |
+
+## Premium-Design-Systeme
+
+Über Substrate hinaus bietet Webza zehn Premium-Design-Systeme. Jedes ist ein vollständiger eigener Look mit eigener Typografie, Farben, Schatten und Persönlichkeit.
+
+| Design-System | Persönlichkeit |
+| --- | --- |
+| Aperture | Klar, kühl, architektonisches SaaS. Präzise und selbstbewusst. |
+| Atrium | Vertrauenswürdiges Enterprise-SaaS. Ruhig, glaubwürdig, Dashboard-Qualität. |
+| Bloom | Verspielt und freudig. Klobig, abgerundet, mit fröhlichen Candy-Akzenten. |
+| Botanica | Warm, organisch, redaktionelles Wellness. Ruhig und Premium. |
+| Carbon | Schlankes Entwicklertool. Dunkel zuerst, technisch, Terminal-Grün. |
+| Halcyon | Heiter, luftig, verträumt pastell. Schwerelos und ruhig. |
+| Lumen | Lebendiges modernes Fintech-Glow. Leuchtend, gradient, glasmorph. |
+| Monolith | Kräftiges brutalistisches Schweizer Redaktionsdesign. Laut, grafisch, hochkontrastig. |
+| Noir | Dunkler Luxus und filmisch. Teuer, zurückhaltend, metallischer Akzent. |
+| Sandstone | Warm, minimal, redaktionell. Literarischer Minimalismus mit Seele. |
+
+Premium-Design-Systeme erscheinen überall dort, wo Substrate erscheint: im Design-System-Picker unter **Anpassen**, bei der **Automatischen** Auswahl und im Design-Modus des Editors. Neue Design-Systeme werden im Laufe der Zeit hinzugefügt.
+
+<Tip>
+  Viele Design-Systeme enthalten eine Styleguide-Vorschau: eine Seite, die ihre Typografie, Farben, Buttons und Komponenten zeigt. Öffnen Sie sie aus dem Design-System-Picker oder dem Design-Panel des Editors, um einen Look vor der Anwendung zu betrachten.
+</Tip>
+
+## Design-System auswählen
+
+Ein Design-System und ein Akzent werden auf eine von drei Arten gewählt.
+
+### Automatisch (Standard)
+
+Wenn Sie ein Projekt erstellen, ist der Design-System-Picker im **Anpassen**-Popover auf **Automatisch** gesetzt. Beim ersten Build wählt die KI das Design-System und den Akzent, die am besten zu Ihrem Prompt passen, und speichert diese Wahl im Projekt.
+
+### Manuell
+
+Anstelle von **Automatisch** wählen Sie ein bestimmtes Design-System im **Anpassen**-Popover. Sie können auch eine der Akzentpaletten auswählen oder dessen Standard-Akzent beibehalten. Jeder Build des Projekts verwendet dann diesen Look.
+
+### Im Editor neu gestalten
+
+Sie können das Design-System oder den Akzent eines fertigen Website-Projekts jederzeit im Editor wechseln.
+
+<Steps>
+  <Step title="Design-Panel öffnen">
+    Wechseln Sie im Editor in den Design-Modus. Das **Design**-Panel öffnet sich neben der Vorschau.
+  </Step>
+  <Step title="Design-System und Akzent wählen">
+    Wählen Sie ein neues Design-System und optional eine Akzentpalette. Öffnen Sie zuvor die Styleguide-Vorschau, wenn Sie Looks vergleichen möchten.
+  </Step>
+  <Step title="Auf KI anwenden klicken">
+    Webza wendet die neuen Tokens und den Akzent an und baut Ihre Website neu auf. Die Vorschau lädt neu, und die KI passt anschließend hartcodierte Farben an, sodass die gesamte Website zum neuen Look passt.
+  </Step>
+</Steps>
+
+Eine Neugestaltung verbraucht Credits wie eine Chat-Anfrage. Sie können keine Neugestaltung anwenden, während ein anderer Build läuft.
+
+<Note>
+  Der Design-Modus ist nur für Website-Projekte verfügbar. Er ist für [WordPress](/de/themes/wordpress-themes)- und [Shopify](/de/themes/shopify-themes)-Theme-Projekte ausgeblendet. Diese verwenden weiterhin das bei der Erstellung gewählte Design-System, aber Sie können es nicht im Editor wechseln.
+</Note>
+
+## Neugestaltung rückgängig machen
+
+Eine Neugestaltung zählt als ein Schritt in Rückgängig und Wiederholen und erstellt einen Prüfpunkt in der Revisionshistorie. Sie können sie später aus der Vorschau wiederherstellen. Siehe [Vorschau](/de/preview).
+
+## Projekt duplizieren
+
+Wenn Sie ein Projekt duplizieren, werden dessen Design-System und Akzent in das neue Projekt kopiert.
+
+<a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=design-systems" target="_blank" rel="noopener">
+  <span className="wz-ad-glow" />
+
+  <span className="wz-ad-copy">
+    <span className="wz-ad-eyebrow">Jeder Plan</span>
+    <span className="wz-ad-title">Finden Sie Ihren Look in Sekunden</span>
+    <span className="wz-ad-text">Design-Systeme sind in jedem Plan enthalten. Starten Sie ein Projekt, wählen Sie einen Stil und wechseln Sie ihn jederzeit.</span>
+  </span>
+
+  <span className="wz-ad-btn">Design-Systeme ausprobieren <Icon icon="arrow-right" size={14} /></span>
+</a>
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Templates" icon="table-cells-large" href="/de/templates">
+    Wählen Sie eine Ausgangsstruktur für Ihr Projekt.
+  </Card>
+
+  <Card title="Vorschau" icon="eye" href="/de/preview">
+    Vorschau Ihrer Website und Verwaltung der Revisionshistorie.
+  </Card>
+</CardGroup>

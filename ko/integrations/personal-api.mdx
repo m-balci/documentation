@@ -1,0 +1,59 @@
+---
+title: "개인 API"
+sidebarTitle: "개인 API"
+description: "Webza 계정, 프로젝트, 크레딧, 결제 정보를 프로그래밍 방식으로 읽을 수 있는 읽기 전용 REST API입니다."
+---
+
+Plus 및 Premium 요금제에는 API 접근 권한이 포함됩니다. 개인 API는 읽기 전용 REST API로, 프로그래밍 방식으로 Webza 계정 데이터에 접근할 수 있게 해줍니다. API를 통해 프로젝트를 생성하거나, 빌드를 트리거하거나, 결제를 변경할 수는 없습니다.
+
+## API 키 생성하기
+
+사이드바에서 **API 키** 페이지를 엽니다.
+
+<Steps>
+  <Step title="키 생성">
+    새 키를 생성하려면 클릭하세요. 각 키는 생성 시에만 한 번 표시되므로, 즉시 복사하여 안전하게 보관하세요.
+  </Step>
+  <Step title="만료 기한 설정(선택 사항)">
+    30일, 90일, 365일 중 만료 기한을 선택하거나, 만료 기한 없이 두세요.
+  </Step>
+  <Step title="필요 시 취소">
+    언제든지 키를 취소할 수 있습니다. 계정당 최대 10개의 키를 보유할 수 있습니다.
+  </Step>
+</Steps>
+
+<Warning>
+  키를 비밀에 부치세요. 취소되거나 만료될 때까지 계정 데이터에 접근할 수 있습니다.
+</Warning>
+
+## 인증
+
+키를 `Authorization` 헤더의 Bearer 토큰으로 전송하세요.
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://webza.ai/api/v1/...
+```
+
+{/* TODO: confirm the exact base URL for the Personal API. */}
+
+## 엔드포인트 및 문서
+
+API는 `/api/v1` 아래에 계정, 크레딧, 구독, 프로젝트, 알림, 인보이스에 대한 리소스를 노출합니다.
+
+사이드바에서 **API 문서** 페이지를 열면 모든 엔드포인트를 확인할 수 있습니다. 문서에는 인터랙티브 테스터와 curl, JavaScript, PHP, Python용 복사-붙여넣기 샘플이 포함되어 있습니다.
+
+{/* TODO: confirm exact endpoint paths; point users to API Docs for authoritative details. */}
+
+## 별도 관리: AI 제공업체 키
+
+자신의 AI 제공업체 키는 **설정 → AI 설정**(`/settings`)에서 별도로 관리됩니다. 이것은 개인 API와 무관합니다.
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github" href="/ko/integrations/github">
+    생성된 소스를 비공개 GitHub 저장소에 자동으로 푸시하세요.
+  </Card>
+
+  <Card title="Supabase 데이터베이스" icon="database" href="/ko/integrations/supabase">
+    생성된 앱에 Postgres 데이터베이스를 연결하세요.
+  </Card>
+</CardGroup>

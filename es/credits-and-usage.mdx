@@ -1,0 +1,93 @@
+---
+title: "Créditos y uso"
+description: "Entiende cómo funcionan los créditos de construcción de Webza, supervisa tu saldo y aprende cuándo se gastan o reembolsan los créditos."
+---
+
+Los créditos de construcción impulsan cada generación de IA en Webza. Cada plan incluye una asignación fija, y puedes comprar paquetes extra si te quedas sin ellos a mitad de mes.
+
+## Cómo funcionan los créditos
+
+Los créditos se consumen en función del uso de tokens de IA. Cada generación, edición y llamada de construcción cuesta una pequeña cantidad de tokens, que se descuentan de tu saldo en tiempo real.
+
+Tu plan determina tu asignación mensual:
+
+| Plan | Asignación mensual | Facturación |
+| --- | --- | --- |
+| Free | 2,000,000 créditos (una sola vez) | Sin suscripción |
+| Plus | 7,000,000 créditos por mes | \$19.99/mes |
+| Premium | 20,000,000 créditos por mes | \$49.99/mes |
+
+{/* TODO: confirm whether unused monthly credits roll over to the next month. */}
+
+## Consultar tu saldo
+
+Tus créditos restantes aparecen en la barra superior del panel, por ejemplo **20,000,000 / 20,000,000 credits**.
+
+El encabezado del chat también muestra un indicador de créditos:
+
+- **Color predeterminado** cuando queda más del 20% de tu saldo.
+- **Amarillo** cuando tu saldo está entre el 5% y el 20%. Aparece un enlace **Comprar créditos** para que puedas recargar rápidamente.
+- **Rojo** cuando tu saldo es del 5% o menos.
+- **"Usando tu clave de API"** cuando estás construyendo con tu propia clave en lugar de los créditos de Webza.
+
+## Comprar créditos extra
+
+Si te quedas sin créditos antes de tu próximo ciclo de facturación, abre **Facturación → Uso** y haz clic en **Comprar créditos**. Puedes comprar un paquete de créditos puntual con el mismo método de pago que usas para tu suscripción. Los créditos se añaden a tu saldo tan pronto como se completa el pago.
+
+Los paquetes de créditos no se renuevan automáticamente y no cambian la asignación mensual de tu plan. Los tamaños y precios de los paquetes pueden variar según el plan.
+
+{/* TODO: confirm exact pack sizes and prices for Webza plans. */}
+
+## Usar tu propia clave de API
+
+Los planes Plus y Premium te permiten añadir tu propia clave de API de proveedor de IA. Cuando construyes con tu propia clave, el uso se mide en Webza pero no se descuenta de los créditos de tu plan. Tu proveedor te factura directamente.
+
+Para configurarlo, ve a [Configuración](/es/settings) → **Configuración de IA** y pega tu clave de API.
+
+## Cuándo se gastan los créditos
+
+Los créditos se consumen durante:
+
+- Rediseños de diseño
+- Acciones de **Guardar todo** desde el inspector
+- Cualquier ejecución de construcción o generación de IA
+
+Los créditos **no** se consumen mientras haces preguntas o esperas la respuesta de la IA. Solo la ejecución real de la construcción cuesta créditos.
+
+## Fix for free
+
+Si una ejecución falla por un error de IA o un problema de la plataforma, no se te cobra por esa ejecución. Las ejecuciones que cancelas o que se detienen porque te quedaste sin créditos sí se cobran.
+
+Cuando una ejecución no se cobra, aparece en **Facturación → Uso** como **No cobrado** con una breve razón. Estas ejecuciones no cobradas no cuentan para tus créditos usados.
+
+Si una ejecución falla, puedes hacer clic en **Corregir gratis** para reintentar una vez dentro de las 24 horas sin costo. Hay un límite diario en los reintentos gratuitos (el predeterminado es 5 por 24 horas).
+
+{/* TODO: confirm Webza's exact daily limit for Fix for free retries. */}
+
+## Estadísticas de uso
+
+Abre **Facturación → Uso** para ver un desglose completo de tu consumo de créditos:
+
+- Uso por proyecto
+- Uso por modelo de IA
+- Ejecuciones no cobradas y razones
+
+Esto te ayuda a identificar qué proyectos o modelos usan más créditos.
+
+## Imágenes de IA
+
+Tu plan puede incluir una asignación mensual de imágenes generadas por IA. El límite actual se muestra en la tarjeta **Plan actual** dentro de la página **Uso**.
+
+{/* TODO: confirm AI image allowances for each Webza plan. */}
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Facturas y pagos" icon="receipt" href="/es/invoices-and-billing">
+    Ver pagos, facturas e historial de transacciones.
+  </Card>
+
+  <Card title="Chat del proyecto" icon="message" href="/es/project-chat">
+    Aprende cómo funcionan las construcciones y los reintentos en el chat.
+  </Card>
+</CardGroup>
