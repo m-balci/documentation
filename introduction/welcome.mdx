@@ -325,60 +325,65 @@ description: "Build and publish a fully designed website from a prompt. Find gui
 
   <div className="wz-section">
     <h2 className="wz-h2">Get help and connect</h2>
-    <p className="wz-sub">Reach the support team, find answers on your own, and follow what's new.</p>
+    <p className="wz-sub">Our team is here when you need a hand.</p>
 
-    <div className="wz-help">
-      <div className="wz-help-text">
-        <div className="wz-comm-icon">
-          <Icon icon="life-ring" size={18} />
+    <div className="wz-sp">
+      <div className="wz-sp-main">
+        <span className="wz-sp-label">Support</span>
+        <h3 className="wz-sp-title">We're here to help</h3>
+        <p className="wz-sp-text">Open a ticket from your dashboard or write to us directly. Our team reads every request and replies by email.</p>
+
+        <div className="wz-sp-actions">
+          <a className="wz-sp-btn wz-sp-btn-primary" href="/help/support-tickets">Open a ticket</a>
+          <a className="wz-sp-btn wz-sp-btn-quiet" href="mailto:support@webza.ai">Email us</a>
         </div>
-
-        <b>Need a hand with your site?</b>
-        <span>Open a ticket from the Support page in your dashboard or email the team. Plus and Premium members get priority support.</span>
       </div>
 
-      <div className="wz-help-actions">
-        <a className="wz-btn wz-btn-primary" href="/help/support-tickets">Open a support ticket</a>
-        <a className="wz-btn wz-btn-ghost" href="mailto:support@webza.ai">Email [support@webza.ai](mailto:support@webza.ai)</a>
+      <div className="wz-sp-list">
+        <a className="wz-sp-row" href="/help/prompting-tips">
+          <Icon icon="lightbulb" size={16} />
+
+          <div>
+            <b>Prompting tips</b>
+            <span>Write clearer prompts for better results.</span>
+          </div>
+
+          <Icon icon="arrow-right" size={14} />
+        </a>
+
+        <a className="wz-sp-row" href="/changelog">
+          <Icon icon="clock-rotate-left" size={16} />
+
+          <div>
+            <b>Changelog</b>
+            <span>The latest features and improvements.</span>
+          </div>
+
+          <Icon icon="arrow-right" size={14} />
+        </a>
+
+        <a className="wz-sp-row" href="https://x.com/webzaai">
+          <Icon icon="x-twitter" iconType="brands" size={16} />
+
+          <div>
+            <b>X</b>
+            <span>Product news and announcements.</span>
+          </div>
+
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
+
+        <a className="wz-sp-row" href="https://linkedin.com/company/webzaai">
+          <Icon icon="linkedin" iconType="brands" size={16} />
+
+          <div>
+            <b>LinkedIn</b>
+            <span>Company updates from the Webza team.</span>
+          </div>
+
+          <Icon icon="arrow-up-right" size={14} />
+        </a>
       </div>
-    </div>
-
-    <div className="wz-community wz-community-4">
-      <a className="wz-comm wz-comm-iconed" href="/help/prompting-tips">
-        <div className="wz-comm-icon">
-          <Icon icon="lightbulb" size={18} />
-        </div>
-
-        <b>Prompting tips</b>
-        <span>Write clearer prompts to get faster, more accurate results.</span>
-      </a>
-
-      <a className="wz-comm wz-comm-iconed" href="/changelog">
-        <div className="wz-comm-icon">
-          <Icon icon="clock-rotate-left" size={18} />
-        </div>
-
-        <b>Changelog</b>
-        <span>See the latest features, fixes, and improvements.</span>
-      </a>
-
-      <a className="wz-comm wz-comm-iconed" href="https://x.com/webzaai">
-        <div className="wz-comm-icon">
-          <Icon icon="x-twitter" iconType="brands" size={18} />
-        </div>
-
-        <b>Follow us on X</b>
-        <span>Get product news and announcements as they happen.</span>
-      </a>
-
-      <a className="wz-comm wz-comm-iconed" href="https://linkedin.com/company/webzaai">
-        <div className="wz-comm-icon">
-          <Icon icon="linkedin" iconType="brands" size={18} />
-        </div>
-
-        <b>Connect on LinkedIn</b>
-        <span>Follow company updates and stories from the Webza team.</span>
-      </a>
     </div>
   </div>
 </div>
