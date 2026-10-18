@@ -1,0 +1,20 @@
+/* Dil seçiciyi header'ın sağına, Webza butonunun soluna taşı (yalnızca masaüstü) */
+@media (min-width: 1024px) {
+  #navbar {
+    --wz-lang-right: 150px; /* Webza butonundan uzaklık; gerekirse ayarla */
+  }
+
+  #navbar > div,
+  #navbar .max-w-8xl {
+    position: relative;
+  }
+
+  #localization-select-trigger,
+  [data-component-part="localization-select-trigger"] {
+    position: absolute !important;
+    right: var(--wz-lang-right);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+  }
+}
