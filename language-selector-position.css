@@ -23,15 +23,23 @@
   }
 }
 
-/* Tema seçiciyi Webza butonuyla aynı yükseklikte çerçeveli bir kutuya al */
-html body [data-component-name="theme-toggle"] {
+/* Tema seçiciyi Webza butonuyla aynı yükseklikte çerçeveli bir kutuya al.
+   Farklı tema sürümlerinde eşleşmesi için birden fazla seçici kullanılır. */
+:is(
+  [data-component-name="theme-toggle"],
+  #navbar button[aria-label*="dark" i],
+  #navbar button[aria-label*="theme" i],
+  #navbar button[aria-label*="light mode" i],
+  #navbar button[aria-label*="color mode" i]
+) {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 2px !important;
   height: 40px !important;
   min-height: 40px !important;
-  padding: 0 6px !important;
+  min-width: 40px !important;
+  padding: 0 8px !important;
   border-radius: 10px !important;
   border: 1px solid rgba(10, 10, 10, 0.14) !important;
   background-color: #ffffff !important;
@@ -39,21 +47,54 @@ html body [data-component-name="theme-toggle"] {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-html body [data-component-name="theme-toggle"]:hover {
+:is(
+  [data-component-name="theme-toggle"],
+  #navbar button[aria-label*="dark" i],
+  #navbar button[aria-label*="theme" i],
+  #navbar button[aria-label*="light mode" i],
+  #navbar button[aria-label*="color mode" i]
+):hover {
   border-color: rgba(10, 10, 10, 0.28) !important;
 }
 
-html.dark body [data-component-name="theme-toggle"] {
+html.dark :is(
+  [data-component-name="theme-toggle"],
+  #navbar button[aria-label*="dark" i],
+  #navbar button[aria-label*="theme" i],
+  #navbar button[aria-label*="light mode" i],
+  #navbar button[aria-label*="color mode" i]
+) {
   border-color: rgba(255, 255, 255, 0.16) !important;
   background-color: #0a0a0a !important;
   box-shadow: 0 6px 20px -12px rgba(255, 255, 255, 0.15) !important;
 }
 
-html.dark body [data-component-name="theme-toggle"]:hover {
+html.dark :is(
+  [data-component-name="theme-toggle"],
+  #navbar button[aria-label*="dark" i],
+  #navbar button[aria-label*="theme" i],
+  #navbar button[aria-label*="light mode" i],
+  #navbar button[aria-label*="color mode" i]
+):hover {
   border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-html body [data-component-name="theme-toggle"] svg {
+/* İç içe kutu oluşmasın: dış kutunun içindeki tema butonlarının çerçevesini kaldır */
+[data-component-name="theme-toggle"] :is(button[aria-label*="dark" i], button[aria-label*="theme" i], button[aria-label*="light mode" i], button[aria-label*="color mode" i]) {
+  border: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  height: auto !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+
+:is(
+  [data-component-name="theme-toggle"],
+  #navbar button[aria-label*="dark" i],
+  #navbar button[aria-label*="theme" i]
+) svg {
   width: 18px !important;
   height: 18px !important;
 }
