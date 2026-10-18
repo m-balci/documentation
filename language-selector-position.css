@@ -1,7 +1,7 @@
 /* Header sağ bölüm sırası (yalnızca masaüstü): Dil seçici | Tema | Webza butonu */
 @media (min-width: 1024px) {
   #navbar {
-    --wz-lang-right: 185px; /* Sağ kenardan uzaklık; gerekirse ayarla */
+    --wz-lang-right: 182px; /* Sağ kenardan uzaklık; gerekirse ayarla */
   }
 
   #navbar > div,
@@ -25,6 +25,11 @@
   /* Tema ile Webza butonu arasında boşluk */
   #navbar [data-component-name="theme-toggle"] {
     margin-right: 1rem !important;
+  }
+
+  /* Tema ile Webza arasındaki boşluğu dil ile tema arasıyla eşitle */
+  #navbar #topbar-cta-button {
+    margin-left: 10px !important;
   }
 
   /* Dil seçici tema seçicinin soluna */
