@@ -9,15 +9,22 @@
     position: relative;
   }
 
-  /* Webza butonu en sağa, tema seçici onun soluna */
-  .topbar-right-container > #topbar-cta-button,
-  .topbar-right-container > *:has(#topbar-cta-button) {
-    order: 99;
+  /* Webza butonunu içeren kapsayıcılar sona */
+  #navbar #topbar-cta-button,
+  #navbar :has(#topbar-cta-button):not(:has([data-component-name="theme-toggle"])) {
+    order: 2;
   }
 
-  .topbar-right-container > [data-component-name="theme-toggle"],
-  .topbar-right-container > *:has([data-component-name="theme-toggle"]) {
-    order: 98;
+  /* Tema seçiciyi içeren kapsayıcılar Webza butonunun önüne */
+  #navbar [data-component-name="theme-toggle"],
+  #navbar :has([data-component-name="theme-toggle"]):not(:has(#topbar-cta-button)) {
+    order: 1;
+    margin-left: 0 !important;
+  }
+
+  /* Tema ile Webza butonu arasında boşluk */
+  #navbar [data-component-name="theme-toggle"] {
+    margin-right: 1rem !important;
   }
 
   /* Dil seçici tema seçicinin soluna */
