@@ -8,8 +8,8 @@
     "dark": "#000000"
   },
   "favicon": {
-    "light": "/images/Frame(4).png",
-    "dark": "/images/Frame(4).png"
+    "light": "/images/favicon-docs.svg",
+    "dark": "/images/favicon-docs.svg"
   },
   "navigation": {
     "languages": [
