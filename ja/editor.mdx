@@ -43,9 +43,20 @@ description: "Webzaプロジェクトエディタの概要、レイアウト、�
 
 {/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
 
+## Effort
+
+**Effort** 設定は、AIが各リクエストにどれだけの労力を割くかを制御します。エディタまたは **Create** ページでプロジェクトごとに選択できます。
+
+- **Auto**: AIが各リクエストのEffortを自動選択します。
+- **Low**、**Medium**、**High**: Effortが高いほど、より詳細な結果が得られることがありますが、より多くのクレジットを消費することがあります。
+
+選択したAIモデルにEffort制御がない場合、この設定は無効化して表示されます。詳細は[クレジットと使用量](/ja/credits-and-usage)をご覧ください。
+
+{/* TODO: Confirm the default Effort value for new projects. */}
+
 ## プロジェクトのエクスポート
 
-プランでサポートされている場合、プロジェクトをダウンロードしてWebza外でホストできます。
+プランでサポートされている場合、プロジェクトをダウンロードしてWebza外でホスティングできます。
 
 <Steps>
   <Step title="エディタを開く">
@@ -55,7 +66,7 @@ description: "Webzaプロジェクトエディタの概要、レイアウト、�
     ツールバーで**エクスポート**（テーマプロジェクトの場合は**テーマをダウンロード**）をクリックします。
   </Step>
   <Step title="ZIPをダウンロード">
-    ファイルがコンピュータにダウンロードされます。展開して、内蔵のREADMEに従い、ローカル開発またはVercelへのデプロイを行います。
+    ファイルがコンピュータにダウンロードされます。展開して、内蔵のREADMEに従い、ローカル開発またはVercelへのデプロイを行います。ウェブサイトのエクスポートには `.gitignore` ファイルが含まれているため、すぐにGitリポジトリにプッシュできます。
   </Step>
 </Steps>
 

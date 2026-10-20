@@ -55,6 +55,12 @@ Her yapay zeka çalıştırması, sohbette gösterilen aşamalardan geçer:
 | Mesajlar | Yapay zeka ne yaptığını ve nedenini açıklar. |
 | Tamamlandı | Çalıştırma tamamlanır ve sonucu önizleyebilirsiniz. |
 
+Bir derleme başlatılamazsa, sohbet bunun nedenini açıklar ve mesajınızı korur, böylece tekrar gönderebilirsiniz.
+
+## Bir derlemeyi durdurma
+
+Bir çalıştırmayı erken sonlandırmak için **Stop** düğmesine tıklayın. Webza, siteyi mesajınızdan önceki haline geri getirir. Kısmi değişiklikleri isterseniz, geri getirmek için **Redo** düğmesine tıklayın. Proje, durdurulan derleme tamamlanana kadar kilitli kalır. Durdurulan bir çalıştırma, harcadığı kadar kredi kullanır.
+
 ## Kredi göstergesi
 
 Sohbet başlığı mevcut kredi durumunuzu gösterir:
@@ -67,7 +73,7 @@ Sınırsız planlarda **Sınırsız kredi** yazar. Kendi API anahtarınızla olu
 
 ## Ücretsiz düzeltme
 
-Yapay zeka aracısı veya platform nedeniyle başarısız olan çalıştırmalar ücretlendirilmez. Buna, aracın tekrarlanan hatalar sonrası durduğu, son oluşturma kontrolünün başarısız olduğu veya bir şey üretmeden token harcanan çalıştırmalar dahildir. Kredinizin bitmesi nedeniyle başarısız olan çalıştırmalar veya sizin iptal ettiğiniz çalıştırmalar ücretlendirilir.
+Başarısız olan çalıştırmalar harcadıkları kadar kredi kullanır, ancak platform sorunu nedeniyle başarısız olan çalıştırmalar ücretlendirilmez. Yapay zeka geçersiz bir istek gönderdiğinde, çalıştırmayı başarısız saymak yerine tekrar göndermesi istenir. Hâlâ bu şekilde başarısız olan çalıştırma ücretlendirilmez. Kredilerinizin bitmesi nedeniyle duran çalıştırmalar veya sizin durdurduğunuz çalıştırmalar, kullandıkları kadar ücretlendirilir.
 
 Başarısız bir çalıştırmadan sonra, sohbetin altında **Ücretsiz düzelt** düğmesi belirir. Tıklamak, yapay zekadan sorunu teşhis etmesini ve yeni özellik eklemeden düzeltmesini ister. Bu düzeltme çalıştırması da ücretsizdir. Düğme, sabit bir talimat gönderir. Sohbet kutusundaki metin dahil edilmez.
 

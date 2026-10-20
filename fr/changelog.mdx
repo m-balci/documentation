@@ -14,15 +14,44 @@ mode: "center"
   - **Compréhension d'images** : Quand le modèle sélectionné prend en charge les images, l'IA peut désormais voir les images que vous joignez à un prompt ou à un message de chat.
   - **Correction gratuite** : Les exécutions qui échouent à cause de l'IA ou de la plateforme ne sont pas facturées. Vous pouvez réessayer une exécution échouée une fois gratuitement, et la page Utilisation marque ces exécutions comme non facturées. Consultez [Crédits et utilisation](/fr/credits-and-usage).
   - **Plus de façons de connecter Supabase** : Connectez-vous en vous authentifiant avec Supabase ou avec un jeton d'accès. Les connexions manuelles n'ont plus besoin de votre clé secrète. Consultez [Supabase](/fr/integrations/supabase).
+  - **Paramètre Effort** : Choisissez l'effort **Auto**, **Low**, **Medium** ou **High** pour chaque projet dans l'éditeur et sur la page **Create**. Un effort plus élevé peut consommer plus de crédits. Les modèles sans contrôle d'effort affichent le paramètre désactivé.
+  - **Noms de projet** : Les nouveaux projets reçoivent un nom court généré par l'IA. Il apparaît dans les titres de page, les noms de thème et la liste des projets à la place de votre prompt.
+  - **Raccourcis de la fenêtre de publication** : Pour un site en direct, la fenêtre de publication propose désormais **Visit**, **Copy link** et **Unpublish**. Consultez [Publier](/fr/publish).
 
   ### Améliorations
 
   - Les templates de site web incluent désormais la bibliothèque d'animations Motion, pour que l'IA puisse créer des animations plus riches comme des entrées échelonnées, du parallaxe et des compteurs animés. Consultez [Templates](/fr/templates).
+  - Les aperçus des projets de site web se construisent désormais en arrière-plan. Rebuild, Undo, Redo, Restore, les modifications de style et les changements de design s'appliquent immédiatement avec un petit indicateur **Updating preview**. Un message envoyé entre-temps n'attend plus l'aperçu.
+  - **Stop** restaure désormais le site à l'état précédent votre message, et **Redo** ramène les modifications partielles. Le projet reste verrouillé jusqu'à ce que la construction arrêtée soit entièrement terminée.
+  - Les constructions arrêtées et échouées utilisent désormais les crédits qu'elles ont consommés. Les constructions qui échouent à cause de la plateforme restent gratuites. Consultez [Crédits et utilisation](/fr/credits-and-usage).
+  - Dans les projets partagés, la personne qui envoie un message paie avec son propre forfait, ses crédits, ses pages Web Agent et ses images IA.
+  - Les crédits pour l'entrée en cache suivent désormais le prix réel de chaque fournisseur IA.
+  - L'IA vérifie vos crédits restants avant chaque requête, garde sa dernière réponse dans la limite disponible et termine l'étape déjà payée. Le chat affiche un avis clair lorsque vous atteignez votre limite de crédits.
+  - Lorsque l'IA envoie une requête invalide, elle la renvoie désormais au lieu de faire échouer la construction. Une construction qui échoue encore de cette façon n'est pas facturée (dans la limite quotidienne de correction gratuite) et propose une correction gratuite.
+  - Une mise à jour d'aperçu échouée conserve désormais le dernier aperçu fonctionnel. Les constructions qui ont perdu le suivi de leur progression sont marquées comme interrompues au lieu de rester bloquées.
+  - Les longues conversations conservent le résumé des messages précédents lorsque vous en envoyez de nouveaux.
+  - L'[éditeur de code](/fr/code-editor) refuse désormais de sauvegarder un fichier pendant que l'IA construit, affiche un message clair et conserve votre texte non sauvegardé.
+  - Les listes de modèles IA utilisent désormais la génération actuelle de modèles, et les paramètres enregistrés migrent des modèles retirés.
+  - Sécurité renforcée : l'aperçu de l'éditeur s'exécute dans un bac à sable, et les sites publiés ne reçoivent plus votre connexion au tableau de bord, de sorte que le code d'un site généré ne peut pas agir en tant que la personne qui le consulte. Les propriétaires ouvrent les sites privés, y compris ceux sur des domaines personnalisés, avec **Visit**.
+  - Le jeton de projet dans les sites publiés ne peut atteindre que les fichiers téléchargés par le site lui-même, et est masqué aux collaborateurs en lecture seule.
+  - Les exports de code de projet incluent désormais un fichier `.gitignore` et affichent un message lisible en cas d'échec.
+  - Des pages plus cohérentes dans l'ensemble du tableau de bord : confirmations avant suppression, erreurs de champ en ligne, états de chargement, accès au clavier, mises en page de droite à gauche et étiquettes traduites.
 
   ### Corrections
 
   - Les thèmes WordPress appliquent désormais de manière fiable les couleurs et tokens du design system sélectionné. Les design systems sombres (Carbon, Lumen et Noir) démarrent désormais en mode sombre.
   - Les thèmes Shopify reçoivent désormais les couleurs du design system quand le template est choisi automatiquement, et les fichiers de démarrage non modifiés n'affichent plus de faux messages de validation.
+  - Deux constructions, ou une construction et une annulation, ne s'exécutent plus en même temps sur le même projet.
+  - L'éditeur ne perd plus votre message quand une construction ne peut pas démarrer. Il explique désormais pourquoi et conserve votre texte.
+  - De nombreux problèmes de l'éditeur ont été corrigés, notamment les échecs de construction silencieux, les modifications signalées comme envoyées alors qu'elles ont échoué, et l'historique disparaissant en milieu de session.
+  - Une sauvegarde manuelle effectuée après Undo n'est plus supprimée par Redo.
+  - L'IA ne commence plus à construire quand elle a simplement répondu à une question sur un site déjà construit.
+  - Les domaines personnalisés de type sous-domaine, comme `shop.example.com`, nécessitent désormais uniquement leur propre enregistrement A et reçoivent un certificat pour ce nom. Consultez [Domaines personnalisés](/fr/custom-domains).
+  - Les domaines personnalisés saisis avec `www` (comme `www.example.com`) ne passent plus la vérification sans l'enregistrement de domaine nu nécessaire au certificat.
+  - Les messages de validation de publication sont désormais traduits.
+  - Les téléchargements de thèmes WordPress incluent désormais leurs paramètres de police et de couleur du `theme.json`.
+  - L'indicateur de crédits ne casse plus la barre d'outils de l'éditeur après l'expiration d'une session.
+  - Les notifications s'affichent désormais sur les pages **File Manager** et **Project Settings**.
 </Update>
 
 <Update label="Septembre 2026">

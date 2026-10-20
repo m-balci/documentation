@@ -59,6 +59,12 @@ Asegúrate de tener lo siguiente:
   Los cambios de DNS pueden tardar desde unos minutos hasta 48 horas en propagarse por internet (esto se llama **DNS propagation**). Si la verificación no tiene éxito de inmediato, espera un rato e intenta de nuevo. No necesitas eliminar y volver a agregar el dominio.
 </Note>
 
+## Dominios raíz, www y subdominios
+
+- **Dominio raíz** (`goldencrust.com`): agrega los registros que se muestran en la pantalla de verificación.
+- **Dominio www** (`www.goldencrust.com`): Webza también solicita el registro del dominio raíz, porque el certificado de seguridad cubre ambos. La verificación solo tiene éxito una vez que ambos registros están en su lugar.
+- **Subdominio** (`shop.goldencrust.com`): solo necesitas el registro para ese subdominio. Webza emite un certificado para ese nombre.
+
 ## Cómo funcionan los nombres de host en diferentes proveedores
 
 Los proveedores de dominios etiquetan el campo de host de forma diferente. Cuando Webza muestra un registro para tu dominio raíz (por ejemplo `goldencrust.com`), tu proveedor puede esperar uno de estos en el campo de host:

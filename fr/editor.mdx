@@ -43,6 +43,17 @@ La barre d'outils supérieure vous donne des actions rapides pour le projet en c
 
 {/* TODO : Confirmer si les plans Free voient le bouton Exporter désactivé ou masqué */}
 
+## Effort
+
+Le paramètre **Effort** contrôle le niveau de travail que l'IA consacre à chaque demande. Choisissez-le par projet dans l'éditeur ou sur la page **Create** :
+
+- **Auto** : l'IA choisit l'effort pour chaque demande.
+- **Low**, **Medium** ou **High** : un effort plus élevé peut produire des résultats plus complets mais peut consommer plus de crédits.
+
+Si le modèle d'IA sélectionné n'a pas de contrôle d'effort, le paramètre apparaît désactivé. Consultez [Crédits et utilisation](/fr/credits-and-usage).
+
+{/* TODO : Confirmer la valeur par défaut d'Effort pour les nouveaux projets. */}
+
 ## Exporter votre projet
 
 Si votre plan le permet, vous pouvez télécharger votre projet et l'héberger en dehors de Webza.
@@ -55,7 +66,7 @@ Si votre plan le permet, vous pouvez télécharger votre projet et l'héberger e
     Dans la barre d'outils, cliquez sur **Exporter** (ou **Télécharger le thème** pour les projets de thème).
   </Step>
   <Step title="Télécharger le ZIP">
-    Le fichier se télécharge sur votre ordinateur. Extrayez-le et suivez le README à l'intérieur pour le développement local ou le déploiement sur Vercel.
+    Le fichier se télécharge sur votre ordinateur. Extrayez-le et suivez le README à l'intérieur pour le développement local ou le déploiement sur Vercel. Les exports de sites web incluent un fichier `.gitignore`, vous pouvez donc pousser le code vers un dépôt Git immédiatement.
   </Step>
 </Steps>
 

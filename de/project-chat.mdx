@@ -55,6 +55,12 @@ Jeder KI-Durchlauf durchläuft Stufen, die im Chat angezeigt werden:
 | Nachrichten | Die KI erklärt, was sie getan hat und warum. |
 | Abgeschlossen | Der Durchlauf ist abgeschlossen und Sie können das Ergebnis in der Vorschau betrachten. |
 
+Wenn ein Build nicht starten kann, erklärt der Chat, warum, und Ihre Nachricht bleibt erhalten, sodass Sie sie erneut senden können.
+
+## Build abbrechen
+
+Klicken Sie auf **Stop**, um einen Lauf vorzeitig zu beenden. Webza stellt die Site in den Zustand vor Ihrer Nachricht wieder her. Wenn Sie die Teilergebnisse doch behalten möchten, klicken Sie auf **Redo**, um sie zurückzuholen. Das Projekt bleibt gesperrt, bis der abgebrochene Build vollständig beendet ist. Ein abgebrochener Lauf nutzt die Credits, die er verbraucht hat.
+
 ## Credit-Anzeige
 
 Die Chat-Kopfzeile zeigt Ihren aktuellen Credit-Status:
@@ -67,7 +73,7 @@ Bei unbegrenzten Plänen steht dort **Unbegrenzte Credits**. Wenn Sie mit Ihrem 
 
 ## Kostenlose Fehlerbehebung
 
-Durchläufe, die aufgrund des KI-Agenten oder der Plattform fehlschlagen, werden nicht berechnet. Dazu gehören Durchläufe, bei denen der Agent nach wiederholten Fehlern stoppte, bei denen der finale Build-Check fehlschlug oder bei denen Tokens verbraucht wurden, ohne etwas zu produzieren. Durchläufe, die fehlschlagen, weil Ihnen die Credits ausgegangen sind, oder Durchläufe, die Sie abbrechen, werden berechnet.
+Fehlgeschlagene Läufe nutzen die Credits, die sie verbraucht haben, aber Läufe, die aufgrund der Plattform fehlschlagen, werden nicht berechnet. Wenn die KI eine ungültige Anfrage sendet, wird sie aufgefordert, sie erneut zu senden, anstatt den Lauf fehlschlagen zu lassen. Wenn der Lauf auf diese Weise dennoch fehlschlägt, wird er nicht berechnet. Läufe, die stoppen, weil Ihnen die Credits ausgegangen sind, oder Läufe, die Sie abbrechen, werden für das, was sie verbraucht haben, berechnet.
 
 Nach einem fehlgeschlagenen Durchlauf erscheint unter dem Chat eine Schaltfläche **Kostenlos beheben**. Ein Klick darauf bittet die KI, das Problem zu diagnostizieren und zu reparieren, ohne neue Funktionen hinzuzufügen. Auch dieser Korrekturdurchlauf ist kostenlos. Die Schaltfläche sendet eine feste Anweisung. Text im Chat-Feld wird nicht berücksichtigt.
 

@@ -14,15 +14,44 @@ mode: "center"
   - **Comprensión de imágenes**: Cuando el modelo seleccionado admite imágenes, la IA ahora puede ver las imágenes que adjuntas a un prompt o mensaje de chat.
   - **Corregir gratis**: Las ejecuciones que fallan por culpa de la IA o la plataforma no se cobran. Puedes reintentar una ejecución fallida una vez gratis, y la página Uso marca estas ejecuciones como no cobradas. Consulta [Créditos y uso](/es/credits-and-usage).
   - **Más formas de conectar Supabase**: Conéctate iniciando sesión con Supabase o con un token de acceso. Las conexiones manuales ya no necesitan tu clave secreta. Consulta [Supabase](/es/integrations/supabase).
+  - **Configuración de Effort**: Elige el esfuerzo **Auto**, **Low**, **Medium** o **High** para cada proyecto en el editor y en la página **Create**. Un esfuerzo mayor puede consumir más créditos. Los modelos sin control de esfuerzo muestran la configuración desactivada.
+  - **Nombres de proyecto**: Los proyectos nuevos reciben un nombre corto generado por IA. Aparece en los títulos de página, nombres de tema y la lista de proyectos en lugar de tu prompt.
+  - **Atajos de la ventana Publicar**: Para un sitio en vivo, la ventana Publicar ahora ofrece **Visit**, **Copy link** y **Unpublish**. Consulta [Publicar](/es/publish).
 
   ### Mejorado
 
   - Las plantillas de sitios web ahora incluyen la biblioteca de animaciones Motion, así que la IA puede construir animaciones más ricas como entradas escalonadas, paralaje y contadores animados. Consulta [Templates](/es/templates).
+  - Las vistas previas de los proyectos web ahora se construyen en segundo plano. Reconstruir, deshacer, rehacer, restaurar, ediciones de estilo y cambios de diseño responden de inmediato con un pequeño indicador **Updating preview**. Un mensaje que envíes mientras tanto ya no espera a la vista previa.
+  - **Stop** ahora restaura el sitio al estado anterior a tu mensaje, y **Redo** recupera los cambios parciales. El proyecto permanece bloqueado hasta que la construcción detenida haya terminado por completo.
+  - Las construcciones detenidas y fallidas ahora usan los créditos que gastaron. Las que fallan por culpa de la plataforma siguen siendo gratuitas. Consulta [Créditos y uso](/es/credits-and-usage).
+  - En proyectos compartidos, la persona que envía un mensaje paga con su propio plan, créditos, páginas de Web Agent e imágenes de IA.
+  - Los créditos por entrada en caché ahora siguen el precio real de cada proveedor de IA.
+  - La IA verifica tus créditos restantes antes de cada solicitud, mantiene su última respuesta dentro de lo que queda y termina el paso que ya pagó. El chat muestra un aviso claro cuando alcanzas tu límite de créditos.
+  - Cuando la IA envía una solicitud inválida, ahora la reenvía en lugar de fallar la construcción. Una construcción que aún falla de esta forma no se cobra (dentro del límite diario de correcciones gratis) y ofrece una corrección gratuita.
+  - Una actualización de vista previa fallida ahora conserva la última vista previa funcional. Las construcciones que perdieron el seguimiento de su progreso se marcan como interrumpidas en lugar de quedarse atascadas.
+  - Las conversaciones largas conservan el resumen de mensajes anteriores cuando envías nuevos.
+  - El [editor de código](/es/code-editor) ahora se niega a guardar un archivo mientras la IA está construyendo, muestra un mensaje claro y conserva tu texto no guardado.
+  - Las listas de modelos de IA ahora usan la generación actual de modelos, y las configuraciones guardadas migran de modelos retirados.
+  - Mejor seguridad: la vista previa del editor se ejecuta en un entorno aislado, y los sitios publicados ya no reciben tu sesión del panel, así que el código de un sitio generado no puede actuar como la persona que lo visualiza. Los propietarios abren sitios privados, incluidos los de dominios personalizados, con **Visit**.
+  - El token de proyecto en sitios publicados solo puede acceder a archivos que el propio sitio subió, y está oculto para los colaboradores de solo lectura.
+  - Las exportaciones de código de proyecto ahora incluyen un archivo `.gitignore` y muestran un mensaje legible cuando fallan.
+  - Páginas más consistentes en todo el panel: confirmaciones antes de eliminar, errores de campo en línea, estados de carga, acceso por teclado, diseños de derecha a izquierda y etiquetas traducidas.
 
   ### Corregido
 
   - Los temas de WordPress ahora aplican de forma fiable los colores y tokens del sistema de diseño seleccionado. Los sistemas de diseño oscuros (Carbon, Lumen y Noir) ahora inician en modo oscuro.
   - Los temas de Shopify ahora obtienen los colores del sistema de diseño cuando la plantilla se elige automáticamente, y los archivos iniciales sin modificar ya no muestran errores de validación falsos.
+  - Dos construcciones, o una construcción y un deshacer, ya no se ejecutan al mismo tiempo en un mismo proyecto.
+  - El editor ya no pierde tu mensaje cuando una construcción no puede iniciarse. Ahora explica por qué y conserva tu texto.
+  - Se corrigieron muchos problemas del editor, incluyendo fallos de construcción silenciosos, ediciones reportadas como enviadas cuando fallaron, y el historial que desaparecía durante la sesión.
+  - Un guardado manual hecho después de Deshacer ya no se descarta al hacer Rehacer.
+  - La IA ya no inicia una construcción cuando solo respondió una pregunta en un sitio que ya estaba construido.
+  - Los [dominios personalizados](/es/custom-domains) con subdominios como `shop.example.com` ahora solo necesitan su propio registro A y reciben un certificado para ese nombre.
+  - Los dominios personalizados ingresados con `www` (como `www.example.com`) ya no pasan la verificación sin el registro del dominio raíz que necesita el certificado.
+  - Los mensajes de validación de publicación ahora están traducidos.
+  - Las descargas de temas de WordPress ahora incluyen sus configuraciones de fuentes y colores de `theme.json`.
+  - El indicador de créditos ya no rompe la barra de herramientas del editor después de que expira una sesión.
+  - Las notificaciones ahora aparecen en las páginas de **File Manager** y **Project Settings**.
 </Update>
 
 <Update label="Septiembre 2026">

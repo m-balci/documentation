@@ -54,9 +54,20 @@ Les crédits sont consommés lors de :
 
 Les crédits ne sont **pas** consommés quand vous posez des questions ou attendez la réponse de l'IA. Seule l'exécution réelle de la construction coûte des crédits.
 
+Quelques éléments influencent le nombre de crédits consommés par une exécution :
+
+- **Effort** : les paramètres d'effort plus élevés peuvent consommer plus de crédits. Voir [Effort](/fr/editor#effort).
+- **Exécutions arrêtées** : si vous arrêtez une exécution, elle consomme les crédits qu'elle a déjà dépensés.
+- **Projets partagés** : la personne qui envoie un message paie avec son propre forfait, ses crédits et son allocation d'images IA.
+- **Entrée en cache** : l'entrée mise en cache par le fournisseur IA est comptabilisée au prix réel, plus bas, de ce fournisseur.
+
+## Manquer de crédits
+
+Avant chaque requête, l'IA vérifie combien de crédits il vous reste et garde sa réponse dans cette limite. Si vous tombez à court en cours de construction, l'IA termine l'étape déjà payée, et le chat affiche un avis de limite de crédits.
+
 ## Correction gratuite
 
-Si une exécution échoue à cause d'une erreur IA ou d'un problème de plateforme, vous n'êtes pas facturé pour cette exécution. Les exécutions que vous annulez, ou celles qui s'arrêtent parce que vous avez manqué de crédits, sont toujours facturées.
+Les exécutions qui échouent consomment les crédits qu'elles ont dépensés, mais les exécutions qui échouent à cause d'un problème de plateforme ne sont pas facturées. Si l'IA continue d'envoyer des requêtes invalides et que l'exécution échoue pour cette raison, cette exécution n'est pas facturée non plus, dans la limite quotidienne de correction gratuite. Les exécutions que vous arrêtez, ou celles qui s'arrêtent parce que vous avez manqué de crédits, sont facturées pour ce qu'elles ont consommé.
 
 Quand une exécution n'est pas facturée, elle apparaît dans **Facturation** → **Utilisation** comme **Non facturé** avec une courte raison. Ces exécutions non facturées ne comptent pas dans vos crédits utilisés.
 

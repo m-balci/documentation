@@ -59,6 +59,12 @@ Aşağıdakilere sahip olduğunuzdan emin olun:
   DNS değişikliklerinin internet genelinde yayılması birkaç dakika ile 48 saat arasında sürebilir (buna **DNS yayılımı** denir). Doğrulama hemen başarılı olmazsa, bir süre bekleyin ve tekrar deneyin. Alan adını kaldırıp yeniden eklemenize gerek yok.
 </Note>
 
+## Kök alan adları, www ve alt alan adları
+
+- **Kök alan adı** (`goldencrust.com`): Doğrulama ekranında gösterilen kayıtları ekleyin.
+- **www alan adı** (`www.goldencrust.com`): Webza ayrıca kök alan adı kaydını ister, çünkü güvenlik sertifikası her ikisini de kapsar. Doğrulama, her iki kayıt da yerine getirildiğinde başarılı olur.
+- **Alt alan adı** (`shop.goldencrust.com`): Yalnızca o alt alan adı için kayda ihtiyacınız vardır. Webza bu isim için bir sertifika verir.
+
 ## Farklı sağlayıcılarda host adlarının nasıl çalıştığı
 
 Alan adı sağlayıcıları host alanını farklı etiketler. Webza kök alan adınız için (örneğin `goldencrust.com`) bir kayıt gösterdiğinde, sağlayıcınız host alanında şunlardan birini bekleyebilir:

@@ -55,6 +55,12 @@ Ogni esecuzione AI passa attraverso fasi mostrate nella chat:
 | Messages | L'AI spiega cosa ha fatto e perché. |
 | Complete | L'esecuzione termina e puoi visualizzare il risultato in anteprima. |
 
+Se una build non può avviarsi, la chat spiega perché e conserva il tuo messaggio così puoi inviarlo di nuovo.
+
+## Interrompi una build
+
+Clicca **Stop** per terminare un'esecuzione in anticipo. Webza ripristina il sito a come era prima del messaggio. Se vuoi le modifiche parziali, clicca **Redo** per riportarle indietro. Il progetto resta bloccato finché la build interrotta non è completamente terminata. Un'esecuzione interrotta usa i crediti che ha speso.
+
 ## Indicatore dei crediti
 
 L'intestazione della chat mostra il tuo stato crediti attuale:
@@ -67,15 +73,15 @@ Sui piani illimitati mostra **Crediti illimitati**. Quando stai costruendo con l
 
 ## Correzione gratuita
 
-Le esecuzioni che falliscono a causa dell'agente AI o della piattaforma non vengono addebitate. Questo include esecuzioni in cui l'agente si è fermato dopo errori ripetuti, il controllo finale della build è fallito, o i token sono stati spesi senza produrre nulla. Le esecuzioni che falliscono perché hai esaurito i crediti, o quelle che annulli, vengono addebitate.
+Le build che falliscono usano i crediti che hanno speso, ma le build che falliscono a causa della piattaforma non vengono addebitate. Quando l'AI invia una richiesta non valida, le viene chiesto di rinviarla invece di far fallire l'esecuzione. Se l'esecuzione fallisce comunque per questo motivo, non viene addebitata. Le esecuzioni che si fermano perché hai esaurito i crediti, o quelle che interrompi, vengono addebitate per ciò che hanno usato.
 
 Dopo un'esecuzione fallita, un pulsante **Correggi gratis** appare sotto la chat. Cliccarlo chiede all'AI di diagnosticare e riparare il problema senza aggiungere nuove funzionalità. Anche quella esecuzione di correzione è gratuita. Il pulsante invia un'istruzione fissa. Il testo nella casella di chat non è incluso.
 
 <Warning>
-  Ogni esecuzione fallita può essere corretta gratuitamente una volta, entro 24 ore, e solo mentre è l'esecuzione più recente.
+  Ogni esecuzione fallita può essere corretta gratuitamente una volta, entro 24 ore, e solo mentre è la build più recente.
 </Warning>
 
-Le esecuzioni non addebitate appaiono su **Fatturazione → Utilizzo** marcate come **Non addebitato**. C'è un limite giornaliero di esecuzioni non addebitate per utente.
+Le build non addebitate appaiono su **Fatturazione → Utilizzo** marcate come **Non addebitato**. C'è un limite giornaliero di build non addebitate per utente.
 
 {/* TODO: confirm Webza's daily limit of uncharged runs (default is 5 per 24h). */}
 

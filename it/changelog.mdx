@@ -14,15 +14,44 @@ mode: "center"
   - **Comprensione delle immagini**: Quando il modello selezionato supporta le immagini, l'AI può ora vedere le immagini che allegi a un prompt o a un messaggio di chat.
   - **Correzione gratuita**: Le build che falliscono a causa dell'AI o della piattaforma non vengono addebitate. Puoi riprovare una build fallita una volta gratuitamente, e la pagina Utilizzo contrassegna queste build come non addebitate. Consulta [Crediti e utilizzo](/it/credits-and-usage).
   - **Più modi per connettere Supabase**: Connettiti effettuando l'accesso con Supabase o con un token di accesso. Le connessioni manuali non richiedono più la tua chiave segreta. Consulta [Supabase](/it/integrations/supabase).
+  - **Effort setting**: Scegli l'effort **Auto**, **Low**, **Medium** o **High** per ogni progetto nell'editor e nella pagina **Create**. Un effort più alto può consumare più crediti. I modelli senza controllo dell'effort mostrano l'impostazione disabilitata.
+  - **Project names**: I nuovi progetti ricevono un nome breve generato dall'AI. Appare nei titoli delle pagine, nei nomi dei temi e nell'elenco dei progetti al posto del prompt.
+  - **Publish window shortcuts**: Per un sito live, la finestra di pubblicazione offre ora **Visit**, **Copy link** e **Unpublish**. Vedi [Pubblica](/it/publish).
 
   ### Migliorato
 
   - I template di siti web ora includono la libreria di animazione Motion, così l'AI può creare animazioni più ricche come ingressi scaglionati, parallasse e contatori animati. Consulta [Template](/it/templates).
+  - Le anteprime dei progetti sito web ora si ricostruiscono in background. Ricostruisci, Annulla, Ripeti, ripristina, modifiche di stile e cambi di design rispondono subito, con un piccolo indicatore **Updating preview**. Un messaggio inviato nel frattempo non aspetta più l'anteprima.
+  - **Stop** ora ripristina il sito a come era prima del messaggio, e **Redo** riporta le modifiche parziali. Il progetto resta bloccato finché la build interrotta non è completamente terminata.
+  - Build interrotte e fallite ora usano i crediti spesi. Le build che falliscono per colpa della piattaforma restano gratuite. Vedi [Crediti e utilizzo](/it/credits-and-usage).
+  - Nei progetti condivisi, chi invia un messaggio paga con il proprio piano, crediti, pagine Web Agent e immagini AI.
+  - I crediti per l'input in cache seguono ora il prezzo reale di ogni provider AI.
+  - L'AI controlla i crediti rimanenti prima di ogni richiesta, mantiene la sua ultima risposta entro ciò che resta e completa lo step già pagato. La chat mostra un avviso chiaro quando raggiungi il limite di crediti.
+  - Quando l'AI invia una richiesta non valida, la reinvia invece di far fallire la build. Una build che fallisce comunque per questo motivo non viene addebitata (entro il limite giornaliero di correzioni gratuite) e offre una correzione gratuita.
+  - Un aggiornamento di anteprima fallito ora conserva l'ultima anteprima funzionante. Le build che hanno perso traccia del loro progresso vengono contrassegnate come interrotte invece di restare bloccate.
+  - Le conversazioni lunghe conservano il riassunto dei messaggi precedenti quando ne invii di nuovi.
+  - L'[editor di codice](/it/code-editor) ora rifiuta di salvare un file mentre l'AI sta costruendo, mostra un messaggio chiaro e conserva il testo non salvato.
+  - Gli elenchi di modelli AI ora usano la generazione attuale di modelli, e le impostazioni salvate vengono spostate dai modelli ritirati.
+  - Maggiore sicurezza: l'anteprima dell'editor viene eseguita in una sandbox, e i siti pubblicati non ricevono più il tuo login della dashboard, quindi il codice in un sito generato non può agire come la persona che lo visualizza. I proprietari aprono i siti privati, inclusi quelli su domini personalizzati, con **Visit**.
+  - Il token di progetto nei siti pubblicati può raggiungere solo i file caricati dal sito stesso, ed è nascosto ai collaboratori in sola visualizzazione.
+  - Le esportazioni del codice di progetto ora includono un file `.gitignore` e mostrano un messaggio leggibile quando falliscono.
+  - Pagine più coerenti in tutta la dashboard: conferme prima dell'eliminazione, errori di campo inline, stati di caricamento, accesso da tastiera, layout da destra a sinistra ed etichette tradotte.
 
   ### Corretto
 
   - I temi WordPress ora applicano in modo affidabile i colori e i token del design system selezionato. I design system scuri (Carbon, Lumen e Noir) ora partono in modalità scura.
   - I temi Shopify ora ottengono i colori del design system quando il template viene scelto automaticamente, e i file di partenza non modificati non mostrano più falsi errori di validazione.
+  - Due build, o una build e un annulla, non vengono più eseguite contemporaneamente sullo stesso progetto.
+  - L'editor non perde più il messaggio quando una build non può avviarsi. Ora spiega perché e conserva il testo.
+  - Corretti molti problemi dell'editor, tra cui build fallite silenziose, modifiche segnalate come inviate quando invece erano fallite, e cronologia che scompare a metà sessione.
+  - Un salvataggio manuale fatto dopo Annulla non viene più scartato da Ripeti.
+  - L'AI non inizia più a costruire quando ha solo risposto a una domanda su un sito già buildato.
+  - I domini personalizzati in stile sottodominio come `shop.example.com` ora richiedono solo il proprio record A e ricevono un certificato per quel nome. Vedi [Domini personalizzati](/it/custom-domains).
+  - I domini personalizzati inseriti con `www` (come `www.example.com`) non passano più la verifica senza il record del dominio nudo necessario al certificato.
+  - I messaggi di validazione della pubblicazione sono ora tradotti.
+  - I download dei temi WordPress ora includono le impostazioni di font e colori del loro `theme.json`.
+  - L'indicatore dei crediti non blocca più la barra degli strumenti dell'editor dopo la scadenza della sessione.
+  - Le notifiche ora appaiono nelle pagine **File Manager** e **Project Settings**.
 </Update>
 
 <Update label="Settembre 2026">

@@ -54,9 +54,20 @@ Os créditos são consumidos durante:
 
 Os créditos **não** são consumidos enquanto você faz perguntas ou aguarda a resposta da IA. Apenas a execução real do build custa créditos.
 
+Alguns fatores afetam quantos créditos uma execução consome:
+
+- **Effort**: configurações de [effort](/pt-br/editor#effort) mais altas podem usar mais créditos.
+- **Execuções interrompidas**: se você parar uma execução, ela usa os créditos que gastou até aquele ponto.
+- **Projetos compartilhados**: a pessoa que envia uma mensagem paga por ela com seu próprio plano, créditos e cota de imagens de IA.
+- **Entrada em cache**: entrada que o provedor de IA mantém em cache é contada pelo preço real, mais baixo, daquele provedor.
+
+## Quase sem créditos
+
+Antes de cada solicitação, a IA verifica quantos créditos você tem e mantém sua resposta dentro desse limite. Se você ficar sem créditos no meio de uma construção, a IA termina a etapa que já pagou, e o chat mostra um aviso de limite de créditos.
+
 ## Corrigir grátis
 
-Se uma execução falhar por causa de um erro da IA ou de um problema na plataforma, você não é cobrado por essa execução. Execuções que você cancela, ou que param porque você ficou sem créditos, ainda são cobradas.
+Execuções que falham usam os créditos que gastaram, mas execuções que falham por um problema na plataforma não são cobradas. Se a IA continuar enviando solicitações inválidas e a execução falhar por isso, aquela execução também não é cobrada, dentro do limite diário de correção gratuita. Execuções que você interrompe, ou que param porque você ficou sem créditos, são cobradas pelo que usaram.
 
 Quando uma execução não é cobrada, ela aparece em **Faturamento** → **Uso** como **Não cobrado** com um breve motivo. Essas execuções não cobradas não contam para os créditos usados.
 

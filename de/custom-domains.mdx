@@ -59,6 +59,12 @@ Stellen Sie sicher, dass Sie Folgendes haben:
   DNS-Änderungen können von wenigen Minuten bis zu 48 Stunden dauern, um sich im Internet zu verbreiten (das nennt man **DNS propagation**). Wenn die Verifizierung nicht sofort erfolgreich ist, warten Sie eine Weile und versuchen Sie es erneut. Sie müssen die Domain nicht entfernen und erneut hinzufügen.
 </Note>
 
+## Root-Domains, www und Subdomains
+
+- **Root-Domain** (`goldencrust.com`): Fügen Sie die Einträge hinzu, die auf dem Verifizierungsbildschirm angezeigt werden.
+- **www-Domain** (`www.goldencrust.com`): Webza fragt zusätzlich nach dem Root-Domain-Eintrag, da das Sicherheitszertifikat beide abdeckt. Die Verifizierung gelingt erst, wenn beide Einträge vorhanden sind.
+- **Subdomain** (`shop.goldencrust.com`): Sie benötigen nur den Eintrag für diese Subdomain. Webza stellt ein Zertifikat für diesen Namen aus.
+
 ## Wie Host-Namen bei verschiedenen Providern funktionieren
 
 Domain-Provider bezeichnen das Host-Feld unterschiedlich. Wenn Webza einen Eintrag für Ihre Root-Domain anzeigt (zum Beispiel `goldencrust.com`), erwartet Ihr Provider möglicherweise eines der Folgenden im Host-Feld:

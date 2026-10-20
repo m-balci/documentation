@@ -14,15 +14,44 @@ mode: "center"
   - **Compreensão de imagens**: Quando o modelo selecionado suporta imagens, a IA agora consegue ver as imagens que você anexa a um prompt ou mensagem no chat.
   - **Corrigir grátis**: Execuções que falham por causa da IA ou da plataforma não são cobradas. Você pode tentar novamente uma execução falha uma vez de graça, e a página **Uso** marca essas execuções como não cobradas. Consulte [Créditos e uso](/pt-br/credits-and-usage).
   - **Mais formas de conectar o Supabase**: Conecte-se fazendo login com o Supabase ou com um token de acesso. Conexões manuais não precisam mais da sua chave secreta. Consulte [Supabase](/pt-br/integrations/supabase).
+  - **Configuração de Effort**: Escolha **Auto**, **Low**, **Medium** ou **High** effort para cada projeto no editor e na página **Create**. Esforço maior pode usar mais créditos. Modelos sem controle de effort mostram a configuração desabilitada.
+  - **Nomes de projetos**: Novos projetos recebem um nome curto gerado por IA. Ele aparece nos títulos de página, nomes de tema e na lista de projetos em vez do seu prompt.
+  - **Atalhos da janela de publicação**: Para um site ao vivo, a janela de publicação agora oferece **Visit**, **Copy link** e **Unpublish**. Veja [Publicar](/pt-br/publish).
 
   ### Melhorado
 
   - Templates de site agora incluem a biblioteca de animação Motion, então a IA pode construir animações mais ricas como entradas escalonadas, parallax e contadores animados. Consulte [Templates](/pt-br/templates).
+  - Prévias de projetos de site agora são construídas em segundo plano. Rebuild, Desfazer, Refazer, restaurar, edições de estilo e alterações de design retornam imediatamente com um pequeno indicador **Updating preview**. Uma mensagem que você envia enquanto isso não precisa mais esperar pela prévia.
+  - **Stop** agora restaura o site para como ele estava antes da sua mensagem, e **Redo** traz as alterações parciais de volta. O projeto permanece bloqueado até que a construção interrompida termine completamente.
+  - Construções interrompidas e falhas agora usam os créditos que gastaram. Construções que falham por causa da plataforma permanecem gratuitas. Consulte [Créditos e uso](/pt-br/credits-and-usage).
+  - Em projetos compartilhados, a pessoa que envia uma mensagem paga por ela com seu próprio plano, créditos, páginas de Web Agent e imagens de IA.
+  - Créditos para entrada em cache agora seguem o preço real de cada provedor de IA.
+  - A IA verifica seus créditos restantes antes de cada solicitação, mantém sua última resposta dentro do que resta e termina a etapa que já pagou. O chat mostra uma notificação clara quando você alcança seu limite de créditos.
+  - Quando a IA envia uma solicitação inválida, ela agora reenvia em vez de falhar a construção. Uma construção que ainda falhar dessa forma não é cobrada (dentro do limite diário de correção gratuita) e oferece uma correção gratuita.
+  - Uma atualização de prévia que falha agora mantém a última prévia funcional. Construções que perderam o controle de seu progresso são marcadas como interrompidas em vez de ficarem travadas.
+  - Conversas longas mantêm o resumo de mensagens anteriores quando você envia novas.
+  - O [editor de código](/pt-br/code-editor) agora recusa salvar um arquivo enquanto a IA está construindo, mostra uma mensagem clara e mantém seu texto não salvo.
+  - As listas de modelos de IA agora usam a geração atual de modelos, e configurações salvas migram de modelos descontinuados.
+  - Melhor segurança: a prévia do editor roda em sandbox, e sites publicados não recebem mais seu login do dashboard, então código em um site gerado não pode agir como a pessoa que o visualiza. Proprietários abrem sites privados, incluindo aqueles em domínios personalizados, com **Visit**.
+  - O token de projeto em sites publicados só pode alcançar arquivos que o próprio site enviou, e fica oculto de colaboradores com permissão apenas de visualização.
+  - Exportações de código de projeto agora incluem um arquivo `.gitignore` e mostram uma mensagem legível quando falham.
+  - Páginas mais consistentes em todo o dashboard: confirmações antes de excluir, erros de campo inline, estados de carregamento, acesso por teclado, layouts de direita para esquerda e rótulos traduzidos.
 
   ### Corrigido
 
   - Temas WordPress agora aplicam as cores e tokens do design system selecionado de forma confiável. Design systems escuros (Carbon, Lumen e Noir) agora iniciam no modo escuro.
   - Temas Shopify agora recebem as cores do design system quando o template é escolhido automaticamente, e arquivos iniciais não modificados não mostram mais falsos erros de validação.
+  - Duas construções, ou uma construção e um desfazer, não rodam mais no mesmo projeto ao mesmo tempo.
+  - O editor não perde mais sua mensagem quando uma construção não pode começar. Ele agora explica por quê e mantém seu texto.
+  - Corrigidos muitos problemas no editor, incluindo falhas de construção silenciosas, edições reportadas como enviadas quando falharam, e histórico desaparecendo no meio da sessão.
+  - Um salvamento manual feito após Desfazer não é mais descartado por Redo.
+  - A IA não começa mais a construir quando ela apenas respondeu uma pergunta em um site que já estava construído.
+  - [Domínios personalizados](/pt-br/custom-domains) no estilo de subdomínio, como `shop.example.com`, agora precisam apenas de seu próprio registro A e recebem um certificado para aquele nome.
+  - Domínios personalizados inseridos com `www` (como `www.example.com`) não passam mais na verificação sem o registro do domínio raiz que o certificado precisa.
+  - Mensagens de validação de publicação agora são traduzidas.
+  - Downloads de temas WordPress agora incluem suas configurações de fonte e cor do `theme.json`.
+  - O indicador de créditos não quebra mais a barra de ferramentas do editor após a expiração da sessão.
+  - Notificações agora aparecem nas páginas **File Manager** e **Project Settings**.
 </Update>
 
 <Update label="Setembro de 2026">

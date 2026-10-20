@@ -43,6 +43,17 @@ description: "Webza 项目编辑器的概览，包括布局、工具栏和键盘
 
 {/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
 
+## Effort
+
+**Effort** 设置控制 AI 为每次请求投入的工作量。您可以在编辑器中或 **Create** 页面上逐个设置项目：
+
+- **Auto**：AI 为每次请求自动选择 effort。
+- **Low**、**Medium** 或 **High**：更高的 effort 可能产生更全面的结果，但也可能消耗更多积分。
+
+如果所选 AI 模型没有 effort 控制，该设置将显示为禁用状态。请参阅[积分与用量](/zh/credits-and-usage)。
+
+{/* TODO: Confirm the default Effort value for new projects. */}
+
 ## 导出项目
 
 如果您的套餐支持，您可以下载项目并在 Webza 外部托管。
@@ -55,7 +66,7 @@ description: "Webza 项目编辑器的概览，包括布局、工具栏和键盘
     在工具栏中，点击**导出**（对于主题项目点击**下载主题**）。
   </Step>
   <Step title="下载 ZIP">
-    文件会下载到您的电脑。解压它并按照里面的 README 进行本地开发或 Vercel 部署。
+    文件会下载到您的电脑。解压它并按照里面的 README 进行本地开发或 Vercel 部署。网站导出版本包含 `.gitignore` 文件，因此您可以直接将代码推送到 Git 仓库。
   </Step>
 </Steps>
 

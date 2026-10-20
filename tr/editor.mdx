@@ -43,6 +43,17 @@ Sohbet panelini daraltarak önizlemeye tam genişlik verebilirsiniz. Bu, tasarı
 
 {/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
 
+## Effort
+
+**Effort** ayarı, yapay zekanın her istek için ne kadar çalışacağını kontrol eder. Editörde veya **Create** sayfasında proje başına seçin:
+
+- **Auto**: Yapay zeka her istek için çaba seviyesini kendisi belirler.
+- **Low**, **Medium** veya **High**: Daha yüksek çaba daha kapsamlı sonuçlar verebilir ancak daha fazla kredi kullanabilir.
+
+Seçilen yapay zeka modelinde çaba kontrolü yoksa, bu ayar devre dışı görünür. Ayrıntılar için [Krediler ve kullanım](/tr/credits-and-usage) sayfasına bakın.
+
+{/* TODO: Confirm the default Effort value for new projects. */}
+
 ## Projenizi dışa aktarma
 
 Planınız bunu destekliyorsa, projenizi Webza dışında barındırmak için indirebilirsiniz.
@@ -55,7 +66,7 @@ Planınız bunu destekliyorsa, projenizi Webza dışında barındırmak için in
     Araç çubuğunda **Dışa aktar**'ı (veya tema projeleri için **Tema indir (.zip)**'i) tıklayın.
   </Step>
   <Step title="ZIP dosyasını indirin">
-    Dosya bilgisayarınıza indirilir. Çıkarın ve yerel geliştirme veya Vercel dağıtımı için içindeki README dosyasını takip edin.
+    Dosya bilgisayarınıza indirilir. Çıkarın ve yerel geliştirme veya Vercel dağıtımı için içindeki README dosyasını takip edin. Web sitesi dışa aktarımları `.gitignore` dosyası içerir, böylece kodu hemen bir Git deposuna gönderebilirsiniz.
   </Step>
 </Steps>
 

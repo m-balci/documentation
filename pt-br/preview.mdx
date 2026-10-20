@@ -5,6 +5,8 @@ description: "Use o painel de preview para visualizar seu projeto ao vivo, inspe
 
 O painel de preview mostra uma visualização ao vivo do seu projeto. Você pode redimensionar a viewport, inspecionar elementos, re-temar o design e percorrer o histórico de revisões. O preview se recarrega automaticamente quando uma construção termina, então você não precisa de um botão de atualização manual.
 
+Em projetos de site, a prévia é construída em segundo plano. Rebuild, Desfazer, Refazer, restaurar, edições de estilo e alterações de design retornam imediatamente, e um pequeno indicador **Updating preview** mostra enquanto a nova prévia é preparada. Você pode continuar conversando enquanto isso. Se uma atualização de prévia falhar, a última prévia funcional permanece no lugar.
+
 ## Controles de viewport
 
 Use os botões de viewport para testar como seu projeto fica em diferentes tamanhos.
@@ -72,7 +74,7 @@ Cada desfazer reverte exatamente uma alteração: uma solicitação de chat da I
 </Warning>
 
 <Warning>
-  Edições manuais no editor de código feitas enquanto você está dentro do histórico (após desfazer) não são capturadas. O próximo Desfazer, Refazer ou Restaurar as descarta sem aviso. Retorne ao estado mais recente primeiro, ou deixe a IA fazer a alteração.
+  Edições manuais no editor de código feitas enquanto você está dentro do histórico (após desfazer) não são capturadas. O próximo Desfazer ou Restaurar as descarta sem aviso. Retorne ao estado mais recente primeiro, ou deixe a IA fazer a alteração.
 </Warning>
 
 <Info>

@@ -55,6 +55,12 @@ Chaque exécution de l'IA passe par des étapes affichées dans la discussion :
 | Messages | L'IA explique ce qu'elle a fait et pourquoi. |
 | Complete | L'exécution se termine et vous pouvez prévisualiser le résultat. |
 
+Si une construction ne peut pas démarrer, la discussion explique pourquoi et conserve votre message pour que vous puissiez l'envoyer à nouveau.
+
+## Arrêter une construction
+
+Cliquez sur **Stop** pour interrompre une exécution en cours. Webza restaure le site à l'état précédent votre message. Si vous voulez finalement conserver les modifications partielles, cliquez sur **Redo** pour les ramener. Le projet reste verrouillé jusqu'à ce que la construction arrêtée soit entièrement terminée. Une exécution arrêtée consomme les crédits qu'elle a dépensés.
+
 ## Indicateur de crédits
 
 L'en-tête de la discussion affiche votre statut de crédits actuel :
@@ -67,7 +73,7 @@ Sur les plans illimités, il affiche **Crédits illimités**. Lorsque vous const
 
 ## Correction gratuite
 
-Les exécutions qui échouent à cause de l'agent IA ou de la plateforme ne sont pas facturées. Cela inclut les exécutions où l'agent s'est arrêté après des erreurs répétées, la vérification finale de construction a échoué, ou des jetons ont été dépensés sans rien produire. Les exécutions qui échouent parce que vous avez manqué de crédits, ou les exécutions que vous annulez, sont facturées.
+Les exécutions qui échouent consomment les crédits qu'elles ont dépensés, mais les exécutions qui échouent à cause de la plateforme ne sont pas facturées. Lorsque l'IA envoie une requête invalide, elle est invitée à la renvoyer au lieu de faire échouer l'exécution. Si l'exécution échoue encore de cette façon, elle n'est pas facturée. Les exécutions qui s'arrêtent parce que vous avez manqué de crédits, ou celles que vous arrêtez, sont facturées pour ce qu'elles ont consommé.
 
 Après une exécution échouée, un bouton **Corriger gratuitement** apparaît sous la discussion. Cliquer dessus demande à l'IA de diagnostiquer et de réparer le problème sans ajouter de nouvelles fonctionnalités. Cette exécution de correction est également gratuite. Le bouton envoie une instruction fixée. Le texte dans la zone de discussion n'est pas inclus.
 

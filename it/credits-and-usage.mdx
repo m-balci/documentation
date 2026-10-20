@@ -54,9 +54,20 @@ I crediti vengono consumati durante:
 
 I crediti **non** vengono consumati mentre fai domande o attendi la risposta dell'AI. Solo l'esecuzione effettiva della build costa crediti.
 
+Alcune cose influenzano quanti crediti usa una build:
+
+- **Effort**: impostazioni di [effort](/it/editor#effort) più alte possono usare più crediti.
+- **Build interrotte**: se interrompi una build, usa i crediti che ha speso fino a quel punto.
+- **Progetti condivisi**: chi invia un messaggio paga per conto proprio, con il proprio piano, crediti e assegnazione di immagini AI.
+- **Input in cache**: l'input messo in cache dal provider AI viene conteggiato al prezzo reale e più basso di quel provider.
+
+## Quando i crediti stanno per esaurirsi
+
+Prima di ogni richiesta, l'AI controlla quanti crediti ti restano e mantiene la sua risposta entro quella cifra. Se ti esaurisci a metà build, l'AI completa lo step che ha già pagato, e la chat mostra un avviso sul limite dei crediti.
+
 ## Correggi gratuitamente
 
-Se una build fallisce a causa di un errore dell'AI o di un problema della piattaforma, non vieni addebitato per quella build. Le build che annulli o che si interrompono perché hai esaurito i crediti vengono comunque addebitate.
+Le build che falliscono usano i crediti che hanno speso, ma le build che falliscono a causa di un problema della piattaforma non vengono addebitate. Se l'AI continua a inviare richieste non valide e la build fallisce per questo motivo, anche quella build non viene addebitata, entro il limite giornaliero di correzioni gratuite. Le build che interrompi, o quelle che si fermano perché hai esaurito i crediti, vengono addebitate per ciò che hanno usato.
 
 Quando una build non viene addebitata, appare su **Fatturazione** → **Utilizzo** come **Non addebitato** con una breve motivazione. Queste build non addebitate non contano nel totale dei crediti usati.
 

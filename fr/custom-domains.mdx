@@ -59,6 +59,12 @@ Assurez-vous d'avoir ce qui suit :
   Les changements DNS peuvent prendre de quelques minutes à 48 heures pour se propager sur Internet (cela s'appelle la **propagation DNS**). Si la vérification ne réussit pas immédiatement, attendez un moment et réessayez. Vous n'avez pas besoin de supprimer et de réajouter le domaine.
 </Note>
 
+## Domaines racine, www et sous-domaines
+
+- **Domaine racine** (`goldencrust.com`) : ajoutez les enregistrements affichés sur l'écran de vérification.
+- **Domaine www** (`www.goldencrust.com`) : Webza demande également l'enregistrement du domaine racine, car le certificat de sécurité couvre les deux. La vérification ne réussit que lorsque les deux enregistrements sont en place.
+- **Sous-domaine** (`shop.goldencrust.com`) : vous n'avez besoin que de l'enregistrement pour ce sous-domaine. Webza émet un certificat pour ce nom.
+
 ## Comment les noms d'hôte fonctionnent chez différents fournisseurs
 
 Les fournisseurs de domaines étiquettent le champ hôte différemment. Lorsque Webza affiche un enregistrement pour votre domaine racine (par exemple `goldencrust.com`), votre fournisseur peut attendre l'une des valeurs suivantes dans le champ hôte :

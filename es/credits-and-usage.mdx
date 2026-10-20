@@ -54,9 +54,20 @@ Los créditos se consumen durante:
 
 Los créditos **no** se consumen mientras haces preguntas o esperas la respuesta de la IA. Solo la ejecución real de la construcción cuesta créditos.
 
+Algunos factores afectan cuántos créditos usa una ejecución:
+
+- **Effort**: una configuración de [esfuerzo](/es/editor#esfuerzo) más alta puede usar más créditos.
+- **Ejecuciones detenidas**: si detienes una ejecución, usa los créditos que gastó hasta ese momento.
+- **Proyectos compartidos**: la persona que envía un mensaje paga con su propio plan, créditos y asignación de imágenes de IA.
+- **Entrada en caché**: la entrada que el proveedor de IA tiene en caché se cuenta al precio real y menor de ese proveedor.
+
+## Quedarse sin créditos
+
+Antes de cada solicitud, la IA verifica cuántos créditos te quedan y mantiene su respuesta dentro de esa cantidad. Si te quedas sin créditos a mitad de una construcción, la IA termina el paso que ya pagó, y el chat muestra un aviso de límite de créditos.
+
 ## Fix for free
 
-Si una ejecución falla por un error de IA o un problema de la plataforma, no se te cobra por esa ejecución. Las ejecuciones que cancelas o que se detienen porque te quedaste sin créditos sí se cobran.
+Las ejecuciones fallidas usan los créditos que gastaron, pero las que fallan por un problema de la plataforma no se cobran. Si la IA sigue enviando solicitudes inválidas y la ejecución falla por eso, esa ejecución tampoco se cobra, dentro del límite diario de correcciones gratis. Las ejecuciones que detienes, o las que se detienen porque te quedaste sin créditos, se cobran por lo que usaron.
 
 Cuando una ejecución no se cobra, aparece en **Facturación → Uso** como **No cobrado** con una breve razón. Estas ejecuciones no cobradas no cuentan para tus créditos usados.
 

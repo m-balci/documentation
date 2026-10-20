@@ -14,15 +14,44 @@ mode: "center"
   - **Bildverständnis**: Wenn das ausgewählte Modell Bilder unterstützt, kann die KI nun die Bilder erkennen, die Sie einem Prompt oder einer Chat-Nachricht anhängen.
   - **Kostenlos beheben**: Läufe, die aufgrund der KI oder der Plattform fehlschlagen, werden nicht berechnet. Sie können einen fehlgeschlagenen Lauf einmal kostenlos wiederholen, und die Seite Nutzung markiert diese Läufe als nicht berechnet. Siehe [Credits und Nutzung](/de/credits-and-usage).
   - **Weitere Möglichkeiten zur Supabase-Verbindung**: Verbinden Sie sich durch Anmeldung mit Supabase oder mit einem Access-Token. Manuelle Verbindungen benötigen nicht mehr Ihren Secret Key. Siehe [Supabase](/de/integrations/supabase).
+  - **Effort setting**: Wählen Sie im Editor und auf der Seite **Create** für jedes Projekt **Auto**, **Low**, **Medium** oder **High**. Höherer Aufwand kann mehr Credits kosten. Bei Modellen ohne Effort-Steuerung ist die Einstellung deaktiviert.
+  - **Project names**: Neue Projekte erhalten einen kurzen, KI-generierten Namen. Er erscheint in Seitentiteln, Theme-Namen und der Projektliste anstelle Ihres Prompts.
+  - **Publish window shortcuts**: Für eine Live-Site bietet das Publish-Fenster nun **Visit**, **Copy link** und **Unpublish**. Siehe [Veröffentlichen](/de/publish).
 
   ### Verbessert
 
   - Website-Templates enthalten nun die Motion-Animationsbibliothek, sodass die KI reichhaltigere Animationen wie gestaffelte Einblendungen, Parallax und animierte Zähler erstellen kann. Siehe [Templates](/de/templates).
+  - Vorschauen für Website-Projekte werden nun im Hintergrund gebaut. Neubauen, **Undo**, **Redo**, Wiederherstellen, Stilbearbeitungen und Design-Änderungen kehren sofort mit einem kleinen **Updating preview**-Indikator zurück. Eine Nachricht, die Sie in der Zwischenzeit senden, wartet nicht mehr auf die Vorschau.
+  - **Stop** stellt die Site nun in den Zustand vor Ihrer Nachricht wieder her, und **Redo** holt die Teilergebnisse zurück. Das Projekt bleibt gesperrt, bis der abgebrochene Build vollständig beendet ist.
+  - Abgebrochene und fehlgeschlagene Builds nutzen nun die dafür verbrauchten Credits. Fehler aufgrund der Plattform bleiben kostenlos. Siehe [Credits und Nutzung](/de/credits-and-usage).
+  - In geteilten Projekten zahlt die Person, die eine Nachricht sendet, mit ihrem eigenen Tarif, Credits, Web Agent-Seiten und KI-Bildern.
+  - Credits für zwischengespeicherten Input folgen nun dem tatsächlichen Preis jedes KI-Anbieters.
+  - Die KI prüft vor jeder Anfrage Ihre verbleibenden Credits, hält ihre letzte Antwort innerhalb des Verfügbaren und beendet den bereits bezahlten Schritt. Der Chat zeigt eine klare Meldung, wenn Sie Ihr Credit-Limit erreichen.
+  - Wenn die KI eine ungültige Anfrage sendet, wiederholt sie diese nun statt den Build fehlschlagen zu lassen. Ein Build, der auf diese Weise dennoch fehlschlägt, wird nicht berechnet (innerhalb des täglichen Limits für kostenlose Korrekturen) und bietet eine kostenlose Korrektur an.
+  - Eine fehlgeschlagene Vorschau-Aktualisierung behält nun die letzte funktionierende Vorschau. Builds, die den Fortschritt verloren haben, werden als unterbrochen markiert statt stecken zu bleiben.
+  - Lange Gespräche behalten die Zusammenfassung früherer Nachrichten, wenn Sie neue senden.
+  - Der [Code-Editor](/de/code-editor) lehnt es nun ab, eine Datei zu speichern, während die KI baut, zeigt eine klare Meldung und behält Ihren ungespeicherten Text.
+  - Die KI-Modelllisten nutzen nun die aktuelle Modellgeneration, und gespeicherte Einstellungen wechseln von eingestellten Modellen ab.
+  - Bessere Sicherheit: Die Editor-Vorschau läuft in einer Sandbox, und veröffentlichte Sites erhalten nicht mehr Ihr Dashboard-Login, sodass Code in einer generierten Site nicht als die betrachtende Person handeln kann. Besitzer öffnen private Sites, auch solche auf eigenen Domains, mit **Visit**.
+  - Das Projekt-Token in veröffentlichten Sites kann nur auf Dateien zugreifen, die die Site selbst hochgeladen hat, und ist für rein betrachtende Mitarbeiter ausgeblendet.
+  - Projekt-Code-Exporte enthalten nun eine `.gitignore`-Datei und zeigen bei Fehlern eine verständliche Meldung.
+  - Konsistentere Seiten im gesamten Dashboard: Bestätigungen vor dem Löschen, Inline-Feldfehler, Ladezustände, Tastaturzugriff, Rechts-nach-Links-Layouts und übersetzte Beschriftungen.
 
   ### Behoben
 
   - WordPress-Themes wenden die Farben und Tokens des ausgewählten Design-Systems nun zuverlässig an. Dunkle Design-Systeme (Carbon, Lumen und Noir) starten nun im Dunkelmodus.
   - Shopify-Themes erhalten nun die Farben des Design-Systems, wenn das Template automatisch ausgewählt wird, und unberührte Starter-Dateien zeigen keine falschen Validierungsfehler mehr.
+  - Zwei Builds oder ein Build und ein Undo laufen nicht mehr gleichzeitig auf demselben Projekt.
+  - Der Editor verliert Ihre Nachricht nicht mehr, wenn ein Build nicht starten kann. Er erklärt nun den Grund und behält Ihren Text.
+  - Viele Editor-Probleme wurden behoben, darunter stille Build-Fehler, als gesendet gemeldete Bearbeitungen, die fehlgeschlagen sind, und ein verschwindender Verlauf mitten in der Sitzung.
+  - Ein manuelles Speichern nach **Undo** wird nicht mehr durch **Redo** verworfen.
+  - Die KI beginnt nicht mehr zu bauen, wenn sie nur eine Frage auf einer bereits gebauten Site beantwortet hat.
+  - Subdomain-ähnliche [eigene Domains](/de/custom-domains) wie `shop.example.com` benötigen nun nur ihren eigenen A-Record und erhalten ein Zertifikat für diesen Namen.
+  - Eigene Domains, die mit `www` eingegeben werden (wie `www.example.com`), bestehen die Verifizierung nicht mehr ohne den benötigten Basis-Domain-Record für das Zertifikat.
+  - Validierungsmeldungen beim Veröffentlichen sind nun übersetzt.
+  - WordPress-Theme-Downloads enthalten nun ihre `theme.json`-Schriftarten- und Farbeinstellungen.
+  - Die Credit-Anzeige zerstört die Editor-Toolbar nicht mehr nach Ablauf der Sitzung.
+  - Benachrichtigungen werden nun auf den Seiten **File Manager** und **Project Settings** angezeigt.
 </Update>
 
 <Update label="September 2026">

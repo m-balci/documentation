@@ -55,6 +55,12 @@ Cada ejecución de la IA avanza por etapas mostradas en el chat:
 | Messages | La IA explica qué hizo y por qué. |
 | Complete | La ejecución termina y puedes previsualizar el resultado. |
 
+Si una construcción no puede iniciarse, el chat explica por qué y conserva tu mensaje para que puedas enviarlo de nuevo.
+
+## Detener una construcción
+
+Haz clic en **Stop** para terminar una ejecución antes de tiempo. Webza restaura el sitio al estado anterior a tu mensaje. Si después quieres los cambios parciales, haz clic en **Redo** para recuperarlos. El proyecto permanece bloqueado hasta que la construcción detenida haya terminado por completo. Una ejecución detenida usa los créditos que gastó.
+
 ## Indicador de créditos
 
 El encabezado del chat muestra tu estado de créditos actual:
@@ -67,7 +73,7 @@ En los planes ilimitados muestra **Créditos ilimitados**. Cuando construyes con
 
 ## Corregir gratis
 
-Las ejecuciones que fallan por culpa del agente de IA o de la plataforma no se cobran. Esto incluye ejecuciones donde el agente se detuvo después de errores repetidos, la verificación final de la construcción falló o se gastaron tokens sin producir nada. Las ejecuciones que fallan porque te quedaste sin créditos, o las que cancelas, sí se cobran.
+Las ejecuciones fallidas usan los créditos que gastaron, pero las que fallan por un problema de la plataforma no se cobran. Cuando la IA envía una solicitud inválida, se le pide que la reenvíe en lugar de fallar la ejecución. Si la ejecución aún falla de esta forma, no se cobra. Las ejecuciones que se detienen porque te quedaste sin créditos, o las que detienes, se cobran por lo que usaron.
 
 Después de una ejecución fallida, aparece un botón **Corregir gratis** debajo del chat. Al hacer clic en él, le pides a la IA que diagnostique y repare el problema sin añadir nuevas funciones. Esa ejecución de corrección también es gratis. El botón envía una instrucción corregida. El texto en el cuadro de chat no se incluye.
 
@@ -101,7 +107,7 @@ Añade instrucciones que la IA recibe en cada construcción. Ve a **Configuraci�
   </Accordion>
 
   <Accordion title="Itera por pasos">
-    Comienza con una versión básica y luego añade funciones una a la vez. Las solicitudes grandes de una sola vez son más difíciles de acertar.
+    Comienza con una versión básica y luego añade funciones una a una. Las solicitudes grandes de una sola vez son más difíciles de acertar.
   </Accordion>
 
   <Accordion title="Referencia ejemplos">

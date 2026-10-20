@@ -28,7 +28,7 @@ Sohbet başlığı ayrıca bir kredi göstergesi içerir:
 - **Varsayılan renk** bakiyenizin yüzde 20'sinden fazlası kaldığında.
 - **Sarı** bakiyeniz yüzde 5 ile 20 arasındayken. Hızlı bir şekilde ek kredi alabilmeniz için bir **Kredi satın al** bağlantısı belirir.
 - **Kırmızı** bakiyeniz yüzde 5 veya daha az olduğunda.
-- **"API anahtarınız kullanılıyor"** kendi API anahtarınızla derleme yaptığınızda; Webza kredileri yerine kendi anahtarınızı kullanıyorsunuz.
+- **"API anahtarınız kullanılıyor"** kendi API anahtarınızla derleme yaptığınızda; Webza kredileri yerine kendi anahtarınızı kullıyorsunuz.
 
 ## Ek kredi satın alma
 
@@ -54,9 +54,20 @@ Krediler şu durumlarda harcanır:
 
 Soru sorduğunuzda veya AI'nın yanıt vermesini beklerken kredi harcanmaz. Sadece gerçek derleme işlemi kredi maliyetine sahiptir.
 
+Bir çalıştırmanın ne kadar kredi kullandığını etkileyen birkaç faktör vardır:
+
+- **Effort**: Daha yüksek [effort](/tr/editor#effort) ayarları daha fazla kredi kullanabilir.
+- **Durdurulan çalıştırmalar**: Bir çalıştırmayı durdurursanız, o noktaya kadar harcadığı kadar kredi kullanır.
+- **Paylaşılan projeler**: Mesajı gönderen kişi, kendi planı, kredileri ve yapay zeka görsel kotasından ödeme yapar.
+- **Önbelleğe alınan girdi**: Yapay zeka sağlayıcısı tarafından önbelleğe alınan girdi, o sağlayıcının gerçek, daha düşük fiyatından hesaplanır.
+
+## Krediler azaldığında
+
+Her istekten önce yapay zeka ne kadar kredi kaldığını kontrol eder ve yanıtını bu miktar dahilinde tutar. Derleme sırasında krediniz biterse, yapay zeka zaten ödediği adımı tamamlar ve sohbette bir kredi limiti uyarısı görünür.
+
 ## Ücretsiz düzeltme
 
-Bir çalışma AI hatası veya platform sorunu nedeniyle başarısız olursa, o çalışma için ücretlendirilmezsiniz. İptal ettiğiniz çalışmalar veya kredileriniz bittiği için duran çalışmalar hâlâ ücretlendirilir.
+Başarısız olan çalıştırmalar harcadıkları kadar kredi kullanır, ancak platform sorunu nedeniyle başarısız olan çalıştırmalar ücretlendirilmez. Yapay zeka geçersiz istekler göndermeye devam ederse ve çalıştırma bu nedenle başarısız olursa, bu çalıştırma da günlük ücretsiz düzeltme limiti dahilinde ücretlendirilmez. Kredilerinizin bitmesi nedeniyle duran çalıştırmalar veya sizin durdurduğunuz çalıştırmalar, kullandıkları kadar ücretlendirilir.
 
 Ücretlendirilmeyen bir çalışma, **Faturalandırma** > **Kullanım** bölümünde kısa bir nedenle birlikte **Ücret alınmadı** olarak görünür. Bu ücretlendirilmeyen çalışmalar, harcanan kredilerinize dahil edilmez.
 

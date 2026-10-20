@@ -59,6 +59,12 @@ Assicurati di avere quanto segue:
   Le modifiche DNS possono impiegare da pochi minuti a 48 ore per propagarsi su internet (questo si chiama **propagazione DNS**). Se la verifica non ha successo subito, attendi un po' e riprova. Non devi rimuovere e riaggiungere il dominio.
 </Note>
 
+## Domini root, www e sottodomini
+
+- **Dominio root** (`goldencrust.com`): aggiungi i record mostrati nella schermata di verifica.
+- **Dominio www** (`www.goldencrust.com`): Webza richiede anche il record del dominio root, perché il certificato di sicurezza copre entrambi. La verifica ha successo solo quando entrambi i record sono inseriti.
+- **Sottodominio** (`shop.goldencrust.com`): ti serve solo il record per quel sottodominio. Webza emette un certificato per quel nome.
+
 ## Come funzionano i nomi host presso provider diversi
 
 I provider di dominio etichettano il campo host in modo diverso. Quando Webza mostra un record per il tuo dominio root (ad esempio `goldencrust.com`), il tuo provider potrebbe aspettarsi uno di questi nel campo host:
