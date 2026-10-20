@@ -55,6 +55,12 @@ Each AI run moves through stages shown in the chat:
 | Messages | The AI explains what it did and why. |
 | Complete | The run finishes and you can preview the result. |
 
+If a build cannot start, the chat explains why and keeps your message so you can send it again.
+
+## Stop a build
+
+Click **Stop** to end a run early. Webza restores the site to how it was before your message. If you want the partial changes after all, click **Redo** to bring them back. The project stays locked until the stopped build has fully finished. A stopped run uses the credits it spent.
+
 ## Credit indicator
 
 The chat header shows your current credit status:
@@ -67,7 +73,7 @@ On unlimited plans it reads **Unlimited credits**. When you are building on your
 
 ## Fix for free
 
-Runs that fail because of the AI agent or the platform are not charged. This includes runs where the agent stopped after repeated errors, the final build check failed, or tokens were spent without producing anything. Runs that fail because you ran out of credits, or runs that you cancel, are charged.
+Failed runs use the credits they spent, but runs that fail because of the platform are not charged. When the AI sends an invalid request, it is asked to resend it instead of failing the run. If the run still fails this way, it is not charged. Runs that stop because you ran out of credits, or runs that you stop, are charged for what they used.
 
 After a failed run, a **Fix for free** button appears under the chat. Clicking it asks the AI to diagnose and repair the problem without adding new features. That fix run is also free. The button sends a fixed instruction. Text in the chat box is not included.
 

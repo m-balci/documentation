@@ -54,9 +54,20 @@ Credits are consumed during:
 
 Credits are **not** consumed while you are asking questions or waiting for the AI to respond. Only the actual build execution costs credits.
 
+A few things affect how many credits a run uses:
+
+- **Effort**: higher [effort](/editor#effort) settings can use more credits.
+- **Stopped runs**: if you stop a run, it uses the credits it spent up to that point.
+- **Shared projects**: the person who sends a message pays for it from their own plan, credits, and AI image allowance.
+- **Cached input**: input the AI provider has cached is counted at that provider's real, lower price.
+
+## Running low on credits
+
+Before each request, the AI checks how many credits you have left and keeps its answer within that amount. If you run out mid-build, the AI finishes the step it already paid for, and the chat shows a credit limit notice.
+
 ## Fix for free
 
-If a run fails because of an AI error or a platform issue, you are not charged for that run. Runs you cancel, or runs that stop because you ran out of credits, are still charged.
+Failed runs use the credits they spent, but runs that fail because of a platform issue are not charged. If the AI keeps sending invalid requests and the run fails because of it, that run is also not charged, within the daily free-fix limit. Runs you stop, or runs that stop because you ran out of credits, are charged for what they used.
 
 When a run is not charged, it appears on **Billing** → **Usage** as **Not charged** with a short reason. These uncharged runs do not count toward your credits used.
 

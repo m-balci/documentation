@@ -14,15 +14,44 @@ mode: "center"
   - **Image understanding**: When the selected model supports images, the AI can now see the images you attach to a prompt or chat message.
   - **Fix for free**: Runs that fail because of the AI or the platform are not charged. You can retry a failed run once for free, and the Usage page marks these runs as not charged. See [Credits and usage](/credits-and-usage).
   - **More ways to connect Supabase**: Connect by signing in with Supabase or with an access token. Manual connections no longer need your secret key. See [Supabase](/integrations/supabase).
+  - **Effort setting**: Choose **Auto**, **Low**, **Medium**, or **High** effort for each project in the editor and on the **Create** page. Higher effort can use more credits. Models without an effort control show the setting disabled.
+  - **Project names**: New projects get a short AI-generated name. It appears in page titles, theme names, and the project list instead of your prompt.
+  - **Publish window shortcuts**: For a live site, the Publish window now offers **Visit**, **Copy link**, and **Unpublish**. See [Publish](/publish).
 
   ### Improved
 
   - Website templates now include the Motion animation library, so the AI can build richer animations such as staggered entrances, parallax, and animated counters. See [Templates](/templates).
+  - Previews on website projects now build in the background. Rebuild, Undo, Redo, restore, style edits, and design changes return right away with a small **Updating preview** indicator. A message you send meanwhile no longer waits for the preview.
+  - **Stop** now restores the site to how it was before your message, and **Redo** brings the partial changes back. The project stays locked until the stopped build has fully finished.
+  - Stopped and failed builds now use the credits they spent. Builds that fail because of the platform stay free. See [Credits and usage](/credits-and-usage).
+  - In shared projects, the person who sends a message pays for it with their own plan, credits, Web Agent pages, and AI images.
+  - Credits for cached input now follow each AI provider's real price.
+  - The AI checks your remaining credits before each request, keeps its last answer within what is left, and finishes the step it already paid for. The chat shows a clear notice when you reach your credit limit.
+  - When the AI sends an invalid request, it now resends it instead of failing the build. A build that still fails this way is not charged (within the daily free-fix limit) and offers a free fix.
+  - A failed preview update now keeps the last working preview. Builds that lost track of their progress are marked as interrupted instead of staying stuck.
+  - Long conversations keep the summary of earlier messages when you send new ones.
+  - The [code editor](/code-editor) now refuses to save a file while the AI is building, shows a clear message, and keeps your unsaved text.
+  - The AI model lists now use the current generation of models, and saved settings move off retired models.
+  - Better security: the editor preview runs in a sandbox, and published sites no longer receive your dashboard login, so code in a generated site cannot act as the person viewing it. Owners open private sites, including those on custom domains, with **Visit**.
+  - The project token in published sites can only reach files the site itself uploaded, and is hidden from view-only collaborators.
+  - Project code exports now include a `.gitignore` file and show a readable message when they fail.
+  - More consistent pages across the dashboard: confirmations before deleting, inline field errors, loading states, keyboard access, right-to-left layouts, and translated labels.
 
   ### Fixed
 
   - WordPress themes now apply the selected design system's colors and tokens reliably. Dark design systems (Carbon, Lumen, and Noir) now start in dark mode.
   - Shopify themes now get the design system's colors when the template is picked automatically, and untouched starter files no longer show false validation errors.
+  - Two builds, or a build and an undo, no longer run on the same project at once.
+  - The editor no longer loses your message when a build cannot start. It now explains why and keeps your text.
+  - Fixed many editor issues, including silent build failures, edits reported as sent when they failed, and history disappearing mid-session.
+  - A manual save made after Undo is no longer discarded by Redo.
+  - The AI no longer starts building when it only answered a question on a site that was already built.
+  - Subdomain-style [custom domains](/custom-domains) such as `shop.example.com` now need only their own A record and get a certificate for that name.
+  - Custom domains entered with `www` (such as `www.example.com`) no longer pass verification without the bare domain record the certificate needs.
+  - Publishing validation messages are now translated.
+  - WordPress theme downloads now include their `theme.json` font and color settings.
+  - The credits indicator no longer breaks the editor toolbar after a session expires.
+  - Notifications now show on the **File Manager** and **Project Settings** pages.
 </Update>
 
 <Update label="September 2026">

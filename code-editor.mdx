@@ -21,6 +21,8 @@ Press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to open the find box insid
 
 Press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> to save the current file. A dot or unsaved-changes indicator appears next to the filename until you save. The live preview updates after you save.
 
+You cannot save a file while the AI is building. The editor shows a message explaining why, and your unsaved text stays in the editor so you can save it once the build finishes.
+
 ## Read-only files
 
 A small set of system files is read-only. They are managed by the template and build system, and a bad edit could leave the project unable to rebuild. When you select one of these files, the editor shows a **Read-only** lock badge and hides the **Save** button.
@@ -48,7 +50,7 @@ If you need to add Google Tag Manager, a Google tag, or a Meta Pixel, use the **
 ## Important warnings
 
 <Warning>
-  Manual edits made while you are inside the revision history (after undoing) are discarded by the next Undo, Redo, or Restore action. See [Preview](/preview) for details on revision history.
+  Manual edits made while you are inside the revision history (after undoing) are discarded by the next Undo or Restore action. See [Preview](/preview) for details on revision history.
 </Warning>
 
 <Info>
