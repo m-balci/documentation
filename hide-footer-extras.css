@@ -1,19 +1,5 @@
-/* Footer: keep only the X, LinkedIn and Webza icons, hide everything else */
-#footer a:not([href*="x.com"]):not([href*="linkedin.com"]):not([href^="https://webza.ai"]),
-footer a:not([href*="x.com"]):not([href*="linkedin.com"]):not([href^="https://webza.ai"]) {
+/* Footer: keep only the X and LinkedIn icons, hide everything else */
+#footer a:not([href*="x.com"]):not([href*="linkedin.com"]),
+footer a:not([href*="x.com"]):not([href*="linkedin.com"]) {
   display: none !important;
-}
-
-/* Webza link: replace the default globe icon with the Webza mark (webza.svg),
-   drawn as a mask so it uses the same color and hover state as the X and LinkedIn icons */
-#footer a[href^="https://webza.ai"] svg,
-footer a[href^="https://webza.ai"] svg {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1500 1500'%3E%3Cpath fill-rule='evenodd' d='M1239.13 0H260.87C116.795 0 0 116.795 0 260.87V1239.13C0 1383.2 116.795 1500 260.87 1500H1239.13C1383.2 1500 1500 1383.2 1500 1239.13V260.87C1500 116.795 1383.2 0 1239.13 0ZM460.766 487.956H258L556.411 1210.38L747.699 840.942L941.539 1210.38L1242.5 487.956H1041.01L919.859 797.925L747.699 450L578.09 796.66L460.766 487.956Z'/%3E%3C/svg%3E") !important;
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1500 1500'%3E%3Cpath fill-rule='evenodd' d='M1239.13 0H260.87C116.795 0 0 116.795 0 260.87V1239.13C0 1383.2 116.795 1500 260.87 1500H1239.13C1383.2 1500 1500 1383.2 1500 1239.13V260.87C1500 116.795 1383.2 0 1239.13 0ZM460.766 487.956H258L556.411 1210.38L747.699 840.942L941.539 1210.38L1242.5 487.956H1041.01L919.859 797.925L747.699 450L578.09 796.66L460.766 487.956Z'/%3E%3C/svg%3E") !important;
-  -webkit-mask-repeat: no-repeat !important;
-  mask-repeat: no-repeat !important;
-  -webkit-mask-position: center !important;
-  mask-position: center !important;
-  -webkit-mask-size: 85% !important;
-  mask-size: 85% !important;
 }
