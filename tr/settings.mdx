@@ -3,15 +3,15 @@ title: "Ayarlar"
 description: "Webza'da proje ayarlarını, özel alan adlarını, analitiği ve hesap tercihlerinizi yönetin."
 ---
 
-Webza'daki **Ayarlar** alanı iki bölümden oluşur: editör içerisindeki proje ayarları ve kenar çubuğundaki hesap ayarları. Bunları, ne oluşturduğunuzu ve hesabınızın nasıl davrandığını yapılandırmak için kullanın.
+Webza'da **Ayarlar** iki bölümden oluşur: editördeki proje ayarları ve kenar çubuğundaki hesap ayarları. Bu ayarlarla oluşturduğunuz projeyi ve hesabınızın nasıl çalışacağını yapılandırırsınız.
 
 ## Proje ayarları
 
-Editörde **Ayarlar** sekmesini açın. Gördüğünüz sekmeler planınıza ve proje türünüze bağlıdır.
+Editörde **Ayarlar** sekmesini açın. Gördüğünüz sekmeler planınıza ve proje türünüze göre değişir.
 
 ### Genel
 
-Projenizi ve çevrimiçi görünümünü şekillendiren temel ayarları burada yapın.
+Projenizi ve internetteki görünümünü belirleyen temel ayarları burada yapın.
 
 | Alan | Ne yapar |
 | --- | --- |
@@ -26,67 +26,67 @@ Projenizi ve çevrimiçi görünümünü şekillendiren temel ayarları burada y
 
 #### Paylaşım görseli
 
-En fazla 2 MB boyutunda JPG, PNG veya WebP görseli yükleyin. Önerilen boyut 1200x630 pikseldir. Webza bunu oluşturma sırasında `og:image` ve `twitter:image` içerisine yazar.
+En fazla 2 MB boyutunda JPG, PNG veya WebP görseli yükleyin. Önerilen boyut 1200x630 pikseldir. Webza bu görseli derleme sırasında `og:image` ve `twitter:image` etiketlerine yazar.
 
 <Tip>
-  Projeyi geniş çapta paylaşmadan önce paylaşım görselinizi ayarlayın. Sosyal platformlar ilk taramayı önbelleğe alır ve bazıları daha sonra güncellemeniz gerekiyorsa önbellek yenileme aracı sunar.
+  Projeyi geniş kitlelerle paylaşmadan önce paylaşım görselinizi ayarlayın. Sosyal platformlar ilk taradıkları görseli önbelleğe alır; bazıları görseli sonradan güncellemeniz için bir önbellek yenileme aracı sunar.
 </Tip>
 
-Kopyalanan projeler paylaşım görselini kopyalamaz. Yeni projede tekrar yüklemeniz gerekir.
+Bir projeyi kopyaladığınızda paylaşım görseli kopyalanmaz; görseli yeni projeye tekrar yüklemeniz gerekir.
 
 #### Analitik
 
-Planınız Analitik içeriyorsa, **Ayarlar → Genel** içerisinde bir kart belirir ve buraya ekleyebilirsiniz:
+Planınız Analitik içeriyorsa **Ayarlar → Genel** bölümünde bir kart görünür. Bu karta şunları ekleyebilirsiniz:
 
 - **Google Tag Manager container ID** (format `GTM-XXXXXXX`)
 - **Google tag ID** (format `G-…` veya `AW-…`)
 - **Meta Pixel ID** (8 ile 20 rakam)
 
-Bir izleyiciyi devre dışı bırakmak için alanı boş bırakın. Bunlar, yayınlanan site sunulduğunda içeriğe enjekte edilir. Editör önizlemesinde veya kod dışa aktarımlarında görünmezler. Değişiklikler, bir yeniden oluşturma gerektirmeden bir sonraki istekte etkinleşir. Yapay zeka bu etiketleri sizin için kaldıramaz.
+Bir izleyiciyi kapatmak için alanını boş bırakın. Bu kodlar, yayınlanan site ziyaretçiye sunulurken sayfaya eklenir; editör önizlemesinde veya kod dışa aktarımlarında yer almaz. Değişiklikler yeniden derleme gerekmeden bir sonraki ziyarette geçerli olur. Yapay zeka bu etiketleri sizin yerinize kaldıramaz.
 
 <Note>
   Diğer hizmetler (Hotjar, Clarity, LinkedIn, TikTok, özel scriptler) için bir GTM konteyneri ekleyin ve her şeyi GTM içerisinde yapılandırın.
 </Note>
 
-Bu kart, WordPress ve Shopify tema projeleri için gizlidir. İzlemeyi bunun yerine WordPress sitenize veya Shopify mağazanıza doğrudan ekleyin.
+Bu kart WordPress ve Shopify tema projelerinde gizlidir. Bu projelerde izleme kodlarını doğrudan WordPress sitenize veya Shopify mağazanıza ekleyin.
 
 {/* TODO: confirm which Webza plans include Analytics */}
 
 ### Alan adları
 
-Projenizin web üzerinde nasıl erişildiğini yönetin.
+Projenize web üzerinden nasıl erişileceğini yönetin.
 
-- **Alt alan adı**: Her yayınlanan siteye `*.webza.ai` alt alan adı verilir. Özel alan adınızı **Proje → Ayarlar → Alan adları → Özel alan adı** bölümünden ekleyin, ardından gerekli DNS kayıtlarını oluşturun ve doğrulayın.
-- **Özel alan adı**: kendi alan adınızı **Proje → Ayarlar → Alan adları → Özel alan adı** altında ekleyin, ardından gerekli DNS kayıtlarını ekleyin ve doğrulayın.
+- **Alt alan adı**: Yayınlanan her siteye bir `*.webza.ai` alt alan adı verilir.
+- **Özel alan adı**: Kendi alan adınızı **Proje → Ayarlar → Alan adları → Özel alan adı** altında ekleyin, ardından gerekli DNS kayıtlarını ekleyin ve doğrulayın.
 
-Bu sekme, WordPress tema projeleri için hiç gösterilmez. Daha fazlası için [Özel alan adları](/tr/custom-domains) sayfasına bakın.
+Bu sekme WordPress tema projelerinde gösterilmez. Daha fazlası için [Özel alan adları](/tr/custom-domains) sayfasına bakın.
 
 ### Bilgi
 
-Her oluşturmada yapay zekaya iletilen özel talimatlar ekleyin. En fazla 500 karakter. Bu alanı, kendinizi tekrar ettiğiniz süregelen kurallar için kullanın: marka sesi, hedef dil, kaçınılması gereken bir kütüphane veya adlandırma kuralı.
+Yapay zekaya her çalışmada iletilecek özel talimatlar ekleyin (en fazla 500 karakter). Bu alanı sürekli tekrarlamak zorunda kaldığınız kalıcıkurallar için kullanın: marka üslubu, hedef dil, kullanılmaması gereken bir kütüphane veya bir adlandırma kuralı gibi.
 
 <Warning>
-  Kısa tutun. Bilgi metni, her oluşturmada ücretlendirilir. Tek seferlik istekler [Proje sohbeti](/tr/project-chat)'ne yazılır, buraya değil.
+  Metni kısa tutun, çünkü Bilgi metni her çalışmada ücretlendirilir. Tek seferlik isteklerinizi buraya değil, [Proje sohbeti](/tr/project-chat)'ne yazın.
 </Warning>
 
 ### Veritabanı
 
-Projeye Supabase bağlantılarınızdan birini ekleyin. Şimdi bağlama, daha sonra başka birine geçme veya istediğiniz zaman ayırma yapabilirsiniz. Bağlama ve geçme, planınızdaki Veritabanı yeteneğini gerektirir. Ayırma, örneğin bir düşürme sonrasında her zaman izin verilir.
+Projeye Supabase bağlantılarınızdan birini ekleyin. Bağlantıyı şimdi ekleyebilir, sonra başka birine geçebilir veya istediğiniz zaman kaldırabilirsiniz. Bağlantı eklemek ve değiştirmek için planınızda Veritabanı özelliği olmalıdır. Bağlantıyı kaldırmak ise her zaman mümkündür, örneğin plan düşürdükten sonra.
 
-Bir bağlantı ekli olduğu sürece Veritabanı sekmesi görünür kalır, mevcut planınız yeni bağlantıları desteklemese bile.
+Mevcut planınız artıkyeni bağlantı eklemeyi desteklemese bile, ekli bir bağlantı olduğu sürece Veritabanı sekmesi görünmeye devam eder.
 
 ### Depolama
 
-Bu sekme, proje dosyalarını ve oluşturulan uygulamaların Webza'ya geri çağrı yapmak için kullandığı API tokenini gösterir. Dosya depolaması olmayan planlarda sekme **API** olarak etiketlenir ve yalnızca tokeni gösterir.
+Bu sekme, proje dosyalarını ve oluşturulan uygulamaların Webza ile iletişim kurmak için kullandığı API tokenini gösterir. Dosya depolaması bulunmayan planlarda sekme **API** olarak etiketlenir ve yalnızca tokeni gösterir.
 
 ### GitHub deposu
 
-Kaynağı otomatik olarak göndermek için bir depo bağlayın.
+Kaynak kodun otomatik gönderilmesi için bir depo bağlayın.
 
 - **Yeni özel depo oluştur**: Webza sizin için oluşturur.
 - **Size ait boş bir depoyu bağla**: Zaten sahip olduğunuz boş bir depoyu bağlayın.
 
-İstediğiniz zaman başka bir depoya geçiş yapabilir veya bağlantıyı kesebilirsiniz. Her oluşturmadan sonra kaynağı göndermek için **Otomatik gönderim** seçeneğini açın.
+İstediğiniz zaman başka bir depoya geçebilir veya bağlantıyı kesebilirsiniz. Kaynak kodun her derlemeden sonra gönderilmesi için **Otomatik gönderim** seçeneğini açın.
 
 ## Hesap ayarları
 
@@ -103,19 +103,19 @@ Bu bölüm, kendi API anahtarınızı kullandığınızda Plus ve Premium planla
 - **Sağlayıcı**: bir sağlayıcı seçin veya Webza kredisi harcamak için **Sistem varsayılanını kullan** olarak bırakın.
 - **Model**: bir sağlayıcı seçtikten sonra görünür.
 - **API anahtarları**: şifrelenmiş olarak saklanır ve maskelenmiş şekilde gösterilir. İstediğiniz zaman bir anahtarı değiştirin veya kaldırın. Bir anahtar kaydedildiğinde **Yapılandırıldı** rozeti belirir.
-- **Test et**: anahtarın çalıştığını kontrol etmek için şimşek düğmesini tıklayın. Seçili sağlayıcı için, seçilen modeli de kontrol eder.
+- **Test et**: Anahtarın çalıştığını kontrol etmek için şimşek düğmesini tıklayın. Seçili sağlayıcıda, seçilen model de kontrol edilir.
 
-Kendi anahtarınızla yapılan oluşturmalar Webza tarafından ölçülür ancak kredilerinizden düşülmez. AI sağlayıcınız tarafından faturalandırılırsınız. **Sistem varsayılanını kullan**'a geri dönerseniz, kaydedilen anahtarlarınız korunur ve tekrar kredi harcamaya başlarsınız.
+Kendi anahtarınızla yapılan derlemeleri Webza ölçer, ancak kredilerinizden düşmez. Faturayı AI sağlayıcınızdan alırsınız. **Sistem varsayılanını kullan**'a geri dönerseniz, kaydedilen anahtarlarınız korunur ve tekrar kredi harcamaya başlarsınız.
 
 #### Sohbet sesleri
 
-Tüm planlarda kullanılabilir. Yapay zeka çalışırken bir bildirim sesi stili seçin: **Minimal**, **Eğlenceli**, **Retro**, **Sci-Fi** veya sesleri kapatın.
+Tüm planlarda kullanılabilir. Yapay zeka çalışırken çalacak bildirim sesi stilini seçin: **Minimal**, **Eğlenceli**, **Retro**, **Sci-Fi** veya sesleri kapatın.
 
 ### Gizlilik
 
 - **Çerez tercihleri**: hangi çerezleri kabul ettiğinizi yönetin.
-- **Verilerinizi indirin**: hesabınız hakkında tutulan her şeyin bir dışa aktarımını talep edin. Bu her zaman kullanılamayabilir.
-- **Hesabınızı silin**: silme talebinde bulunun. Kaldırma öncesinde bir tolerans süresi vardır. Kendi kendine silme kapalıysa, destekle iletişime geçmeniz söylenir.
+- **Verilerinizi indirin**: Hesabınızla ilgili tutulan tüm verilerin bir kopyasını isteyin. Bu seçenek her zaman kullanılamayabilir.
+- **Hesabınızı silin**: Hesabınızın silinmesini talep edin. Hesap silinmeden önce bir bekleme süresi vardır. Kendi kendinize silme kapalıysa destek ekibiyle iletişime geçmeniz istenir.
 
 {/* TODO: confirm whether data export and self-service deletion are enabled on Webza, and the grace period */}
 

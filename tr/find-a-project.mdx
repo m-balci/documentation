@@ -3,16 +3,16 @@ title: "Proje bul"
 description: "Tüm Webza projelerinizi tek bir görünümden göz atın, favori yapın, kopyalayın ve yönetin."
 ---
 
-Kenar çubuğundan (**Projeler** altında) **Tüm projeler**'i açarak üzerinde çalıştığınız her projeyi, durumunu ve nereden devam edeceğinizi görün. Bu görünümde aynı zamanda bir **Yeni proje** düğmesi bulunur.
+Kenar çubuğundaki Projeler altından **Tüm projeler**'i açarak üzerinde çalıştığınız her projeyi, durumunu ve kaldığınız yerden nasıl devam edeceğinizi görün. Bu görünümde aynı zamanda bir **Yeni proje** düğmesi bulunur.
 
 ## Proje sekmeleri
 
-Projeleriniz üç sekme halinde, her biri bir sayaçla düzenlenir:
+Projeleriniz üç sekme halinde listelenir; her birinde bir sayaç gösterilir:
 
 | Sekme | Ne gösterir |
 | --- | --- |
 | **Tümü** | Üzerinde çalıştığınız her proje |
-| **Favoriler** | Satırlarından yıldızlayarak buraya sabitlediğiniz projeler (bu yalnızca bir filtre, projeyi değiştirmez) |
+| **Favoriler** | Satırlarındaki yıldızı tıklayarak buraya sabitlediğiniz projeler (bu yalnızca bir filtre olup projeyi değiştirmez) |
 | **Çöp kutusu** | Kurtarma penceresinde tutulan silinmiş projeler |
 
 {/* TODO: confirm whether All Projects has a search box or sorting */}
@@ -23,13 +23,13 @@ Herhangi bir proje satırındaki yıldız simgesini tıklayarak **Favoriler** se
 
 ## Çöp ve kurtarma
 
-Silinmiş projeler **Çöp kutusu** sekmesine gider. Her satır **Geri yükle** veya **Kalıcı olarak sil** sunar.
+Silinmiş projeler **Çöp kutusu** sekmesine gider. Her satırda **Geri yükle** veya **Kalıcı olarak sil** seçenekleri sunulur.
 
 <Warning>
-  Çöp kendini boşaltır. Çöpteki projeler, bekletme süresi sonunda (varsayılan 90 gün) dosyaları, önizlemeleri ve anlık görüntüleriyle birlikte kalıcı olarak kaldırılır. Kalıcı silme, manuel veya otomatik, geri alınamaz.
+  Çöp kutusu kendini otomatik olarak boşaltır. Çöpteki projeler, bekletme süresi sonunda (varsayılan 90 gün) dosyaları, önizlemeleri ve anlık görüntüleriyle birlikte kalıcı olarak silinir. Kalıcı silme, ister elle ister otomatik olarak yapılmış olsun, geri alınamaz.
 </Warning>
 
-Bir projeyi silmek, alt alan adını ve özel alan adını yeniden kullanılmak üzere serbest bırakır.
+Bir projeyi silerseniz, alt alan adı ve özel alan adı yeniden kullanılabilir hale gelir.
 
 {/* TODO: confirm Webza's trash retention period */}
 
@@ -48,21 +48,21 @@ Herhangi bir proje satırındaki eylem menüsünü açın ve **Çoğalt**'ı se�
 
 ### Neler kopyalanmaz
 
-Kopya, yeni, yayınlanmamış bir proje olarak başlar:
+Kopya, yeni ve yayınlanmamış bir proje olarak başlar:
 
 - Alt alan adı veya özel alan adı yok
 - Paylaşım görseli yok
-- Oluşturma geçmişi veya depolama kullanımı yok
+- Derleme geçmişi veya depolama kullanımı yok
 - Küçük resim yok
 - Analitik kimlikleri yok
-- Yeni bir API tokeni
-- Orijinalin hiçbir Supabase veya GitHub bağlantısı
+- API tokeni yenidir
+- Orijinalin Supabase veya GitHub bağlantıları yok
 
-Bir kopya, canlı bir sitenin klonu değil, yeni bir başlangıçtır. Orijinalin alan adında yanıt vermez. Ayrı olarak yayınlayın ve bağlantıları yeniden ekleyin. Bunun nedeni, bir alt alan adının yalnızca bir projeye ait olması ve bir API tokeni veya depo paylaşmanın bir projenin diğerinin dosyalarının üzerine yazmasına izin vermesidir.
+Kopya, canlı sitenin bir klonu değil, yeni bir başlangıçtır ve orijinalin alan adından açılmaz. Kopyayı ayrıca yayınlayın ve bağlantıları yeniden ekleyin. Bunun nedeni, bir alt alan adının yalnızca bir projeye ait olmasıdır; ayrıca bir API tokeni veya depo paylaşılırsa bir proje diğerinin dosyalarının üzerine yazabilir.
 
 ## Proje limitleri
 
-- **Free** ve **Plus** planlar 1 proje içerir.
+- **Free** ve **Plus** planları 1 proje içerir.
 - **Premium** sınırsız proje içerir.
 
 {/* TODO: confirm whether duplicates and trashed projects count toward the project limit */}

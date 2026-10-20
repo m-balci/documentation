@@ -4,16 +4,16 @@ sidebarTitle: "Özel Alan Adları"
 description: "Sahip olduğunuz bir alan adını Webza projenize bağlayın. Proje ayarlarında ekleyin, DNS kayıtlarıyla doğrulayın ve sitenizi kendi adresinizde sunun."
 ---
 
-Bir özel alan adı, ziyaretçilerin Webza web sitenize varsayılan `webza.ai` alt alan adı yerine kendi adresinizden, örneğin `goldencrust.com` adresinden ulaşmasını sağlar. Webza alan adı satmaz. Bir alan adını herhangi bir alan adı sağlayıcısından (kayıt kuruluşu) satın alır ve projenize bağlarsınız. Bu sayfa, alan adınızı bağlama, doğrulama ve sorun giderme adımlarını açıklar.
+Bir **özel alan adı**, ziyaretçilerin Webza web sitenize varsayılan `webza.ai` alt alan adı (örneğin `golden-crust.webza.ai`) yerine kendi adresinizden, örneğin `goldencrust.com` adresinden ulaşmasını sağlar. Webza alan adı satmaz: bir alan adını herhangi bir alan adı sağlayıcısından (kayıt kuruluşu) satın alır ve projenize bağlarsınız. Bu sayfa, alan adınızı bağlama, doğrulama ve sorun giderme adımlarını anlatır.
 
-Özel alan adı, web sitenizin aşağıdaki yönlerini geliştirir:
+Özel alan adının sitenize katkıları:
 
 - **Marka kimliği**: siteniz daha profesyonel ve güvenilir görünür.
 - **Arama görünürlüğü**: içeriğiniz kontrol ettiğiniz bir alan adı altında otorite oluşturur.
 - **Hatırlanabilirlik**: kısa, markalı bir adres paylaşmak ve hatırlamak daha kolaydır.
 
 <Info>
-  Özel alan adları **Plus** ve **Premium** planlarda mevcuttur. Ücretsiz planda mevcut değildir. Planları karşılaştırmak üzere bkz. [Abonelik planları](/tr/subscription-plans).
+  Özel alan adları **Plus** ve **Premium** planlarda mevcuttur. Ücretsiz planda mevcut değildir. Planları karşılaştırmak için [Abonelik planları](/tr/subscription-plans) sayfasına bakın.
 </Info>
 
 ## Başlamadan önce
@@ -31,10 +31,10 @@ Aşağıdakilere sahip olduğunuzdan emin olun:
     Bağlamak istediğiniz projeyi açın, ardından **Ayarlar → Alan adları → Özel alan adı**'na gidin.
   </Step>
   <Step title="Alan adınızı girin">
-    Kullanmak istediğiniz alan adını, örneğin `goldencrust.com` yazın ve devam edin. Yalnızca alan adını girin, `https://` veya son eğik çizgi olmadan.
+    Kullanmak istediğiniz alan adını (örneğin `goldencrust.com`) yazın ve devam edin. Başına `https://`, sonuna eğik çizgi eklemeden yalnızca alan adını girin.
   </Step>
-  <Step title="Doğrulama ekranını gözden geçirgözden geçirin">
-    Webza, eklemeniz gereken DNS kayıtlarını gösteren bir doğrulama ekranı görüntüler. Bu ekranı açık tutun, çünkü bir sonraki adımda her kaydı buradan alan adı sağlayıcınıza kopyalayacaksınız.
+  <Step title="Doğrulama ekranını inceleyin">
+    Webza, eklemeniz gereken DNS kayıtlarını gösteren bir doğrulama ekranı görüntüler. Bu ekranı açık tutun: bir sonraki adımda her kaydı buradan kopyalayıp alan adı sağlayıcınıza yapıştıracaksınız.
   </Step>
   <Step title="DNS kayıtlarını alan adı sağlayıcınızda ekleyin">
     Yeni bir sekmede alan adı sağlayıcınıza giriş yapın ve alan adınız için DNS ayarlarını (bazen **DNS management**, **DNS zone** veya **Advanced DNS** olarak adlandırılır) açın. Webza doğrulama ekranındaki her kayıt için:
@@ -45,7 +45,7 @@ Aşağıdakilere sahip olduğunuzdan emin olun:
     4. Kaydı kaydedin.
 
     <Tip>
-      Değerleri yazmak yerine kopyala butonuyla kopyalayın. Tek eksik karakter, doğrulamanın başarısız olmasının en yaygın nedenidir.
+      Değerleri elle yazmak yerine kopyala düğmesini kullanın. Doğrulamanın başarısız olmasının en yaygın nedeni tek bir eksik karakterdir.
     </Tip>
   </Step>
   <Step title="Alan adınızı doğrulayın">
@@ -62,12 +62,12 @@ Aşağıdakilere sahip olduğunuzdan emin olun:
 ## Kök alan adları, www ve alt alan adları
 
 - **Kök alan adı** (`goldencrust.com`): Doğrulama ekranında gösterilen kayıtları ekleyin.
-- **www alan adı** (`www.goldencrust.com`): Webza ayrıca kök alan adı kaydını ister, çünkü güvenlik sertifikası her ikisini de kapsar. Doğrulama, her iki kayıt da yerine getirildiğinde başarılı olur.
+- **www alan adı** (`www.goldencrust.com`): Webza ayrıca kök alan adı kaydını ister, çünkü güvenlik sertifikası her ikisini de kapsar. Doğrulama, iki kayıt da eklendiğinde başarılı olur.
 - **Alt alan adı** (`shop.goldencrust.com`): Yalnızca o alt alan adı için kayda ihtiyacınız vardır. Webza bu isim için bir sertifika verir.
 
 ## Farklı sağlayıcılarda host adlarının nasıl çalıştığı
 
-Alan adı sağlayıcıları host alanını farklı şekilde etiketler. Webza kök alan adınız için (örneğin `goldencrust.com`) bir kayıt gösterdiğinde, sağlayıcınız host alanında şunlardan birini isteyebilir:
+Alan adı sağlayıcıları host alanını farklı biçimlerde ister. Webza kök alan adınız (örneğin `goldencrust.com`) için bir kayıt gösterdiğinde, sağlayıcınız host alanına şunlardan birini yazmanızı isteyebilir:
 
 - `@`
 - Boş bir alan
@@ -79,7 +79,7 @@ Bazı sağlayıcılar host'un sonuna otomatik olarak alan adınızı ekler. Bir 
 
 - **Yeni adresinizi paylaşın.** Özel alan adınızı her yerde kullanın: kartvizitler, sosyal profiller ve e-posta imzaları.
 - **DNS kayıtlarınızı yerinde tutun.** Eklediğiniz kayıtları silerseniz veya değiştirirseniz, alan adınız web sitenizi göstermeyi durdurur.
-- **Sitenizi güncellemek için yayınlayın.** Canlı siteniz bir anlık görüntüdür. Editörde yaptığınız değişiklikler yalnızca tekrar yayınladıktan sonra özel alan adınızda görünür. Detaylar için bkz. [Yayınlama](/tr/publish).
+- **Sitenizi güncellemek için yayınlayın.** Canlı siteniz bir anlık görüntüdür. Editörde yaptığınız değişiklikler yalnızca tekrar yayınladıktan sonra özel alan adınızda görünür. Ayrıntılar için [Yayınlama](/tr/publish) sayfasına bakın.
 
 ## Sorun giderme
 
@@ -87,16 +87,16 @@ Bazı sağlayıcılar host'un sonuna otomatik olarak alan adınızı ekler. Bir 
   <Accordion title="Doğrulama sürekli başarısız oluyor">
     Alan adı sağlayıcınızda şu yaygın nedenleri kontrol edin:
 
-    - **Kayıt türü** Webza'nın gösterdiğiyle tam olarak eşleşmelidir Webza'nın gösterdiğiyle tam olarak eşleşmelidir.
-    - **Değer** tamamen kopyalanmış olmalı, fazladan boşluk veya eksik karakter olmamalıdırtamamen kopyalanmış olmalı, fazladan boşluk veya eksik karakter olmamalıdır.
-    - **host** sağlayıcınızın formatına uygun olmalıdır. Bkz. [Farklı sağlayıcılarda host adlarının nasıl çalıştığı](#farkli-saglayicilarda-host-adlarinin-nasil-calistigi)**host** sağlayıcınızın formatına uygun olmalıdır. Bkz. [Farklı sağlayıcılarda host adlarının nasıl çalıştığı](#farkli-saglayicilarda-host-adlarinin-nasil-calistigi).
-    - Kaydı kaydettiğinizden emin olun. Bazı sağlayıcılar ayrı bir **Kaydet** veya **Değişiklikleri uygula** adımı gerektir ayrı bir **Kaydet** veya **Değişiklikleri uygula** adımı gerektirir.
+    - Kayıt **türü** Webza'nın gösterdiğiyle tam olarak eşleşiyor.
+    - **Değer** tamamen kopyalandı, fazladan boşluk veya eksik karakter yok.
+    - **host** sağlayıcınızın formatına uyuyor. Daha fazla bilgi için [Farklı sağlayıcılarda host adlarının nasıl çalıştığı](#farkli-saglayicilarda-host-adlarinin-nasil-calistigi).
+    - Kaydı kaydettiniz. Bazı sağlayıcılar ayrı bir **Kaydet** veya **Değişiklikleri uygula** adımı gerektirir.
 
-    Her şey doğru görünüyorsa, DNS yayılımını bekleyin ve, DNS yayılımını bekleyin ve tekrar doğrulayın.
+    Her şey doğru görünüyorsa, DNS yayılımını bekleyin ve tekrar doğrulayın.
   </Accordion>
 
   <Accordion title="Alan adım hâlâ eski web sitemi gösteriyor">
-    Alan adı sağlayıcınız muhtemelen önceki web sitenizden veya barındırma sağlayıcınızdan kalma kayıtlara sahip. Aynı host için başka bir yere işaret eden eski kayıtları kaldırın, böylece yalnızca Webza'nın istediği kayıtlar kalsın. Ardından DNS yayılımını bekleyin.
+    Alan adı sağlayıcınızda büyük olasılıkla önceki web sitenizden veya barındırma hizmetinizden kalan kayıtlar var. Aynı host için başka bir yere işaret eden eski kayıtları kaldırın, böylece yalnızca Webza'nın istediği kayıtlar kalsın. Ardından DNS yayılımını bekleyin.
   </Accordion>
 
   <Accordion title="Alan adım boş bir sayfa veya hata gösteriyor">
@@ -104,7 +104,7 @@ Bazı sağlayıcılar host'un sonuna otomatik olarak alan adınızı ekler. Bir 
   </Accordion>
 
   <Accordion title="Cloudflare kullanıyorum ve sitem yüklenmiyor">
-    DNS'niz Cloudflare'de yönetiliyorsa, Webza için eklediğiniz kayıtları **DNS only** (gri bulut) olarak ayarlayın, **Proxied** (turuncu bulut) yerine, ardından tekrar doğrulayın.
+    DNS'niz Cloudflare'de yönetiliyorsa, Webza için eklediğiniz kayıtları **Proxied** (turuncu bulut) yerine **DNS only** (gri bulut) olarak ayarlayın, ardından tekrar doğrulayın.
   </Accordion>
 
   <Accordion title="Sağlayıcımın DNS ayarlarını bulamıyorum">
@@ -120,21 +120,21 @@ Bazı sağlayıcılar host'un sonuna otomatik olarak alan adınızı ekler. Bir 
   </Accordion>
 
   <Accordion title="Özel alan adı bağladıktan sonra webza.ai alt alan adımı korur muyum?">
-    Projeniz `webza.ai` alt alan adını korumaya devam edemaya devam eder. Alan adı bağlandıktan sonra ziyaretçiler web sitenize özel alan adınızdan ulaşabilir.
+    Evet, projenizin `webza.ai` alt alan adı kalır. Alan adı bağlandıktan sonra ziyaretçiler sitenize özel alan adınızdan da ulaşabilir.
   </Accordion>
 
   <Accordion title="Projenizi yayınlamadan önce bir alan adı bağlayabilir miyim?">
-    Bir alan adını istediğiniz zaman bağlayabilir ve doğrulayabilirsiniz, ancak web sitenizi yalnızca projenizi yayınladıktan sonra gösterir.
+    Evet. Bir alan adını istediğiniz zaman bağlayabilir ve doğrulayabilirsiniz, ancak yalnızca projenizi yayınladıktan sonra web sitenizi gösterir.
   </Accordion>
 
   <Accordion title="Alan adımı Webza'ya transfer etmem gerekiyor mu?">
-    Hayır. Alan adınız mevcut sağlayıcınızda kayıtlı kalır. Webza web sitenize yönlendirmek için yalnızca DNS kayıtları eklemeniz gerekir. Alan adınızın ücretini ve yenilemesini sağlayıcınızla ödemeye devam edersiniz.
+    Hayır. Alan adınız mevcut sağlayıcınızda kayıtlı kalır. Alan adını Webza sitenize yönlendirmek için yalnızca DNS kayıtları eklemeniz yeterlidir. Alan adınızın ücretini ve yenilemesini sağlayıcınızla ödemeye devam edersiniz.
   </Accordion>
 
   <Accordion title="DNS, DNS kayıtları ve yayılım ne anlama geliyor?">
     - **DNS**, tarayıcılara bir alan adının web sitesini nerede bulacağını söyleyen sistemdir.
     - **DNS kayıtları**, alan adını bir hizmete yönlendiren veya sahipliğinizi kanıtlayan alan adı ayarlarınızdaki kayıtlardır.
-    - **Yayılım**, DNS değişikliklerinin internet genelinde güncellenmesinin sürdüğü zamandır, genellikle birkaç dakika ile birkaç saat arası ve en fazla 48 saat.
+    - **Yayılım**, DNS değişikliklerinin internet genelinde güncellenmesi için geçen süredir. Genellikle birkaç dakika ile birkaç saat sürer, en fazla 48 saati bulur.
   </Accordion>
 </AccordionGroup>
 

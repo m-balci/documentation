@@ -3,15 +3,15 @@ title: "Krediler ve kullanım"
 description: "Kredilerin nasıl çalıştığını anlayın, bakiyenizi izleyin ve kredilerin ne zaman harcandığını veya iade edildiğini öğrenin."
 ---
 
-Derleme kredileri, Webza'daki her AI üretimini gerçekleştirir. Her plan belirli bir miktar içerir ve ay içinde tükenirseniz ek paketler satın alabilirsiniz.
+Webza'daki her AI üretimi derleme kredisi kullanır. Her plan belirli miktarda kredi içerir; ay bitmeden krediniz tükenirse ek paket satın alabilirsiniz.
 
 ## Krediler nasıl çalışır
 
-Krediler, yapay zeka token kullanımına göre harcanır. Her üretim, düzenleme ve derleme çağrısı küçük bir miktar token maliyetine sahiptir ve bu, bakiyenizden gerçek zamanlı olarak düşülür.
+Krediler, AI token kullanımına göre harcanır. Her üretim, düzenleme ve derleme isteği bir miktar token kullanır ve bu tutar bakiyenizden anında düşülür.
 
-Planınız aylık tahsisatınızı belirler:
+Aylık kredi miktarınızı planınız belirler:
 
-| Plan | Aylık tahsisat | Ödeme |
+| Plan | Aylık kredi | Ödeme |
 | --- | --- | --- |
 | Free | 2.000.000 kredi (tek seferlik) | Abonelik yok |
 | Plus | Ayda 7.000.000 kredi | \$19.99/ay |
@@ -25,22 +25,22 @@ Kalan kredileriniz kontrol panelinin üst çubuğunda görünür, örneğin **20
 
 Sohbet başlığında ayrıca bir kredi göstergesi bulunur:
 
-- **Varsayılan renk** bakiyenizin yüzde 20'sinden fazlası kaldığında.
-- **Sarı** bakiyeniz yüzde 5 ile 20 arasındayken. Hızlıca ek kredi alabilmeniz için bir **Kredi satın al** bağlantısı belirir.
-- **Kırmızı** bakiyeniz yüzde 5 veya daha az olduğunda.
-- **"API anahtarınız kullanılıyor"** kendi API anahtarınızla derleme yaptığınızda; Webza kredileri yerine kendi anahtarınızı kullanıyorsunuz.
+- **Varsayılan renk**: Kredilerinizin yüzde 20'sinden fazlası kaldı.
+- **Sarı**: Kredilerinizin yüzde 5 ile 20'si arası kaldı. Hızlıca ek kredi alabilmeniz için bir **Kredi satın al** bağlantısı belirir.
+- **Kırmızı**: Kredilerinizin yüzde 5'i veya daha azı kaldı.
+- **"API anahtarınız kullanılıyor"**: Kendi API anahtarınızla derleme yapıyorsunuz; Webza kredileri yerine kendi anahtarınız kullanılır.
 
 ## Ek kredi satın alma
 
-Bir sonraki fatura döngüsünden önce kredileriniz biterse, **Faturalandırma** > **Kullanım** yolunu açın ve **Kredi satın al** düğmesine tıklayın. Aboneliğiniz için kullandığınız aynı ödeme yöntemiyle tek seferlik bir kredi paketi satın alabilirsiniz. Ödeme tamamlandığında krediler bakiyenize anında eklenir.
+Bir sonraki fatura döneminden önce krediniz biterse **Faturalandırma** > **Kullanım** sayfasını açın ve **Kredi satın al** düğmesini tıklayın. Aboneliğinizde kullandığınız ödeme yöntemiyle tek seferlik bir kredi paketi satın alabilirsiniz. Ödeme tamamlandığında krediler bakiyenize anında eklenir.
 
-Kredi paketleri otomatik olarak yenilenmez ve planınızın aylık tahsisatını değiştirmez. Paket boyutları ve fiyatları plana göre değişiklik gösterebilir.
+Kredi paketleri otomatik yenilenmez ve planınızın aylık kredi miktarını değiştirmez. Paket boyutları ve fiyatları plana göre farklılık gösterebilir.
 
 {/* TODO: confirm exact pack sizes and prices for Webza plans. */}
 
 ## Kendi API anahtarınızı kullanma
 
-Plus ve Premium planlar, kendi AI sağlayıcı API anahtarınızı eklemenize olanak tanır. "API anahtarınız kullanılıyor" mesajını gördüğünüzde, kendi anahtarınızla derleme yapıyorsunuz demektir. Webza kredileri yerine kendi API anahtarınızın kotasından harcama yaparsınız. Sağlayıcınız tarafından doğrudan faturalandırılırsınız.
+Plus ve Premium planlarda kendi AI sağlayıcınızın API anahtarını ekleyebilirsiniz. "API anahtarınız kullanılıyor" mesajını gördüğünüzde kendi anahtarınızla derleme yapıyorsunuz demektir. Bu durumda Webza kredileri yerine kendi API anahtarınızın kotası kullanılır ve faturayı doğrudan sağlayıcınız keser.
 
 Bunu ayarlamak için [Ayarlar](/tr/settings) > **AI ayarları** yoluna gidin ve API anahtarınızı yapıştırın.
 
@@ -48,36 +48,36 @@ Bunu ayarlamak için [Ayarlar](/tr/settings) > **AI ayarları** yoluna gidin ve 
 
 Krediler şu durumlarda harcanır:
 
-- Tasarım yeniden temalandırma
-- Denetçiden **Tümünü kaydet** işlemleri
-- Herhangi bir AI derleme veya üretim çalıştırması
+- Tasarım modunda yeni tema uygulama
+- İnceleme aracında **Tümünü kaydet**
+- Her AI derleme veya üretim çalışması
 
-Soru sorduğunuzda veya AI'nın yanıt vermesini beklerken kredi harcanmaz. Sadece gerçek derleme işlemi kredi maliyetine sahiptir.
+AI size soru sorup yanıtınızı beklerken kredi harcanmaz. Yalnızca asıl derleme işlemi kredi harcar.
 
-Bir çalıştırmanın ne kadar kredi kullandığını etkileyen birkaç faktör vardır:
+Bir çalışmanın ne kadar kredi kullanacağını birkaç etken belirler:
 
 - **Effort**: Daha yüksek [effort](/tr/editor#effort) ayarları daha fazla kredi kullanabilir.
-- **Durdurulan çalıştırmalar**: Bir çalıştırmayı durdurursanız, o noktaya kadar harcadığı kadar kredi kullanır.
-- **Paylaşılan projeler**: Mesajı gönderen kişi, kendi planı, kredileri ve AI görsel kotasından ödeme yapar.
-- **Önbelleğe alınan girdi**: AI sağlayıcısı tarafından önbelleğe alınan girdi, o sağlayıcının gerçek, daha düşük fiyatından hesaplanır.
+- **Durdurulan çalışmalar**: Bir çalışmayı durdurursanız, o ana kadar harcanan kredi bakiyenizden düşülür.
+- **Paylaşılan projeler**: Mesajı gönderen kişi, ücreti kendi planı, kredileri ve AI görsel kotasıyla öder.
+- **Önbelleğe alınan girdi**: AI sağlayıcısının önbelleğe aldığı girdi, o sağlayıcının gerçek ve daha düşük fiyatıyla hesaplanır.
 
 ## Krediler azaldığında
 
-Her istekten önce yapay zeka ne kadar kredi kaldığını kontrol eder ve yanıtını bu miktar dahilinde tutar. Derleme sırasında krediniz biterse, yapay zeka zaten ödediği adımı tamamlar ve sohbette bir kredi limiti uyarısı görünür.
+AI her istekten önce kalan kredinizi kontrol eder ve yanıtını bu miktarın içinde tutar. Derleme sırasında krediniz biterse AI, ücretini zaten ödediği adımı tamamlar ve sohbette bir kredi sınırı uyarısı görünür.
 
 ## Ücretsiz düzeltme
 
-Başarısız olan çalıştırmalar harcadıkları kadar kredi kullanır, ancak platform sorunu nedeniyle başarısız olan çalıştırmalar ücretlendirilmez. Yapay zeka geçersiz istekler göndermeye devam ederse ve çalıştırma bu nedenle başarısız olursa, bu çalıştırma da günlük ücretsiz düzeltme limiti dahilinde ücretlendirilmez. Kredilerinizin bitmesi nedeniyle duran çalıştırmalar veya sizin durdurduğunuz çalıştırmalar, kullandıkları kadar ücretlendirilir.
+Başarısız olan çalışmalar harcadıkları krediyi kullanır; ancak platformdan kaynaklanan bir sorun yüzünden başarısız olan çalışmalar ücretsizdir. AI geçersiz istek göndermeye devam eder ve çalışma bu yüzden başarısız olursa, bu çalışma da günlük ücretsiz düzeltme sınırı içinde ücretlendirilmez. Krediniz bittiği için duran veya sizin durdurduğunuz çalışmalar, kullandıkları kadar ücretlendirilir.
 
-Ücretlendirilmeyen bir çalışma, **Faturalandırma** > **Kullanım** bölümünde kısa bir nedenle birlikte **Ücret alınmadı** olarak görünür. Bu ücretlendirilmeyen çalışmalar, harcanan kredilerinize dahil edilmez.
+Ücretlendirilmeyen bir çalışma, **Faturalandırma** > **Kullanım** bölümünde kısa bir açıklamayla birlikte **Ücret alınmadı** olarak görünür. Bu çalışmalar harcanan kredilerinize eklenmez.
 
-Bir çalışma başarısız olursa, 24 saat içinde bir kez ücretsiz olarak tekrar denemek için **Ücretsiz düzelt** seçeneğine tıklayabilirsiniz. Ücretsiz tekrar deneme günlük bir limiti vardır (varsayılan 24 saatte 5'tir).
+Bir çalışma başarısız olursa, 24 saat içinde bir kez ücretsiz yeniden denemek için **Ücretsiz düzelt** seçeneğini tıklayabilirsiniz. Ücretsiz yeniden denemelerin günlük bir sınırı vardır (varsayılan olarak 24 saatte 5).
 
 {/* TODO: confirm Webza's exact daily limit for Fix for free retries. */}
 
 ## Kullanım istatistikleri
 
-**Faturalandırma** > **Kullanım** bölümünü açarak kredi tüketiminizin tam bir dağılımını görebilirsiniz:
+Kredi kullanımınızın ayrıntılı dökümünü görmek için **Faturalandırma** > **Kullanım** bölümünü açın:
 
 - Proje bazında kullanım
 - AI modeli bazında kullanım
@@ -87,7 +87,7 @@ Hangi projelerin veya modellerin en çok kredi harcadığını görmek için bu 
 
 ## AI görselleri
 
-Planınız, ayda belirli sayıda AI üretilmiş görsel içeriyor olabilir. Mevcut limit, **Kullanım** sayfasındaki **Mevcut plan** kartında gösterilir.
+Planınız her ay belirli sayıda AI görseli içerebilir. Güncel sınırınız **Kullanım** sayfasındaki **Mevcut plan** kartında gösterilir.
 
 {/* TODO: confirm AI image allowances for each Webza plan. */}
 

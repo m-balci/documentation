@@ -4,26 +4,26 @@ sidebarTitle: "Tasarım sistemleri"
 description: "Webza tasarım sistemlerinin sitenizin görünümünü nasıl kontrol ettiğini, hangi tasarım sistemlerinin mevcut olduğunu ve bunları editörden nasıl değiştireceğinizi öğrenin."
 ---
 
-Bir tasarım sistemi, sitenizin görsel kimliğidir. Tasarım tokenlerini (renkler, tipografi, boşluklar, köşe yarıçapı ve gölgeler), adlandırılmış vurgu paletleri, web yazı tipleri ve yapay zekanın görünümü nasıl uygulayacağını anlatan bir oyun kitabını bir araya getirir.
+Tasarım sistemi, sitenizin görsel kimliğidir. Renkler, tipografi, boşluklar, köşe yarıçapı ve gölgeler gibi tasarım tokenlerini, adlandırılmış vurgu paletlerini, web yazı tiplerini ve yapay zekanın bu görünümü nasıl uygulayacağını anlatan bir stil kılavuzunu bir araya getirir.
 
-Bir [şablon](/tr/templates) yapıyı kontrol eder: sitenizin hangi sayfaları ve bileşenleri olacağı. Bir tasarım sistemi görünümü kontrol eder. Webza ikisini birleştirir, böylece herhangi bir tasarım sistemi herhangi bir şablonla eşleştirilebilir ve aynı şablon birçok farklı görünüm kazanabilir.
+[Şablon](/tr/templates), sitenizde hangi sayfaların ve bileşenlerin olacağını, yani yapıyı belirler. Tasarım sistemi ise görünümü belirler. Webza ikisini birleştirir; böylece her tasarım sistemi her şablonla kullanılabilir ve aynı şablon çok farklı görünümlere bürünebilir.
 
 <Info>
-  Tasarım sistemleri her planda mevcuttur. Otomatik seçim, manuel seçim ve Tasarım modu Free, Plus ve Premium planlarda aynı şekilde çalışır.
+  Tasarım sistemleri her planda mevcuttur. Otomatik seçim, manuelmanuel seçim ve Tasarım modu Free, Plus ve Premium planlarda aynı şekilde çalışır.
 </Info>
 
 ## Nasıl çalışır
 
-Webza projenizi inşa ederken şablondan başlar ve tasarım sistemini üzerine katmanlar halinde uygular:
+Webza projenizi oluştururken şablondan başlar ve tasarım sistemini katmanlar halinde bunun üzerine uygular:
 
-1. Şablon sayfa yapısını ve bileşenleri sağlar.
+1. Şablon, sayfa yapısını ve bileşenleri sağlar.
 2. Tasarım sisteminin temel tokenleri, seçtiğiniz vurgu paleti ve web yazı tipleri uygulanır.
-3. Bazı tasarım sistemleri, belirli bileşenlerin kendi sürümlerini içerir; bunlar şablonun bileşenlerini değiştirir veya iyileştirir.
-4. Yapay zeka, tasarım sisteminin oyun kitabını takip ederek oluşturulan kodu görünüme uyumlu hale getirmek için ayarlar. Örneğin, sabit renkleri aktif tokenler ve vurgu renklerine uygun şekilde değiştirir.
+3. Bazı tasarım sistemleri belirli bileşenlerin kendi sürümlerini içerir; bunlar şablondaki bileşenlerin yerini alır veya onları iyileştirir.
+4. Yapay zeka, tasarım sisteminin stil kılavuzuna uyarak oluşturulan kodu bu görünüme göre düzenler. Örneğin, sabit yazılmış renkleri aktif tokenler ve vurgu renkleriyle değiştirir.
 
-Her oyun kitabı ayrıca site genelinde tutarlı bir hareket stili belirler, böylece animasyonlar bölümden bölüme aynı hissiyat verir.
+Her stil kılavuzu site genelinde tutarlı bir hareket stili de belirler; böylece animasyonlar her bölümde aynı hissi verir.
 
-Katmanlama öngörülebilirdir. Farklı bir tasarım sistemi veya vurgu seçmek, sitenizin yapısını değiştirmeden görünümü değiştirir.
+Bu katmanlama öngörülebilirdir: farklı bir tasarım sistemi veya vurgu seçmek, sitenin yapısına dokunmadan yalnızca görünümünü değiştirir.
 
 ## Substrate (varsayılan)
 
@@ -60,7 +60,7 @@ Substrate'in ötesinde Webza, on premium tasarım sistemi sunar. Her biri kendi 
 Premium tasarım sistemleri, Substrate'in göründüğü her yerde görünür: **Özelleştir** içindeki tasarım sistemi seçici, **Otomatik** seçim ve editörün Tasarım modu. Zamanla yeni tasarım sistemleri eklenir.
 
 <Tip>
-  Birçok tasarım sistemi bir stil rehberi önizlemesi içerir: tipografi, renkler, butonlar ve bileşenleri gösteren bir sayfa. Tasarım sistemi seçiciden veya editörün Tasarım panelinden açarak uygulamadan önce inceleyebilirsiniz.uygulamadan önce inceleyebilirsiniz.
+  Birçok tasarım sistemi bir stil rehberi önizlemesi içerir: tipografi, renkler, düğmeler ve bileşenleri gösteren bir sayfa. Tasarım sistemi seçicisinden veya editörün Tasarım panelinden açarak uygulamadan önce inceleyebilirsiniz.
 </Tip>
 
 ## Tasarım sistemi seçin
@@ -69,15 +69,15 @@ Bir tasarım sistemi ve vurgu, üç yoldan biriyle seçilir.
 
 ### Otomatik (varsayılan)
 
-Proje oluşturduğunuzda, **Özelleştir** açılır penceresindeki tasarım sistemi seçici **Otomatik** konumundadır. İlk inşada, yapay zeka isteminize en uygun tasarım sistemini ve vurguyu seçer ve bu seçimi projeye kaydeder.
+Proje oluşturduğunuzda **Özelleştir** menüsündeki tasarım sistemi seçici **Otomatik** olarak ayarlıdır. İlk derlemede yapay zeka isteminize en uygun tasarım sistemini ve vurguyu seçer ve bu seçimi projeye kaydeder.
 
-### Manuel
+### Manuel seçim
 
-**Otomatik** yerine, **Özelleştir** açılır penceresinden belirli bir tasarım sistemi seçin. Ayrıca vurgu paletlerinden birini seçebilir veya varsayılan vurguyu koruyabilirsiniz. Projenin her inşası o görünümü kullanır.
+**Otomatik** yerine **Özelleştir** menüsünden belirli bir tasarım sistemi seçin. İsterseniz vurgu paletlerinden birini de seçebilir veya varsayılan vurguyu koruyabilirsiniz. Projenin sonraki tüm derlemeleri bu görünümü kullanır.
 
-### Editörde yeniden tema uygulama
+### Editörde temayı değiştirme
 
-İnşa edilmiş bir web sitesi projesinin tasarım sistemini veya vurgusunu istediğiniz zaman editörden değiştirebilirsiniz.
+Oluşturulmuş bir web sitesi projesinin tasarım sistemini veya vurgusunu istediğiniz zaman editörden değiştirebilirsiniz.
 
 <Steps>
   <Step title="Tasarım panelini açın">
@@ -87,23 +87,23 @@ Proje oluşturduğunuzda, **Özelleştir** açılır penceresindeki tasarım sis
     Yeni bir tasarım sistemi ve isteğe bağlı olarak bir vurgu paleti seçin. Önce görünümleri karşılaştırmak isterseniz stil rehberi önizlemesini açın.
   </Step>
   <Step title="Uygulamak için AI'ya sor düğmesini tıklayın">
-    Webza yeni tokenleri ve vurguyu uygular ve sitenizi yeniden inşa eder. Önizleme yeniden yüklenir ve yapay zeka sabit renkleri ayarlayarak tüm sitenin yeni görünüme uymasını sağlar.
+    Webza yeni tokenleri ve vurguyu uygular, ardından sitenizi yeniden derler. Önizleme yenilenir ve yapay zeka sabit renkleri düzenleyerek sitenin tamamının yeni görünüme uymasını sağlar.
   </Step>
 </Steps>
 
-Yeniden tema uygulama, bir sohbet isteği gibi kredi harcar. Başka bir inşa çalışırken yeniden tema uygulayamazsınız.
+Temayı değiştirmek, bir sohbet isteği gibi kredi harcar. Başka bir derleme sürerken temayı değiştiremezsiniz.
 
 <Note>
-  Tasarım modu yalnızca web sitesi projeleri için mevcuttur. [WordPress](/tr/themes/wordpress-themes) ve [Shopify](/tr/themes/shopify-themes) tema projeleri için gizlidir. Bunlar yine de oluşturulduklarında seçilen tasarım sistemini kullanır, ancak editörden değiştiremezsiniz.
+  Tasarım modu yalnızca web sitesi projelerinde kullanılabilir; [WordPress](/tr/themes/wordpress-themes) ve [Shopify](/tr/themes/shopify-themes) tema projelerinde gizlidir. Bu projeler oluşturulurken seçilen tasarım sistemini kullanır, ancak bunu editörden değiştiremezsiniz.
 </Note>
 
-## Yeniden temayı geri alma
+## Tema değişikliğini geri alma
 
-Bir yeniden tema, Geri al ve Yinele'de bir adım olarak sayılır ve Revizyon geçmişinde bir kontrol noktası oluşturur. Daha sonra önizlemeden geri döndürebilirsiniz. Ayrıntılar için bkz. [Önizleme](/tr/preview).
+Tema değişikliği, Geri al ve Yinele için tek bir adım sayılır ve Sürüm geçmişinde bir kontrol noktası oluşturur. Böylece daha sonra önizlemeden geri dönebilirsiniz. Ayrıntılar için bkz. [Önizleme](/tr/preview).
 
 ## Projeyi kopyalama
 
-Bir projeyi kopyaladığınızda, tasarım sistemi ve vurgusu yeni projeye kopyalanır.
+Bir projeyi kopyaladığınızda, tasarım sistemi ve vurgu da yeni projeye aktarılır.
 
 <a className="wz-ad not-prose" href="https://webza.ai/register?utm_source=webza_docs&utm_medium=cta&utm_content=design-systems" target="_blank" rel="noopener">
   <span className="wz-ad-glow" />
@@ -125,6 +125,6 @@ Bir projeyi kopyaladığınızda, tasarım sistemi ve vurgusu yeni projeye kopya
   </Card>
 
   <Card title="Önizleme" icon="eye" href="/tr/preview">
-    Sitenizi önizleyin ve revizyon geçmişini yönetin.
+    Sitenizi önizleyin ve sürüm geçmişini yönetin.
   </Card>
 </CardGroup>

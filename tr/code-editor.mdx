@@ -3,7 +3,7 @@ title: "Kod editörü"
 description: "Webza Monaco kod editöründe proje dosyalarını nasıl görüntüleyeceğinizi, arayacağınızı ve düzenleyeceğinizi öğrenin; salt okunur sistem dosyaları ve önemli uyarılar dahil."
 ---
 
-Kod editörü, proje dosyalarını doğrudan görüntülemenize ve düzenlemenize olanak tanıyan yerleşik bir Monaco editörüdür. Sözdizimi vurgulama, arama ve değiştirme, isteğe bağlı kaydetme ve kaydedilmemiş değişiklik göstergesi sunar, böylece her zaman neyin beklediğini bilirsiniz.
+Kod editörü, proje dosyalarını doğrudan görüntüleyip düzenleyebileceğiniz yerleşik bir Monaco editörüdür. Sözdizimi vurgulama, bul ve değiştir, istediğiniz anda kaydetme ve kaydedilmemiş değişiklik göstergesi sunar; böylece henüz kaydetmediğiniz değişiklikleri her zaman görürsünüz.
 
 ## Desteklenen diller
 
@@ -21,11 +21,11 @@ Editör içerisinde arama kutusunu açmak için <kbd>Ctrl</kbd> / <kbd>Cmd</kbd>
 
 Mevcut dosyayı kaydetmek için <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> tuşlarına basın. Kaydetene kadar dosya adının yanında bir nokta veya kaydedilmemiş değişiklik göstergesi belirir. Canlı önizleme, kaydettikten sonra güncellenir.
 
-AI derleme yaparken dosya kaydedemezsiniz. Editör bunun nedenini açıklayan bir mesaj gösterir ve kaydedilmemiş metninizi editörde tutar, böylece derleme bittiğinde kaydedebilirsiniz.
+Yapay zeka derleme yaparken dosya kaydedemezsiniz. Editör bunun nedenini açıklayan bir mesaj gösterir ve kaydedilmemiş metninizi editörde tutar, böylece derleme bittiğinde kaydedebilirsiniz.
 
 ## Salt okunur dosyalar
 
-Küçük bir sistem dosyaları grubu salt okunurdur. Bunlar şablon ve derleme sistemi tarafından yönetilir; kötü bir düzenleme projeyi yeniden oluşturulamayacak hale getirebilir. Bu dosyalardan birini seçtiğinizde, editör bir **Salt okunur** kilit rozeti gösterir ve **Kaydet** düğmesini gizler.
+Az sayıda sistem dosyası salt okunurdur. Bu dosyaları şablon ve derleme sistemi yönetir; yanlış bir düzenleme projenin yeniden oluşturulmasını engelleyebilir. Bu dosyalardan birini seçtiğinizde, editör bir **Salt okunur** kilit rozeti gösterir ve **Kaydet** düğmesini gizler.
 
 <AccordionGroup>
   <Accordion title="Kök düzeyi salt okunur dosyalar">
@@ -41,20 +41,20 @@ Küçük bir sistem dosyaları grubu salt okunurdur. Bunlar şablon ve derleme s
   </Accordion>
 </AccordionGroup>
 
-Bu dosyaların kilidini açan bir ayar yoktur. `index.html`, yalnızca uygulamayı yükleyen kabuktur. Görünen her sayfa, başlık, altbilgi ve bağlantı `src/` altındadır ve `main.tsx`, `index.css` ve `vite-env.d.ts` dışındaki her şey düzenlenebilir.
+Bu dosyaları düzenlenebilir yapan bir ayar yoktur. `index.html` yalnızca uygulamayı yükleyen bir iskelettir. Sitede görünen her sayfa, üst bilgi, altbilgi ve bağlantı `src/` klasöründedir; `main.tsx`, `index.css` ve `vite-env.d.ts` dışındaki her şeyi düzenleyebilirsiniz.
 
 ## Analitik ve izleme parçaları
 
-Google Tag Manager, Google tag veya Meta Pixel eklemeniz gerekiyorsa, başlık işaretlemesini doğrudan düzenlemek yerine **Ayarlar → Genel** içerisindeki **Analitik** kartını kullanın. [Ayarlar](/tr/settings) sayfasına bakın.
+Google Tag Manager, Google etiketi veya Meta Pixel eklemeniz gerekiyorsa, `<head>` kodunu elle düzenlemek yerine **Ayarlar → Genel** bölümündeki **Analitik** kartını kullanın. [Ayarlar](/tr/settings) sayfasına bakın.
 
 ## Önemli uyarılar
 
 <Warning>
-  Geçmişin içindeyken (geri aldıktan sonra) yapılan manuel düzenlemeler, sonraki Geri alma veya Geri yükleme eylemi tarafından atılır. Düzeltme geçmişi ayrıntıları için [Önizleme](/tr/preview) sayfasına bakın.
+  Geri aldıktan sonra, yani geçmişte bir noktadayken yaptığınız manuel düzenlemeler, bir sonraki geri alma veya geri yükleme işleminde silinir. Sürüm geçmişi ayrıntıları için [Önizleme](/tr/preview) sayfasına bakın.
 </Warning>
 
 <Info>
-  Oluşturulan yapay zeka görselleri `public/images/generated/` altında saklanır. Kodunuzda bunlara referans verebilirsiniz, ancak sohbet dışında taşımayın veya yeniden adlandırmayın; aksi takdirde yapay zeka onları takip edemeyebilir.
+  Yapay zekanın ürettiği görseller `public/images/generated/` klasöründe saklanır. Kodunuzda bu görselleri kullanabilirsiniz, ancak sohbet dışında taşımayın veya adlarını değiştirmeyin; aksi halde yapay zeka onları bulamayabilir.
 </Info>
 
 ## İlgili sayfalar
@@ -65,6 +65,6 @@ Google Tag Manager, Google tag veya Meta Pixel eklemeniz gerekiyorsa, başlık i
   </Card>
 
   <Card title="Önizleme" icon="eye" href="/tr/preview">
-    Canlı önizleme ve düzeltme geçmişinin nasıl çalıştığını öğrenin.
+    Canlı önizleme ve sürüm geçmişinin nasıl çalıştığını öğrenin.
   </Card>
 </CardGroup>

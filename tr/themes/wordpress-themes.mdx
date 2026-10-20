@@ -4,7 +4,7 @@ sidebarTitle: "WordPress temaları"
 description: "Webza ile kurulabilir WordPress blok temaları oluşturun, bunları tarayıcı içi WordPress Playground'da önizleyin ve WordPress 6.7 veya daha yeni bir sürüme kurun."
 ---
 
-Web siteleri oluşturmak için kullandığınız aynı sohbetten kurulabilir bir WordPress Full Site Editing (FSE) blok teması oluşturun. Bunu tarayıcınızda canlı önizleyin, `.zip` olarak indirin ve 6.7 veya daha yeni sürüm çalıştıran herhangi bir WordPress sitesine kurun.
+Web siteleri oluşturmak için kullandığınız aynı sohbetle, kuruluma hazır bir WordPress Full Site Editing (FSE) blok teması oluşturun. Tarayıcınızda canlı önizleyin, `.zip` olarak indirin ve 6.7 veya daha yeni sürüm çalıştıran herhangi bir WordPress sitesine kurun.
 
 <Note>
   WordPress temaları Plus ve Premium planlarda mevcuttur.
@@ -19,7 +19,7 @@ Bir WordPress teması projesi, bir web sitesi yerine bir blok teması üretir. T
 - Desenler
 - Stiller
 
-Webza, temanın yapısını ve PHP sözdizimini her inşada kontrol eder, böylece indirilen tema kuruluma hazırdır.
+Webza, temanın yapısını ve PHP sözdizimini her derlemede denetler, böylece indirilen tema kuruluma hazır olur.
 
 ## WordPress teması projesi oluşturma
 
@@ -38,9 +38,9 @@ Kontrol panelinde istemin yanında bir çıktı seçici görünür:
 
 ## Temanızı önizleme
 
-Webza, temaları WordPress Playground'da önizler: tarayıcınızda çalışan gerçek bir WordPress ortamında temanız kurulu ve etkin. Sonucu görmek için sunucu veya barındırma hizmetine ihtiyacınız yoktur.
+Webza, temaları WordPress Playground'da önizler: Temanız, tarayıcınızda çalışan gerçek bir WordPress ortamında kurulu ve etkin olarak açılır. Sonucu görmek için sunucuya veya barındırma hizmetine ihtiyacınız yoktur.
 
-Playground'un kendi yeniden yükleme kontrolü vardır. Tam bir WordPress örneği başlattığı için, ilk yükleme ve önizleme güncellemeleri biraz zaman alabilir.
+Playground'un kendi yeniden yükleme denetimi vardır. Tam bir WordPress örneği başlattığı için ilk yükleme ve önizleme güncellemeleri biraz zaman alabilir.
 
 <Warning>
   Playground bir önizlemedir, barındırma hizmeti değil. İçindeki her şey tarayıcı sekmesinde geçicidir ve sekmeyi kapattığınızda kaybolur. Temayı kullanmak için `.zip` dosyasını indirin ve WordPress sitenize kurun.
@@ -48,7 +48,7 @@ Playground'un kendi yeniden yükleme kontrolü vardır. Tam bir WordPress örne�
 
 ## Düzenleme ve yineleme
 
-Geri Al, Yinele ve Revizyon Geçmişi, tema projeleri için web sitelerinde olduğu gibi çalışır. Bir revizyonu geri yüklediğinizde, Playground önizlemesi geri yüklenen tema ile yeniden başlar ve bu noktadan düzenlemeye devam edebilirsiniz.
+Geri al, Yinele ve Sürüm geçmişi, tema projelerinde de web sitelerindeki gibi çalışır. Bir sürümü geri yüklediğinizde Playground önizlemesi bu temayla yeniden başlar ve o noktadan düzenlemeye devam edebilirsiniz.
 
 ## İndirme ve kurulum
 
@@ -75,19 +75,19 @@ Geri Al, Yinele ve Revizyon Geçmişi, tema projeleri için web sitelerinde oldu
 
 ## Tema projelerinin yapamayacakları
 
-Bir tema indirilebilir bir dosyadır, barındırılan bir site değildir. Bu yüzden bazı web sitesi özellikleri mevcut değildir:
+Tema, indirilebilir bir dosyadır ve barındırılan bir site değildir. Bu nedenle bazı web sitesi özellikleri kullanılamaz:
 
 - **Yayınlama ve özel alan adları**: Webza tema projelerini barındırmaz, bu yüzden **Alan Adları** sekmesi hiç gösterilmez.
 - **GitHub ve Supabase**: temalar için mevcut değildir.
-- **Tasarım modu**: oluşturulduğunda seçilen tasarım sistemi `theme.json` içine inşa edilir.
+- **Tasarım modu**: Proje oluşturulurken seçilen tasarım sistemi `theme.json` dosyasına işlenir.
 - **Yapay zeka tarafından oluşturulan görüntüler**: yalnızca web sitesi projelerinde mevcuttur.
 - **Analitik**: analitik kartı gizlidir. İzlemeyi doğrudan WordPress sitenize ekleyin.
 
-Editörde **Dışa aktar** butonu yerine **Temayı indir** bulunur.
+Editörde **Dışa aktar** düğmesi yerine **Temayı indir** bulunur.
 
 ## Plan değiştirme
 
-Plus veya Premium'dan WordPress temaları olmayan bir plana geçerseniz, mevcut temalarınızı hâlâ indirebilirsiniz, ancak tema projelerinde yeni inşalar engellenir. Düzenlemeye devam etmek için tekrar yükseltme yapın.
+Plus veya Premium'dan WordPress temaları içermeyen bir plana geçerseniz, mevcut temalarınızı indirmeye devam edebilirsiniz, ancak tema projelerinde yeni derleme yapamazsınız. Düzenlemeye devam etmek için tekrar yükseltin.
 
 ## Tema projesini kopyalama
 
@@ -100,20 +100,20 @@ Kopyalanan bir WordPress teması projesi, WordPress çıktı türünü korur.
     WordPress temaları yalnızca Plus ve Premium planlarda mevcuttur. Diğer planlarda seçici gizlidir.
   </Accordion>
 
-  <Accordion title="Tema projemde inşalar reddediliyor">
-    Mevcut planınız WordPress temalarını içermiyor. Düzenlemeye devam etmek için Plus veya Premium'a yükseltin. Projeniz ve indirilebilir temanız bu süre içinde korunuiçinde korunur.
+  <Accordion title="Tema projemde derlemeler reddediliyor">
+    Mevcut planınızda WordPress temaları bulunmuyor. Düzenlemeye devam etmek için Plus veya Premium'a yükseltin. Projeniz ve indirilebilir temanız bu süre boyunca korunur.
   </Accordion>
 
   <Accordion title="Önizleme Temanız yükleniyor... ekranında takılı kaldı">
-    - Biraz bekleyin. İlk yükleme, tarayıcınıza tam bir WordPress indirir ve bazı bağlantılarda yavaş olabilir.
+    - Biraz bekleyin. İlk yükleme sırasında tarayıcınıza tam bir WordPress indirir ve bazı bağlantılarda yavaş olabilir.
     - Katı kurallara sahip bir şirket ağı, VPN veya tarayıcı uzantısı önizlemeyi veya WebAssembly'i engelleyebilir. Başka bir ağ deneyin veya uzantıları devre dışı bırakın.
     - Tarayıcı konsolunuzu engellenen istekler açısından kontrol edin.
 
-    **Temayı indir** butonu hâlâ çalışır, bu yüzden temayı kendi WordPress sitenize her zaman kurabilirsiniz.
+    **Temayı indir** düğmesi hâlâ çalışır, bu yüzden temayı kendi WordPress sitenize her zaman kurabilirsiniz.
   </Accordion>
 
   <Accordion title="WordPress temayı kurmuyor">
-    WordPress'i 6.7 veya daha yeni sürüme güncelleyin ve **Temayı indir**'den indirilen `.zip` dosyasını açmadan yüklediğinizden emin olun.
+    WordPress'i 6.7 veya daha yeni sürüme güncelleyin ve **Temayı indir** ile indirilen `.zip` dosyasını açmadan, olduğu gibi yüklediğinizden emin olun.
   </Accordion>
 </AccordionGroup>
 

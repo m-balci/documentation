@@ -1,10 +1,10 @@
 ---
 title: "GitHub"
 sidebarTitle: "GitHub"
-description: "GitHub hesabınızı bağlayın, böylece Webza her başarılı inşadan sonra projenizin kaynak kodunu sizin sahibi olduğunuz özel bir depoya göndersin."
+description: "GitHub hesabınızı bağlayın; Webza her başarılı derlemeden sonra projenizin kaynak kodunu size ait özel bir depoya göndersin."
 ---
 
-Her Webza planında GitHub hesabınızı bağlayabilirsiniz, böylece Webza her başarılı inşadan sonra projenizin kaynak kodunu hesabınızdaki bir depoya gönderir. Kod sizin kontrolünüzde kalır ve Webza'dan ayrılmadan güncel tutabilirsiniz.
+GitHub hesabınızı her Webza planında bağlayabilirsiniz. Bağladığınızda Webza, her başarılı derlemeden sonra projenizin kaynak kodunu hesabınızdaki bir depoya gönderir. Kod sizin kontrolünüzde kalır; Webza'dan ayrılmadan onu güncel tutabilirsiniz.
 
 <Note>
   GitHub entegrasyonu WordPress veya Shopify tema projeleri için mevcut değildir.
@@ -20,12 +20,12 @@ Her Webza planında GitHub hesabınızı bağlayabilirsiniz, böylece Webza her 
     Bir proje oluştururken bir GitHub bağlantısı seçin. Webza bunun için yeni bir özel depo oluşturur.
   </Step>
   <Step title="İnşa edin">
-    Her başarılı inşadan sonra yapay zeka, proje kaynağını otomatik olarak oluşturulan bir commit mesajıyla gönderir.
+    Her başarılı derlemeden sonra yapay zeka, proje kaynağını otomatik oluşturulan bir commit mesajıyla depoya gönderir.
   </Step>
 </Steps>
 
 <Info>
-  Webza yalnızca deponuza gönderir. Asla klonlama, çekme veya depo içeriğinden kod oluşturmaz.Asla klonlama, çekme veya depo içeriğinden kod oluşturmaz. Depo bir çıktıdır, girdi değil.
+  Webza yalnızca deponuza gönderir. Asla klonlama, çekme veya depo içeriğinden kod oluşturmaz. Depo bir çıktıdır, girdi değil.
 </Info>
 
 ## GitHub hesabınızı bağlama
@@ -63,7 +63,7 @@ Bir projeyi kopyalamak GitHub bağlantısını kopyalamaz. Bir depoyu birden faz
 
 ## İstek üzerine gönderme
 
-**Otomatik gönderiyi** kapatmak, el ile göndermek zorunda kalacağınız anlamına gelmez. Proje sohbetinde yapay zekaya isteyin, örneğin "Bunu GitHub'a gönder", ve o tek seferlik gönderiyi açma/kapama durumundan bağımsız olarak çalıştırır.
+**Otomatik gönderimi** kapatmak, kodu el ile göndermek zorunda kalacağınız anlamına gelmez. Proje sohbetinde yapay zekadan isteyebilirsiniz: örneğin "Bunu GitHub'a gönder" dediğinizde, anahtar kapalı olsa bile tek seferlik bir gönderim yapılır.
 
 <Tip>
   Her commit öncesinde değişiklikleri incelemek istiyorsanız otomatik gönderiyi kapatın, ardından hazır olduğunuzda yapay zekaya göndermesini isteyin.
@@ -71,14 +71,14 @@ Bir projeyi kopyalamak GitHub bağlantısını kopyalamaz. Bir depoyu birden faz
 
 ## Ne gönderilir
 
-Webza, bir geliştiricinin okumak isteyeceği proje kaynağını gönderir, çalışma alanının tam bir kopyasını değil. Bağımlılıklar, inşa çıktısı ve kimlik bilgisi gibi görünen her şey hariç tutulur, böylece gizli bilgiler deponuza yayınlanmaz.
+Webza, bir geliştiricinin okumak isteyeceği proje kaynağını gönderir, çalışma alanının tam bir kopyasını değil. Bağımlılıklar, derleme çıktısı ve kimlik bilgisi gibi görünen her şey hariç tutulur, böylece gizli bilgiler deponuza yayınlanmaz.
 
 ## Depoyu Webza dışında düzenleme
 
-Göndermeler asla zorlanmaz. Birisi Webza dışında depoya commit yaparsa, bir sonraki gönderme atlanır, böylece değişiklikleriniz kaybolmaz.
+Webza hiçbir zaman zorla gönderme (force push) yapmaz. Biri Webza dışında depoya commit yaparsa, değişiklikleriniz kaybolmasın diye sonraki gönderme atlanır.
 
 <Warning>
-  Bundan sonra deponuz ve Webza projeniz senkronize kalmaz. Webza dışarıdan yapılan değişiklikleri projeye geri birleştirmez ve o dala yapılan daha sonraki göndermeler atlanır.
+  Bundan sonra deponuz ve Webza projeniz senkronize kalmaz. Webza dışarıdan yapılan değişiklikleri projeye yansıtmaz ve o dala yapılan daha sonraki göndermeler atlanır.
 </Warning>
 
 ## Güvenlik
@@ -126,7 +126,7 @@ Webza'nın erişimini tamamen iptal etmek için, GitHub ayarlarınızdan Webza u
 
 ## Alternatif: kod dışa aktarma
 
-Planınız dahilindeyse, **Dışa Aktar** butonundan Vercel hazır bir ZIP de indirebilirsiniz. Bu Plus ve Premium planlarda mevcuttur.
+Planınız kapsamındaysa, **Dışa Aktar** düğmesinden Vercel uyumlu bir ZIP de indirebilirsiniz. Bu Plus ve Premium planlarda mevcuttur.
 
 <CardGroup cols={2}>
   <Card title="Supabase veritabanı" icon="database" href="/tr/integrations/supabase">

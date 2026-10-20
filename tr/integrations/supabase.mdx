@@ -4,7 +4,7 @@ sidebarTitle: "Supabase"
 description: "Oluşturulan uygulamalara Postgres veritabanı, kimlik doğrulama, depolama ve satır düzeyinde güvenlik eklemek için kendi Supabase projenizi getirin."
 ---
 
-Her Webza planında, kendi Supabase projenizi ekleyerek oluşturulan uygulamaları veritabanı destekli yapabilirsiniz. Uygulamalarınız ilişkisel Postgres tabloları, kimlik doğrulama, depolama ve satır düzeyinde güvenlik (RLS) elde eder. Yapay zeka inşa ederken tabloları ve kimlik doğrulama akışlarını sizin için tanımlar.
+Her Webza planında, kendi Supabase projenizi ekleyerek oluşturulan uygulamaları veritabanı destekli yapabilirsiniz. Uygulamalarınız ilişkisel Postgres tabloları, kimlik doğrulama, depolama ve satır düzeyinde güvenlik (RLS) elde eder. Yapay zeka, uygulamayı inşa ederken tabloları ve kimlik doğrulama akışlarını sizin için otomatik olarak tanımlar.
 
 <Note>
   Veritabanı bağlantıları WordPress veya Shopify tema projeleri için mevcut değildir.
@@ -14,8 +14,8 @@ Her Webza planında, kendi Supabase projenizi ekleyerek oluşturulan uygulamalar
 
 Webza, kendi-veritabanını-getir modeli kullanır. Bir Supabase projesi sağlarsınız ve oluşturulan uygulamalar `@supabase/supabase-js` istemcisi aracılığıyla onunla iletişim kurar. Webza veritabanınızı asla sağlamaz, barındırmaz, sahiplenmez veya faturalandırmaz.
 
-- Kendi Supabase bağlantılarınızın bir kütüphanesini tutar ve her projeye bir tane ekler.
-- Webza, veritabanınızda her proje için ayrılmış bir şema oluşturur ve tabloları orada inşa eder.
+- Kendi Supabase bağlantılarınızdan oluşan bir kütüphane tutar ve her projeye bir tane bağlar.
+- Webza, veritabanınızda her proje için ayrılmış bir şema oluşturur ve tabloları bu şemada kurar.
 - Webza, projeyi sildiğinizde bile verilerinizi asla silmez.
 
 ## Nasıl çalışır
@@ -25,16 +25,16 @@ Webza, kendi-veritabanını-getir modeli kullanır. Bir Supabase projesi sağlar
     Kenar çubuğundaki **Veritabanları** sayfasında bir veya daha fazla Supabase bağlantısı kaydedin.
   </Step>
   <Step title="Proje için seçin">
-    Bir proje oluştururken **Veritabanı** seçicisinden bir bağlantı seçin. İlk inşadan itibaren bağlanır.
+    Bir proje oluştururken **Veritabanı** seçicisinden bir bağlantı seçin. Veritabanı ilk derlemeden itibaren bağlı olur.
   </Step>
-  <Step title="Yapay zekanın inşa etmesine izin verin">
-    Webza, Supabase projenizde RLS etkin olan bir Postgres şeması oluşturur. Yapay zeka uygulamanızı inşa ederken buna tablolar ekler.
+  <Step title="Gerisini yapay zekaya bırakın">
+    Webza, Supabase projenizde RLS etkin olan bir Postgres şeması oluşturur. Yapay zeka uygulamanızı derlerken bu şemaya tablolar ekler.
   </Step>
 </Steps>
 
 ## Supabase bağlantısı ekleme
 
-Kenar çubuğundan **Veritabanları**'nı açın ve **Bağlantı Ekle**'ye tıklayın. Her bağlantı bir ad ve bir Supabase projesine erişim saklar. En fazla 20 bağlantı kaydedebilir ve projeler arasında yeniden kullanabilirsiniz.
+Kenar çubuğundan **Veritabanları**'nı açın ve **Bağlantı Ekle**'ye tıklayın. Her bağlantı bir ad ve bir Supabase projesine erişim bilgisi saklar. En fazla 20 bağlantı kaydedebilir ve projeler arasında yeniden kullanabilirsiniz.
 
 Gördüğünüz yöntemler hesabınız için etkin olanlara bağlıdır. Yalnızca bir yöntem mevcutsa, **Bağlantı Ekle** doğrudan onu açar.
 
@@ -51,7 +51,7 @@ Gördüğünüz yöntemler hesabınız için etkin olanlara bağlıdır. Yalnız
         **Veritabanları** sayfasında, **Bağlantı ekle**'ye tıklayın ve **Supabase ile bağlan**'ı seçin.
       </Step>
       <Step title="Webza'yı yetkilendirin">
-        Supabase onay ekranındaki izinleri inceleyin ve projenizi barındıran kuruluşu yetkilendirin. Supabase, yazma erişiminin okumayı da içerdiği için **Veritabanı**'nı okuma ve yazma olarak listeler.
+        Supabase onay ekranındaki izinleri inceleyin ve projenizi barındıran kuruluşu yetkilendirin. Supabase, yazma erişiminin okumayı da kapsadığı için **Veritabanı**'nı okuma ve yazma olarak listeler.
       </Step>
       <Step title="Proje seçin">
         Aktif bir proje seçin ve bağlantıyı kaydedin.
@@ -59,7 +59,7 @@ Gördüğünüz yöntemler hesabınız için etkin olanlara bağlıdır. Yalnız
     </Steps>
 
     <Warning>
-      Supabase erişimi kuruluş başına verir, bu yüzden seçtiğiniz kuruluştaki her projeyi yetkilendirirsiniz. Webza yalnızca seçtiğiniz projede çalışır. Erişimi tek bir proje ile sınırlamak için bunun yerine bir erişim tokeni kullanın.
+      Supabase erişimi kuruluş başına verir; dolayısıyla seçtiğiniz kuruluştaki tüm projeleri yetkilendirmiş olursunuz. Webza yalnızca seçtiğiniz projede çalışır. Erişimi tek bir proje ile sınırlamak için bunun yerine bir erişim tokeni kullanın.
     </Warning>
 
     OAuth oturumları otomatik olarak yenilenir, bu yüzden erişim verili kaldığı sürece tekrar giriş yapmanıza gerek kalmaz.
@@ -108,7 +108,7 @@ Gördüğünüz yöntemler hesabınız için etkin olanlara bağlıdır. Yalnız
         - **Veritabanı şifresi**: veritabanı şifreniz. Webza bunu şifreler ve `[YOUR-PASSWORD]` yerine ekler.
         - **Yayınlanabilir anahtar**: kopyaladığınız anahtar.
 
-        **Supabase URL'si**, bağlantı dizesinden kendiliğinden dolar. `https://` ile başlamalıdır.
+        **Supabase URL'si**, bağlantı dizesinden kendiliğinden doldurulur. `https://` ile başlamalıdır.
       </Step>
       <Step title="Bağlantıyı test edin">
         **Bağlantıyı test et**'e tıklayın. Veritabanı erişimini ve yayınlanabilir anahtarı ayrı ayrı kontrol eder.
@@ -121,7 +121,7 @@ Gördüğünüz yöntemler hesabınız için etkin olanlara bağlıdır. Yalnız
 
 ### E-posta onayını kapatma
 
-Oluşturulan uygulamalarınızda kayıt işleminin anında çalışması için, Supabase'te e-posta onayını kapatın. **Authentication → Sign In / Providers → Email**'e gidin, **Confirm email** seçeneğini kapatın ve kaydedin.
+Oluşturulan uygulamalarınızda kaydın hemen çalışması için, Supabase'te e-posta onayını kapatın. **Authentication → Sign In / Providers → Email**'e gidin, **Confirm email** seçeneğini kapatın ve kaydedin.
 
 <Warning>
   Supabase projenizde SMTP yapılandırmadıysanız, onay açık bırakıldığında kayıt aktif bir oturum döndürmez ve giriş sessizce başarısız olur.
@@ -129,9 +129,9 @@ Oluşturulan uygulamalarınızda kayıt işleminin anında çalışması için, 
 
 ## Projeye veritabanı ekleme
 
-Oluşturma sayfasında, **Özelleştir** açılır penceresini açın ve **Veritabanı** seçicisinden bir bağlantı seçin. En az bir bağlantı kaydettikten sonra seçici görünür. Statik bir site için **Veritabanı yok** konumunda bırakın.
+Oluşturma sayfasında, **Özelleştir** açılır penceresini açın ve **Veritabanı** seçicisinden bir bağlantı seçin. En az bir bağlantı kaydettikten sonra seçici görünür. Statik bir site için **Veritabanı yok** seçeneğinde bırakın.
 
-Daha sonra veritabanı eklemek, değiştirmek veya ayırmak için projedeki **Ayarlar → Veritabanı**'na gidin.
+Daha sonra veritabanı eklemek, değiştirmek veya ayırmak için projenin **Ayarlar → Veritabanı** bölümüne gidin.
 
 - Bağlantı değiştirmek hiçbir şemayı düşürmez. Eski şema, oluşturulduğu veritabanında kalır.
 - Veritabanını istediğiniz zaman ayırabilirsiniz.
@@ -157,10 +157,10 @@ Bir `submit` tablosu ziyaretçilerin satır eklemesine izin verir ancak tarayıc
 
 ### Bir tablonun modunu değiştirme
 
-Yapay zekadan mevcut bir tabloyu farklı bir modla yeniden tanımlamasını isteyin. Webza tablonun politikalarını eşleşecek şekilde yeniden inşa eder ve verilerini korur.
+Yapay zekadan mevcut bir tabloyu farklı bir modla yeniden tanımlamasını isteyin. Webza tablonun politikalarını yeni moda göre yeniden oluşturur ve verilerini korur.
 
 <Warning>
-  Bir `public` veya `submit` tablosunu `private` olarak değiştirmek, mevcut satırları gizler. Bu satırların sahibi yoktur, bu yüzden hiçbir kullanıcı uygulamada onları göremez. Veriler hâlâ Supabase kontrol panelinizdedir. Satırlar önemliyse, değiştirmeden önce sahipler atayın veya dışa aktarın.
+  Bir `public` veya `submit` tablosunu `private` olarak değiştirmek, mevcut satırları gizler. Bu satırların sahibi yoktur; dolayısıyla hiçbir kullanıcı uygulamada onları göremez. Veriler hâlâ Supabase kontrol panelinizdedir. Satırlar önemliyse, değiştirmeden önce sahipler atayın veya dışa aktarın.
 </Warning>
 
 ### Yönetilen sütunlar
@@ -175,7 +175,7 @@ Her tablo otomatik olarak `id` ve `created_at` sütunları alır. `private` tabl
 
 Her proje, `proj_` ile başlayan ve ardından tireler olmadan proje kimliği gelen kendi şemasını alır. Örneğin, kimliği `3f0c1a2b-…` olan bir proje `proj_3f0c1a2b…` kullanır.
 
-Oluşturulan uygulamalar yalnızca proje URL'sini, yayınlanabilir anahtarı ve şema adını alır. Erişim tokenleri ve bağlantı dizeleri şifrelenir ve asla tarayıcıya ulaşmaz.
+Oluşturulan uygulamalar yalnızca proje URL'sini, yayınlanabilir anahtarı ve şema adını alır. Erişim tokenleri ve bağlantı dizeleri şifrelenir ve asla tarayıcıya aktarılmaz.
 
 <Info>
   Bir projeyi silmek, veritabanını ayırmak veya bağlantıları değiştirmek, projenin şemasını veya verilerini asla silmez. Alanı boşaltmak için, `proj_…` şemasını kendi Supabase kontrol panelinizden kendiniz kaldırın.
@@ -183,7 +183,7 @@ Oluşturulan uygulamalar yalnızca proje URL'sini, yayınlanabilir anahtarı ve 
 
 ## Erişimi yönetme
 
-- Bir erişim tokeni veya Supabase girişi birden fazla bağlantıyı destekleyebilir. Bir Supabase girişini yeniden bağlamak, ondan yapılan her bağlantıyı düzeltir.
+- Bir erişim tokeni veya Supabase oturumu birden fazla bağlantı için kullanılabilir. Bir Supabase oturumunu yeniden bağlamak, ondan yapılan her bağlantıyı onarır.
 - Yeni bir erişim tokeni yalnızca düzenlediğiniz bağlantıya uygulanır. Eski tokeni kullanan her bağlantıya yeni tokeni ayrı ayrı yapıştırın.
 - En fazla 10 token ve giriş saklayabilirsiniz.
 
@@ -192,20 +192,20 @@ Webza'da bir bağlantı silmek, Supabase'te erişimi iptal etmez. Erişimi iptal
 - **Supabase ile bağlan**: kuruluşunuzun **Settings → OAuth Apps → Authorized apps** bölümünden Webza'yı kaldırın.
 - **Erişim belirteci**: **Account → Access Tokens** altından tokeni silin.
 
-Erişim iptal edildiğinde veya token süresi dolduğunda, bağlantı **Veritabanları** sayfasında **Yeniden bağlan** gösterir ve inşalar erişimin iptal edildiğini bildirir. Yeniden bağlanmak bağlantıyı yerinde onarır, bu yüzden eklenen projeler şemalarını korur.
+Erişim iptal edildiğinde veya token süresi dolduğunda, bağlantı **Veritabanları** sayfasında **Yeniden bağlan** durumunu gösterir ve derlemeler erişimin iptal edildiğini bildirir. Yeniden bağlanmak bağlantıyı yerinde onarır, bu yüzden eklenen projeler şemalarını korur.
 
 ## Sorun giderme
 
 <AccordionGroup>
   <Accordion title="Bağlantı testi başarısız oldu">
-    - Manuel bağlantılar için, **Connect** bölümünden Session pooler URI'sini kullanın, `[YOUR-PASSWORD]` koruyun ve şifreyi **Veritabanı şifresi** alanına girin.
+    - Manuel bağlantılar için **Connect** bölümündeki Session pooler URI'sini kullanın, `[YOUR-PASSWORD]` kısmını koruyun ve şifreyi **Veritabanı şifresi** alanına girin.
     - Yayınlanabilir anahtar reddedilirse, aynı Supabase projesinden tekrar kopyalayın.
     - Supabase projesinin aktif, duraklatılmamış olduğundan emin olun.
     - Bağlantı **Yeniden bağlan** gösteriyorsa, tokeni değiştirin veya Webza'yı tekrar yetkilendirin.
   </Accordion>
 
   <Accordion title="Uygulamam form gönderilerini göstermiyor">
-    Bu `submit` tabloları için beklenen bir durumdur. Tarayıcıdan yazma-okunamazdırlar, bu yüzden gönderiler uygulamada asla görünmez. Bunları Supabase kontrol panelinizden okuyun. Uygulamanız gönderileri listeliyor gibi görünüyorsa, örnek yer tutucu satırları gösteriyordur.
+    Bu `submit` tabloları için beklenen bir durumdur. Tarayıcıdan yalnızca yazılabilir oldukları için gönderiler uygulamada asla görünmez. Bunları Supabase kontrol panelinizden okuyun. Uygulamanız gönderileri listeliyor gibi görünüyorsa, aslında örnek yer tutucu satırları gösteriyordur.
   </Accordion>
 
   <Accordion title="Uygulamam veri okuyamıyor">
