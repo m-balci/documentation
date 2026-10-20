@@ -382,3 +382,119 @@
   .wz-ad, .wz-ad-glow, .wz-ad-logo, .wz-ad-btn svg { transition: none; }
   .wz-ad:hover, .wz-ad:hover .wz-ad-logo, .wz-ad:hover .wz-ad-glow { transform: none; }
 }
+
+/* ===== Hero build sequence v2 (18s loop) =====
+   1) AI step list in chat, 2) wireframe skeleton appears, 3) sections are built one by one,
+   4) "Live", 5) second prompt: top-to-bottom luxe repaint. Overrides the 14s timings above. */
+.wz-k-u, .wz-k-a1, .wz-k-u2, .wz-k-a2, .wz-k-b1, .wz-k-b2, .wz-k-b3, .wz-k-b4, .wz-k-b5, .wz-k-b6 { animation-duration: 18s; }
+.wz-k-dots { display: none !important; }
+.wz-k-u { animation-name: wz2-u; } .wz-k-a1 { animation-name: wz2-a1; } .wz-k-u2 { animation-name: wz2-u2; } .wz-k-a2 { animation-name: wz2-a2; }
+.wz-k-b1 { animation-name: wz2-b1; } .wz-k-b2 { animation-name: wz2-b2; } .wz-k-b3 { animation-name: wz2-b3; }
+.wz-k-b4 { animation-name: wz2-b4; } .wz-k-b5 { animation-name: wz2-b5; } .wz-k-b6 { animation-name: wz2-b6; }
+@keyframes wz2-u  { 0%,1% { opacity: 0; transform: translateY(8px); } 4%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-a1 { 0%,39.5% { opacity: 0; transform: translateY(8px); } 42%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-u2 { 0%,48% { opacity: 0; transform: translateY(8px); } 51%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-a2 { 0%,57.5% { opacity: 0; transform: translateY(8px); } 60%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+
+/* AI step list ("thinking out loud") */
+.wz-k-wrap > .wz-build { position: absolute; top: 0; inset-inline-start: 0; z-index: 1; }
+.wz-build { display: flex; flex-direction: column; gap: 7px; min-width: 190px; opacity: 0; animation: wz2-build 18s ease-out infinite; }
+.wz-step { display: flex; align-items: center; gap: 8px; line-height: 1.3; opacity: .4; animation: wz2-step 18s ease-out infinite; }
+.wz-step i { position: relative; flex: none; display: block; box-sizing: border-box; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--wz-line); animation: wz2-step-dot 18s ease-out infinite; }
+.wz-step i::before { content: ""; position: absolute; inset: -1.5px; border-radius: 50%; border: 1.5px solid transparent; border-top-color: var(--wz-accent); opacity: 0; animation: wz-spin .7s linear infinite, wz2-step-spin 18s ease-out infinite; }
+.wz-step i::after { content: ""; position: absolute; left: 3.5px; top: 1.2px; width: 3.5px; height: 6.5px; border: solid #fff; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg) scale(.4); opacity: 0; animation: wz2-step-check 18s ease-out infinite; }
+.wz-k-s2, .wz-k-s2 i, .wz-k-s2 i::after { animation-delay: 1.35s; } .wz-k-s2 i::before { animation-delay: 0s, 1.35s; }
+.wz-k-s3, .wz-k-s3 i, .wz-k-s3 i::after { animation-delay: 2.7s; }  .wz-k-s3 i::before { animation-delay: 0s, 2.7s; }
+.wz-k-s4, .wz-k-s4 i, .wz-k-s4 i::after { animation-delay: 4.05s; } .wz-k-s4 i::before { animation-delay: 0s, 4.05s; }
+@keyframes wz2-build { 0%,5% { opacity: 0; transform: translateY(8px); } 7%,38% { opacity: 1; transform: none; } 40.5%,100% { opacity: 0; transform: translateY(-4px); } }
+@keyframes wz2-step { 0%,6% { opacity: .4; } 7%,40% { opacity: 1; } 42%,100% { opacity: .4; } }
+@keyframes wz2-step-spin { 0%,6.5% { opacity: 0; } 7.5%,14% { opacity: 1; } 14.5%,100% { opacity: 0; } }
+@keyframes wz2-step-dot { 0%,14% { background-color: transparent; border-color: var(--wz-line); } 15%,40% { background-color: #3fb37f; border-color: #3fb37f; } 41%,100% { background-color: transparent; border-color: var(--wz-line); } }
+@keyframes wz2-step-check { 0%,14.2% { opacity: 0; transform: rotate(45deg) scale(.4); } 15.5%,40% { opacity: 1; transform: rotate(45deg) scale(1); } 41%,100% { opacity: 0; transform: rotate(45deg) scale(.4); } }
+
+/* Sections: wireframe first (fade in), then each one is "painted" in */
+.wz-bs-nav, .wz-bs-card, .wz-bs-book { position: relative; }
+@keyframes wz2-b1 { 0%,7.5%  { opacity: 0; transform: translateY(6px); } 9%,96%    { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-b2 { 0%,8.5%  { opacity: 0; transform: translateY(6px) scale(.98); } 10%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-b3 { 0%,9.5%  { opacity: 0; transform: translateY(8px) scale(.96); } 11%,96%   { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-b4 { 0%,10.3% { opacity: 0; transform: translateY(8px) scale(.96); } 11.8%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-b5 { 0%,11.1% { opacity: 0; transform: translateY(8px) scale(.96); } 12.6%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-b6 { 0%,12%   { opacity: 0; transform: translateY(8px); } 13.5%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: none; } }
+
+.wz-k-b1::after, .wz-k-b2::after, .wz-k-b3::after, .wz-k-b4::after, .wz-k-b5::after, .wz-k-b6::after {
+  content: ""; position: absolute; inset: 0; z-index: 6; pointer-events: none; border-radius: inherit;
+  background-color: #f8eff0; background-repeat: no-repeat;
+}
+.wz-k-b1::after {
+  background-image: linear-gradient(#ecdfe2,#ecdfe2), linear-gradient(#ecdfe2,#ecdfe2), linear-gradient(#e6d5d9,#e6d5d9);
+  background-size: 74px 10px, 96px 7px, 56px 18px;
+  background-position: 14px 50%, 58% 50%, calc(100% - 14px) 50%;
+  animation: wz2-sk-pulse 1.1s ease-in-out infinite alternate, wz2-cv-b1 18s ease-in-out infinite;
+}
+.wz-k-b2::after {
+  background-image: linear-gradient(#ecdfe2,#ecdfe2), linear-gradient(#e6d5d9,#e6d5d9), linear-gradient(#e6d5d9,#e6d5d9), linear-gradient(#efe3e5,#efe3e5), linear-gradient(#efe3e5,#efe3e5), linear-gradient(#e6d5d9,#e6d5d9), linear-gradient(#f0e4e6,#f0e4e6);
+  background-size: 84px 11px, 46% 17px, 34% 17px, 44% 8px, 32% 8px, 70px 22px, 34% 72%;
+  background-position: 16px 16px, 16px 38px, 16px 61px, 16px 88px, 16px 101px, 16px 118px, calc(100% - 16px) 50%;
+  animation: wz2-sk-pulse 1.1s ease-in-out infinite alternate, wz2-cv-b2 18s ease-in-out infinite;
+}
+.wz-k-b3::after, .wz-k-b4::after, .wz-k-b5::after {
+  background-image: linear-gradient(#ecdfe2,#ecdfe2), linear-gradient(#e6d5d9,#e6d5d9), linear-gradient(#efe3e5,#efe3e5);
+  background-size: 30px 30px, 66% 9px, 42% 7px;
+  background-position: 8px 8px, 8px 46px, 8px 61px;
+}
+.wz-k-b3::after { animation: wz2-sk-pulse 1.1s ease-in-out infinite alternate, wz2-cv-b3 18s ease-in-out infinite; }
+.wz-k-b4::after { animation: wz2-sk-pulse 1.1s ease-in-out infinite alternate, wz2-cv-b4 18s ease-in-out infinite; }
+.wz-k-b5::after { animation: wz2-sk-pulse 1.1s ease-in-out infinite alternate, wz2-cv-b5 18s ease-in-out infinite; }
+.wz-k-b6::after {
+  background-image: linear-gradient(#efe3e5,#efe3e5), linear-gradient(#ecdfe2,#ecdfe2), linear-gradient(#e6d5d9,#e6d5d9);
+  background-size: 44px 9px, 150px 24px, 84px 26px;
+  background-position: 14px 9px, 66px 2px, calc(100% - 14px) 1px;
+  animation: wz2-sk-pulse 1.1s ease-in-out infinite alternate, wz2-cv-b6 18s ease-in-out infinite;
+}
+@keyframes wz2-sk-pulse { from { background-color: #f8eff0; } to { background-color: #fdf8f7; } }
+/* Each cover: glows while "in focus", then wipes away left to right to reveal the real section */
+@keyframes wz2-cv-b1 { 0%,13.5% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 0 rgba(194,87,122,0); } 14.5%,15% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } 17.5%,100% { clip-path: inset(0 0 0 100%); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } }
+@keyframes wz2-cv-b2 { 0%,16.5% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 0 rgba(194,87,122,0); } 17.5%,18% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } 21.5%,100% { clip-path: inset(0 0 0 100%); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } }
+@keyframes wz2-cv-b3 { 0%,22%   { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 0 rgba(194,87,122,0); } 22.5%,23% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } 25%,100% { clip-path: inset(0 0 0 100%); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } }
+@keyframes wz2-cv-b4 { 0%,24%   { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 0 rgba(194,87,122,0); } 24.5%,25% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } 27%,100% { clip-path: inset(0 0 0 100%); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } }
+@keyframes wz2-cv-b5 { 0%,26%   { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 0 rgba(194,87,122,0); } 26.5%,27% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } 29%,100% { clip-path: inset(0 0 0 100%); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } }
+@keyframes wz2-cv-b6 { 0%,30%   { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 0 rgba(194,87,122,0); } 31%,31.5% { clip-path: inset(0 0 0 0); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } 34%,100% { clip-path: inset(0 0 0 100%); box-shadow: inset 0 0 0 2px rgba(194,87,122,.55); } }
+
+/* Status pills: "Live" after the first build, "Applying new style" then "Live" again after the restyle */
+.wz-lx-busy { animation: wz2-busy 18s ease-out infinite; }
+.wz-lx-done { animation: wz2-done 18s ease-out infinite; }
+@keyframes wz2-busy { 0%,51.5% { opacity: 0; transform: translateY(-4px); } 53%,58.5% { opacity: 1; transform: none; } 60%,100% { opacity: 0; transform: none; } }
+@keyframes wz2-done { 0%,38.5% { opacity: 0; transform: translateY(-4px) scale(.95); } 40.5%,46% { opacity: 1; transform: none; } 48%,59.5% { opacity: 0; transform: translateY(-4px) scale(.95); } 61.5%,74% { opacity: 1; transform: none; } 77%,100% { opacity: 0; transform: none; } }
+
+/* Restyle: a scan line moves top to bottom and each section turns "luxe" as it passes */
+.wz-typing.wz-k-dots2 { animation: wz2-dots2 18s ease-out infinite; }
+@keyframes wz2-dots2 { 0%,51% { opacity: 0; } 53%,57.5% { opacity: 1; } 58.5%,100% { opacity: 0; } }
+.wz-lx::after { inset: auto 0; top: -30%; height: 30%; transform: none; background: linear-gradient(180deg, transparent 0%, rgba(255,236,200,.5) 40%, rgba(255,255,255,.95) 50%, rgba(255,236,200,.5) 60%, transparent 100%); animation: wz2-scan 18s ease-in-out infinite; }
+@keyframes wz2-scan { 0%,54.5% { opacity: 0; top: -30%; } 55% { opacity: 1; top: -30%; } 62% { opacity: 1; top: 100%; } 62.5%,100% { opacity: 0; top: 100%; } }
+.wz-bs-pill { animation: wz2-lx-btn 18s ease-in-out infinite; }
+.wz-bs-hero::before { animation: wz2-lx-fade 18s ease-out .25s infinite; }
+.wz-bs-h em { animation: wz2-lx-grad 18s ease-in-out .25s infinite; }
+.wz-bs-btn:not(.wz-bs-btn-o) { animation: wz2-lx-btn 18s ease-in-out .25s infinite; }
+.wz-bs-badge { animation: wz2-lx-badge 18s ease-in-out .25s infinite; }
+.wz-bs-rating { animation: wz2-lx-ring 18s ease-in-out .25s infinite; }
+.wz-bs-icon { animation: wz2-lx-ring 18s ease-in-out .6s infinite; }
+.wz-price { animation: wz2-lx-price 18s ease-in-out .6s infinite; }
+.wz-bs-slot-on { animation: wz2-lx-slot 18s ease-in-out .9s infinite; }
+.wz-bs-book em { animation: wz2-lx-grad 18s ease-in-out .9s infinite; }
+@keyframes wz2-lx-fade { 0%,56% { opacity: 0; } 59%,96% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes wz2-lx-grad { 0%,56% { background-position: 0% 0; } 59%,96% { background-position: 100% 0; } 100% { background-position: 0% 0; } }
+@keyframes wz2-lx-btn { 0%,56% { background-color: #2b1a2e; box-shadow: none; } 59%,96% { background-color: #b8925a; box-shadow: 0 6px 14px -8px rgba(184,146,90,.95); } 100% { background-color: #2b1a2e; box-shadow: none; } }
+@keyframes wz2-lx-badge { 0%,56% { border-color: #f1d6dc; color: #9c3d61; } 59%,96% { border-color: #e8d3ad; color: #8a6634; } 100% { border-color: #f1d6dc; color: #9c3d61; } }
+@keyframes wz2-lx-slot { 0%,56% { background-color: #fde3e8; border-color: #c2577a; color: #9c3d61; } 59%,96% { background-color: #f8ecd6; border-color: #b8925a; color: #7a5a2e; } 100% { background-color: #fde3e8; border-color: #c2577a; color: #9c3d61; } }
+@keyframes wz2-lx-ring { 0%,56% { box-shadow: 0 0 0 0 rgba(184,146,90,0); } 59%,96% { box-shadow: 0 0 0 1px #e3c58f, 0 6px 14px -8px rgba(184,146,90,.7); } 100% { box-shadow: 0 0 0 0 rgba(184,146,90,0); } }
+@keyframes wz2-lx-price { 0%,56% { color: #9c3d61; } 59%,96% { color: #9a7440; } 100% { color: #9c3d61; } }
+
+@media (max-width: 560px) {
+  .wz-msg.wz-build { font-size: 12px; }
+  .wz-k-b3::after, .wz-k-b4::after, .wz-k-b5::after { background-size: 30px 30px, 46% 9px, 28% 7px; background-position: 10px 50%, 50px calc(50% - 6px), 50px calc(50% + 8px); }
+  .wz-k-b6::after { background-size: 50px 9px, 62% 24px, calc(100% - 24px) 30px; background-position: 12px 4px, 12px 22px, 12px calc(100% - 12px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wz-k-build, .wz-k-b1::after, .wz-k-b2::after, .wz-k-b3::after, .wz-k-b4::after, .wz-k-b5::after, .wz-k-b6::after, .wz-lx::after, .wz-lx-status { display: none; animation: none; }
+  .wz-bs-hero::before, .wz-bs-h em, .wz-bs-book em, .wz-bs-btn, .wz-bs-pill, .wz-bs-badge, .wz-bs-slot-on, .wz-bs-icon, .wz-bs-rating, .wz-price, .wz-typing.wz-k-dots2 { animation: none; }
+}
