@@ -3,7 +3,7 @@ title: "Editör"
 description: "Webza proje editörüne genel bakış, düzeni, araç çubuğu ve klavye kısayolları."
 ---
 
-Proje editörü, kontrol panelinde bir proje kartı üzerinde **Başlat**'ı tıkladıktan sonra girdiğiniz çalışma alanıdır. Sohbeti, önizlemeyi, kodu ve ayarları tek bir yerde bir araya getirerek, sekme değiştirmeden sitenizi oluşturmanıza ve iyileştirmenize olanak tanır.
+Proje editörü, kontrol panelinde bir proje kartı üzerinde **Başlat**'ı tıkladıktan sonra açılan çalışma alanıdır. Sohbet, önizleme, kod ve ayarları tek bir yerde toplayarak sekme değiştirmeden sitenizi oluşturup geliştirmenizi sağlar.
 
 {/* TODO: Add an annotated screenshot of the editor with the chat panel, preview, toolbar, and settings tab labeled */}
 
@@ -13,23 +13,23 @@ Editör üç ana alana ayrılır:
 
 <CardGroup cols={2}>
   <Card title="Proje sohbeti" icon="message" href="/tr/project-chat">
-    Yapay zekadan sayfaları düzenlemesini, bölüm eklemesini, stilleri değiştirmesini veya hataları düzeltmesini isteyin. Talimatlarınız, gerçek zamanlı olarak inceleyebileceğiniz kod değişikliklerine dönüşür.
+    Yapay zekaya sayfaları düzenlemesini, bölüm eklemesini, stilleri değiştirmesini veya hataları düzeltmesini söyleyin. Verdiğiniz talimatlar, gerçek zamanlı olarak inceleyebileceğiniz kod değişikliklerine dönüşür.
   </Card>
 
   <Card title="Canlı önizleme" icon="eye" href="/tr/preview">
-    Ziyaretçilerin göreceği şekilde sitenizi görün. Önizleme, her yapay zeka düzenlemesinden veya manuel kod kaydından sonra otomatik olarak güncellenir.
+    Ziyaretçilerin göreceği şekilde sitenizi görün. Önizleme, her yapay zeka düzenlemesinden veya manuel kod kaydetme işleminden sonra otomatik güncellenir.
   </Card>
 
   <Card title="Kod editörü" icon="code" href="/tr/code-editor">
-    Dosyaları doğrudan sözdizimi vurgulama, arama ve kaydetme ile inceleyin ve düzenleyin. Monaco editörü üzerine kuruludur.
+    Dosyaları doğrudan sözdizimi vurgulama, arama ve kaydetme özellikleriyle inceleyip düzenleyin. Monaco editörü üzerine kuruludur.
   </Card>
 
   <Card title="Ayarlar" icon="gear" href="/tr/settings">
-    Alan adlarını, analitiği, SEO'yu ve diğer proje düzeyi seçenekleri yönetin.
+    Alan adlarını, analitikleri, SEO ayarlarını ve diğer proje düzeyindeki seçenekleri yönetin.
   </Card>
 </CardGroup>
 
-Sohbet panelini daraltarak önizlemeye tam genişlik verebilirsiniz. Bu, tasarım detaylarına odaklandığınız ve yapay zeka yardımına ihtiyacınız olmadığında kullanışlıdır.
+Sohbet panelini daraltarak önizlemeyi tam ekran görebilirsiniz. Bu, tasarım detaylarına odaklandığınız ve yapay zeka yardımına ihtiyaç duymadığınız zamanlarda işinize yarar.
 
 ## Araç çubuğu
 
@@ -38,8 +38,8 @@ Sohbet panelini daraltarak önizlemeye tam genişlik verebilirsiniz. Bu, tasarı
 - **Yayınla**: Sitenizi canlı hale getirmek için yayınlama akışını açar. [Yayınla](/tr/publish) sayfasına bakın.
 - **Yeniden oluştur**: Projeyi en son koddan yeniden oluşturur. Önizleme senkronize görünmüyorsa bunu kullanın.
 - **Turu tekrar oynat**: **Yeniden oluştur**'un yanındaki dairesel ok düğmesi, rehberli editör turunu tekrar oynatır.
-- **Dışa aktar**: Planınız kod dışa aktarımını içeriyorsa (Plus veya Premium), bu düğme tam kaynak kodu ZIP dosyası olarak indirir; bu dosya Vercel'de yayınlamaya veya istediğiniz yerde barındırmaya hazırdır.
-- **Tema indir (.zip)**: Tema projeleri için, tam kaynak dışa aktarımı yerine kurulabilir WordPress blok teması veya Shopify Online Store 2.0 teması ZIP dosyası olarak döner.
+- **Dışa aktar**: Planınız kod dışa aktarımını destekliyorsa (Plus veya Premium), bu düğme tam kaynak kodunu ZIP dosyası olarak indirir; bu dosya Vercel'de yayınlamaya veya istediğiniz yerde barındırmaya hazırdır.
+- **Tema indir (.zip)**: Tema projelerinde, tam kaynak dışa aktarımı yerine kurulabilir WordPress blok teması veya Shopify Online Store 2.0 teması ZIP dosyası olarak döner.
 
 {/* TODO: Confirm whether Free plans see the Export button disabled or hidden */}
 
@@ -50,7 +50,7 @@ Sohbet panelini daraltarak önizlemeye tam genişlik verebilirsiniz. Bu, tasarı
 - **Auto**: Yapay zeka her istek için çaba seviyesini kendisi belirler.
 - **Low**, **Medium** veya **High**: Daha yüksek çaba daha kapsamlı sonuçlar verebilir ancak daha fazla kredi kullanabilir.
 
-Seçilen yapay zeka modelinde çaba kontrolü yoksa, bu ayar devre dışı görünür. Ayrıntılar için [Krediler ve kullanım](/tr/credits-and-usage) sayfasına bakın.
+Seçilen yapay zeka modelinde çaba ayarı yoksa, bu seçenek devre dışı görünür. Ayrıntılar için [Krediler ve kullanım](/tr/credits-and-usage) sayfasına bakın.
 
 {/* TODO: Confirm the default Effort value for new projects. */}
 
@@ -66,7 +66,7 @@ Planınız bunu destekliyorsa, projenizi Webza dışında barındırmak için in
     Araç çubuğunda **Dışa aktar**'ı (veya tema projeleri için **Tema indir (.zip)**'i) tıklayın.
   </Step>
   <Step title="ZIP dosyasını indirin">
-    Dosya bilgisayarınıza indirilir. Çıkarın ve yerel geliştirme veya Vercel dağıtımı için içindeki README dosyasını takip edin. Web sitesi dışa aktarımları `.gitignore` dosyası içerir, böylece kodu hemen bir Git deposuna gönderebilirsiniz.
+    Dosya bilgisayarınıza indirilir. İçindeki README dosyasındaki yönergeleri izleyerek yerel geliştirme yapabilir veya Vercel'e dağıtabilirsiniz. Web sitesi dışa aktarımları `.gitignore` dosyası içerdiğinden, kodu hemen bir Git deposuna gönderebilirsiniz.
   </Step>
 </Steps>
 

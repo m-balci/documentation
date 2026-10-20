@@ -3,9 +3,9 @@ title: "Önizleme"
 description: "Önizleme panelini kullanarak projenizi canlı olarak görün, öğeleri inceleyin, görünüm alanını yeniden boyutlandırın, tasarımları yeniden temalandırın ve düzeltme geçmişini yönetin."
 ---
 
-Önizleme paneli, projenizin canlı görünümünü gösterir. Görünüm alanını yeniden boyutlandırabilir, öğeleri inceleyebilir, tasarımı yeniden temalandırabilir ve düzeltme geçmişinde adım atabilirsiniz. Önizleme, bir oluşturma tamamlandığında kendini otomatik olarak yeniden yükler, bu nedenle manuel bir yenileme düğmesine ihtiyacınız yoktur.
+Önizleme paneli, projenizin canlı görünümünü gösterir. Görünüm alanını yeniden boyutlandırabilir, öğeleri inceleyebilir, tasarımı yeniden temalandırabilir ve düzeltme geçmişinde adım atabilirsiniz. Önizleme, bir oluşturma tamamlandığında kendini otomatik olarak yeniden yükler; bu yüzden manuel yenileme düğmesine gerek yoktur.
 
-Web sitesi projelerinde önizleme arka planda oluşturulur. Yeniden oluşturma, Undo, Redo, geri yükleme, stil düzenlemeleri ve tasarım değişiklikleri hemen sonuç verir; yeni önizleme hazırlanırken küçük bir **Updating preview** göstergesi belirir. Bu sırada sohbete devam edebilirsiniz. Önizleme güncellemesi başarısız olursa, son çalışan önizleme yerinde kalır.
+Web sitesi projelerinde önizleme arka planda oluşturulur. Yeniden oluşturma, geri alma, yineleme, geri yükleme, stil düzenlemeleri ve tasarım değişiklikleri hemen sonuç verir; yeni önizleme hazırlanırken küçük bir **Updating preview** göstergesi belirir. Bu sırada sohbete devam edebilirsiniz. Önizleme güncellemesi başarısız olursa, önceki çalışan önizleme ekranda kalır.
 
 ## Görünüm alanı kontrolleri
 
@@ -19,14 +19,14 @@ Projenizin farklı boyutlarda nasıl göründüğünü test etmek için görün�
 
 ## İnceleme modu
 
-İnceleme modunu açmak veya kapatmak için **İncele** düğmesini tıklayın. İnceleme modu açıkken, önizlemede herhangi bir öğeye tıklamak öğe inceleme araç çubuğunu açar.
+İnceleme modunu açmak veya kapatmak için **İncele** düğmesine tıklayın. İnceleme modu açıkken, önizlemede herhangi bir öğeye tıklayarak öğe inceleme araç çubuğunu açabilirsiniz.
 
-Araç çubuğu eylemleri, seçtiğiniz öğeye bağlıdır:
+Araç çubuğundaki eylemler, hangi öğeyi seçtiğinize göre değişir:
 
-- **Metni düzenle** (yalnızca metin öğeleri): Öğe metnini satır içi olarak düzenleyin. Değişiklik, bekleyen değişiklikler çubuğunda sıraya girer.
-- **Görsel** (yalnızca `<img>` öğeleri): Bir dosya yükleyerek veya görsel URL'si yapıştırarak görsel kaynağını değiştirin. Değişiklik, bekleyen değişiklikler çubuğunda sıraya girer.
-- **Stil**: Renkler, boşluklar ve boyutlandırma gibi satır içi stilleri ayarlayın. Stil düzenlemeleri, yapay zeka olmadan kendi başına uygulanır.
-- **AI ile düzenle**: Öğeyi bir talimatla yapay zekaya gönderin. Değişiklik, bekleyen değişiklikler çubuğunda sıraya girer.
+- **Metni düzenle** (yalnızca metin öğeleri): Öğenin metnini satır içi düzenleyin. Değişiklik bekleyen değişiklikler çubuğunda sıraya girer.
+- **Görsel** (yalnızca `<img>` öğeleri): Görsel kaynağını bir dosya yükleyerek veya görsel URL'si yapıştırarak değiştirin. Değişiklik bekleyen değişiklikler çubuğunda sıraya girer.
+- **Stil**: Renkler, boşluklar ve boyutlandırma gibi satır içi stilleri ayarlayın. Stil düzenlemeleri yapay zeka olmadan doğrudan uygulanır.
+- **AI ile düzenle**: Öğeyi yapay zekaya bir talimatla gönderin. Değişiklik bekleyen değişiklikler çubuğunda sıraya girer.
 - **Kapat**: İncelemeyi kapatır.
 
 ### Bekleyen değişiklikler çubuğu
@@ -52,7 +52,7 @@ Zaten oluşturulmuş bir siteyi yeniden temalandırmak için **Tasarım**'ı tı
 2. İsteğe bağlı olarak bir vurgu paleti seçin.
 3. Yeni temayı uygulamak için **AI'ya sor** düğmesini tıklayın.
 
-Bu, bir yeniden oluşturma tetikler. Önizleme, gerçek tasarımla yeniden yüklenir ve yapay zeka, sabit kodlanmış renkler için bir düzeltme geçişi çalıştırır. Bu, bir sohbet isteği gibi oluşturma kredisi harcar. Başka bir oluşturma çalışırken tasarım değişikliği uygulayamazsınız.
+Bu, bir yeniden oluşturma tetikler. Önizleme, yeni tasarımla yeniden yüklenir ve yapay zeka, sabit kodlanmış renkler için bir düzeltme geçişi çalıştırır. Bu, bir sohbet isteği gibi oluşturma kredisi harcar. Başka bir oluşturma çalışırken tasarım değişikliği uygulayamazsınız.
 
 <Info>
   Tasarım modu yalnızca web siteleri için kullanılabilir. WordPress ve Shopify tema projeleri için gizlidir; bunlar oluşturulurken seçilen tasarım sistemini korur.
@@ -67,14 +67,14 @@ Proje geçmişinde adım atmak için **Geri al** ve **Yinele** düğmelerini kul
 | Geri al | Ctrl/Cmd + Z |
 | Yinele | Ctrl/Cmd + Shift + Z veya Ctrl + Y |
 
-Her geri alma, tam olarak bir değişikliği geri alır: bir yapay zeka sohbet isteği, bir Stil düzenlemesi veya bir tasarım yeniden temalama. Geri aldıktan sonra proje yeniden oluşturulur. En yeni çalışmanız, geri almadan önce kontrol noktası yapılır, böylece yineleme geri getirebilir. Her geri alma ve yineleme, yapay zekanın farkında kalması için sohbete kaydedilir.
+Her geri alma, tam olarak bir değişikliği geri alır: bir yapay zeka sohbet isteği, bir stil düzenlemesi veya bir tasarım yeniden temalama. Geri aldıktan sonra proje yeniden oluşturulur. En yeni çalışmanız, geri almadan önce kontrol noktası yapılır, böylece yineleme onu geri getirebilir. Her geri alma ve yineleme, yapay zekanın farkında kalması için sohbete kaydedilir.
 
 <Warning>
   Geri alma ve yineleme, bir oluşturma çalışırken kullanılamaz. Yepyeni bir proje, ikinci değişikliğe kadar geri alınacak bir şey içermez.
 </Warning>
 
 <Warning>
-  Geçmişin içindeyken (geri aldıktan sonra) yapılan manuel kod editörü düzenlemeleri kaydedilmez. Sonraki Geri alma veya Geri yükleme işlemi bunları uyarıda bulunmadan atar. Önce en yeni duruma dönün veya değişikliği yapay zekaya yaptırın.
+  Geçmişin içindeyken (geri aldıktan sonra) yapılan manuel kod editörü düzenlemeleri kaydedilmez. Sonraki geri alma veya geri yükleme işlemi bunları uyarıda bulunmadan atar. Önce en yeni duruma dönün veya değişikliği yapay zekaya yaptırın.
 </Warning>
 
 <Info>
@@ -87,7 +87,7 @@ Saat simgesini tıklayarak düzeltme geçmişini açın. Her yapay zeka isteğin
 
 Liste, etiketleri, zaman damgalarını ve dosya sayılarını gösterir. Mevcut sürümde **Güncel** rozeti bulunur. Herhangi bir sürümdeki **Geri yükle** düğmesini tıklayarak o sürüme atlayabilirsiniz.
 
-Geri yükleme önce mevcut durumunuzu kontrol noktası yapar, böylece geri yükleme tersine çevrilebilir. Her geri yükleme bir yeniden oluşturma tetikler. Düzeltme geçmişi yalnızca web siteleri ve WordPress temaları için kullanılabilir.
+Geri yükleme işlemi önce mevcut durumunuzu kontrol noktası yapar, bu sayede geri yükleme işlemi tersine çevrilebilir. Her geri yükleme bir yeniden oluşturma tetikler. Düzeltme geçmişi yalnızca web siteleri ve WordPress temaları için kullanılabilir.
 
 <Note>
   Yayın anlık görüntüleri, düzeltme geçmişinden ayrı tutulur. Ayrıntılar için [Yayınla](/tr/publish) sayfasına bakın.

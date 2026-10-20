@@ -19,13 +19,13 @@ Editör içerisinde arama kutusunu açmak için <kbd>Ctrl</kbd> / <kbd>Cmd</kbd>
 
 ## Değişikliklerinizi kaydedin
 
-Mevcut dosyayı kaydetmek için <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> tuşlarına basın. Kaydetene kadar dosya adının yanında bir nokta veya kaydedilmemiş-değişiklik göstergesi belirir. Canlı önizleme, kaydettikten sonra güncellenir.
+Mevcut dosyayı kaydetmek için <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>S</kbd> tuşlarına basın. Kaydetene kadar dosya adının yanında bir nokta veya kaydedilmemiş değişiklik göstergesi belirir. Canlı önizleme, kaydettikten sonra güncellenir.
 
 AI derleme yaparken dosya kaydedemezsiniz. Editör bunun nedenini açıklayan bir mesaj gösterir ve kaydedilmemiş metninizi editörde tutar, böylece derleme bittiğinde kaydedebilirsiniz.
 
 ## Salt okunur dosyalar
 
-Küçük bir sistem dosyaları grubu salt okunurdur. Bunlar şablon ve oluşturma sistemi tarafından yönetilir ve kötü bir düzenleme projenin yeniden oluşturulamaz hale gelmesine neden olabilir. Bu dosyalardan birini seçtiğinizde, editör bir **Salt okunur** kilit rozeti gösterir ve **Kaydet** düğmesini gizler.
+Küçük bir sistem dosyaları grubu salt okunurdur. Bunlar şablon ve derleme sistemi tarafından yönetilir; kötü bir düzenleme projeyi yeniden oluşturulamayacak hale getirebilir. Bu dosyalardan birini seçtiğinizde, editör bir **Salt okunur** kilit rozeti gösterir ve **Kaydet** düğmesini gizler.
 
 <AccordionGroup>
   <Accordion title="Kök düzeyi salt okunur dosyalar">
@@ -41,7 +41,7 @@ Küçük bir sistem dosyaları grubu salt okunurdur. Bunlar şablon ve oluşturm
   </Accordion>
 </AccordionGroup>
 
-Bu dosyaların kilidini açan bir ayar yoktur. `index.html`, yalnızca uygulamayı yükleyen kabuktur. Görünen her sayfa, başlık, altbilgi ve bağlantı `src/` altında yaşar ve oradaki her şey, `main.tsx`, `index.css` ve `vite-env.d.ts` dışında düzenlenebilir.
+Bu dosyaların kilidini açan bir ayar yoktur. `index.html`, yalnızca uygulamayı yükleyen kabuktur. Görünen her sayfa, başlık, altbilgi ve bağlantı `src/` altındadır ve `main.tsx`, `index.css` ve `vite-env.d.ts` dışındaki her şey düzenlenebilir.
 
 ## Analitik ve izleme parçaları
 
