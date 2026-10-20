@@ -4,7 +4,7 @@ sidebarTitle: "Supabase"
 description: "Oluşturulan uygulamalara Postgres veritabanı, kimlik doğrulama, depolama ve satır düzeyinde güvenlik eklemek için kendi Supabase projenizi getirin."
 ---
 
-Her Webza planında, kendi Supabase projenizi ekleyerek oluşturulan uygulamaları veritabanı destekli yapabilirsiniz. Uygulamalarınız ilişkisel Postgres tabloları, kimlik doğrulama, depolama ve satır düzeyinde güvenlik (RLS) elde eder. Yapay zeka, uygulamayı inşa ederken tabloları ve kimlik doğrulama akışlarını sizin için otomatik olarak tanımlar.
+Her Webza planında, kendi Supabase projenizi ekleyerek oluşturulan uygulamaları veritabanı destekli yapabilirsiniz. Uygulamalarınız ilişkisel Postgres tabloları, kimlik doğrulama, depolama ve satır düzeyinde güvenlik (RLS) elde eder. Yapay zeka, uygulamayı derlerken tabloları ve kimlik doğrulama akışlarını sizin için otomatik olarak tanımlar.
 
 <Note>
   Veritabanı bağlantıları WordPress veya Shopify tema projeleri için mevcut değildir.
@@ -12,7 +12,7 @@ Her Webza planında, kendi Supabase projenizi ekleyerek oluşturulan uygulamalar
 
 ## Veritabanının sahibi sizsiniz
 
-Webza, kendi-veritabanını-getir modeli kullanır. Bir Supabase projesi sağlarsınız ve oluşturulan uygulamalar `@supabase/supabase-js` istemcisi aracılığıyla onunla iletişim kurar. Webza veritabanınızı asla sağlamaz, barındırmaz, sahiplenmez veya faturalandırmaz.
+Webza, "kendi veritabanınızı getirin" modelini kullanır. Bir Supabase projesi sağlarsınız ve oluşturulan uygulamalar `@supabase/supabase-js` istemcisi aracılığıyla onunla iletişim kurar. Webza veritabanınızı asla sağlamaz, barındırmaz, sahiplenmez veya faturalandırmaz.
 
 - Kendi Supabase bağlantılarınızdan oluşan bir kütüphane tutar ve her projeye bir tane bağlar.
 - Webza, veritabanınızda her proje için ayrılmış bir şema oluşturur ve tabloları bu şemada kurar.
@@ -133,7 +133,7 @@ Oluşturma sayfasında, **Özelleştir** açılır penceresini açın ve **Verit
 
 Daha sonra veritabanı eklemek, değiştirmek veya ayırmak için projenin **Ayarlar → Veritabanı** bölümüne gidin.
 
-- Bağlantı değiştirmek hiçbir şemayı düşürmez. Eski şema, oluşturulduğu veritabanında kalır.
+- Bağlantıyı değiştirmek hiçbir şemayı silmez. Eski şema, oluşturulduğu veritabanında kalır.
 - Veritabanını istediğiniz zaman ayırabilirsiniz.
 - Projeyi kopyalamak veritabanı bağlantısını kopyalamaz.
 
@@ -198,14 +198,14 @@ Erişim iptal edildiğinde veya token süresi dolduğunda, bağlantı **Veritaba
 
 <AccordionGroup>
   <Accordion title="Bağlantı testi başarısız oldu">
-    - Manuel bağlantılar için **Connect** bölümündeki Session pooler URI'sini kullanın, `[YOUR-PASSWORD]` kısmını koruyun ve şifreyi **Veritabanı şifresi** alanına girin.
+    - Elle eklenen bağlantılar için **Connect** bölümündeki Session pooler URI'sini kullanın, `[YOUR-PASSWORD]` kısmını koruyun ve şifreyi **Veritabanı şifresi** alanına girin.
     - Yayınlanabilir anahtar reddedilirse, aynı Supabase projesinden tekrar kopyalayın.
     - Supabase projesinin aktif, duraklatılmamış olduğundan emin olun.
     - Bağlantı **Yeniden bağlan** gösteriyorsa, tokeni değiştirin veya Webza'yı tekrar yetkilendirin.
   </Accordion>
 
   <Accordion title="Uygulamam form gönderilerini göstermiyor">
-    Bu `submit` tabloları için beklenen bir durumdur. Tarayıcıdan yalnızca yazılabilir oldukları için gönderiler uygulamada asla görünmez. Bunları Supabase kontrol panelinizden okuyun. Uygulamanız gönderileri listeliyor gibi görünüyorsa, aslında örnek yer tutucu satırları gösteriyordur.
+    `submit` tablolarında bu beklenen bir durumdur. Bu tablolara tarayıcıdan yalnızca yazılabildiği için gönderiler uygulamada hiçbir zaman görünmez. Bunları Supabase kontrol panelinizden okuyun. Uygulamanız gönderileri listeliyor gibi görünüyorsa, aslında örnek yer tutucu satırları gösteriyordur.
   </Accordion>
 
   <Accordion title="Uygulamam veri okuyamıyor">
