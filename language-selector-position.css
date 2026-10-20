@@ -30,7 +30,7 @@
 
 /* Tema seçiciyi Webza butonuyla aynı yükseklikte çerçeveli bir kutuya al */
 #theme-preference-menu-trigger,
-[data-component-name="theme-preference-menu"] {
+button[data-component-name="theme-preference-menu"]:not([role^="menuitem"]) {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -48,7 +48,7 @@
 }
 
 #theme-preference-menu-trigger:hover,
-[data-component-name="theme-preference-menu"]:hover {
+button[data-component-name="theme-preference-menu"]:not([role^="menuitem"]):hover {
   border-color: rgba(10, 10, 10, 0.45) !important;
   background-color: #ebebec !important;
 }
@@ -62,7 +62,7 @@
 
 /* Koyu mod */
 html.dark #theme-preference-menu-trigger,
-html.dark [data-component-name="theme-preference-menu"] {
+html.dark button[data-component-name="theme-preference-menu"]:not([role^="menuitem"]) {
   border-color: rgba(255, 255, 255, 0.32) !important;
   background-color: #1c1c1c !important;
   box-shadow:
@@ -71,7 +71,7 @@ html.dark [data-component-name="theme-preference-menu"] {
 }
 
 html.dark #theme-preference-menu-trigger:hover,
-html.dark [data-component-name="theme-preference-menu"]:hover {
+html.dark button[data-component-name="theme-preference-menu"]:not([role^="menuitem"]):hover {
   border-color: rgba(255, 255, 255, 0.5) !important;
   background-color: #262626 !important;
 }
