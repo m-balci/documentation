@@ -1322,5 +1322,10 @@
   },
   "appearance": {
     "default": "system"
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://docs.webza.ai"
+    }
   }
 }
