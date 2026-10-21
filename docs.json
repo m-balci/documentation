@@ -1325,7 +1325,8 @@
   },
   "seo": {
     "metatags": {
-      "canonical": "https://docs.webza.ai"
+      "canonical": "https://docs.webza.ai",
+      "google-site-verification": "D5znEhTpi8iDPJQVIj9f8YVitV2ImDM-F5T2yY4PmEc"
     }
   }
 }
