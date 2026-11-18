@@ -17,23 +17,23 @@ mode: "center"
 
   ### Verbessert
 
-  - **Eigener Code und Cookie-Einwilligung**: Solange das Cookie-Banner aktiv ist, wird der eigene Code unter Admin > Settings > General erst geladen, wenn der Besucher Cookies zulässt (standardmäßig Analyse-Cookies). Tracking-Code startet damit nicht mehr vor der Einwilligung. Enthält Ihr Code ein Chat-Widget oder anderen Code ohne Tracking, stellen Sie **Load custom code after consent for** auf **Always load (no consent needed)**. Siehe [Settings](/settings).
+  - **Eigener Code und Cookie-Einwilligung**: Solange das Cookie-Banner aktiv ist, wird der eigene Code unter Admin > Settings > General erst geladen, wenn der Besucher Cookies zulässt (standardmäßig Analyse-Cookies). Tracking-Code startet damit nicht mehr vor der Einwilligung. Enthält Ihr Code ein Chat-Widget oder anderen Code ohne Tracking, stellen Sie **Load custom code after consent for** auf **Always load (no consent needed)**.
   - In Webby gelöschte Dateien werden jetzt zuverlässig auch aus Ihrem Cloud-Speicher entfernt, selbst nach einem vorübergehenden Speicherfehler.
   - Fehlermeldungen beim Cloud-Speicher sind verständlicher: Statt der Rohmeldung des Anbieters sehen Sie eine kurze Meldung mit Referenzcode. Neue Uploads werden abgelehnt, solange die Einstellungen des aktiven Anbieters nicht nutzbar sind. Einen solchen Anbieter können Sie unter Admin > Plugins deaktivieren.
 
   ### Behoben
 
-  - Die Karte „Custom Domain“ zeigte eine Domain als Active an, obwohl das Projekt nicht veröffentlicht war. Jetzt wird sie als Offline mit einer kurzen Erklärung angezeigt. Siehe [Custom domains](/custom-domains).
+  - Die Karte „Custom Domain“ zeigte eine Domain als Active an, obwohl das Projekt nicht veröffentlicht war. Jetzt wird sie als Offline mit einer kurzen Erklärung angezeigt. Siehe [Benutzerdefinierte Domains](/de/custom-domains).
   - Nach einer Änderung von Bucket, Region oder Ordner eines Cloud-Speicher-Anbieters waren früher gespeicherte Dateien nicht mehr lesbar. Sie bleiben jetzt an ihrem ursprünglichen Ort, neue Uploads landen am neuen.
   - Cloud-Speicher-Add-ons funktionierten nicht, wenn ein Ordnerpräfix festgelegt war.
   - Downloads aus Amazon S3 und DigitalOcean Spaces, auch Ticket-Anhänge, wurden unter einem zufälligen Namen gespeichert. Jetzt behalten sie ihren ursprünglichen Dateinamen und -typ.
   - Zwei Cloud-Speicher-Anbieter konnten gleichzeitig aktiv sein, wenn sie zeitgleich aktiviert wurden.
   - Beim Hochladen eines Plugin-Updates wurde manchmal eine zweite Kopie des Plugins angelegt, statt das installierte zu ersetzen.
-  - Projekte im Papierkorb zählten nicht zum Speicherlimit. Das Wiederherstellen eines Projekts mit Dateien ist jetzt nicht möglich, solange Sie das Speicherlimit Ihres Tarifs überschreiten. Siehe [Subscription plans](/subscription-plans).
+  - Projekte im Papierkorb zählten nicht zum Speicherlimit. Das Wiederherstellen eines Projekts mit Dateien ist jetzt nicht möglich, solange Sie das Speicherlimit Ihres Tarifs überschreiten. Siehe [Abonnementpläne](/de/subscription-plans).
   - Fortschrittsbalken wurden in Sprachen mit Schreibrichtung von rechts nach links von der falschen Seite gefüllt.
-  - Mit „Swap Image“ im Editor hochgeladene Bilder wurden auf der veröffentlichten Website nicht angezeigt. Siehe [Editor](/editor).
-  - Ein Projekt konnte nach Abschluss des Builds weiter als „building“ angezeigt werden und neue Builds mit der Meldung „active session“ blockieren. Siehe [Project chat](/project-chat).
-  - In der Telefon- und Tablet-Vorschau wurde die linke Seite der Website abgeschnitten, wenn der Vorschaubereich schmaler als das Gerät war. Siehe [Preview](/preview).
+  - Mit „Swap Image“ im Editor hochgeladene Bilder wurden auf der veröffentlichten Website nicht angezeigt. Siehe [Editor](/de/editor).
+  - Ein Projekt konnte nach Abschluss des Builds weiter als „building“ angezeigt werden und neue Builds mit der Meldung „active session“ blockieren. Siehe [Projekt-Chat](/de/project-chat).
+  - In der Telefon- und Tablet-Vorschau wurde die linke Seite der Website abgeschnitten, wenn der Vorschaubereich schmaler als das Gerät war. Siehe [Live-Vorschau](/de/preview).
 </Update>
 
 <Update label="Oktober 2026">
