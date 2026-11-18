@@ -8,27 +8,13 @@ mode: "center"
 {/* TODO: Entries are grouped by month. Confirm the exact release dates for the late August and early September updates. */}
 
 <Update label="November 2026">
-  ### New
-
-  - **Block disposable emails**: A new Block Disposable Emails setting in Admin > Settings > Authentication refuses sign-ups and email changes that use temporary or disposable email addresses. It is on by default.
-  - **Sign-up limits**: Sign-ups are now limited to 5 attempts per minute and 20 per day from the same IP address.
-  - **Test Connection for cloud storage**: Check your bucket details from the settings of a cloud storage add-on before saving.
-  - **Move Files for cloud storage**: The active cloud storage add-on in Admin > Plugins can now move your existing files to it in the background. If it is interrupted, it continues where it left off.
-
   ### Improved
 
-  - **Custom code and cookie consent**: While the cookie consent banner is on, the custom code in Admin > Settings > General now waits until the visitor allows cookies (Analytics cookies by default), so tracking code no longer loads before consent. If your custom code holds a chat widget or other code that does not track visitors, set **Load custom code after consent for** to **Always load (no consent needed)**. See [Settings](/settings).
-  - Files deleted in Webby are now reliably removed from your cloud storage bucket, even after a temporary storage error.
-  - Cloud storage errors are now clearer: you see a short message with a reference code instead of the provider's raw error. New uploads are refused while the active provider's settings cannot be used, and you can switch such a provider off in Admin > Plugins.
+  - **Sign-up protection**: Sign-ups are now limited to 5 attempts per minute and 20 per day from the same IP address.
 
   ### Fixed
 
   - The Custom Domain card showed a domain as Active while its project was not published. It now shows Offline with a short explanation. See [Custom domains](/custom-domains).
-  - Changing a cloud storage provider's bucket, region, or folder made files saved earlier unreadable. They now stay where they were saved, and new uploads go to the new location.
-  - Cloud storage add-ons failed when a folder prefix was set.
-  - Downloads from Amazon S3 and DigitalOcean Spaces storage, including ticket attachments, were saved under a random name. They now keep the original file name and type.
-  - Two cloud storage providers could end up active at the same time when activated at the same moment.
-  - Uploading a plugin update sometimes added a second copy of the plugin instead of replacing the installed one.
   - Projects in the trash were not counted toward the storage limit. Restoring a project with files is now refused while you are over your plan's storage limit. See [Subscription plans](/subscription-plans).
   - Progress bars filled from the wrong side in right-to-left languages.
   - Images uploaded with Swap Image in the editor did not show on the published site. See [Editor](/editor).
